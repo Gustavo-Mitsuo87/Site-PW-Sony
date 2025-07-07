@@ -64,7 +64,7 @@ nav a:active {
 .hero {
     position: relative;
     height: 100vh;
-    background: linear-gradient(to bottom, #00000000 20%, #000000cf), url('Camera - Home.jpg');
+    background: linear-gradient(to bottom, #00000000 20%, #000000cf), url('./Imagens/Camera\ -\ Home.jpg ');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
