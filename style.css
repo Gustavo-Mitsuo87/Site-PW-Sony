@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: black;
 }
 
 main {
@@ -79,7 +79,7 @@ nav a:active {
     text-align: left;
     margin-left: 100px;
     font-size: 4rem;
-    font-family: Baskerville Old Face;
+    font-family: "Baskerville Old Face";
 }
 
 .logo img {
