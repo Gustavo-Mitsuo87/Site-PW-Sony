@@ -287,3 +287,22 @@ nav a:active {
     text-align: justify;
   }
 }
+/*Inicio G.O.G*/
+.cabeçalho_camera{
+  position: fixed;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+}
+
+.h1_intro_camera{
+  color: #333;
+  margin-left: -15px
+}
+
+.hr_camera{
+  margin-left: -15px;
+}
