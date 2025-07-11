@@ -306,3 +306,32 @@ nav a:active {
 .hr_camera{
   margin-left: -15px;
 }
+
+.cards_camera{
+  display: flex;
+}
+
+.card_camera{
+    width: 380px;
+    height: 250px;
+    background-color: #ddd;
+    margin: 20px;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid black;
+    overflow: hidden;
+    display: flex;
+}
+
+.card-imagem-camera{
+ height: 60%;
+ overflow: hidden;
+ width: 100%;
+}
+
+.card-imagem-camera img{
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
