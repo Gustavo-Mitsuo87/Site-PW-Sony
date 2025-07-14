@@ -1,49 +1,49 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-    background-color: white;
+  background-color: white;
 }
 
 main {
-    max-width: 1200px;
-    margin: 6rem auto 2rem;
-    padding: 0 1rem;
+  max-width: 1200px;
+  margin: 6rem auto 2rem;
+  padding: 0 1rem;
 }
 
 header {
-    padding: 0.5rem;
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    top: 5px;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  top: 5px;
 }
 
 nav {
-    text-decoration-color: #000000;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  text-decoration-color: #000000;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
-    color: #000000;
-    text-decoration: none;
-    margin-right: 20px;
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
 nav a:hover {
-    color: #002d7f;
+  color: #002d7f;
 }
 
 nav a:active {
-    color: #0056b3;
+  color: #0056b3;
 }
 
 #navbar {
@@ -56,43 +56,43 @@ nav a:active {
 }
 
 #navbar.scrolled {
-  background-color: white; 
+  background-color: white;
   color: black;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .hero {
-    position: relative;
-    height: 100vh;
-    background: linear-gradient(to bottom, #00000000 20%, #000000cf), url('./Imagens/Camera\ -\ Home.jpg ');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    text-shadow: 1px 1px 5px rgba(7, 7, 7, 0.7);
-    margin-top: -50px;
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00000000 20%, #000000cf),
+    url("./Imagens/Camera\ -\ Home.jpg ");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 5px rgba(7, 7, 7, 0.7);
+  margin-top: -50px;
 }
 
 .hero h1 {
-    color: white;
-    text-align: left;
-    margin-left: 100px;
-    font-size: 4rem;
-    font-family: "Baskerville Old Face";
+  color: white;
+  text-align: left;
+  margin-left: 100px;
+  font-size: 4rem;
+  font-family: "Baskerville Old Face";
 }
 
 .logo img {
-    max-width: 200px;
-    height: auto;
-    width: auto;
-    color: rgb(0, 0, 0);
-
+  max-width: 200px;
+  height: auto;
+  width: auto;
+  color: rgb(0, 0, 0);
 }
 
 .cards {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -101,24 +101,24 @@ nav a:active {
 
 .card {
   display: flex;
-  flex-direction: row; 
-  gap: 20px; 
-  background-color: #f9f9f9; 
-  border: 1px solid #ddd; 
-  border-radius: 8px; 
-  overflow: hidden; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  flex-direction: row;
+  gap: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
-  flex: 1; 
-  max-width: 40%; 
-  object-fit: cover; 
+  flex: 1;
+  max-width: 40%;
+  object-fit: cover;
 }
 
 .card-text {
-  flex: 2; 
-  padding: 20px; 
+  flex: 2;
+  padding: 20px;
 }
 
 .card-text h3 {
@@ -151,7 +151,7 @@ nav a:active {
 }
 
 .card {
-  flex: 0 0 100%; 
+  flex: 0 0 100%;
   text-align: center;
   padding: 10px;
 }
@@ -186,20 +186,19 @@ nav a:active {
   outline: none;
 }
 
-
 .footer {
-  background-color: #000000; 
-  color: #878792; 
+  background-color: #000000;
+  color: #878792;
   padding: 20px 0;
-  border-top: 1px solid #ddd; 
-  font-size: 0.9rem; 
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
 }
 
 .footer-content {
-  max-width: 1200px; 
-  margin: 0 auto; 
-  display: flex; 
-  justify-content: space-between; 
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
@@ -211,7 +210,7 @@ nav a:active {
 
 .footer-left p,
 .footer-right p {
-  margin: 0; 
+  margin: 0;
 }
 
 .footer-right p a {
@@ -222,14 +221,13 @@ nav a:active {
 }
 
 .footer-right p a:hover {
-  color: #002d7f; 
+  color: #002d7f;
 }
 
 @media (max-width: 768px) {
-
   .hero {
     text-align: center;
-    height: 600px;;
+    height: 600px;
   }
 
   .hero h1 {
@@ -255,23 +253,23 @@ nav a:active {
   }
 
   .cards {
-    grid-template-columns: 1fr; 
-    gap: 10px; 
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .card {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     width: 100%;
     align-items: center;
   }
 
   .card-image {
-    width: 100% ;
+    width: 100%;
     height: 300px;
     max-width: 300px;
     object-fit: cover;
-    border-radius: 8px;    
+    border-radius: 8px;
   }
 
   .card-text {
@@ -288,7 +286,7 @@ nav a:active {
   }
 }
 /*Inicio G.O.G*/
-.cabeçalho_camera{
+.cabeçalho_camera {
   position: fixed;
   padding: 10px 20px;
   background-color: transparent;
@@ -298,38 +296,38 @@ nav a:active {
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
 }
 
-.h1_intro_camera{
+.h1_intro_camera {
   color: #333;
-  margin-left: -15px
-}
-
-.hr_camera{
   margin-left: -15px;
 }
 
-.cards_camera{
+.hr_camera {
+  margin-left: -15px;
+}
+
+.cards_camera {
   display: flex;
 }
 
-.card_camera{
-    width: 380px;
-    height: 250px;
-    background-color: #ddd;
-    margin: 20px;
-    flex-direction: column;
-    border-radius: 8px;
-    border: 1px solid black;
-    overflow: hidden;
-    display: flex;
+.card_camera {
+  width: 380px;
+  height: 250px;
+  background-color: #ddd;
+  margin: 20px;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid black;
+  overflow: hidden;
+  display: flex;
 }
 
-.card-imagem-camera{
- height: 60%;
- overflow: hidden;
- width: 100%;
+.card-imagem-camera {
+  height: 60%;
+  overflow: hidden;
+  width: 100%;
 }
 
-.card-imagem-camera img{
+.card-imagem-camera img {
   height: 100%;
   object-fit: cover;
   width: 100%;
