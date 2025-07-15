@@ -289,15 +289,19 @@ nav a:active {
 .cabeçalho_camera {
   position: fixed;
   padding: 10px 20px;
-  background-color: transparent;
+  background-color: white;
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: -5px;
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
 }
 
-.h1_intro_camera {
-  color: #333;
+main {
+  display: flex;
+  flex-direction: column;
+}
+.h1_camera {
+  color: #000000;
   margin-left: -15px;
 }
 
@@ -325,6 +329,20 @@ nav a:active {
   transition: transform 0.3s;
 }
 
+.card_camera2 {
+  flex: 0 0 calc((100% - 40px) / 3);
+  height: auto;
+  background-color: #ddd;
+  flex-direction: column;
+  border-radius: 8px;
+  /*O overflow oculta qualquer elemento que esteja ultrapassando as dimensões do container, fazendo com que o elemento não faça o container aumentar para acomodar seu conteúdo*/
+  overflow: hidden;
+  display: flex;
+  /*Sombreamento dos cards*/
+  box-shadow: 0 2px 4px black;
+  /*Ajuda no hover*/
+  transition: transform 0.3s;
+}
 .card_camera:hover {
   transform: translateY(-5px);
 }
@@ -349,4 +367,17 @@ nav a:active {
 .card_texto_camera p {
   font-style: italic;
   padding-top: 2.5px;
+}
+
+.btn_galeria {
+  display: flex;
+  width: 250px;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: #000000;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
