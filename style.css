@@ -311,25 +311,41 @@ nav a:active {
 
 .card_camera {
   width: 380px;
-  height: 250px;
+  height: auto;
   background-color: #ddd;
   margin: 20px;
   flex-direction: column;
   border-radius: 8px;
-  border: 1px solid black;
+  /*O overflow oculta qualquer elemento que esteja ultrapassando as dimensões do container, fazendo com que o elemento não faça o container aumentar para acomodar seu conteúdo*/
   overflow: hidden;
   display: flex;
+  /*Sombreamento dos cards*/
+  box-shadow: 0 2px 4px black;
+  /*Ajuda no hover*/
+  transition: transform 0.3s;
 }
 
-.card-imagem-camera {
+.card_camera:hover {
+  transform: translateY(-5px);
+}
+
+.card_imagem_camera {
   height: 60%;
   overflow: hidden;
   width: 100%;
 }
 
-.card-imagem-camera img {
+.card_imagem_camera img {
   height: 100%;
+  /*O object-fit faz com que a imagem preencha o contâiner completo e tentando não mudar a proporção original da imagem, cortando bordas se necessário*/
   object-fit: cover;
   width: 100%;
-  display: block;
+}
+
+.card_texto_camera {
+  text-align: center;
+}
+
+.card_texto_camera p {
+  font-style: italic;
 }
