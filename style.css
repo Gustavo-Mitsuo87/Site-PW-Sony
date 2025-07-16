@@ -384,4 +384,67 @@ main {
 
 
 /* WalkMan Início */
+
+/* coisas do cabeçalho */
+.wcabecalho {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: white;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+}
+.wlogo {
+  max-width: 200px;
+  height: auto;
+  width: auto;
+  color: rgb(0, 0, 0);
+}
+.wlogo img {
+  max-height: 26px;
+  height: auto;
+  width: auto;  
+}
+
+/* coisas do corpo */
+.wcaixa {
+  background-color: #f9f9f9;
+  margin-top: 100px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+}
+
+.wesq, .wcaixa 
+
+.wesq{
+  margin-right: 5%;
+  padding-left: 5%;
+  border: 1px solid #ddd;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.wesq img,h1,p{
+  display: inline;
+}
+
+.wcaixa_img {
+  max-height: 500px;
+  height: auto;
+  width: auto;
+}
+
+.wtexto{
+  vertical-align: top;
+}
+
+/* Rodapé */
+.wfooter {
+  background-color: #000000;
+  color: #878792;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
 /* WalkMan Fim */
