@@ -407,14 +407,20 @@ main {
   width: auto;  
 }
 
+.wsepara {
+  height: 100px;
+}
+
 /* coisas do corpo */
 .wcaixa {
+  padding: 10px;
   background-color: #f9f9f9;
-  margin-top: 100px;
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+  margin-bottom: 50px;
 }
 
 .wesq, .wcaixa 
+.wdir, .wcaixa 
 
 .wesq{
   margin-right: 5%;
@@ -423,17 +429,44 @@ main {
   border-radius: 0px 8px 8px 0px;
 }
 
+.wdir {
+  margin-left: 5%;
+  padding-right: 5%;
+  height: 530px;
+  border: 1px solid #ddd;
+  border-radius: 8px 0px 0px 8px;
+}
+
 .wesq img,h1,p{
   display: inline;
 }
 
+.wdir img,h1,p{
+  display: inline;
+}
+
 .wcaixa_img {
-  max-height: 500px;
+  max-height: 1000px;
   height: auto;
   width: auto;
 }
 
+.wcaixa_img img {
+  height: 500px;
+}
+
+.wdir_img {
+  float: right;
+}
+
 .wtexto{
+  vertical-align: top;
+}
+
+.wdt, .wtexto
+
+.wdt {
+  text-align: end;
   vertical-align: top;
 }
 
@@ -446,5 +479,33 @@ main {
   font-size: 0.9rem;
   margin-top: 50px;
 }
+
+/* Adaptação de tela */
+@media (max-width: 768px){
+  .wcaixa_img {
+  max-height: 500px;
+  height: auto;
+  width: auto;
+  }
+  .wdir {
+  margin-left: 5%;
+  padding-right: 5%;
+  height: 330px;
+  }
+  .wcaixa {
+  padding: 10px;
+  margin-bottom: 50px;
+  }
+  .wcaixa_img {
+  max-height: 300px;
+  height: auto;
+  width: auto;
+  }
+  .wcaixa_img img {
+  height: 300px;
+}
+}
+
+
 
 /* WalkMan Fim */
