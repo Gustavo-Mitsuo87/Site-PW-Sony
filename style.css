@@ -417,21 +417,22 @@ main {
   background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
   margin-bottom: 50px;
+  position: relative;
 }
 
 .wesq, .wcaixa 
 .wdir, .wcaixa 
 
 .wesq{
-  margin-right: 5%;
-  padding-left: 5%;
+  margin-right: 10%;
+  padding-left: 10%;
   border: 1px solid #ddd;
   border-radius: 0px 8px 8px 0px;
 }
 
 .wdir {
-  margin-left: 5%;
-  padding-right: 5%;
+  margin-left: 10%;
+  padding-right: 10%;
   height: 530px;
   border: 1px solid #ddd;
   border-radius: 8px 0px 0px 8px;
@@ -470,6 +471,36 @@ main {
   vertical-align: top;
 }
 
+.wbotao {
+  background-color: #000000;
+  width: 100px;
+  text-align: center;
+  border-radius: 8px;
+  float: right;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+.wbotaod {
+  background-color: #000000;
+  width: 100px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+
+
+
+
 /* Rodapé */
 .wfooter {
   background-color: #000000;
@@ -504,6 +535,9 @@ main {
   .wcaixa_img img {
   height: 300px;
 }
+.wesq{
+  margin-right: 5%;
+  padding-left: 5%;
 }
 
 
