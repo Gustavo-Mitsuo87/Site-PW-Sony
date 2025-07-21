@@ -497,8 +497,18 @@ main {
   left: 20px;
 }
 
+.wfea{
+  opacity: 1;
+  height: auto;
+  display: inline-block;
+  position: relative;
+  left: 10%;
+  top: 50px;
+}
 
-
+.wico{
+  height: 30px;
+}
 
 
 /* Rodapé */
@@ -539,6 +549,9 @@ main {
   margin-right: 5%;
   padding-left: 5%;
 }
-
-/* WalkMan Fim */
+.wfea{
+  opacity: 0;
+  height: 0;
 }
+}
+/* WalkMan Fim */
