@@ -390,6 +390,25 @@ main {
   text-decoration: none;
 }
 
+.beneficios {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.beneficios-itens {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card-beneficios {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  flex-direction: column;
+}
 /* WalkMan Início */
 
 /* coisas do cabeçalho */
