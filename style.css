@@ -415,6 +415,9 @@ main {
   width: 100%;
 }
 
+.whtml{
+  min-height: 1910;
+}
 
 /* coisas do cabeçalho */
 .wcabecalho {
@@ -437,6 +440,10 @@ main {
   height: auto;
   width: auto;
 }
+
+.wmain{
+  flex: 1;
+}
 /* coisas do corpo */
 
 .wcaixa {
@@ -445,31 +452,15 @@ main {
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
   margin-bottom: 50px;
   position: relative;
+  display: flex;
 }
 
-
-h1,
-p {
-  display: inline;
-}
-
-
-h1,
-p {
-  display: inline;
-}
-
-.wcaixa_img {
+.wcaixa_img{
   max-height: 1000px;
   height: auto;
   width: auto;
-}
-
-.wcaixa_img img {
   height: 500px;
 }
-
-
 
 .wtexto {
   vertical-align: top;
@@ -478,10 +469,32 @@ p {
   font-size: 100%;
 }
 
+h1,p {
+  display: inline;
+}
+
 .wdt,
 .wtexto .wdt {
   text-align: end;
   vertical-align: top;
+}
+
+.wdetalhes {
+  opacity: 1;
+  max-width: 100%;
+  left: 7%;
+  top: 50px;
+  margin-top: 50px;
+  margin-left: 7%;
+}
+
+.wico {
+  height: auto;
+  width: auto;
+  height: 30px;
+  max-height: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .wbotao {
@@ -496,45 +509,16 @@ p {
   bottom: 20px;
   right: 20px;
 }
-
-.wbotaod {
-  background-color: #000000;
-  width: 100px;
-  text-align: center;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
-.wfea {
-  opacity: 1;
-  height: 100%;
-  max-width: 100%;
-  left: 7%;
-  top: 50px;
-  margin-top: 50px;
-  margin-left: 7%;
-}
-
-
-.wico {
-  height: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-
 /* Adaptação de tela */
 @media (max-width: 768px) {
-  .wcaixa_img {
-    max-height: 500px;
+
+  .wcaixa img {
+    max-height: 400px;
     height: auto;
     width: auto;
   }
   .wcaixa {
+    display: block;
     padding: 10px;
     margin-bottom: 50px;
   }
@@ -543,12 +527,11 @@ p {
     height: auto;
     width: auto;
   }
-  .wcaixa_img img {
-    height: 300px;
+  .wdetalhes {
+    display: none;
   }
-  .wfea {
-    opacity: 0;
-    height: 0;
+  .wbotaomin{
+    height: 50px;
   }
 }
 /* WalkMan Fim */
