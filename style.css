@@ -400,6 +400,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .card-beneficios {
@@ -409,16 +410,26 @@ main {
   background-color: transparent;
   flex-direction: column;
 }
+
+.linha_vertical {
+  display: flex;
+  width: 1px;
+  height: 180px;
+  background-color: gray;
+}
 /* WalkMan Início */
 
 .wtudo {
   width: 100%;
 }
 
+<<<<<<< HEAD
 .whtml{
   min-height: 1910;
 }
 
+=======
+>>>>>>> 440254c94a5aada877b92ca0b10b92d4c260a00a
 /* coisas do cabeçalho */
 .wcabecalho {
   position: fixed;
@@ -455,7 +466,21 @@ main {
   display: flex;
 }
 
+<<<<<<< HEAD
 .wcaixa_img{
+=======
+h1,
+p {
+  display: inline;
+}
+
+h1,
+p {
+  display: inline;
+}
+
+.wcaixa_img {
+>>>>>>> 440254c94a5aada877b92ca0b10b92d4c260a00a
   max-height: 1000px;
   height: auto;
   width: auto;
@@ -464,7 +489,7 @@ main {
 
 .wtexto {
   vertical-align: top;
-  width: 100%;  
+  width: 100%;
   height: 100%;
   font-size: 100%;
 }
@@ -509,6 +534,38 @@ h1,p {
   bottom: 20px;
   right: 20px;
 }
+<<<<<<< HEAD
+=======
+
+.wbotaod {
+  background-color: #000000;
+  width: 100px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.wfea {
+  opacity: 1;
+  height: 100%;
+  max-width: 100%;
+  left: 7%;
+  top: 50px;
+  margin-top: 50px;
+  margin-left: 7%;
+}
+
+.wico {
+  height: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+>>>>>>> 440254c94a5aada877b92ca0b10b92d4c260a00a
 /* Adaptação de tela */
 @media (max-width: 768px) {
 
