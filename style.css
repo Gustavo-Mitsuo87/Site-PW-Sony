@@ -400,6 +400,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .card-beneficios {
@@ -409,12 +410,18 @@ main {
   background-color: transparent;
   flex-direction: column;
 }
+
+.linha_vertical {
+  display: flex;
+  width: 1px;
+  height: 180px;
+  background-color: gray;
+}
 /* WalkMan Início */
 
 .wtudo {
   width: 100%;
 }
-
 
 /* coisas do cabeçalho */
 .wcabecalho {
@@ -447,12 +454,10 @@ main {
   position: relative;
 }
 
-
 h1,
 p {
   display: inline;
 }
-
 
 h1,
 p {
@@ -469,11 +474,9 @@ p {
   height: 500px;
 }
 
-
-
 .wtexto {
   vertical-align: top;
-  width: 100%;  
+  width: 100%;
   height: 100%;
   font-size: 100%;
 }
@@ -519,13 +522,11 @@ p {
   margin-left: 7%;
 }
 
-
 .wico {
   height: 30px;
   margin-left: 20px;
   margin-right: 20px;
 }
-
 
 /* Adaptação de tela */
 @media (max-width: 768px) {
