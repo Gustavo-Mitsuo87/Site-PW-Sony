@@ -543,3 +543,15 @@ h1,p {
   }
 }
 /* WalkMan Fim */
+
+/* Xperia Inicio*/
+.Xcabecalho {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+
+}
