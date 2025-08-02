@@ -492,10 +492,7 @@ main {
   font-size: 100%;
 }
 
-h1,
-p {
-  display: inline;
-}
+
 
 .wdt,
 .wtexto .wdt {
@@ -573,12 +570,7 @@ p {
 
 /*PS Inicio*/
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
+
 
 .tt {
   text-align: justify;
@@ -679,7 +671,7 @@ nav a:hover {
   display: none;
 }
 
-.title {
+.title-tt {
   text-align: center;
   font-family: Baskerville Old Face;
   font-weight: bold;
@@ -687,7 +679,7 @@ nav a:hover {
   margin-top: 200px;
 }
 
-.s-txt {
+.s-txt-tt {
   margin: 0 auto;
   font-family: Baskerville Old Face;
   font-size: 20px;
@@ -696,7 +688,7 @@ nav a:hover {
   text-align: center;
   color: white;
 }
-.txt {
+.txt-tt {
   margin: 0 auto;
   font-family: Baskerville Old Face;
   font-size: 20px;
