@@ -572,56 +572,13 @@ main {
 
 
 
-.tt {
-  text-align: justify;
-  color: white;
-  font-size: 20px;
-}
 
 .sony-txt {
   text-align: center;
   font-family: Baskerville Old Face;
-
   font-size: 55px;
   margin-top: 50px;
   color: white;
-}
-body {
-  background: #ffffff;
-}
-
-header {
-  position: fixed;
-  padding: 10px 20px;
-  width: 100%;
-  background-color: transparent;
-  color: black;
-  transition: background-color 0.3s ease;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-header {
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(65, 51, 145, 0.452);
-}
-
-nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  color: #000;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-nav a:hover {
-  color: #002d7f;
 }
 
 .banner {
@@ -629,14 +586,13 @@ nav a:hover {
   align-items: center; /* Alinha verticalmente */
   justify-content: flex-start; /* imagem e texto lado a lado, alinhados à esquerda */
   background: #ffffff;
-
   gap: 40px; /* Espaço entre imagem e texto */
 }
 
 .img-console {
-  width: 100%; /* define largura fixa, ajuste conforme precisar */
+  width: 100%; 
   height: auto;
-  margin-top: 50px; /* se quiser espaço acima da imagem */
+  margin-top: 50px;
 }
 
 .section {
@@ -738,7 +694,7 @@ img#imagem-destaque {
   max-width: 200px;
   min-width: 200px;
   text-align: center;
-  padding: 10px;
+  padding: 0px;
   border-radius: 6px;
   flex-shrink: 0;
   max-height: 150px;
