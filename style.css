@@ -852,44 +852,7 @@ img#imagem-destaque {
 .pss {
   padding-top: 100px;
 }
-.footer {
-  background-color: #000000;
-  color: #878792;
-  padding: 20px 0;
-  border-top: 1px solid #ddd;
-  font-size: 0.9rem;
-  margin-top: 0px;
-}
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.footer-left,
-.footer-right {
-  display: flex;
-}
-
-.footer-left p,
-.footer-right p {
-  margin: 0;
-}
-
-.footer-right p a {
-  color: #0056b3;
-  text-decoration: none;
-  margin: 0 5px;
-  transition: color 0.3s ease;
-}
-
-.footer-right p a:hover {
-  color: #002d7f;
-}
 .cards_acessórios {
   display: flex;
   margin-top: 50px;
