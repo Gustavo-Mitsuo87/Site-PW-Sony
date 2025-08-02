@@ -39,3 +39,33 @@ prevButton.addEventListener("click", () => {
 
 // Responsividade: atualiza o carrossel ao redimensionar a janela
 window.addEventListener("resize", updateCarousel);
+
+
+
+
+function scrollCarousel(id, direction) {
+  const carousel = document.getElementById(id);
+  const card = carousel.querySelector('.card');
+
+  if (!card) return;
+
+  const cardStyle = window.getComputedStyle(card);
+  const cardWidth = card.offsetWidth;
+  const cardMargin = parseInt(cardStyle.marginRight || 0);
+  const gap = 16; // você definiu gap: 16px no CSS do .carousel
+
+  const scrollAmount = cardWidth + gap;
+
+  carousel.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+
+  // Pequeno efeito visual
+  carousel.style.transition = "transform 0.3s ease";
+  carousel.style.transform = "scale(0.98)";
+  setTimeout(() => {
+    carousel.style.transform = "scale(1)";
+  }, 200);
+}
+

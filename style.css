@@ -570,3 +570,506 @@ p {
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
 
 }
+
+/*PS Inicio*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.tt {
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+}
+
+.sony-txt {
+  text-align: center;
+  font-family: Baskerville Old Face;
+
+  font-size: 55px;
+  margin-top: 50px;
+  color: white;
+}
+body {
+  background: #ffffff;
+}
+
+header {
+  position: fixed;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: transparent;
+  color: black;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(65, 51, 145, 0.452);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  color: #002d7f;
+}
+
+.banner {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: flex-start; /* imagem e texto lado a lado, alinhados à esquerda */
+  background: #ffffff;
+
+  gap: 40px; /* Espaço entre imagem e texto */
+}
+
+.img-console {
+  width: 100%; /* define largura fixa, ajuste conforme precisar */
+  height: auto;
+  margin-top: 50px; /* se quiser espaço acima da imagem */
+}
+
+.section {
+  padding: 20px;
+  background: rgb(0, 0, 0);
+  margin-top: 230px;
+}
+
+.section h2 {
+  color: #000000;
+  font-size: xx-large;
+  font-family: Baskerville Old Face, serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.title {
+  text-align: center;
+  font-family: Baskerville Old Face;
+  font-weight: bold;
+  font-size: 55px;
+  margin-top: 200px;
+}
+
+.s-txt {
+  margin: 0 auto;
+  font-family: Baskerville Old Face;
+  font-size: 20px;
+  margin-top: 30px;
+  width: 70%;
+  text-align: center;
+  color: white;
+}
+.txt {
+  margin: 0 auto;
+  font-family: Baskerville Old Face;
+  font-size: 20px;
+  margin-top: 50px;
+  width: 70%;
+  text-align: center;
+}
+.img-carousel h1 {
+  color: aliceblue;
+  align-items: center;
+}
+
+img#imagem-destaque {
+  max-width: 90%;
+  max-height: 700px;
+  min-height: 500px;
+  min-width: 90%;
+
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  padding: 0 60px; /* espaço para setas laterais */
+  margin-top: 40px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 10px 0;
+  scroll-padding: 60px;
+}
+
+.carousel::after {
+  content: "";
+  flex: 0 0 60px; /* garante espaço para exibir a última imagem */
+}
+
+.card {
+  max-width: 200px;
+  min-width: 200px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  max-height: 150px;
+  margin-top: 30px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+.consoles {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ps-plus {
+  background: linear-gradient(to bottom, #aeaeae 20%, #000000cf);
+  height: 900px;
+  margin-top: 0px;
+}
+.ps-plus p {
+  color: white;
+  margin-top: 40px;
+}
+.button {
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 30px;
+  background: linear-gradient(rgb(241, 200, 85), rgb(110, 82, 2));
+  border-radius: 30px;
+  width: 30%;
+  height: 60px;
+  margin: 40px auto 0; /* margem superior 40px, e lateral automático para centralizar */
+  display: block; /* garante que margin auto funcione */
+}
+.title-ps {
+  text-align: center;
+  font-family: Baskerville Old Face;
+
+  font-size: 55px;
+  margin-top: 100px;
+}
+.txt-ps {
+  margin: 0 auto;
+  font-family: Baskerville Old Face;
+  font-size: 20px;
+  margin-top: 70px;
+  width: 70%;
+  text-align: center;
+}
+.ps-plus img {
+  width: 60%;
+  height: 50%;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+.img-ps {
+  height: 120px;
+}
+
+.pss {
+  padding-top: 100px;
+}
+.footer {
+  background-color: #000000;
+  color: #878792;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  margin-top: 0px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+}
+
+.footer-left p,
+.footer-right p {
+  margin: 0;
+}
+
+.footer-right p a {
+  color: #0056b3;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-right p a:hover {
+  color: #002d7f;
+}
+.cards_acessórios {
+  display: flex;
+  margin-top: 50px;
+}
+.fundo {
+  background-color: #2c2c2c;
+}
+.card_acessório {
+  width: 380px;
+  height: auto;
+  background-color: #ffffff;
+
+  margin: 20px;
+  flex-direction: column;
+  border-radius: 8px;
+  /*O overflow oculta qualquer elemento que esteja ultrapassando as dimensões do container, fazendo com que o elemento não faça o container aumentar para acomodar seu conteúdo*/
+  overflow: hidden;
+  display: flex;
+  /*Sombreamento dos cards*/
+  box-shadow: 0 2px 4px black;
+  /*Ajuda no hover*/
+  transition: transform 0.3s;
+}
+
+.card_acessório:hover {
+  transform: translateY(-10px);
+}
+
+.cards_acessorios {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.card_acessorio {
+  position: relative;
+  background-color: rgb(40, 40, 40);
+  border-radius: 20px;
+  width: 200px;
+  height: 130px;
+  text-align: center;
+  padding-top: 80px;
+  overflow: visible;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Todas as imagens: posicionadas absolutas e centralizadas horizontalmente */
+.card_imagem_acessorio {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+}
+
+/* Fone 1 */
+.card_imagem_acessorio.fone1 {
+  top: -60px;
+  width: 130px;
+  height: 120px;
+}
+
+/* Earbuds: mais leves e menores */
+.card_imagem_acessorio.earbuds {
+  top: -40px;
+  width: 130px;
+  height: 130px;
+}
+
+/* Portal: mais baixo para alinhar */
+.card_imagem_acessorio.portal {
+  top: -25px;
+  width: 200px;
+  height: 150px;
+}
+
+.card_imagem_acessorio img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hr_accessório {
+  margin-left: -15px;
+  padding-top: 350px;
+}
+
+.btn {
+  display: flex;
+  width: 250px;
+  height: 50px;
+  margin: 20px auto; /* auto nas laterais centraliza */
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+.capas-container {
+  padding: 60px 40px;
+  background-color: #f8f8f8;
+  font-family: sans-serif;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* Espaço entre as miniaturas */
+  margin-bottom: 80px; /* Espaço abaixo das miniaturas */
+}
+
+.capas-topo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.capas-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.capas-texto h2 {
+  color: #0070d1;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.capas-texto p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.capas-imagem {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.capas-imagem img {
+  max-width: 100%;
+  height: auto;
+}
+
+.capas-galeria {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.capa-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
+  transition: border 0.3s ease;
+}
+
+.capa-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.capa-card p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.capa-card:hover {
+  border: 3px solid #007bff; /* Azul padrão */
+  cursor: pointer;
+}
+/*PS fim*/
