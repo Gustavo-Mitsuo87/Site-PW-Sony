@@ -683,11 +683,17 @@ img#imagem-destaque {
   gap: 16px;
   padding: 10px 0;
   scroll-padding: 60px;
+  
+ 
+
+
 }
 
 .carousel::after {
   content: "";
-  flex: 0 0 60px; /* garante espaço para exibir a última imagem */
+  flex: 0 0 216px; /* garante espaço para exibir a última imagem */
+  display: block;
+
 }
 
 .card {
