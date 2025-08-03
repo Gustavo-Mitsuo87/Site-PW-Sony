@@ -1028,3 +1028,13 @@ img#imagem-destaque {
   cursor: pointer;
 }
 /*PS fim*/
+
+
+/* TV Inicio */
+
+.banner_tv {
+  width: 100vw;
+  height: 40vh;
+}
+
+/* TV fim*/
