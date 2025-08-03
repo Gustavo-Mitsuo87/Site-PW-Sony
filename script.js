@@ -52,7 +52,7 @@ function scrollCarousel(id, direction) {
   const cardStyle = window.getComputedStyle(card);
   const cardWidth = card.offsetWidth;
   const cardMargin = parseInt(cardStyle.marginRight || 0);
-  const gap = 16; // você definiu gap: 16px no CSS do .carousel
+  const gap = 16; 
 
   const scrollAmount = cardWidth + gap;
 
