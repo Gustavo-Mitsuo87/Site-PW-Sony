@@ -696,7 +696,6 @@ object-fit: cover;
   flex-shrink: 0;
   max-height: 150px;
   margin-top: 30px;
-
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -980,7 +979,7 @@ object-fit: cover;
   border: 3px solid #007bff; /* Azul padrão */
   cursor: pointer;
 }
-<<<<<<< HEAD
+/* HEAD*/
 
 .ps5-consoles {
   background-color: #fff;
@@ -1038,8 +1037,6 @@ object-fit: cover;
 
 
 /*PS fim*/
-=======
-/*PS fim*/
 
 
 /* TV Inicio */
@@ -1050,4 +1047,4 @@ object-fit: cover;
 }
 
 /* TV fim*/
->>>>>>> 3030a3c7af9e3d498d3d0553ae6467f4cb93bea4
+
