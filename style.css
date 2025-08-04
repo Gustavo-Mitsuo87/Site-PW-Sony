@@ -980,6 +980,7 @@ object-fit: cover;
   border: 3px solid #007bff; /* Azul padrão */
   cursor: pointer;
 }
+<<<<<<< HEAD
 
 .ps5-consoles {
   background-color: #fff;
@@ -1037,3 +1038,16 @@ object-fit: cover;
 
 
 /*PS fim*/
+=======
+/*PS fim*/
+
+
+/* TV Inicio */
+
+.banner_tv {
+  width: 100vw;
+  height: 40vh;
+}
+
+/* TV fim*/
+>>>>>>> 3030a3c7af9e3d498d3d0553ae6467f4cb93bea4
