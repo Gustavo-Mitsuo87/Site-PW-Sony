@@ -582,11 +582,12 @@ main {
 }
 
 .banner {
-  display: flex;
-  align-items: center; /* Alinha verticalmente */
-  justify-content: flex-start; /* imagem e texto lado a lado, alinhados à esquerda */
-  background: #ffffff;
-  gap: 40px; /* Espaço entre imagem e texto */
+width: 100%;
+
+}
+
+.banner img {
+object-fit: cover;
 }
 
 .img-console {
@@ -979,4 +980,60 @@ main {
   border: 3px solid #007bff; /* Azul padrão */
   cursor: pointer;
 }
+
+.ps5-consoles {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.console-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.console-item {
+  max-width: 300px;
+  flex: 1 1 300px;
+}
+
+.console-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.console-item h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.console-item p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.btn-ps5 {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 20px;
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+.btn-ps5:hover {
+  background-color: darkorange;
+}
+
+
 /*PS fim*/
