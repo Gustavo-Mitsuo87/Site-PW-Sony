@@ -127,7 +127,7 @@ window.addEventListener("resize", updateCarousel);
 
 function scrollCarousel(id, direction) {
   const carousel = document.getElementById(id);
-  const card = carousel.querySelector('.card');
+  const card = carousel.querySelector('.card-ps');
 
   if (!card) return;
 
