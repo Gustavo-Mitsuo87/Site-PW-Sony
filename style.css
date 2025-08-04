@@ -980,7 +980,7 @@ object-fit: cover;
   border: 3px solid #007bff; /* Azul padrão */
   cursor: pointer;
 }
-<<<<<<< HEAD
+
 
 .ps5-consoles {
   background-color: #fff;
@@ -1017,7 +1017,6 @@ object-fit: cover;
 
 .console-item p {
   font-size: 0.9rem;
-  color: #333;
 }
 
 .btn-ps5 {
@@ -1033,12 +1032,12 @@ object-fit: cover;
 }
 
 .btn-ps5:hover {
-  background-color: darkorange;
+  background: linear-gradient(rgb(241, 200, 85), rgb(110, 82, 2));
 }
 
 
 /*PS fim*/
-=======
+
 /*PS fim*/
 
 
@@ -1049,5 +1048,47 @@ object-fit: cover;
   height: 40vh;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown a {
+  cursor: pointer;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.submenu a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .submenu {
+  display: flex;
+}
+
+
 /* TV fim*/
->>>>>>> 3030a3c7af9e3d498d3d0553ae6467f4cb93bea4
