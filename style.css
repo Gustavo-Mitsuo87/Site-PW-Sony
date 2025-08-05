@@ -573,6 +573,7 @@ main {
 
 
 
+
 .sony-txt {
   text-align: center;
   font-family: Baskerville Old Face;
@@ -615,78 +616,7 @@ object-fit: cover;
   overflow: hidden;
   margin-bottom: 100px;
 }
-.footer {
-  background-color: #0a0a0a; /* preto */
-  color: #dcdcdc; /* cinza claro */
-  padding: 40px 20px 20px;
-  font-family: 'Segoe UI', sans-serif;
-}
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-  border-bottom: 1px solid #333;
-  padding-bottom: 30px;
-}
-
-.footer-logo h2 {
-  color: #ffffff; 
-  margin-bottom: 10px;
-}
-
-.footer-logo p {
-  color: #aaa;
-}
-
-.footer-links h3,
-.footer-social h3 {
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 8px;
-}
-
-.footer-links a {
-  color: #dcdcdc;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-links a:hover {
-  color: #002a40;
-}
-
-.footer-social .social-icons {
-  display: flex;
-  gap: 12px;
-}
-
-.footer-social a {
-  color: #dcdcdc;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.footer-social a:hover {
-  color: #002a40;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  color: #888;
-  font-size: 14px;
-}
 
 
 .carousel-ps::-webkit-scrollbar {
@@ -1100,6 +1030,89 @@ object-fit: cover;
 
 .btn-ps5:hover {
   background: linear-gradient(rgb(241, 200, 85), rgb(110, 82, 2));
+}
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+  }
+
+  .footer-section:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
 }
 
 
