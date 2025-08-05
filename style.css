@@ -1099,6 +1099,7 @@ object-fit: cover;
   .footer-section {
     border-top: 1px solid #444;
     padding-top: 20px;
+    text-decoration: none;
   }
 
   .footer-section:first-child {
@@ -1112,6 +1113,7 @@ object-fit: cover;
 
   .social-icons a {
     font-size: 20px;
+    text-decoration: none;
   }
 }
 
