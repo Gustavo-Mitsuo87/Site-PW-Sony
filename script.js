@@ -10,32 +10,114 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
 //////////////////////////////////////////////////////////////
 const track = document.querySelector(".carousel-track");
-const cards = Array.from(track.children);
 const prevButton = document.querySelector(".carousel-button.prev");
 const nextButton = document.querySelector(".carousel-button.next");
 
-let currentIndex = 0;
+let currentIndex = 1;
+let isTransitioning = false;
+let autoplayInterval;
+let startX = 0;
+let endX = 0;
 
-const updateCarousel = () => {
-  const cardWidth = cards[0].getBoundingClientRect().width;
+// Clona primeiro e último slide
+const cards = Array.from(track.children);
+const firstClone = cards[0].cloneNode(true);
+const lastClone = cards[cards.length - 1].cloneNode(true);
+firstClone.classList.add("clone");
+lastClone.classList.add("clone");
+
+track.appendChild(firstClone);
+track.insertBefore(lastClone, track.firstChild);
+
+const updatedCards = Array.from(track.children);
+
+function updateCarousel() {
+  const cardWidth = updatedCards[0].getBoundingClientRect().width;
+  track.style.transition = "transform 0.4s ease-in-out";
   track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-};
+}
 
-nextButton.addEventListener("click", () => {
-  if (currentIndex < cards.length - 1) {
+function jumpToRealSlide() {
+  const cardWidth = updatedCards[0].getBoundingClientRect().width;
+  track.style.transition = "none";
+  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+function startAutoplay() {
+  autoplayInterval = setInterval(() => {
     currentIndex++;
     updateCarousel();
-  }
+  }, 4000);
+}
+
+function stopAutoplay() {
+  clearInterval(autoplayInterval);
+}
+
+// Navegação pelas setas
+nextButton.addEventListener("click", () => {
+  if (isTransitioning) return;
+  currentIndex++;
+  updateCarousel();
+  isTransitioning = true;
 });
 
 prevButton.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateCarousel();
-  }
+  if (isTransitioning) return;
+  currentIndex--;
+  updateCarousel();
+  isTransitioning = true;
 });
+
+// Loop contínuo visual
+track.addEventListener("transitionend", () => {
+  const realCardsCount = updatedCards.length - 2;
+  if (updatedCards[currentIndex].classList.contains("clone")) {
+    if (currentIndex === updatedCards.length - 1) {
+      currentIndex = 1;
+    } else if (currentIndex === 0) {
+      currentIndex = realCardsCount;
+    }
+    jumpToRealSlide();
+  }
+  isTransitioning = false;
+});
+
+// Swipe para touch
+track.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+track.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const threshold = 50;
+  if (endX < startX - threshold) {
+    nextButton.click();
+  } else if (endX > startX + threshold) {
+    prevButton.click();
+  }
+}
+
+// Pausa quando o mouse estiver nas setas
+[nextButton, prevButton].forEach(btn => {
+  btn.addEventListener("mouseenter", stopAutoplay);
+  btn.addEventListener("mouseleave", startAutoplay);
+});
+
+// Início
+window.addEventListener("load", () => {
+  jumpToRealSlide();
+  startAutoplay();
+});
+
+
 
 // Responsividade: atualiza o carrossel ao redimensionar a janela
 window.addEventListener("resize", updateCarousel);
@@ -45,14 +127,14 @@ window.addEventListener("resize", updateCarousel);
 
 function scrollCarousel(id, direction) {
   const carousel = document.getElementById(id);
-  const card = carousel.querySelector('.card');
+  const card = carousel.querySelector('.card-ps');
 
   if (!card) return;
 
   const cardStyle = window.getComputedStyle(card);
   const cardWidth = card.offsetWidth;
   const cardMargin = parseInt(cardStyle.marginRight || 0);
-  const gap = 16; // você definiu gap: 16px no CSS do .carousel
+  const gap = 16; 
 
   const scrollAmount = cardWidth + gap;
 
