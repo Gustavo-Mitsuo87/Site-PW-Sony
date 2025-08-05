@@ -155,7 +155,13 @@ nav a:active {
   flex: 0 0 100%;
   text-align: center;
   padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.cards:hover {
+  transform: translateY(-5px); /* ← esse é o "salto" */
+}
+
 
 .card-image {
   width: 100%;
@@ -167,19 +173,19 @@ nav a:active {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #4a4a4a;
-  color: #f9f9f9;
+  background-color: #00000000;
+  color: #000000ec;
   border: none;
   padding: 9px ;
   cursor: pointer;
   border-radius: 60%;
-  font-size: 10px;
+  font-size: 17px;
   z-index: 100;
   transition: background 0.3s, transform 0.2s;
 }
 
 .carousel-button:hover {
-  background-color: #555;
+  background-color: #55555572;
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -195,12 +201,25 @@ nav a:active {
   outline: none;
 }
 
+.social-icons a img {
+  margin: 26px;
+}
+
+
 .footer {
   background-color: #000000;
   color: #878792;
-  padding: 20px 0;
-  border-top: 1px solid #ddd;
+  padding: 20px 20px;
   font-size: 0.9rem;
+  align-items: center;
+  text-align: left;
+  flex-direction: column;
+  gap: 20px;
+}
+
+hr{
+    height: 60px;
+    width: 0px;
 }
 
 .footer-content {
@@ -213,13 +232,13 @@ nav a:active {
 }
 
 .footer-left,
-.footer-right {
+.footer-right{
   display: flex;
 }
 
 .footer-left p,
 .footer-right p {
-  margin: 0;
+  margin: 4px;
 }
 
 .footer-right p a {
@@ -246,9 +265,10 @@ nav a:active {
   }
 
   nav a {
-    font-size: small;
+    font-size: 10px;
     font-weight: bold;
     margin-right: auto;
+
   }
 
   .logo img {
@@ -259,6 +279,7 @@ nav a:active {
 
   .footer-content {
     flex-direction: column;
+    align-items: center;
   }
 
   .cards {
@@ -293,4 +314,37 @@ nav a:active {
     font-size: 70%;
     text-align: justify;
   }
+
+  .carousel-button.prev {
+    display: none;
+  }
+
+  .carousel-button.next {
+    display: none;
+  }
+
+.social-icons{
+    display: flex;
+    gap: 5px; /* espaço entre os ícones */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    margin: 10px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #444; /* cor da linha */
+  margin: 20px 0;          /* espaço acima e abaixo */
+  width: 110%;              /* largura opcional */
+}
+
+.social-icons h3{
+    font-size: 16px;
+}
+
 }

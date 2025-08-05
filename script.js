@@ -46,17 +46,6 @@ function jumpToRealSlide() {
   track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 }
 
-function startAutoplay() {
-  autoplayInterval = setInterval(() => {
-    currentIndex++;
-    updateCarousel();
-  }, 4000);
-}
-
-function stopAutoplay() {
-  clearInterval(autoplayInterval);
-}
-
 // Navegação pelas setas
 nextButton.addEventListener("click", () => {
   if (isTransitioning) return;
@@ -104,18 +93,6 @@ function handleSwipe() {
     prevButton.click();
   }
 }
-
-// Pausa quando o mouse estiver nas setas
-[nextButton, prevButton].forEach(btn => {
-  btn.addEventListener("mouseenter", stopAutoplay);
-  btn.addEventListener("mouseleave", startAutoplay);
-});
-
-// Início
-window.addEventListener("load", () => {
-  jumpToRealSlide();
-  startAutoplay();
-});
 
 
 
