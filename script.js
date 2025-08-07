@@ -104,14 +104,18 @@ window.addEventListener("resize", updateCarousel);
 
 function scrollCarousel(id, direction) {
   const carousel = document.getElementById(id);
-  const card = carousel.querySelector('.card-ps');
+  if (!carousel) return;
 
+  // Detecta o card certo baseado no id
+  let cardClass = id === 'games' ? '.card-ps' : (id === 'games-plus' ? '.card-ps-plus' : null);
+  if (!cardClass) return;
+
+  const card = carousel.querySelector(cardClass);
   if (!card) return;
 
   const cardStyle = window.getComputedStyle(card);
   const cardWidth = card.offsetWidth;
-  const cardMargin = parseInt(cardStyle.marginRight || 0);
-  const gap = 16; 
+  const gap = 16; // ou pega de algum lugar se for dinâmico
 
   const scrollAmount = cardWidth + gap;
 
@@ -127,4 +131,5 @@ function scrollCarousel(id, direction) {
     carousel.style.transform = "scale(1)";
   }, 200);
 }
+
 

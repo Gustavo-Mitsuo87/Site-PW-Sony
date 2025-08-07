@@ -801,10 +801,103 @@ object-fit: cover;
 
 .carousel-btn.left {
   left: 10px;
+  background-color: #0056b3;
 }
 
 .carousel-btn.right {
   right: 10px;
+  background-color: #0056b3;
+}
+
+.img-carousel-plus h1 {
+  color: aliceblue;
+  align-items: center;
+}
+
+
+
+.carousel-container-plus {
+  position: relative;
+  overflow: hidden;
+  padding: 0 60px; /* espaço para setas laterais */
+  margin-top: 40px;
+}
+
+.carousel-ps-plus {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 10px 0;
+  scroll-padding: 60px;
+  
+ 
+
+
+}
+
+.carousel-plus::after {
+  content: "";
+  flex: 0 0 216px; /* garante espaço para exibir a última imagem */
+  display: block;
+
+}
+
+
+.carousel-ps-plus::-webkit-scrollbar {
+  display: none;
+}
+
+.card-ps-plus {
+  max-width: 60%;
+  min-width: 60%;
+  text-align: center;
+  padding: 0px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  max-height: 70%;
+  margin-top: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-ps-plus:hover {
+  transform: translateY(-10px);
+}
+
+.card-ps-plus img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.carousel-btn-plus {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn.left-plus {
+  left: 10px;
+  background-color: #0056b3;
+}
+
+.carousel-btn.right-plus {
+  right: 10px;
+  background-color: #0056b3;
 }
 
 .consoles {
@@ -905,7 +998,7 @@ object-fit: cover;
 
 .card_acessorio {
   position: relative;
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(129, 127, 127);
   border-radius: 20px;
   width: 200px;
   height: 130px;

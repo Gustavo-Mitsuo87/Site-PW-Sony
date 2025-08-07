@@ -52,6 +52,7 @@
 
       <li><a href="walkman.html">Walkman</a></li>
       <li><a href="Xperia.html">Xperia</a></li>
+      
     </ul>
   </nav>
 </header>
@@ -81,6 +82,7 @@
     <div class="card-ps"><img src="Imagens/astro-bot-store-art-01-en-04jul24.webp" alt="" /></div>
     <div class="card-ps"><img src="Imagens/god-of-war-raganok-clean-keyart-01-en-10mar22.webp" alt="" /></div>
     <div class="card-ps"><img src="Imagens/ps5-games-gt7-hub-image-block-01-en-10mar22.webp" alt="" /></div>
+    
   </div>
   <button class="carousel-btn right" onclick="scrollCarousel('games', 1)">❯</button>
 </div>
@@ -129,7 +131,19 @@
 </div>
 
 <div class="ps-plus">
-  <img class="pss" src="Imagens/ps-plus.png">
+
+  <div class="carousel-container-plus">
+  <button class="carousel-btn left-plus" onclick="scrollCarousel('games-plus', -1)">❮</button>
+  <div class="carousel-ps-plus" id="games-plus">
+    <div class="card-ps-plus"><img src="Imagens/ps-plus-premium-image-block-desktop-01-en-13dec23.webp" alt="Spider-Man" /></div>
+    <div class="card-ps-plus"><img src="Imagens/jan-ps-plus-extra-image-block-desktop-01-en-18jan24.webp" alt="" /></div>
+    <div class="card-ps-plus"><img src="Imagens/feb-ps-plus-essential-image-block-desktop-01-en-09feb24.webp" alt="" /></div>
+    
+    
+  </div>
+  <button class="carousel-btn right-plus" onclick="scrollCarousel('games-plus', 1)">❯</button>
+</div>
+
   <p class="title-ps">Descubra o PlayStation Plus</p>
   <p class="txt-ps">Curta centenas de jogos para PS5 e PS4, além de clássicos do PlayStation. Descubra aventuras épicas, jogos independentes sem igual, favoritos para a família inteira e muito mais.</p>
   <a href="">
@@ -159,9 +173,11 @@
     </div>
 
     <div class="console-item">
-      <div class="banner">
-      <img class = "img-plus " src="Imagens/PS5-Pro-box-image-block-01-en-02apr25.webp" alt="PS5 PRO">
-      </div>
+    
+       <div class="banner">
+    <img src="Imagens/PS5-Pro-box-image-block-01-en-02apr25.webp" class="img-console">
+  
+  </div> 
       <h3>PS5 PRO</h3>
       <p>
         Melhor desempenho, 4K nítido, gráficos avançados e jogos otimizados.
