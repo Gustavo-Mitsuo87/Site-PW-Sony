@@ -6,6 +6,7 @@
   <title>SONY</title>
   <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   </style>
 </head>
@@ -34,7 +35,7 @@
   
   </div>                                
 
-  <p class="title-tt">JOGUE COMO NUNCA ANTES™</p>
+  <p class="title-tt" data-aos="fade-up">JOGUE COMO NUNCA ANTES™</p>
   <p class="txt-tt">Curta o carregamento ultrarrápido com o SSD de altíssima velocidade, maior imersão com os recursos de resposta tátil1, gatilhos adaptáveis1, áudio em 3D1 e uma incrível coleção de jogos do PlayStation.</p>
 
   <div class="section"> 
@@ -128,6 +129,43 @@
 
 </div>
 
+<div class="card-container">
+  <div class="card">
+    <img src="Imagens/ps5-overview-breath-taking-immersion-image-block-01-en-09jul24.webp" alt="Velocidade da Luz" />
+    <div class="card-content">
+      <div class="icon"><img class = icon src="Imagens/ps5-overview-lightning-speed-icon-01-en-18jun24.webp"></div>
+      <h2>VELOCIDADE DA LUZ</h2>
+      <p>Entre na ação e continue jogando com a tecnologia de console ultrarrápida e integrada.</p>
+      <a href="#" class="card-link">Visuais espetaculares na velocidade da luz &gt;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Imagens/ps5-overview-lightning-speed-image-block-01-en-17jun24.webp" alt="Imersão de tirar o fôlego" />
+    <div class="card-content">
+      <div class="icon">🎮</div>
+      <h2>IMERSÃO DE TIRAR O FÔLEGO</h2>
+      <p>Coloque-se no centro do jogo com controles responsivos, áudio de 360 graus e gráficos detalhados.</p>
+      <a href="#" class="card-link">Jogo imersivo com o PS5 &gt;</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="video-container">
+  <video 
+    src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/hardware/ps5/channel-specific-content/pdc/2024/ps5-overview/videos/ps5-overview-stunning-games-video-desktop-01-en-20jun24.mp4" 
+    type="video/mp4" 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+  >
+    Seu navegador não suporta vídeo.
+  </video>
+</div>
+
+
 <div class="ps-plus">
 
   <div class="carousel-container-plus">
@@ -217,7 +255,14 @@
 
 
 <script src="script.js"></script>
- 
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // duração da animação em ms
+    once: true       // anima a apenas uma vez (não repete ao rolar para cima e para baixo)
+  });
+</script>
+
 
 </body>
 </html>
