@@ -132,4 +132,29 @@ function scrollCarousel(id, direction) {
   }, 200);
 }
 
+// TV Inicio
 
+const slides_tv = document.querySelectorAll(".slide_tv");
+const btnEsq = document.querySelector("btn-esquerda_tv");
+const btnDir = document.querySelector("btn-direita_tv");
+
+let indice_atual_carrossel_tv;
+
+function carrossel(novo_indice_carrossel_tv) {
+  slides_tv.forEach(slides_tv => slides_tv.classList.remove("primeiro-slide_tv"))
+  slides[novo_indice_carrossel_tv].classList.add("primeiro-slide_tv");
+  indice_atual_carrossel_tv = novo_indice_carrossel_tv
+}
+
+// Fazendo botões do carrossel mostrarem as imagens 
+btnEsq.addEventListener("click", () => {
+  let anterior = (indice_atual_carrossel_tv - 1 + slides_tv.length) % slides_tv.length;
+  carrossel(anterior)
+});
+
+btnEsq.addEventListener("click", () => {
+  let proximo = (indice_atual_carrossel_tv + 1) % slides_tv.length;
+  carrossel(proximo)
+});
+
+// TV Fim
