@@ -1430,8 +1430,31 @@ object-fit: cover;
   word-wrap: break-word; /* garante quebra de linha se a palavra for longa */
   font-size: 3rem;
   text-align: left;
-  font-family: "Baskerville Old Face";
+  font-family: "Segoe UI";
 }
 
+.principais-recursos_tv {
+  display: flex;
+  flex-direction: column; /* deixa alinhado em coluna */
+  width: 100vw;
+  height: 70vh;
+  justify-content: center;
+}
+
+.principais-recursos_tv h1 {
+  color: #000;
+  text-align: center;
+  margin-top: 200px;
+  font-size: 4rem;
+  font-family: 'SST W01 Roman' ;
+}
+.principais-recursos_tv p {
+  color: #2c2c2c;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-family: 'SST W01 Roman' ;
+}
 
 /* TV fim*/
