@@ -450,3 +450,15 @@ nav a:active {
   }
 
 }
+
+.banner-ps {
+
+  max-width: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.banner-ps img {
+  object-fit: cover;
+}
