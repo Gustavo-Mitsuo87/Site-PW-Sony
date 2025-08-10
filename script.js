@@ -10,7 +10,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
 //////////////////////////////////////////////////////////////
 const track = document.querySelector(".carousel-track");
 const prevButton = document.querySelector(".carousel-button.prev");
@@ -94,20 +93,16 @@ function handleSwipe() {
   }
 }
 
-
-
 // Responsividade: atualiza o carrossel ao redimensionar a janela
 window.addEventListener("resize", updateCarousel);
-
-
-
 
 function scrollCarousel(id, direction) {
   const carousel = document.getElementById(id);
   if (!carousel) return;
 
   // Detecta o card certo baseado no id
-  let cardClass = id === 'games' ? '.card-ps' : (id === 'games-plus' ? '.card-ps-plus' : null);
+  let cardClass =
+    id === "games" ? ".card-ps" : id === "games-plus" ? ".card-ps-plus" : null;
   if (!cardClass) return;
 
   const card = carousel.querySelector(cardClass);
@@ -121,7 +116,7 @@ function scrollCarousel(id, direction) {
 
   carousel.scrollBy({
     left: direction * scrollAmount,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 
   // Pequeno efeito visual
@@ -141,20 +136,23 @@ const btnDir = document.querySelector("btn-direita_tv");
 let indice_atual_carrossel_tv;
 
 function carrossel(novo_indice_carrossel_tv) {
-  slides_tv.forEach(slides_tv => slides_tv.classList.remove("primeiro-slide_tv"))
+  slides_tv.forEach((slides_tv) =>
+    slides_tv.classList.remove("primeiro-slide_tv")
+  );
   slides[novo_indice_carrossel_tv].classList.add("primeiro-slide_tv");
-  indice_atual_carrossel_tv = novo_indice_carrossel_tv
+  indice_atual_carrossel_tv = novo_indice_carrossel_tv;
 }
 
-// Fazendo botões do carrossel mostrarem as imagens 
+// Fazendo botões do carrossel mostrarem as imagens
 btnEsq.addEventListener("click", () => {
-  let anterior = (indice_atual_carrossel_tv - 1 + slides_tv.length) % slides_tv.length;
-  carrossel(anterior)
+  let anterior =
+    (indice_atual_carrossel_tv - 1 + slides_tv.length) % slides_tv.length;
+  carrossel(anterior);
 });
 
 btnEsq.addEventListener("click", () => {
   let proximo = (indice_atual_carrossel_tv + 1) % slides_tv.length;
-  carrossel(proximo)
+  carrossel(proximo);
 });
 
 // TV Fim
