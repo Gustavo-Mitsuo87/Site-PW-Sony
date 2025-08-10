@@ -252,6 +252,69 @@ nav a:active {
   background-color: transparent;
 }
 
+.card7 {
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  background-color: #ffffff; /* cor de fundo parecida com o exemplo */
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 20px;
+  width: 340px; /* tamanho fixo opcional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.card7 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card7:hover img {
+  transform: scale(1.05);
+}
+
+.card8 {
+  width: 645px;       /* ou o tamanho que quiser */
+  height: 400px;      /* precisa ter altura definida */
+  overflow: hidden;   /* esconde pedaços que ultrapassarem */
+  position: relative;
+  margin: 0px;
+  border-radius: 25px;
+}
+
+.card8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* preenche cortando o excesso */
+  display: block;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card8 p{
+  position: absolute;
+  bottom: 20px;      /* distância do fundo */
+  left: 30px;        /* distância da esquerda */
+  color: rgb(26, 24, 24);
+  font-size: 1.1rem;
+}
+
+.card8 h3 {
+  position: absolute;
+  bottom: 60px;      /* distância do fundo */
+  left: 30px;        /* distância da esquerda */
+  margin: 0;
+  color: rgb(26, 24, 24);
+  font-size: 1.5rem;
+}
+
+.card8:hover {
+  transform: scale(1.01);
+}
+
 .container {
   display: flex; /* coloca lado a lado */
   gap: 20px; /* espaçamento entre o card fixo e o carousel */
