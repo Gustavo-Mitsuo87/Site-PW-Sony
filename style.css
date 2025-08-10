@@ -1446,7 +1446,7 @@ object-fit: cover;
   text-align: center;
   margin-top: 200px;
   font-size: 4rem;
-  font-family: 'SST W01 Roman' ;
+  font-family: 'Segoe UI' ;
 }
 .principais-recursos_tv p {
   color: #2c2c2c;
@@ -1454,7 +1454,37 @@ object-fit: cover;
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 1.5rem;
-  font-family: 'SST W01 Roman' ;
+  font-family: 'Segoe UI' ;
 }
+.carrossel-principais-recursos_tv {
+  position: relative;
+  overflow: hidden;
+  width: 100dvw;
+  height: 85dvh;
+}
+.slide_tv {
+  position: absolute;
+  top: 0;
+  left: 100%; /* por padrão cada slide fica fora */
+  width: 100%;
+  height: 100%;
+  transition: left 0.5s ease-in-out; /*a animação dura 0.5 segundos, ease-in-out faz a animação ser mais acelerada no começo */
+}
+.slide_tv.active-recursos_tv {
+  left: 0;
+}
+.slide_tv.left-recursos_tv {
+  left: -100%;
+}
+.slide_tv.right-recursos_tv {
+  left: 100%;
+}
+.slide_tv img {
+  width: 100%;
+  height: 85dvh;
+  object-fit: cover;
+  display: block;
+}
+
 
 /* TV fim*/
