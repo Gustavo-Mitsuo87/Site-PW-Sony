@@ -133,28 +133,47 @@ function scrollCarousel(id, direction) {
 }
 
 // TV Inicio
+  const slides_tv = document.querySelectorAll(".slide_tv");
+  const btnEsq = document.querySelector(".btn-esquerda_tv");
+  const btnDir = document.querySelector(".btn-direita_tv");
 
-const slides_tv = document.querySelectorAll(".slide_tv");
-const btnEsq = document.querySelector("btn-esquerda_tv");
-const btnDir = document.querySelector("btn-direita_tv");
+  console.log("Slides encontrados:", slides_tv.length);
+  console.log("Botão esquerda:", btnEsq);
+  console.log("Botão direita:", btnDir);  
+  let indice_atual_carrossel_tv = 0;
 
-let indice_atual_carrossel_tv;
+function carrossel_tv(indice_carrossel_tv) {
+  // garante que o índice n seja menor que 0 ou maior que o último 
+  console.log("Tentando mostrar slide:", indice_carrossel_tv);
+  if(indice_carrossel_tv < 0) {
+    indice_atual_carrossel_tv = slides_tv.length - 1;
+  } else if (indice_carrossel_tv >= slides_tv.length){
+    indice_atual_carrossel_tv = 0; // volta pro primeiro slide
+  } else {
+    indice_atual_carrossel_tv = indice_carrossel_tv;
+  }
+  //Remove a classe active-recursos_tv de todos os slides
+  slides_tv.forEach(slide_tv => slide_tv.classList.remove('active-recursos_tv'));
 
-function carrossel(novo_indice_carrossel_tv) {
-  slides_tv.forEach(slides_tv => slides_tv.classList.remove("primeiro-slide_tv"))
-  slides[novo_indice_carrossel_tv].classList.add("primeiro-slide_tv");
-  indice_atual_carrossel_tv = novo_indice_carrossel_tv
+  //Adiciona a classe atual 
+  slides_tv[indice_atual_carrossel_tv].classList.add('active-recursos_tv');
+    
+  console.log("Slide atual:", indice_atual_carrossel_tv);
+
+
 }
 
-// Fazendo botões do carrossel mostrarem as imagens 
+
+//Eventos para botões
 btnEsq.addEventListener("click", () => {
-  let anterior = (indice_atual_carrossel_tv - 1 + slides_tv.length) % slides_tv.length;
-  carrossel(anterior)
+  carrossel_tv(indice_atual_carrossel_tv - 1);
 });
 
-btnEsq.addEventListener("click", () => {
-  let proximo = (indice_atual_carrossel_tv + 1) % slides_tv.length;
-  carrossel(proximo)
+btnDir.addEventListener("click", () => {
+  carrossel_tv(indice_atual_carrossel_tv + 1);
 });
+
+//Inicia o carrossel com a primeira imagem
+carrossel_tv(indice_atual_carrossel_tv);
 
 // TV Fim

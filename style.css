@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -1457,10 +1458,10 @@ object-fit: cover;
   font-family: 'Segoe UI' ;
 }
 .carrossel-principais-recursos_tv {
+  width: 100vw;
+  height: 85vh;
   position: relative;
   overflow: hidden;
-  width: 100dvw;
-  height: 85dvh;
 }
 .slide_tv {
   position: absolute;
@@ -1481,10 +1482,23 @@ object-fit: cover;
 }
 .slide_tv img {
   width: 100%;
-  height: 85dvh;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
+.btn-esquerda_tv, .btn-direita_tv {
+  position: absolute;
+  top: 50%;
+  z-index: 10; /*o elemento está sobrepondo outros elementos */
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  border-radius: 6px;
+}
+/* define posição dos botões */
+.btn-esquerda_tv { left: 12px; }
+.btn-direita_tv  { right: 12px; }
 
 /* TV fim*/
