@@ -10,7 +10,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
 //////////////////////////////////////////////////////////////
 const track = document.querySelector(".carousel-track");
 const prevButton = document.querySelector(".carousel-button.prev");
@@ -94,20 +93,16 @@ function handleSwipe() {
   }
 }
 
-
-
 // Responsividade: atualiza o carrossel ao redimensionar a janela
 window.addEventListener("resize", updateCarousel);
-
-
-
 
 function scrollCarousel(id, direction) {
   const carousel = document.getElementById(id);
   if (!carousel) return;
 
   // Detecta o card certo baseado no id
-  let cardClass = id === 'games' ? '.card-ps' : (id === 'games-plus' ? '.card-ps-plus' : null);
+  let cardClass =
+    id === "games" ? ".card-ps" : id === "games-plus" ? ".card-ps-plus" : null;
   if (!cardClass) return;
 
   const card = carousel.querySelector(cardClass);
@@ -121,7 +116,7 @@ function scrollCarousel(id, direction) {
 
   carousel.scrollBy({
     left: direction * scrollAmount,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 
   // Pequeno efeito visual
@@ -133,47 +128,42 @@ function scrollCarousel(id, direction) {
 }
 
 // TV Inicio
-  const slides_tv = document.querySelectorAll(".slide_tv");
-  const btnEsq = document.querySelector(".btn-esquerda_tv");
-  const btnDir = document.querySelector(".btn-direita_tv");
+  // Lista de todas as imagens do carrossel - PrincipaisRecursosTv
+const imagensPrincipaisRecursosTv = document.querySelectorAll('.imagem-principais-recursos_tv');
 
-  console.log("Slides encontrados:", slides_tv.length);
-  console.log("Botão esquerda:", btnEsq);
-  console.log("Botão direita:", btnDir);  
-  let indice_atual_carrossel_tv = 0;
+// Índice da imagem atualmente visível - PrincipaisRecursosTv
+let indiceAtualPrincipaisRecursosTv = 0;
 
-function carrossel_tv(indice_carrossel_tv) {
-  // garante que o índice n seja menor que 0 ou maior que o último 
-  console.log("Tentando mostrar slide:", indice_carrossel_tv);
-  if(indice_carrossel_tv < 0) {
-    indice_atual_carrossel_tv = slides_tv.length - 1;
-  } else if (indice_carrossel_tv >= slides_tv.length){
-    indice_atual_carrossel_tv = 0; // volta pro primeiro slide
-  } else {
-    indice_atual_carrossel_tv = indice_carrossel_tv;
-  }
-  //Remove a classe active-recursos_tv de todos os slides
-  slides_tv.forEach(slide_tv => slide_tv.classList.remove('active-recursos_tv'));
+// Função para mostrar a imagem com base no índice atual - PrincipaisRecursosTv
+function mostrarImagemPrincipaisRecursosTv(indice) {
+  imagensPrincipaisRecursosTv.forEach((img, i) => {
+    img.classList.remove('ativa_principais-recursos_tv');
+    img.style.display = 'none';
+  });
 
-  //Adiciona a classe atual 
-  slides_tv[indice_atual_carrossel_tv].classList.add('active-recursos_tv');
-    
-  console.log("Slide atual:", indice_atual_carrossel_tv);
-
-
+  imagensPrincipaisRecursosTv[indice].classList.add('ativa_principais-recursos_tv');
+  imagensPrincipaisRecursosTv[indice].style.display = 'block';
 }
 
+// Função para avançar para a próxima imagem - PrincipaisRecursosTv
+function avancarImagemPrincipaisRecursosTv() {
+  indiceAtualPrincipaisRecursosTv++;
+  if (indiceAtualPrincipaisRecursosTv >= imagensPrincipaisRecursosTv.length) {
+    indiceAtualPrincipaisRecursosTv = 0;
+  }
+  mostrarImagemPrincipaisRecursosTv(indiceAtualPrincipaisRecursosTv);
+}
 
-//Eventos para botões
-btnEsq.addEventListener("click", () => {
-  carrossel_tv(indice_atual_carrossel_tv - 1);
-});
+// Função para voltar para a imagem anterior - PrincipaisRecursosTv
+function voltarImagemPrincipaisRecursosTv() {
+  indiceAtualPrincipaisRecursosTv--;
+  if (indiceAtualPrincipaisRecursosTv < 0) {
+    indiceAtualPrincipaisRecursosTv = imagensPrincipaisRecursosTv.length - 1;
+  }
+  mostrarImagemPrincipaisRecursosTv(indiceAtualPrincipaisRecursosTv);
+}
 
-btnDir.addEventListener("click", () => {
-  carrossel_tv(indice_atual_carrossel_tv + 1);
-});
-
-//Inicia o carrossel com a primeira imagem
-carrossel_tv(indice_atual_carrossel_tv);
+// Inicializa o carrossel mostrando a primeira imagem - PrincipaisRecursosTv
+mostrarImagemPrincipaisRecursosTv(indiceAtualPrincipaisRecursosTv);
 
 // TV Fim

@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sony</title>
-        <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sony</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="navbar">
+      <nav>
+        <div class="logo">
+          <img src="./Imagens/logo.png" alt="" />
+        </div>
+        <div class="menu">
+          <a href="index.html">Home</a>
+          <a>User</a>
+          <a>Contato</a>
+        </div>
+      </nav>
+    </header>
 
-    </head>
-    <body>
-        <header id="navbar">
-            <nav>
-                <div class="logo">
-                    <img src="./Imagens/logo.png" alt="" />
-                </div>
-                <div class="menu">
-                    <a href="index.html">Home</a>
-                    <a>User</a>
-                    <a>Contato</a>
-                </div>
-            </nav>
-        </header>
+    <!--Banner-->
+    <section>
+      <div class="banner_tv">
+        <h1>Cada detalhe em alta definição</h1>
+      </div>
+    </section>
+    <!--Fim Banner-->
 
-        <!--Banner-->
-        <section>
-            <div class="banner_tv">
-                <h1>Cada detalhe em alta definição</h1>
-            </div>
-        </section>
-        <!--Fim Banner-->
-
-         <!--Principais Recursos-->
-        <section class="principais-recursos_tv">
-            <h1>Principais Recursos</h1>
-            <p>Experimente uma nova forma de consumir entretenimento</p>
-        </section>
-         <!--Fim Principais Recursos-->
+    <!--Principais Recursos-->
+    <section class="principais-recursos_tv">
+      <h1>Principais Recursos</h1>
+      <p>Experimente uma nova forma de consumir entretenimento</p>
+    </section>
+    <!--Fim Principais Recursos-->
 
          <!--Carrossel Principais Recursos-->
-        <section class="carrossel-principais-recursos_tv">
-            <!--Botões do Carrossel-->
-            <button class="btn-esquerda_tv">&#10094;</button>
-            <button class="btn-direita_tv">&#10095;</button>
-            <!--Fim Botões do Carrossel-->
+        <section class="carrosel-principais-recursos_tv">
+          <button class="navegacao-principais-recursos_tv btn-esquerda-principais-recursos_tv" onclick="voltarImagemPrincipaisRecursos_tv()">&lt;</button>
 
-            <div class="primeiro-slide_tv slide_tv active-recursos_tv">
-                <img src="Imagens/mais_nitidez_tv.png" alt="Imagem1">
-            </div>
-            <div class="segundo-slide_tv slide_tv">
-                <img src="Imagens/dolby-vision.jpg" alt="Imagem2">
-            </div>
-            <div class="terceiro-slide_tv slide_tv">
-                <img src="Imagens/triluminos-color.webp" alt="Imagem3">  
-            </div>
+          <div class="imagens-carrossel-principais-recursos_tv">
+            <img src="Imagens/mais_nitidez_tv.png" class="imagem-principais-recursos_tv ativa_principais-recursos_tv" alt="Imagem1">
+            <img src="Imagens/dolby-vision.jpg" class="imagem-principais-recursos_tv" alt="Imagem2">
+            <img src="Imagens/triluminos-color.webp" class="imagem-principais-recursos_tv" alt="Imagem3">
+          </div>
+
+          <button class="navegacao-principais-recursos_tv btn-direita-principais-recursos_tv" onclick="avancarImagemPrincipaisRecursos_tv()">&gt;</button>
+
 
         </section>
          <!--Fim Carrossel Principais Recursos-->
@@ -86,6 +81,6 @@
         </footer>
 
         
-        <script src="script.js" defer></script>
+        <script src="script.js"></script>
     </body>
 </html>

@@ -1462,43 +1462,38 @@ object-fit: cover;
   height: 85vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.slide_tv {
-  position: absolute;
-  top: 0;
-  left: 100%; /* por padrão cada slide fica fora */
-  width: 100%;
-  height: 100%;
-  transition: left 0.5s ease-in-out; /*a animação dura 0.5 segundos, ease-in-out faz a animação ser mais acelerada no começo */
+.imagens-carrossel-principais-recursos_tv {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
-.slide_tv.active-recursos_tv {
-  left: 0;
+.imagem-principais-recursos_tv {
+  min-width: 100%;
+  display: none;
 }
-.slide_tv.left-recursos_tv {
-  left: -100%;
-}
-.slide_tv.right-recursos_tv {
-  left: 100%;
-}
-.slide_tv img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.imagem-principais-recursos_tv .ativa_principais-recursos_tv {
   display: block;
 }
-
-.btn-esquerda_tv, .btn-direita_tv {
+.navegacao-principais-recursos_tv {
   position: absolute;
   top: 50%;
-  z-index: 10; /*o elemento está sobrepondo outros elementos */
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
   border: none;
-  padding: 10px 12px;
+  font-size: 2rem;
+  padding: 0.5rem;
   cursor: pointer;
-  font-size: 1.6rem;
-  border-radius: 6px;
+  z-index: 1;
 }
-/* define posição dos botões */
-.btn-esquerda_tv { left: 12px; }
-.btn-direita_tv  { right: 12px; }
+.btn-esquerda-principais-recursos_tv {
+  left: 10px;
+}
+.btn-direita-principais-recursos_tv {
+  right: 10px;
+}
 
 /* TV fim*/
