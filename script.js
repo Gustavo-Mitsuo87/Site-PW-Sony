@@ -128,31 +128,42 @@ function scrollCarousel(id, direction) {
 }
 
 // TV Inicio
+  // Lista de todas as imagens do carrossel - PrincipaisRecursosTv
+const imagensPrincipaisRecursosTv = document.querySelectorAll('.imagem-principais-recursos_tv');
 
-const slides_tv = document.querySelectorAll(".slide_tv");
-const btnEsq = document.querySelector("btn-esquerda_tv");
-const btnDir = document.querySelector("btn-direita_tv");
+// Índice da imagem atualmente visível - PrincipaisRecursosTv
+let indiceAtualPrincipaisRecursosTv = 0;
 
-let indice_atual_carrossel_tv;
+// Função para mostrar a imagem com base no índice atual - PrincipaisRecursosTv
+function mostrarImagemPrincipaisRecursosTv(indice) {
+  imagensPrincipaisRecursosTv.forEach((img, i) => {
+    img.classList.remove('ativa_principais-recursos_tv');
+    img.style.display = 'none';
+  });
 
-function carrossel(novo_indice_carrossel_tv) {
-  slides_tv.forEach((slides_tv) =>
-    slides_tv.classList.remove("primeiro-slide_tv")
-  );
-  slides[novo_indice_carrossel_tv].classList.add("primeiro-slide_tv");
-  indice_atual_carrossel_tv = novo_indice_carrossel_tv;
+  imagensPrincipaisRecursosTv[indice].classList.add('ativa_principais-recursos_tv');
+  imagensPrincipaisRecursosTv[indice].style.display = 'block';
 }
 
-// Fazendo botões do carrossel mostrarem as imagens
-btnEsq.addEventListener("click", () => {
-  let anterior =
-    (indice_atual_carrossel_tv - 1 + slides_tv.length) % slides_tv.length;
-  carrossel(anterior);
-});
+// Função para avançar para a próxima imagem - PrincipaisRecursosTv
+function avancarImagemPrincipaisRecursosTv() {
+  indiceAtualPrincipaisRecursosTv++;
+  if (indiceAtualPrincipaisRecursosTv >= imagensPrincipaisRecursosTv.length) {
+    indiceAtualPrincipaisRecursosTv = 0;
+  }
+  mostrarImagemPrincipaisRecursosTv(indiceAtualPrincipaisRecursosTv);
+}
 
-btnEsq.addEventListener("click", () => {
-  let proximo = (indice_atual_carrossel_tv + 1) % slides_tv.length;
-  carrossel(proximo);
-});
+// Função para voltar para a imagem anterior - PrincipaisRecursosTv
+function voltarImagemPrincipaisRecursosTv() {
+  indiceAtualPrincipaisRecursosTv--;
+  if (indiceAtualPrincipaisRecursosTv < 0) {
+    indiceAtualPrincipaisRecursosTv = imagensPrincipaisRecursosTv.length - 1;
+  }
+  mostrarImagemPrincipaisRecursosTv(indiceAtualPrincipaisRecursosTv);
+}
+
+// Inicializa o carrossel mostrando a primeira imagem - PrincipaisRecursosTv
+mostrarImagemPrincipaisRecursosTv(indiceAtualPrincipaisRecursosTv);
 
 // TV Fim
