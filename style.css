@@ -100,18 +100,6 @@ nav a:active {
   padding: 20px;
 }
 
-.card {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-}
-
 .card-image {
   flex: 1;
   max-width: 40%;
@@ -150,12 +138,6 @@ nav a:active {
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-}
-
-.card {
-  flex: 0 0 100%;
-  text-align: center;
-  padding: 10px;
 }
 
 .card-image {
@@ -287,7 +269,6 @@ nav a:active {
     text-align: justify;
   }
 }
-
 
 /*Inicio G.O.G*/
 .cabeçalho_camera {
@@ -495,7 +476,269 @@ main {
   font-size: 100%;
 }
 
+.wdt,
+.wtexto .wdt {
+  text-align: end;
+  vertical-align: top;
+}
 
+.wdetalhes {
+  opacity: 1;
+  max-width: 100%;
+  left: 7%;
+  top: 50px;
+  margin-top: 50px;
+  margin-left: 7%;
+}
+
+.wico {
+  height: auto;
+  width: auto;
+  height: 30px;
+  max-height: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.wbotao {
+  background-color: #000000;
+  width: 100px;
+  text-align: center;
+  border-radius: 8px;
+  float: right;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+/* Adaptação de tela */
+@media (max-width: 768px) {
+  .wcaixa img {
+    max-height: 400px;
+    height: auto;
+    width: auto;
+  }
+  .wcaixa {
+    display: block;
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+  .wcaixa_img {
+    max-height: 300px;
+    height: auto;
+    width: auto;
+  }
+  .wdetalhes {
+    display: none;
+  }
+  .wbotaomin {
+    height: 50px;
+  }
+}
+/* WalkMan Fim */
+
+/* Xperia Inicio*/
+.Xcabecalho {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+}
+
+/*PS Inicio*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+main {
+  max-width: 1200px;
+  margin: 6rem auto 2rem;
+  padding: 0 1rem;
+}
+
+header {
+  padding: 0.5rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  top: 5px;
+}
+
+nav {
+  text-decoration-color: #000000;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  color: #002d7f;
+}
+
+nav a:active {
+  color: #0056b3;
+}
+
+#navbar {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+}
+
+#navbar.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00000000 20%, #000000cf),
+    url("./Imagens/Camera\ -\ Home.jpg ");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 5px rgba(7, 7, 7, 0.7);
+  margin-top: -50px;
+}
+
+.hero h1 {
+  color: white;
+  text-align: left;
+  margin-left: 100px;
+  font-size: 4rem;
+  font-family: "Baskerville Old Face";
+}
+
+.logo img {
+  max-width: 200px;
+  height: auto;
+  width: auto;
+  color: rgb(0, 0, 0);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.card-image {
+  flex: 1;
+  max-width: 40%;
+  object-fit: cover;
+}
+
+.card-text {
+  flex: 2;
+  padding: 20px;
+}
+
+.card-text h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card-text p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* WalkMan Início */
+
+/* coisas do cabeçalho */
+.wcabecalho {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: white;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+}
+.wlogo {
+  max-width: 200px;
+  height: auto;
+  width: auto;
+  color: rgb(0, 0, 0);
+}
+.wlogo img {
+  max-height: 26px;
+  height: auto;
+  width: auto;
+}
+
+.wmain {
+  flex: 1;
+}
+/* coisas do corpo */
+
+.wcaixa {
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  position: relative;
+  display: flex;
+}
+
+.wcaixa_img {
+  max-height: 1000px;
+  height: auto;
+  width: auto;
+  height: 500px;
+}
+
+.wtexto {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
 
 .wdt,
 .wtexto .wdt {
@@ -568,36 +811,26 @@ main {
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: -5px;
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
-
 }
 
 /*PS Inicio*/
 
-
-
-
-
 .sony-txt {
   text-align: center;
-  font-family: Baskerville Old Face;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: bold;
   font-size: 55px;
-  margin-top: 50px;
+  margin-top: 4rem;
   color: white;
 }
 
 .banner {
-width: 100%;
-
+  width: 100%;
 }
 
 .banner img {
-object-fit: cover;
+  object-fit: cover;
 }
-
-
-
-
-
 
 .menu {
   display: flex;
@@ -614,8 +847,6 @@ object-fit: cover;
   color: black;
   font-weight: bold;
   transition: 0.3s;
-  
-
 }
 
 .menu a:hover {
@@ -634,7 +865,7 @@ object-fit: cover;
   top: 100%;
   left: -50%;
   background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 8px;
   min-width: 400px;
@@ -670,7 +901,7 @@ object-fit: cover;
 }
 
 .img-console {
-  width: 100%; 
+  width: 100%;
   height: auto;
   margin-top: 50px;
 }
@@ -684,7 +915,7 @@ object-fit: cover;
 .section h2 {
   color: #000000;
   font-size: xx-large;
-  font-family: Baskerville Old Face, serif;
+  font-family: "Segoe UI", sans-serif;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -695,15 +926,13 @@ object-fit: cover;
   margin-bottom: 100px;
 }
 
-
-
 .carousel-ps::-webkit-scrollbar {
   display: none;
 }
 
 .title-tt {
   text-align: center;
-  font-family: Baskerville Old Face;
+  font-family: "Segoe UI", sans-serif;
   font-weight: bold;
   font-size: 55px;
   margin-top: 200px;
@@ -711,7 +940,7 @@ object-fit: cover;
 
 .s-txt-tt {
   margin: 0 auto;
-  font-family: Baskerville Old Face;
+  font-family: "Segoe UI", sans-serif;
   font-size: 20px;
   margin-top: 30px;
   width: 70%;
@@ -720,7 +949,7 @@ object-fit: cover;
 }
 .txt-tt {
   margin: 0 auto;
-  font-family: Baskerville Old Face;
+  font-family: "Segoe UI", sans-serif;
   font-size: 20px;
   margin-top: 50px;
   width: 70%;
@@ -730,8 +959,6 @@ object-fit: cover;
   color: aliceblue;
   align-items: center;
 }
-
-
 
 .carousel-container {
   position: relative;
@@ -747,17 +974,12 @@ object-fit: cover;
   gap: 16px;
   padding: 10px 0;
   scroll-padding: 60px;
-  
- 
-
-
 }
 
 .carousel::after {
   content: "";
   flex: 0 0 216px; /* garante espaço para exibir a última imagem */
   display: block;
-
 }
 
 .card-ps {
@@ -767,18 +989,14 @@ object-fit: cover;
   padding: 0px;
   border-radius: 6px;
   flex-shrink: 0;
-  max-height: 150px;
   margin-top: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-
 
 .card-container {
   display: flex;
   gap: 30px;
   justify-content: center;
-  max-width: 45%;
   margin: 40px auto;
 }
 
@@ -790,18 +1008,17 @@ object-fit: cover;
 }
 
 .icon img {
-  width: 40px ;  /* força a largura */
-  height: 40px ;
+  width: 40px; /* força a largura */
+  height: 40px;
   display: block; /* para evitar espaçamento extra */
   margin: 0 auto; /* centraliza dentro do container caso o container seja maior */
 }
-
 
 .card {
   background-color: #e7eaf6;
   border-radius: 6px;
   overflow: hidden;
-  width: 350px;
+  width: 98%;
   box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
   display: flex;
   flex-direction: column;
@@ -810,9 +1027,7 @@ object-fit: cover;
 
 .card img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
- 
 }
 
 .card-content {
@@ -827,7 +1042,7 @@ object-fit: cover;
 }
 
 .card h2 {
-  font-family: 'Arial Black', Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
   font-size: 18px;
   margin-bottom: 10px;
   color: #000;
@@ -850,7 +1065,6 @@ object-fit: cover;
   text-decoration: underline;
 }
 
-
 .capa-card-div img {
   width: 100%;
   height: auto;
@@ -860,7 +1074,7 @@ object-fit: cover;
 
 .video-container {
   width: 100%;
-  max-height: 500px;       /* Limita a altura do vídeo */
+  max-height: 500px; /* Limita a altura do vídeo */
   overflow: hidden;
 }
 
@@ -871,9 +1085,6 @@ object-fit: cover;
   border-radius: 8px;
   display: block;
 }
-
-
-
 
 .card-ps img {
   width: 100%;
@@ -890,7 +1101,7 @@ object-fit: cover;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  font-size: 2rem;
+
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
@@ -916,8 +1127,6 @@ object-fit: cover;
   align-items: center;
 }
 
-
-
 .carousel-container-plus {
   position: relative;
   overflow: hidden;
@@ -932,47 +1141,39 @@ object-fit: cover;
   gap: 16px;
   padding: 10px 0;
   scroll-padding: 60px;
-  
- 
-
-
 }
 
 .carousel-plus::after {
   content: "";
   flex: 0 0 216px; /* garante espaço para exibir a última imagem */
   display: block;
-
 }
-
 
 .carousel-ps-plus::-webkit-scrollbar {
   display: none;
 }
 
 .card-ps-plus {
-  width: 100%; 
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%;
   height: 70%;
   margin-top: 16px;
-  border-radius: 20px;
   overflow: hidden;
   flex: 0 0 auto;
   transition: transform 0.7 ease;
 }
 
-.card-ps-plus img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cobre todo o espaço, cortando se necessário */
-  transition: transform 0.3s ease;
+.card-ps-plus video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ajusta sem cortar */
+  border-radius: 12px; /* opcional, para manter estilo */
 }
 
-
-
-
-
 /* A imagem que está sendo "hovered" */
- .card-ps-plus:hover {
+.card-ps-plus:hover {
   transform: translateY(-10px);
   filter: none;
   z-index: 1;
@@ -990,9 +1191,6 @@ object-fit: cover;
   filter: none;
   z-index: 1;
 }
-
-
-
 
 .carousel-btn-plus {
   position: absolute;
@@ -1053,26 +1251,27 @@ object-fit: cover;
 }
 .title-ps {
   text-align: center;
-  font-family: Baskerville Old Face;
+  font-family: "Segoe UI", sans-serif;
 
   font-size: 55px;
   margin-top: 100px;
 }
 .txt-ps {
   margin: 0 auto;
-  font-family: Baskerville Old Face;
+  font-family: "Segoe UI", sans-serif;
   font-size: 20px;
   margin-top: 70px;
   width: 70%;
   text-align: center;
 }
 .ps-plus img {
-  width: 60%;
+  width: 100%;
   height: 50%;
   align-items: center;
   border-radius: 20px;
   margin: 0 auto;
   display: block;
+  background-repeat: no-repeat;
 }
 
 .img-ps {
@@ -1188,7 +1387,7 @@ object-fit: cover;
 .capas-container {
   padding: 60px 40px;
   background-color: #f8f8f8;
-  font-family: sans-serif;
+  font-family: "Segoe UI", sans-serif;
 
   display: flex;
   flex-wrap: wrap;
@@ -1226,8 +1425,8 @@ object-fit: cover;
   min-width: 280px;
   text-align: center;
 }
-.img-plus{
-object-fit: cover;
+.img-plus {
+  object-fit: cover;
 }
 
 .capas-imagem img {
@@ -1269,12 +1468,11 @@ object-fit: cover;
   cursor: pointer;
 }
 
-
 .ps5-consoles {
   background-color: #fff;
   padding: 40px 20px;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .console-grid {
@@ -1408,9 +1606,68 @@ object-fit: cover;
   }
 }
 
-
 /*PS fim*/
 
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.banner-ps-2 {
+  background-image: url(Imagens/ps5-deitado.webp);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  margin-top: 7rem;
+}
+
+.banner-ps-2 p {
+  text-align: center;
+  padding-top: 70px;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.banner-ps-2 h5 {
+  text-align: center;
+  padding-top: 10px;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  font-size: 15px;
+}
+.btn2-ps5 {
+  display: block; /* ou flex */
+  margin: 20px auto 0 auto; /* centraliza horizontalmente */
+  padding: 8px 20px;
+  background-color: rgb(0, 112, 204, 1);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background 0.3s;
+  width: fit-content;
+}
+
+.btn3-ps5 {
+  display: block; /* ou flex */
+  padding: 8px 20px;
+  background-color: rgb(0, 112, 204, 1);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background 0.3s;
+  width: fit-content;
+  margin: 20px auto 50px auto; /* topo 20px, lateral auto (centralizado), base 50px */
+}
+
+/*PS fim*/
 
 /* TV Inicio */
 
@@ -1447,7 +1704,7 @@ object-fit: cover;
   text-align: center;
   margin-top: 200px;
   font-size: 4rem;
-  font-family: 'Segoe UI' ;
+  font-family: "Segoe UI";
 }
 .principais-recursos_tv p {
   color: #2c2c2c;
@@ -1455,7 +1712,7 @@ object-fit: cover;
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 1.5rem;
-  font-family: 'Segoe UI' ;
+  font-family: "Segoe UI";
 }
 .carrossel-principais-recursos_tv {
   width: 100vw;

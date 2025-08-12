@@ -127,9 +127,19 @@ function scrollCarousel(id, direction) {
   }, 200);
 }
 
+const video = document.getElementById("video1");
+const btn = document.getElementById("playSoundBtn");
+
+btn.addEventListener("click", () => {
+  video.muted = false;
+  video.volume = 1;
+  video.play();
+});
 // TV Inicio
-  // Lista de todas as imagens do carrossel - PrincipaisRecursosTv
-const imagensPrincipaisRecursosTv = document.querySelectorAll('.imagem-principais-recursos_tv');
+// Lista de todas as imagens do carrossel - PrincipaisRecursosTv
+const imagensPrincipaisRecursosTv = document.querySelectorAll(
+  ".imagem-principais-recursos_tv"
+);
 
 // Índice da imagem atualmente visível - PrincipaisRecursosTv
 let indiceAtualPrincipaisRecursosTv = 0;
@@ -137,12 +147,14 @@ let indiceAtualPrincipaisRecursosTv = 0;
 // Função para mostrar a imagem com base no índice atual - PrincipaisRecursosTv
 function mostrarImagemPrincipaisRecursosTv(indice) {
   imagensPrincipaisRecursosTv.forEach((img, i) => {
-    img.classList.remove('ativa_principais-recursos_tv');
-    img.style.display = 'none';
+    img.classList.remove("ativa_principais-recursos_tv");
+    img.style.display = "none";
   });
 
-  imagensPrincipaisRecursosTv[indice].classList.add('ativa_principais-recursos_tv');
-  imagensPrincipaisRecursosTv[indice].style.display = 'block';
+  imagensPrincipaisRecursosTv[indice].classList.add(
+    "ativa_principais-recursos_tv"
+  );
+  imagensPrincipaisRecursosTv[indice].style.display = "block";
 }
 
 // Função para avançar para a próxima imagem - PrincipaisRecursosTv
