@@ -1,4 +1,5 @@
 // Seleciona o navbar
+
 const navbar = document.getElementById("navbar");
 
 // Adiciona um listener de scroll na janela
@@ -131,5 +132,6 @@ function scrollCarousel(id, direction) {
     carousel.style.transform = "scale(1)";
   }, 200);
 }
+
 
 
