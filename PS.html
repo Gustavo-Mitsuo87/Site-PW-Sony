@@ -98,20 +98,7 @@
 
        
 
-<div style = "background-color: #dee0eb; overflow-x: hidden;" class="fundo-com-img">
-      <img style = "width: 100%;" src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-immersive_controller-internals-widescreen-0071?$1600px$" alt="">
 
-      <h1 class="sony-txt" style="padding-top: 30px; color: rgb(0, 112, 204, 1);"data-aos="fade-up">
-        Coleção Completa dos Acessórios
-      </h1>
-
-      <p style = "color: rgb(0, 112, 204, 1)" class="s-txt-tt"data-aos="fade-up">
-        Caso queira ver nossa coleção completa, clique aqui.
-      </p>
-      <a class="btn3-ps5" href="acessorios.html"
-        ><strong data-aos="fade-up">CLIQUE AQUI!</strong>
-      </a>
-    </div>
 
 
 
@@ -280,10 +267,10 @@
 <div class="ps-plus">
 
   <div class="carousel-container-plus">
-  <button class="carousel-btn left-plus" onclick="scrollCarousel('games-plus', -1)">❮</button>
+  
   <div class="carousel-ps-plus" id="games-plus">
    <div class="card-ps-plus">
-    <video src="Videos/miles.mp4" autoplay muted loop></video>
+    <video style = "width: 100%;"src="Videos/miles.mp4" autoplay muted loop></video>
     
 </div>
 <div class="card-ps-plus">
@@ -293,10 +280,9 @@
     <video src="Videos/kratos.mp4" autoplay muted loop></video>
 </div>
 
-    
-    
+    <div class="carousel-indicators" id="games-plus-indicators"></div>
+  
   </div>
-  <button class="carousel-btn right-plus" onclick="scrollCarousel('games-plus', 1)">❯</button>
 </div>
 
   <p class="sony-txt">Descubra o PlayStation Plus</p>
@@ -307,9 +293,27 @@
   </div>
   </a>
 </div>
+</div>
 
+<div style = "background-color: #dee0eb; overflow-x: hidden;" class="fundo-com-img">
+      
+  <di style="height: 10rem"  class="sketchfab-embed-wrapper"> 
+    <iframe style = "width: 100%;object-fit: cover ;"title="DUALSHOCK 3 controller" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/6a922fd074bb4c72bcd595119e3f1e56/embed?autospin=1&autostart=1&preload=1&transparent=1&ui_theme=dark"> 
 
+  </iframe> 
+</div>
 
+      <h1 class="sony-txt" style="padding-top: 30px; color: rgb(0, 112, 204, 1);"data-aos="fade-up">
+        Coleção Completa dos Acessórios
+      </h1>
+
+      <p style = "color: rgb(0, 112, 204, 1)" class="s-txt-tt"data-aos="fade-up">
+        Caso queira ver nossa coleção completa, clique aqui.
+      </p>
+      <a class="btn3-ps5" href="acessorios.html"
+        ><strong data-aos="fade-up">CLIQUE AQUI!</strong>
+      </a>
+    </div>
 
 
 
@@ -344,7 +348,7 @@
 
 
 
-<script src="script.js"></script>
+<script src="script_ps.js"></script>
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({

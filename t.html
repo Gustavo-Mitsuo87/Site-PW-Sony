@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: sans-serif;
+        background-color: #000;
+      }
+
+      /* Container principal do carrossel */
+      .carousel-container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Área de rolagem dos cards */
+      .carousel {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+      }
+
+      /* Esconde a barra de rolagem */
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
+      .carousel {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Cada card ocupa 100% da tela */
+      .card-ps-plus {
+        flex: 0 0 100%;
+        width: 100vw;
+        height: 100vh;
+        scroll-snap-align: start;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #111;
+      }
+
+      /* Vídeo dentro do card */
+      .card-ps-plus video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Indicadores (bolinhas) abaixo do carrossel */
+      .carousel-indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+      }
+
+      .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .indicator.active {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="carousel" id="games-plus">
+        <div class="card-ps-plus">
+          <video src="Videos/miles.mp4" autoplay muted loop></video>
+        </div>
+        <div class="card-ps-plus">
+          <video src="Videos/ghost.mp4" autoplay muted loop></video>
+        </div>
+        <div class="card-ps-plus">
+          <video src="Videos/kratos.mp4" autoplay muted loop></video>
+        </div>
+      </div>
+      <div class="carousel-indicators" id="games-plus-indicators"></div>
+    </div>
+
+    <script>
+      function setupIndicators(id) {
+        const carousel = document.getElementById(id);
+        const indicators = document.getElementById(`${id}-indicators`);
+        if (!carousel || !indicators) return;
+
+        const cardClass =
+          id === "games"
+            ? ".card-ps"
+            : id === "games-plus"
+            ? ".card-ps-plus"
+            : null;
+        if (!cardClass) return;
+
+        const cards = carousel.querySelectorAll(cardClass);
+        indicators.innerHTML = "";
+
+        cards.forEach((_, index) => {
+          const dot = document.createElement("div");
+          dot.classList.add("indicator");
+          if (index === 0) dot.classList.add("active");
+
+          dot.addEventListener("click", () => {
+            const cardWidth = cards[0].offsetWidth;
+            const gap = 16;
+            const scrollAmount = index * (cardWidth + gap);
+
+            carousel.scrollTo({
+              left: scrollAmount,
+              behavior: "smooth",
+            });
+          });
+
+          indicators.appendChild(dot);
+        });
+
+        carousel.addEventListener("scroll", () => {
+          const scrollLeft = carousel.scrollLeft;
+          const cardWidth = cards[0].offsetWidth + 16;
+          const activeIndex = Math.round(scrollLeft / cardWidth);
+
+          indicators.querySelectorAll(".indicator").forEach((dot, i) => {
+            dot.classList.toggle("active", i === activeIndex);
+          });
+        });
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        setupIndicators("games-plus");
+      });
+    </script>
+  </body>
+</html>
