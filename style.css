@@ -648,8 +648,8 @@ nav a:active {
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 16px;
-  padding: 10px 0;
   scroll-padding: 60px;
+  padding-right: 16px;
 }
 
 .carousel::after {
@@ -667,6 +667,7 @@ nav a:active {
   flex-shrink: 0;
   margin-top: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto;
 }
 
 .card-container {
@@ -1346,8 +1347,6 @@ nav a:active {
 /*PS fim*/
 
 /* TV Inicio */
-
-
 
 .img-carousel-plus-tv h1 {
   color: aliceblue;
