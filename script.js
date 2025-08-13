@@ -11,7 +11,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
 //////////////////////////////////////////////////////////////
 const track = document.querySelector(".carousel-track");
 const prevButton = document.querySelector(".carousel-button.prev");
@@ -95,20 +94,23 @@ function handleSwipe() {
   }
 }
 
-
-
 // Responsividade: atualiza o carrossel ao redimensionar a janela
 window.addEventListener("resize", updateCarousel);
-
-
-
 
 function scrollCarousel(id, direction) {
   const carousel = document.getElementById(id);
   if (!carousel) return;
 
   // Detecta o card certo baseado no id
-  let cardClass = id === 'games' ? '.card-ps' : (id === 'games-plus' ? '.card-ps-plus' : null);
+  let cardClass =
+    id === "games"
+      ? ".card-ps"
+      : id === "games-plus"
+      ? ".card-ps-plus"
+      : id === "games-plus-tv"
+      ? ".card-ps-plus-tv"
+      : null;
+
   if (!cardClass) return;
 
   const card = carousel.querySelector(cardClass);
@@ -122,7 +124,7 @@ function scrollCarousel(id, direction) {
 
   carousel.scrollBy({
     left: direction * scrollAmount,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 
   // Pequeno efeito visual
@@ -134,4 +136,5 @@ function scrollCarousel(id, direction) {
 }
 
 
+// TV Inicio
 

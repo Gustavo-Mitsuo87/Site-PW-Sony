@@ -72,7 +72,7 @@ nav a:active {
   display: flex;
   align-items: center;
   text-shadow: 1px 1px 5px rgba(7, 7, 7, 0.7);
-  margin-top: -50px;
+  margin-top: 0px;
 }
 
 .hero h1 {
@@ -90,50 +90,247 @@ nav a:active {
   color: rgb(0, 0, 0);
 }
 
+/* cards camera */
 .cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.card {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center ;
+}
+
+
+.card1 {
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  background-color: #fff; /* cor de fundo parecida com o exemplo */
+  border-radius: 25px;
   overflow: hidden;
+  padding: 20px;
+  width: 390px; /* tamanho fixo opcional */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
 }
 
-.card-image {
-  flex: 1;
-  max-width: 40%;
-  object-fit: cover;
+.card1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+  transition: transform 0.3s ease; /* animação suave */
 }
 
 .card-text {
-  flex: 2;
-  padding: 20px;
+  text-align: left;
+  margin-top: 10px;
 }
 
 .card-text h3 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 0.9rem; /* código do produto */
+  color: #000;
+  margin: 0;
 }
 
 .card-text p {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.5;
-  text-align: justify;
+  font-size: 1rem; /* nome do produto */
+  color: #000;
+  margin: 5px 0 0 0;
 }
+
+.card2 {
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  background-color: #fff; /* cor de fundo parecida com o exemplo */
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 20px;
+  width: 600px; /* tamanho fixo opcional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.card2 img{
+  width: 620px;
+  height: 560px;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card3 img {
+  position: relative;
+  width: 100%;
+}
+
+.card4 {
+  width: 300px;       /* ou o tamanho que quiser */
+  height: 200px;      /* precisa ter altura definida */
+  border-radius: 25px;
+  overflow: hidden;   /* esconde pedaços que ultrapassarem */
+  position: relative;
+  margin-top: 0px;
+}
+
+.card4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* preenche cortando o excesso */
+  display: block;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card4 h4 {
+  position: absolute;
+  bottom: 10px;      /* distância do fundo */
+  left: 15px;        /* distância da esquerda */
+  margin: 0;
+  color: rgb(117, 116, 116);
+}
+
+.card1:hover img {
+  transform: scale(1.05);
+}
+
+.card2:hover img {
+  transform: scale(1.05);
+}
+
+.card4:hover img {
+  transform: scale(1.05);
+}
+
+/*cards do celular*/
+.card5 {
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 500px;
+  width: 1900px; /* tamanho fixo opcional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* animação suave */
+ }
+
+ .card5:hover {
+  transform: scale(1.02);
+ }
+
+.card5 img{
+  width: 120%;
+  height: 450px;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+  transform: translateY(11%); 
+}
+
+.card6 {
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  background-color: #fff; /* cor de fundo parecida com o exemplo */
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 20px;
+  width: 300px; /* tamanho fixo opcional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.card6 img{
+  width: 90%;
+  height: 350px;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+}
+
+.card7 {
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  background-color: #ffffff; /* cor de fundo parecida com o exemplo */
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 20px;
+  width: 340px; /* tamanho fixo opcional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.card7 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card7:hover img {
+  transform: scale(1.05);
+}
+
+.card8 {
+  width: 645px;       /* ou o tamanho que quiser */
+  height: 400px;      /* precisa ter altura definida */
+  overflow: hidden;   /* esconde pedaços que ultrapassarem */
+  position: relative;
+  margin: 0px;
+  border-radius: 25px;
+}
+
+.card8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* preenche cortando o excesso */
+  display: block;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card8 p{
+  position: absolute;
+  bottom: 20px;      /* distância do fundo */
+  left: 30px;        /* distância da esquerda */
+  color: rgb(26, 24, 24);
+  font-size: 1.1rem;
+}
+
+.card8 h3 {
+  position: absolute;
+  bottom: 60px;      /* distância do fundo */
+  left: 30px;        /* distância da esquerda */
+  margin: 0;
+  color: rgb(26, 24, 24);
+  font-size: 1.5rem;
+}
+
+.card8:hover {
+  transform: scale(1.01);
+}
+
+.container {
+  display: flex; /* coloca lado a lado */
+  gap: 20px; /* espaçamento entre o card fixo e o carousel */
+  align-items: center; /* alinha verticalmente */
+  overflow: hidden;
+}
+
+.container-item {
+  min-width: 200px; /* largura de cada card */
+  margin-right: 10px;
+  text-align: center;
+  padding: 20px;
+  flex-shrink: 0; /* impede o card de encolher */
+  flex: 0 0 100%; 
+}
+
 
 .carousel {
   position: relative;
@@ -149,24 +346,6 @@ nav a:active {
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-}
-
-.card {
-  flex: 0 0 100%;
-  text-align: center;
-  padding: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cards:hover {
-  transform: translateY(-5px); /* ← esse é o "salto" */
-}
-
-
-.card-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
 }
 
 .carousel-button {
@@ -201,56 +380,66 @@ nav a:active {
   outline: none;
 }
 
-.social-icons a img {
-  margin: 26px;
-}
-
-
 .footer {
-  background-color: #000000;
-  color: #878792;
-  padding: 20px 20px;
-  font-size: 0.9rem;
-  align-items: center;
-  text-align: left;
-  flex-direction: column;
-  gap: 20px;
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
 }
 
-hr{
-    height: 60px;
-    width: 0px;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+.footer-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  gap: 30px;
 }
 
-.footer-left,
-.footer-right{
-  display: flex;
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-left: 80px;
 }
 
-.footer-left p,
-.footer-right p {
-  margin: 4px;
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
-.footer-right p a {
-  color: #0056b3;
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
   text-decoration: none;
-  margin: 0 5px;
-  transition: color 0.3s ease;
 }
 
-.footer-right p a:hover {
-  color: #002d7f;
+.footer-section ul li a:hover {
+  color: #fff;
 }
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
 
 @media (max-width: 768px) {
   .hero {
@@ -323,28 +512,16 @@ hr{
     display: none;
   }
 
-.social-icons{
-    display: flex;
-    gap: 5px; /* espaço entre os ícones */
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;
-    margin-top: 10px;
 }
 
-.social-icons a img {
-    margin: 10px;
+.banner-ps {
+
+  max-width: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  
 }
 
-hr {
-  border: none;
-  height: 2px;
-  background-color: #444; /* cor da linha */
-  margin: 20px 0;          /* espaço acima e abaixo */
-  width: 110%;              /* largura opcional */
-}
-
-.social-icons h3{
-    font-size: 16px;
-}
-
+.banner-ps img {
+  object-fit: cover;
 }
