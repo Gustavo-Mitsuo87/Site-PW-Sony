@@ -102,7 +102,14 @@ function scrollCarousel(id, direction) {
 
   // Detecta o card certo baseado no id
   let cardClass =
-    id === "games" ? ".card-ps" : id === "games-plus" ? ".card-ps-plus" : null;
+    id === "games"
+      ? ".card-ps"
+      : id === "games-plus"
+      ? ".card-ps-plus"
+      : id === "games-plus-tv"
+      ? ".card-ps-plus-tv"
+      : null;
+
   if (!cardClass) return;
 
   const card = carousel.querySelector(cardClass);
@@ -127,14 +134,6 @@ function scrollCarousel(id, direction) {
   }, 200);
 }
 
-const video = document.getElementById("video1");
-const btn = document.getElementById("playSoundBtn");
-
-btn.addEventListener("click", () => {
-  video.muted = false;
-  video.volume = 1;
-  video.play();
-});
 // TV Inicio
 // Lista de todas as imagens do carrossel - PrincipaisRecursosTv
 const imagensPrincipaisRecursosTv = document.querySelectorAll(

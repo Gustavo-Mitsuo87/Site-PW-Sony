@@ -35,52 +35,114 @@
     </section>
     <!--Fim Principais Recursos-->
 
-         <!--Carrossel Principais Recursos-->
-        <section class="carrosel-principais-recursos_tv">
-          <button class="navegacao-principais-recursos_tv btn-esquerda-principais-recursos_tv" onclick="voltarImagemPrincipaisRecursos_tv()">&lt;</button>
+    <!--Carrossel Principais Recursos-->
+    <section class="carrosel-principais-recursos_tv">
+      <button
+        class="navegacao-principais-recursos_tv btn-esquerda-principais-recursos_tv"
+        onclick="voltarImagemPrincipaisRecursos_tv()"
+      >
+        &lt;
+      </button>
 
-          <div class="imagens-carrossel-principais-recursos_tv">
-            <img src="Imagens/mais_nitidez_tv.png" class="imagem-principais-recursos_tv ativa_principais-recursos_tv" alt="Imagem1">
-            <img src="Imagens/dolby-vision.jpg" class="imagem-principais-recursos_tv" alt="Imagem2">
-            <img src="Imagens/triluminos-color.webp" class="imagem-principais-recursos_tv" alt="Imagem3">
+      <div class="imagens-carrossel-principais-recursos_tv">
+        <img
+          src="Imagens/mais_nitidez_tv.png"
+          class="imagem-principais-recursos_tv ativa_principais-recursos_tv"
+          alt="Imagem1"
+        />
+        <img
+          src="Imagens/dolby-vision.jpg"
+          class="imagem-principais-recursos_tv"
+          alt="Imagem2"
+        />
+        <img
+          src="Imagens/triluminos-color.webp"
+          class="imagem-principais-recursos_tv"
+          alt="Imagem3"
+        />
+      </div>
+
+      <button
+        class="navegacao-principais-recursos_tv btn-direita-principais-recursos_tv"
+        onclick="avancarImagemPrincipaisRecursos_tv()"
+      >
+        &gt;
+      </button>
+    </section>
+    <!--Fim Carrossel Principais Recursos-->
+
+    <div class="carousel-container-plus-tv">
+      <button
+        class="carousel-btn left-plus-tv"
+        onclick="scrollCarousel('games-plus-tv', -1)"
+      >
+        ❮
+      </button>
+      <div class="carousel-ps-plus-tv" id="games-plus-tv">
+        <div class="card-ps-plus-tv">
+          <video src="Videos/miles.mp4" autoplay muted loop></video>
+        </div>
+        <div class="card-ps-plus-tv">
+          <video src="Videos/ghost.mp4" autoplay muted loop></video>
+        </div>
+        <div class="card-ps-plus-tv">
+          <video src="Videos/kratos.mp4" autoplay muted loop></video>
+        </div>
+      </div>
+      <button
+        class="carousel-btn right-plus-tv"
+        onclick="scrollCarousel('games-plus-tv', 1)"
+      >
+        ❯
+      </button>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="social-icons">
+            <h3>Redes Sociais</h3>
+            <a href="https://www.instagram.com/sony/" target="_blank">
+              <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+                alt=""
+                style="filter: invert(1)"
+                width="24"
+              />
+            </a>
+            <br />
+            <a href="https://www.youtube.com/playstation" target="_blank">
+              <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
+                alt=""
+                style="filter: invert(1)"
+                width="24"
+              />
+            </a>
+            <br />
+            <a href="https://www.youtube.com/playstation" target="_blank">
+              <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"
+                alt=""
+                style="filter: invert(1)"
+                width="24"
+              />
+            </a>
           </div>
+        </div>
+        <hr class="hr" />
+        <div class="footer-right">
+          <p>
+            <a href="#privacy">Política de Privacidade</a>
+            <a href="#terms">Termos de Uso</a>
+            <a href="#contact">Contato</a>
+          </p>
+        </div>
+        <hr class="hr" />
+        <p>&copy; 2025 Sony. Todos os direitos reservados.</p>
+      </div>
+    </footer>
 
-          <button class="navegacao-principais-recursos_tv btn-direita-principais-recursos_tv" onclick="avancarImagemPrincipaisRecursos_tv()">&gt;</button>
-
-
-        </section>
-         <!--Fim Carrossel Principais Recursos-->
-
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="social-icons">
-                        <h3>Redes Sociais</h3>
-                        <a href="https://www.instagram.com/sony/" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="" style="filter: invert(1);" width="24">
-                        </a> <br>
-                        <a href="https://www.youtube.com/playstation" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="" style="filter: invert(1);" width="24">
-                        </a> <br>
-                        <a href="https://www.youtube.com/playstation" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="" style="filter: invert(1);" width="24">
-                        </a>
-                    </div>
-                </div>
-                <hr class="hr">
-                <div class="footer-right">
-                    <p>
-                        <a href="#privacy">Política de Privacidade</a>
-                        <a href="#terms">Termos de Uso</a>
-                        <a href="#contact">Contato</a>
-                    </p>
-                </div>
-                <hr class="hr">
-                <p>&copy; 2025 Sony. Todos os direitos reservados.</p>
-            </div>
-        </footer>
-
-        
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>
