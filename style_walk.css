@@ -1,0 +1,33 @@
+
+.whero {
+  position: relative;
+  height: 110vh;
+  background: linear-gradient(to bottom, #00000000 20%, #000000cf),
+    url("./Imagens/Walkhero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 5px rgba(7, 7, 7, 0.7);
+  margin-top: -50px;
+}
+
+.whero h1 {
+  color: white;
+  text-align: left;
+  margin-left: 100px;
+  font-size: 4rem;
+  font-family: "Baskerville Old Face";
+}
+
+.wclasses{
+  display: flex;
+  justify-content: space-between;
+}
+
+.wclasse{
+  height: auto;
+  width: 33%;
+  background-color: black;
+}

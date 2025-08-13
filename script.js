@@ -127,6 +127,14 @@ function scrollCarousel(id, direction) {
   }, 200);
 }
 
+const video = document.getElementById("video1");
+const btn = document.getElementById("playSoundBtn");
+
+btn.addEventListener("click", () => {
+  video.muted = false;
+  video.volume = 1;
+  video.play();
+});
 // TV Inicio
 
 // TV Fim
