@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sony</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_tv.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header id="navbar">
@@ -35,21 +36,33 @@
     </section>
     <!--Fim Principais Recursos-->
 
-         <!--Carrossel Principais Recursos-->
-        <section class="carrosel-principais-recursos_tv">
-          <button class="navegacao-principais-recursos_tv btn-esquerda-principais-recursos_tv" onclick="voltarImagemPrincipaisRecursos_tv()">&lt;</button>
-
-          <div class="imagens-carrossel-principais-recursos_tv">
-            <img src="Imagens/mais_nitidez_tv.png" class="imagem-principais-recursos_tv ativa_principais-recursos_tv" alt="Imagem1">
-            <img src="Imagens/dolby-vision.jpg" class="imagem-principais-recursos_tv" alt="Imagem2">
-            <img src="Imagens/triluminos-color.webp" class="imagem-principais-recursos_tv" alt="Imagem3">
-          </div>
-
-          <button class="navegacao-principais-recursos_tv btn-direita-principais-recursos_tv" onclick="avancarImagemPrincipaisRecursos_tv()">&gt;</button>
-
-
-        </section>
-         <!--Fim Carrossel Principais Recursos-->
+     <!--Carrossel Principais Recursos-->
+        
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="Imagens/mais_nitidez_tv.png" alt="Cognitive Processor XR">
+                    <div class="overlay">
+                        <h2>Cognitive Processor XR</h2>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="Imagens/dolby-vision.jpg" alt="Dolby Vision">
+                    <div class="overlay">
+                        <h2>Dolby Vision</h2>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="Imagens/triluminos-color.webp" alt="Triluminos Color">
+                    <div class="overlay">
+                        <h2>Triluminos Color</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators"></div>
+        </div>
+        
+     <!--Fim Carrossel Principais Recursos-->
 
         <footer class="footer">
             <div class="footer-content">
@@ -79,8 +92,6 @@
                 <p>&copy; 2025 Sony. Todos os direitos reservados.</p>
             </div>
         </footer>
-
-        
-        <script src="script.js"></script>
+        <script src="script_tv.js"></script>
     </body>
 </html>
