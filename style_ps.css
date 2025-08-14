@@ -190,19 +190,37 @@ nav a:active {
   height: auto;
   margin-top: 50px;
 }
-
-.section {
-  padding: 20px;
-  background: rgb(0, 0, 0);
-  margin-top: 230px;
+/* Remove o espaço extra do SVG */
+.fundo-com-img-console svg {
+  display: block; /* evita espaço de elemento inline */
+  margin: 0;
+  padding: 0;
 }
 
+/* Ajusta a section para não criar espaço no topo */
+.section {
+  padding: 0 20px 20px; /* top=0, lados=20px, bottom=20px */
+  background: rgb(0, 0, 0);
+  margin-top: -5px;
+}
+
+/* Ajusta os títulos */
 .section h2 {
   color: #000000;
   font-size: xx-large;
   font-family: "Segoe UI", sans-serif;
   text-align: center;
   margin-bottom: 10px;
+}
+
+/* Remove margens extras de textos dentro do destaque */
+#destaque p {
+  margin-top: 0;
+}
+
+/* Garante que o container do carrossel não tenha margens inesperadas */
+.carousel-container {
+  margin-top: 0;
 }
 
 .carousel-container {
@@ -416,8 +434,6 @@ nav a:active {
 .carousel-container-plus {
   position: relative;
   overflow: hidden;
-  padding: 0 60px; /* espaço para setas laterais */
-  margin-top: 40px;
 }
 
 .carousel-ps-plus {
@@ -428,6 +444,7 @@ nav a:active {
   padding: 10px 0;
   scroll-padding: 60px;
   width: 100%;
+  margin-top: -5px;
 }
 
 .carousel-plus::after {
@@ -457,13 +474,6 @@ nav a:active {
   max-height: 100%;
   object-fit: contain; /* Ajusta sem cortar */
   border-radius: 12px; /* opcional, para manter estilo */
-}
-
-/* A imagem que está sendo "hovered" */
-.card-ps-plus:hover {
-  transform: translateY(-10px);
-  filter: none;
-  z-index: 1;
 }
 
 /* Container geral do carrossel quando o mouse estiver sobre */
@@ -517,11 +527,10 @@ nav a:active {
 .ps-plus {
   background: black;
   height: 900px;
-  margin-top: 0px;
+  margin-top: -5px;
 }
 .ps-plus p {
   color: white;
-  margin-top: 40px;
 }
 .button {
   align-items: center;
@@ -806,44 +815,82 @@ nav a:active {
 .btn-ps5:hover {
   background: linear-gradient(rgb(241, 200, 85), rgb(110, 82, 2));
 }
-
-.footer {
-  background-color: #000000;
-  color: #fff;
-  padding: 40px 20px 20px;
-
-  font-family: sans-serif;
+/* Container */
+.fundo-com-img-console {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #dee0eb;
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
+/* Vídeo */
+.fundo-com-img-console video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 200px;
+/* Overlay escuro */
+.fundo-com-img-console::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 22, 22, 0.5);
+  z-index: 1;
 }
 
-.footer-section h3 {
+/* Conteúdo centralizado */
+.fundo-com-img-console h1,
+.fundo-com-img-console p,
+.fundo-com-img-console .btn3-ps5 {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white !important;
+}
+
+/* Centralização vertical e horizontal */
+.fundo-com-img-console .conteudo-centro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+/* Título */
+.fundo-com-img-console h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-bottom: 10px;
-  font-size: 18px;
 }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
+/* Texto */
+.fundo-com-img-console p {
+  font-size: 1rem;
+  margin-bottom: 20px;
 }
 
-.footer-section ul li a {
-  color: #ccc;
+/* Botão */
+.btn3-ps5 {
+  display: inline-block;
+  background-color: #0070cc;
+  color: white !important;
+  padding: 12px 25px;
+  border-radius: 25px;
   text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-.footer-section ul li a:hover {
-  color: #fff;
+.btn3-ps5:hover {
+  background-color: #005fa3;
 }
 
 .social-icons a {
@@ -857,40 +904,9 @@ nav a:active {
   color: #fff;
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #444;
-  padding-top: 15px;
-  font-size: 14px;
-  color: #aaa;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-  }
-
-  .footer-section {
-    border-top: 1px solid #444;
-    padding-top: 20px;
-    text-decoration: none;
-  }
-
-  .footer-section:first-child {
-    border-top: none;
-    padding-top: 0;
-  }
-
-  .footer-section h3 {
-    font-size: 16px;
-  }
-
-  .social-icons a {
-    font-size: 20px;
-    text-decoration: none;
-  }
+.social-icons a {
+  font-size: 20px;
+  text-decoration: none;
 }
 
 /*PS fim*/
@@ -909,7 +925,6 @@ nav a:active {
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
-  margin-top: 7rem;
 }
 
 .banner-ps-2 p {
@@ -954,49 +969,6 @@ nav a:active {
   margin: 20px auto 50px auto; /* topo 20px, lateral auto (centralizado), base 50px */
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 200px;
-  margin-left: 80px;
-}
-
-.footer-section h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-  color: #fff;
-}
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #444;
-  padding-top: 15px;
-  font-size: 14px;
-  color: #aaa;
-}
-.footer-content {
-  flex-direction: column;
-  align-items: center;
-}
 /* Indicadores (bolinhas) abaixo do carrossel */
 .carousel-indicators {
   position: absolute;
