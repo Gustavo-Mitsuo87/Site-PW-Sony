@@ -483,16 +483,18 @@ nav a:active {
 .Xcabecalho {
   position: fixed;
   padding: 10px 20px;
-  background-color: transparent;
+  
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: -5px;
+  
+
 
 }
 
 
 .XPcarousel {
-
+  
   position: relative;
   width: 100%;
   height: 100vh; /* altura total da janela */
@@ -503,19 +505,23 @@ nav a:active {
 
 .XPcarousel-faixa {
 
-  display: flex;
+  position: relative;
+  width: 100%;
   transition: transform 0.5s ease-in-out;
   height: 100%;
 }
 
 .XPcarousel-faixa img {
 
-   width: 100vw;        /* largura da tela */
-  height: 100vh;       /* altura da tela */
-  object-fit: cover;   /* mantém proporção, mas pode cortar um pouco */
-  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
+  
 }
 
 .XPcarousel-faixa img.active {
@@ -555,6 +561,8 @@ nav a:active {
   display: flex;
   gap: 8px;
   z-index: 10;
+  overflow: visible;       /* Esconde qualquer rolagem */
+  white-space: nowrap;    /* Mantém tudo na mesma linha */
 }
 
 /* Cada bolinha */
@@ -565,6 +573,7 @@ nav a:active {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+       /* Evita encolher */
 }
 
 /* Bolinha ativa */
@@ -573,6 +582,7 @@ nav a:active {
   transform: scale(1.3); /* aumenta levemente */
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
 }
+/*xperia fim*/
 /*PS Inicio*/
 
 .sony-txt {

@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
   function updateCarousel() {
     if (slides.length === 0) return;
 
-    faixa.style.transform = `translateX(${-ImagemAtual * slideWidth}px)`;
+    
 
     slides.forEach(slide => slide.classList.remove('active'));
     slides[ImagemAtual].classList.add('active');
