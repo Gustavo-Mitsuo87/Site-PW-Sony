@@ -1,165 +1,291 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      /* Reset básico */
+
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      html,
       body {
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: #fff;
+      }
+
+      header,
+      footer {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      main {
+        position: relative;
+        width: 100%;
+        max-width: 1200px; /* opcional: limitar largura */
+        margin: 2rem auto;
+        height: 70vh; /* controla altura sem ocupar a tela toda */
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+      }
+
+      .slider {
+        height: 100%;
+      }
+
+      .item {
+        width: 200px;
+        height: 300px;
+        list-style-type: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
+        transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s,
+          height 0.75s, opacity 0.75s;
+      }
+
+      /* Posições principais */
+      .item:nth-child(1),
+      .item:nth-child(2) {
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
-        overflow: hidden;
-        font-family: sans-serif;
-        background-color: #000;
+        transform: none;
+        border-radius: 0;
+        box-shadow: none;
+        opacity: 1;
+      }
+      .item:nth-child(3) {
+        left: 50%;
+      }
+      .item:nth-child(4) {
+        left: calc(50% + 220px);
+      }
+      .item:nth-child(5) {
+        left: calc(50% + 440px);
+      }
+      .item:nth-child(6) {
+        left: calc(50% + 660px);
+        opacity: 0;
       }
 
-      /* Container principal do carrossel */
-      .carousel-container {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        position: relative;
-      }
-
-      /* Área de rolagem dos cards */
-      .carousel {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-      }
-
-      /* Esconde a barra de rolagem */
-      .carousel::-webkit-scrollbar {
+      .content {
+        width: min(30vw, 400px);
+        position: absolute;
+        top: 50%;
+        left: 3rem;
+        transform: translateY(-50%);
+        font: 400 0.85rem helvetica, sans-serif;
+        color: white;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+        opacity: 0;
         display: none;
       }
-      .carousel {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+
+      .content .title {
+        font-family: "arial-black";
+        text-transform: uppercase;
+      }
+      .content .description {
+        line-height: 1.7;
+        margin: 1rem 0 1.5rem;
+        font-size: 0.8rem;
+      }
+      .content button {
+        width: fit-content;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: white;
+        border: 2px solid white;
+        border-radius: 0.25rem;
+        padding: 0.75rem;
+        cursor: pointer;
       }
 
-      /* Cada card ocupa 100% da tela */
-      .card-ps-plus {
-        flex: 0 0 100%;
-        width: 100vw;
-        height: 100vh;
-        scroll-snap-align: start;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #111;
-      }
-
-      /* Vídeo dentro do card */
-      .card-ps-plus video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      .item:nth-of-type(2) .content {
         display: block;
+        animation: show 0.75s ease-in-out 0.3s forwards;
       }
 
-      /* Indicadores (bolinhas) abaixo do carrossel */
-      .carousel-indicators {
+      @keyframes show {
+        0% {
+          filter: blur(5px);
+          transform: translateY(calc(-50% + 75px));
+        }
+        100% {
+          opacity: 1;
+          filter: blur(0);
+          transform: translateY(-50%);
+        }
+      }
+
+      .nav {
         position: absolute;
-        bottom: 20px;
+        bottom: 1.5rem;
         left: 50%;
         transform: translateX(-50%);
-        display: flex;
-        gap: 10px;
-        z-index: 10;
+        z-index: 5;
+        user-select: none;
       }
 
-      .indicator {
-        width: 12px;
-        height: 12px;
+      .nav .btn {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: rgba(0, 0, 0, 0.7);
+        border: 2px solid rgba(0, 0, 0, 0.6);
+        margin: 0 0.25rem;
+        padding: 0.75rem;
         border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.4);
         cursor: pointer;
-        transition: background-color 0.3s ease;
+      }
+      .nav .btn:hover {
+        background-color: rgba(255, 255, 255, 0.3);
       }
 
-      .indicator.active {
-        background-color: #fff;
+      /* Responsividade */
+      @media (width > 650px) and (width < 900px) {
+        .item {
+          width: 160px;
+          height: 270px;
+        }
+        .item:nth-child(4) {
+          left: calc(50% + 170px);
+        }
+        .item:nth-child(5) {
+          left: calc(50% + 340px);
+        }
+        .item:nth-child(6) {
+          left: calc(50% + 510px);
+        }
+      }
+
+      @media (width < 650px) {
+        .item {
+          width: 130px;
+          height: 220px;
+        }
+        .item:nth-child(4) {
+          left: calc(50% + 140px);
+        }
+        .item:nth-child(5) {
+          left: calc(50% + 280px);
+        }
+        .item:nth-child(6) {
+          left: calc(50% + 420px);
+        }
       }
     </style>
   </head>
   <body>
-    <div class="carousel-container">
-      <div class="carousel" id="games-plus">
-        <div class="card-ps-plus">
-          <video src="Videos/miles.mp4" autoplay muted loop></video>
-        </div>
-        <div class="card-ps-plus">
-          <video src="Videos/ghost.mp4" autoplay muted loop></video>
-        </div>
-        <div class="card-ps-plus">
-          <video src="Videos/kratos.mp4" autoplay muted loop></video>
-        </div>
-      </div>
-      <div class="carousel-indicators" id="games-plus-indicators"></div>
-    </div>
+    <header>
+      <h1>Meu Site com Carousel</h1>
+    </header>
+
+    <main>
+      <ul class="slider">
+        <li
+          class="item"
+          style="
+            background-image: url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"Lossless Youths"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li
+          class="item"
+          style="background-image: url('https://i.redd.it/tc0aqpv92pn21.jpg')"
+        >
+          <div class="content">
+            <h2 class="title">"Estrange Bond"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li
+          class="item"
+          style="
+            background-image: url('https://wharferj.files.wordpress.com/2015/11/bio_north.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"The Gate Keeper"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li
+          class="item"
+          style="
+            background-image: url('https://images7.alphacoders.com/878/878663.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"Last Trace Of Us"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li
+          class="item"
+          style="
+            background-image: url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"Urban Decay"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li
+          class="item"
+          style="
+            background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"The Migration"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+      </ul>
+      <nav class="nav">
+        <ion-icon class="btn prev" name="arrow-back-outline"></ion-icon>
+        <ion-icon class="btn next" name="arrow-forward-outline"></ion-icon>
+      </nav>
+    </main>
+
+    <footer>
+      <p>© 2025 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <script>
-      function setupIndicators(id) {
-        const carousel = document.getElementById(id);
-        const indicators = document.getElementById(`${id}-indicators`);
-        if (!carousel || !indicators) return;
+      const slider = document.querySelector(".slider");
 
-        const cardClass =
-          id === "games"
-            ? ".card-ps"
-            : id === "games-plus"
-            ? ".card-ps-plus"
-            : null;
-        if (!cardClass) return;
-
-        const cards = carousel.querySelectorAll(cardClass);
-        indicators.innerHTML = "";
-
-        cards.forEach((_, index) => {
-          const dot = document.createElement("div");
-          dot.classList.add("indicator");
-          if (index === 0) dot.classList.add("active");
-
-          dot.addEventListener("click", () => {
-            const cardWidth = cards[0].offsetWidth;
-            const gap = 16;
-            const scrollAmount = index * (cardWidth + gap);
-
-            carousel.scrollTo({
-              left: scrollAmount,
-              behavior: "smooth",
-            });
-          });
-
-          indicators.appendChild(dot);
-        });
-
-        carousel.addEventListener("scroll", () => {
-          const scrollLeft = carousel.scrollLeft;
-          const cardWidth = cards[0].offsetWidth + 16;
-          const activeIndex = Math.round(scrollLeft / cardWidth);
-
-          indicators.querySelectorAll(".indicator").forEach((dot, i) => {
-            dot.classList.toggle("active", i === activeIndex);
-          });
-        });
+      function activate(e) {
+        const items = document.querySelectorAll(".item");
+        e.target.matches(".next") && slider.append(items[0]);
+        e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
       }
 
-      window.addEventListener("DOMContentLoaded", () => {
-        setupIndicators("games-plus");
-      });
+      document.addEventListener("click", activate, false);
     </script>
   </body>
 </html>
