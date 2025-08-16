@@ -103,31 +103,32 @@ function scrollCarousel(id, direction) {
 
   // Detecta o card certo baseado no id
   let cardClass =
-    id === "games"
-      ? ".card-ps"
-      : id === "games-plus"
-      ? ".card-ps-plus"
-      : id === "games-plus-tv"
-      ? ".card-ps-plus-tv"
-      : null;
-
+    id === "games" ? ".card-ps" : id === "games-plus" ? ".card-ps-plus" : null;
   if (!cardClass) return;
 
   const card = carousel.querySelector(cardClass);
   if (!card) return;
 
-  const cardStyle = window.getComputedStyle(card);
   const cardWidth = card.offsetWidth;
-  const gap = 16; // ou pega de algum lugar se for dinâmico
-
+  const gap = 16; // ou dinâmico via getComputedStyle
   const scrollAmount = cardWidth + gap;
 
-  carousel.scrollBy({
-    left: direction * scrollAmount,
+  const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+  let nextScroll = carousel.scrollLeft + direction * scrollAmount;
+
+  // Loop infinito
+  if (nextScroll > maxScrollLeft) {
+    nextScroll = 0; // volta pro início
+  } else if (nextScroll < 0) {
+    nextScroll = maxScrollLeft; // vai pro fim
+  }
+
+  carousel.scrollTo({
+    left: nextScroll,
     behavior: "smooth",
   });
 
-  // Pequeno efeito visual
+  // Efeito visual
   carousel.style.transition = "transform 0.3s ease";
   carousel.style.transform = "scale(0.98)";
   setTimeout(() => {
@@ -135,6 +136,4 @@ function scrollCarousel(id, direction) {
   }, 200);
 }
 
-
 // TV Inicio
-

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+      <link rel="stylesheet" href="style_ps.css">
+      <link rel="stylesheet" href="style_footer.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+        color: #000000;
+      }
+
+      header,
+      footer {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      main {
+        position: relative;
+        width: 100%;
+        max-width: 1200px; /* opcional: limitar largura */
+        margin: 2rem auto;
+        height: 70vh; /* controla altura sem ocupar a tela toda */
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+      }
+
+      .slider {
+        height: 100%;
+      }
+
+      .item {
+        width: 200px;
+        height: 300px;
+        list-style-type: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
+        transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s,
+          height 0.75s, opacity 0.75s;
+      }
+
+      /* Posições principais */
+      .item:nth-child(1),
+      .item:nth-child(2) {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: none;
+        border-radius: 0;
+        box-shadow: none;
+        opacity: 1;
+      }
+      .item:nth-child(3) {
+        left: 50%;
+      }
+      .item:nth-child(4) {
+        left: calc(50% + 220px);
+      }
+      .item:nth-child(5) {
+        left: calc(50% + 440px);
+      }
+      .item:nth-child(6) {
+        left: calc(50% + 660px);
+        opacity: 0;
+      }
+
+      .content {
+        width: min(30vw, 400px);
+        position: absolute;
+        top: 50%;
+        left: 3rem;
+        transform: translateY(-50%);
+        font: 400 0.85rem helvetica, sans-serif;
+        color: white;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        display: none;
+      }
+
+      .content .title {
+        font-family: "arial-black";
+        text-transform: uppercase;
+      }
+      .content .description {
+        line-height: 1.7;
+        margin: 1rem 0 1.5rem;
+        font-size: 0.8rem;
+      }
+      .content button {
+        width: fit-content;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: white;
+        border: 2px solid white;
+        border-radius: 0.25rem;
+        padding: 0.75rem;
+        cursor: pointer;
+      }
+
+      .item:nth-of-type(2) .content {
+        display: block;
+        animation: show 0.75s ease-in-out 0.3s forwards;
+      }
+
+      @keyframes show {
+        0% {
+          filter: blur(5px);
+          transform: translateY(calc(-50% + 75px));
+        }
+        100% {
+          opacity: 1;
+          filter: blur(0);
+          transform: translateY(-50%);
+        }
+      }
+
+      .nav {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        user-select: none;
+      }
+
+      .nav .btn {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: rgba(0, 0, 0, 0.7);
+        border: 2px solid rgba(0, 0, 0, 0.6);
+        margin: 0 0.25rem;
+        padding: 0.75rem;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .nav .btn-2:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      /* Responsividade */
+      @media (width > 650px) and (width < 900px) {
+        .item {
+          width: 160px;
+          height: 270px;
+        }
+        .item:nth-child(4) {
+          left: calc(50% + 170px);
+        }
+        .item:nth-child(5) {
+          left: calc(50% + 340px);
+        }
+        .item:nth-child(6) {
+          left: calc(50% + 510px);
+        }
+      }
+
+      @media (width < 650px) {
+        .item {
+          width: 130px;
+          height: 220px;
+        }
+        .item:nth-child(4) {
+          left: calc(50% + 140px);
+        }
+        .item:nth-child(5) {
+          left: calc(50% + 280px);
+        }
+        .item:nth-child(6) {
+          left: calc(50% + 420px);
+        }
+      }
+    </style>
+
+</head>
+  <body>
+    <main>
+      <ul class="slider">
+        <li
+          class="item"
+          style="
+            background-image: url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"Lossless Youths"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li
+          class="item"
+          style="background-image: url('https://i.redd.it/tc0aqpv92pn21.jpg')"
+        >
+          <div class="content">
+            <h2 class="title">"Estrange Bond"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li
+          class="item"
+          style="
+            background-image: url('https://wharferj.files.wordpress.com/2015/11/bio_north.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"The Gate Keeper"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li
+          class="item"
+          style="
+            background-image: url('https://images7.alphacoders.com/878/878663.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"Last Trace Of Us"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li
+          class="item"
+          style="
+            background-image: url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"Urban Decay"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+        <li
+          class="item"
+          style="
+            background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg');
+          "
+        >
+          <div class="content">
+            <h2 class="title">"The Migration"</h2>
+            <p class="description">Texto exemplo para testar o conteúdo.</p>
+            <button>Read More</button>
+          </div>
+        </li>
+      </ul>
+      <nav class="nav">
+        <ion-icon class="btn-2 prev" name="arrow-back-outline"></ion-icon>
+        <ion-icon class="btn-2 next" name="arrow-forward-outline"></ion-icon>
+      </nav>
+    </main>
+
+    
+<div class="fundo-com-img">
+  <video autoplay loop muted playsinline style="width: 100%; margin-top: 55px;">
+  <source src="Videos/ps5.mp4" type="video/mp4">
+</video>
+  
+</div>
+
+
+
+                             
+
+  <p class="title-tt" data-aos="fade-up">JOGUE COMO NUNCA ANTES™</p>
+  <p class="txt-tt" data-aos="fade-up">Curta o carregamento ultrarrápido com o SSD de altíssima velocidade, maior imersão com os recursos de resposta tátil1, gatilhos adaptáveis1, áudio em 3D1 e uma incrível coleção de jogos do PlayStation.</p>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000" fill-opacity="1" d="M0,224L80,218.7C160,213,320,203,480,208C640,213,800,235,960,224C1120,213,1280,171,1360,149.3L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+  <div class="section"> 
+  <div id="destaque">
+    <p class="sony-txt"data-aos="fade-up">Jogos incríveis já disponíveis </p>
+    <p class="s-txt-tt"data-aos="fade-up">Jogos que redefinem as possibilidades.</p>
+</div>
+
+<div class="carousel-container">
+  <button class="carousel-btn left" onclick="scrollCarousel('games', -1)">❮</button>
+  <div class="carousel-ps" id="games" data-aos="fade-up">
+    <div class="card-ps"><img src="Imagens/sm2.webp" alt="Spider-Man" />
+    <p class="txt-card-ps"></p>
+    </div>
+    <div class="card-ps"><img src="Imagens/NBA-2K25-PSPlus-keyart-01-en-02jun25.webp" alt="" />
+    <p class="txt-card-ps"></p>
+    </div>
+    <div class="card-ps"><img src="Imagens/ea-sports-fc-store-art-01-en-27sept23.webp" alt="" />
+    <p class="txt-card-ps"></p>
+    </div>
+    <div class="card-ps"><img src="Imagens/fortnite-packshot-01-en-19jun24.webp" alt="" />
+    <p class="txt-card-ps"></p>
+    </div>
+    <div class="card-ps"><img src="Imagens/astro-bot-store-art-01-en-04jul24.webp" alt="" />
+    <p class="txt-card-ps"></p>
+    </div>
+    <div class="card-ps"><img src="Imagens/god-of-war-raganok-clean-keyart-01-en-10mar22.webp" alt="" />
+    <p class="txt-card-ps"></p>
+    </div>
+    <div class="card-ps"><img src="Imagens/ps5-games-gt7-hub-image-block-01-en-10mar22.webp" alt="" />
+    <p class="txt-card-ps"></p>
+    </div>
+    <div class="card-ps"><img src="Imagens/Days-Gone-Remastered-hero-mobile-01-en-07feb25.webp" alt="" />
+    <p class="txt-card-ps"></p>
+    </div>
+    <div class="card-ps"><img src="Imagens/helldivers-2-keyart-nologo-01-en-10oct23.webp" alt="" />
+    <p class="txt-card-ps"></p>
+    </div>
+    <div class="card-ps"><img src="Imagens/stellar-blade-keyart-no-logo-01-en-7jun24.webp" alt="" />
+    <p class="txt-card-ps"></p>
+    </div>
+    <div class="card-ps"><img src="Imagens/until-dawn-hero-mobile-01-en-22jan24.webp" alt="" />
+    <p class="txt-card-ps"></p>
+    </div>
+
+    
+  </div>
+  <button class="carousel-btn right" onclick="scrollCarousel('games', 1)">❯</button>
+</div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000" fill-opacity="1" d="M0,320L120,282.7C240,245,480,171,720,133.3C960,96,1200,96,1320,96L1440,96L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+
+       
+
+
+      
+
+     
+
+
+
+
+
+
+<!-- TOPO COM TEXTO E IMAGEM -->
+<div style="margin-top: 130px;" class="capas-topo">
+  <div class="capas-texto">
+    <h2 style="
+  padding: 20px; /* espaço interno */ ">
+      Conheça nossos modelos de PS5</h2>
+    <p style="
+  padding: 20px;">Melhor desempenho, 4K nítido, gráficos avançados e jogos otimizados..</p>
+    
+  </div>
+  <div class="capas-imagem">
+    <img src="Imagens/PS5-Pro-box-image-block-01-en-02apr25.webp" alt="Capas PS5" />
+  </div>
+</div>
+
+<!-- GALERIA DE CARDS VERTICAIS -->
+<div class="capas-galeria">
+  <div class="card-container" data-aos="fade-up">
+    <div class="card">
+      <img src="Imagens/ps5-console.png" alt="Velocidade da Luz" />
+      <div class="card-content">
+        <h2>PS5 Digital</h2>
+        <p>Entre na ação e continue jogando com a tecnologia de console ultrarrápida e integrada.</p>
+        <a href="play.html" class="btn-ps5">Conheça nossos consoles</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Imagens/ps5-digital.png" alt="Imersão de tirar o fôlego" />
+      <div class="card-content">
+        <h2>Console PS5</h2>
+        <p>Coloque-se no centro do jogo com controles responsivos, áudio de 360 graus e gráficos detalhados.</p>
+        <a href="play.html" class="btn-ps5">Conheça nossos consoles</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD DEITADO EMBAIXO -->
+<div style="
+  background-color: #e7eaf6;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto; /* centraliza horizontalmente */
+  display: flex; /* ativa flexbox */
+  align-items: center;
+  flex-direction: column;
+" class="capas-deitado">
+  <div class="card-container-deitado" data-aos="fade-up">
+   <div class="card-deitado" style="
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente, se tiver altura definida */
+  padding: 10px;
+">
+  <img style="
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+   
+  " 
+  src="Imagens/ps5-pro.png" alt="Velocidade da Luz" />
+</div>
+      <div class="card-content">
+        <h2>PS5 PRO</h2>
+        <p>Entre na ação e continue jogando com a tecnologia de console ultrarrápida e integrada.</p>
+        <a href="play.html" class="btn-ps5">Conheça nossos consoles</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style = "background-color: #dee0eb; overflow-x: hidden;" class="fundo-com-img-console">
+      
+<div class="fundo-com-img-console">
+  <video src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/testing/lucy-test-assets/video-hero/test-dualsense-video-billboard.mp4"
+    autoplay loop muted></video>
+
+  <div class="conteudo-centro">
+    <h1 class="sony-txt" data-aos="fade-up">
+      Coleção dos Acessórios
+    </h1>
+    <p class="s-txt-tt" data-aos="fade-up">
+      Caso queira ver nossa coleção completa...
+    </p>
+    <a class="btn3-ps5" href="acessorios.html">
+      <strong data-aos="fade-up">CLIQUE AQUI!</strong>
+    </a>
+  </div>
+</div>
+
+
+</div>
+<div class = "banner-ps-2">
+<p>Conheça mais dos nossos consoles</p>
+<h5 class="pzin">Aproveite o poder de uma CPU, uma GPU e um SSD personalizados que oferecem gráficos de tirar o fôlego e jogabilidade suave.</h5>
+</div>
+
+<div class="capas-galeria">
+  <div class="card-container" data-aos="fade-up">
+    <div class="card">
+      <img src="Imagens/img1.webp" alt="Velocidade da Luz" />
+      <div class="card-content">
+        <h2>PS5 Digital</h2>
+        <p>Entre na ação e continue jogando com a tecnologia de console ultrarrápida e integrada.</p>
+        <a href="https://youtu.be/VGjpnx4-ANY?si=wibav2zhroIF0rjM" class="btn2-ps5">Assista ao vídeo</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Imagens/img2.webp" alt="Imersão de tirar o fôlego" />
+      <div class="card-content">
+        <h2>Console PS5</h2>
+        <p>Coloque-se no centro do jogo com controles responsivos, áudio de 360 graus e gráficos detalhados.</p>
+        <a href="https://youtu.be/MErGjwHe1mY?si=aez29UtDDvEPIMb9" class="btn2-ps5">Assista ao vídeo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD DEITADO EMBAIXO -->
+<div style="
+  background-color: #e7eaf6;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto; /* centraliza horizontalmente */
+  display: flex; /* ativa flexbox */
+  align-items: center;
+  flex-direction: column;
+" class="capas-deitado">
+  <div class="card-container-deitado" data-aos="fade-up">
+   <div class="card-deitado" style="
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente, se tiver altura definida */
+  padding: 10px;
+">
+  <img style="
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+    height: 450px;
+    border-radius: 10px;
+  " 
+  src="Imagens/img3.webp" alt="Velocidade da Luz" />
+</div>
+      <div class="card-content">
+        <h2>PS5 PRO</h2>
+        <p>Entre na ação e continue jogando com a tecnologia de console ultrarrápida e integrada.</p>
+        <a href="https://youtu.be/YX4Mz_9mqzM?si=aZeiMydF89BvyAj8" class="btn2-ps5">Assista ao vídeo</a>
+      </div>
+    </div>
+  </div>
+</div>
+ <h2 style = "margin-top: 30px; margin-bottom: 30px;"class="title-tt">
+      Vantagens dos nossos modelos
+  </h2>
+
+<div class="card-container"data-aos="fade-up">
+  <div class="card">
+    <img src="Imagens/ps5-overview-breath-taking-immersion-image-block-01-en-09jul24.webp" alt="Velocidade da Luz" />
+    <div class="card-content">
+     
+      <h2>VELOCIDADE DA LUZ</h2>
+      <p>Entre na ação e continue jogando com a tecnologia de console ultrarrápida e integrada.</p>
+     
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Imagens/ps5-overview-lightning3-speed-image-block-01-en-17jun24.webp" alt="Imersão de tirar o fôlego" />
+    <div class="card-content">
+      
+      <h2>IMERSÃO DE TIRAR O FÔLEGO</h2>
+      <p>Coloque-se no centro do jogo com controles responsivos, áudio de 360 graus e gráficos detalhados.</p>
+      
+    </div>
+  </div>
+</div>
+ <div class="ps-plus">
+
+  <div class="carousel-container-plus">
+  
+  <div class="carousel-ps-plus" id="games-plus">
+   <div class="card-ps-plus">
+    <video style = "width: 100%;"src="Videos/miles.mp4" autoplay muted loop></video>
+    
+</div>
+<div class="card-ps-plus">
+    <video src="Videos/ghost.mp4" autoplay muted loop></video>
+</div>
+<div class="card-ps-plus">
+    <video src="Videos/kratos.mp4" autoplay muted loop></video>
+</div>
+
+    <div class="carousel-indicators" id="games-plus-indicators"></div>
+  
+  </div>
+</div>
+
+  <p class="sony-txt">Descubra o PlayStation Plus</p>
+  <p class="txt-ps">Curta centenas de jogos para PS5 e PS4, além de clássicos do PlayStation. Descubra aventuras épicas, jogos independentes sem igual, favoritos para a família inteira e muito mais.</p>
+  <a href="">
+  <div class="button">
+    <div class="img-ps"><img src="Imagens/PlayStation_Plus_second_logo_and_wordmark.svg.png"></div>
+  </div>
+  </a>
+</div>
+</div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Sony</h3>
+        <p>Inovação e tecnologia.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Links úteis</h3>
+        <ul>
+          <li><a href="#">| Política de privacidade</a></li>
+          <li><a href="#">| Termos de uso</a></li>
+          <li><a href="#">| Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Siga-nos</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Sony. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+
+
+
+  
+
+<script src="script_ps.js"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // duração da animação em ms
+    once: true       // anima a apenas uma vez (não repete ao rolar para cima e para baixo)
+  });
+</script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      const slider = document.querySelector(".slider");
+
+      function activate(e) {
+        const items = document.querySelectorAll(".item");
+        e.target.matches(".next") && slider.append(items[0]);
+        e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+      }
+
+      document.addEventListener("click", activate, false);
+    </script>
+    <script href = "script_ps.js"></script>
+  </body>
+</html>
