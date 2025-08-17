@@ -20,8 +20,8 @@ main {
   width: 100%;
   height: 100vh; /* controla altura sem ocupar a tela toda */
   overflow: hidden;
-
-  margin-top: 10rem;
+  border-radius: 10px;
+  margin-top: 10.6rem;
 }
 
 .slider {
@@ -237,7 +237,7 @@ nav a:active {
   text-align: left;
   margin-left: 100px;
   font-size: 4rem;
-  font-family: "Baskerville Old Face";
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo img {
@@ -249,7 +249,7 @@ nav a:active {
 
 .sony-txt {
   text-align: center;
-  font-family: "Segoe UI", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 55px;
   margin-top: 4rem;
@@ -619,7 +619,6 @@ nav a:active {
   align-items: center; /* Centraliza verticalmente */
   width: 100%;
   height: 70%;
-  margin-top: 16px;
   overflow: hidden;
   flex: 0 0 auto;
   transition: transform 0.7 ease;
@@ -988,15 +987,17 @@ nav a:active {
   width: 100%;
   height: auto;
   overflow: hidden;
-  background-color: #dee0eb;
+  background-color: #ffffff;
 }
 
 /* Vídeo */
 .fundo-com-img-console video {
-  width: 100%;
+  width: 95%;
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 30px;
+  margin: 0 auto;
 }
 
 /* Overlay escuro */
@@ -1007,7 +1008,7 @@ nav a:active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(22, 22, 22, 0.5);
+
   z-index: 1;
 }
 
@@ -1092,6 +1093,7 @@ nav a:active {
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
+  margin-top: -5px;
 }
 
 .banner-ps-2 p {
@@ -1158,4 +1160,14 @@ nav a:active {
 
 .indicator.active {
   background-color: #fff;
+}
+.card3 img {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  height: 50vh;
+}
+
+.card3 {
+  height: 100vh;
 }
