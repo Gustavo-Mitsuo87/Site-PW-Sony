@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+main {
+  max-width: 1200px;
+  margin: 6rem auto 2rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 0.5rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  top: 5px;
+}
+
+#navbar-gog {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: white;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+}
+
+nav {
+  text-decoration-color: #000000;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  color: #002d7f;
+}
+
+nav a:active {
+  color: #0056b3;
+}
+.h1_camera {
+  color: #000000;
+  margin-left: -15px;
+}
+
+.hr_camera {
+  margin-left: -15px;
+}
+
+.cards_camera {
+  display: flex;
+}
+
+.card_camera2 {
+  flex: 0 0 calc((100% - 40px) / 3);
+  height: auto;
+  background-color: #ddd;
+  flex-direction: column;
+  border-radius: 8px;
+  /*O overflow oculta qualquer elemento que esteja ultrapassando as dimensões do container, fazendo com que o elemento não faça o container aumentar para acomodar seu conteúdo*/
+  overflow: hidden;
+  display: flex;
+  /*Sombreamento dos cards*/
+  box-shadow: 0 2px 4px black;
+  /*Ajuda no hover*/
+  transition: transform 0.3s;
+}
+
+.card_camera2:hover {
+  transform: translateY(-5px);
+}
+
+.card_imagem_camera {
+  height: 60%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card_imagem_camera img {
+  height: 100%;
+  /*O object-fit faz com que a imagem preencha o contâiner completo e tentando não mudar a proporção original da imagem, cortando bordas se necessário*/
+  object-fit: cover;
+  width: 100%;
+}
+
+.card_texto_camera {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.card_texto_camera p {
+  font-style: italic;
+  padding-top: 5px;
+}
