@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sony</title>
-    <link rel="stylesheet" href="style_tv.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style_tv.css"/>
+    
   </head>
   <body>
     <header id="navbar">
@@ -36,43 +37,47 @@
     </section>
     <!--Fim Principais Recursos-->
 
-
-    
-
-
-    <div class="carousel-container-plus-tv">
-      <button
-        class="carousel-btn left-plus-tv"
-        onclick="scrollCarousel('games-plus-tv', -1)"
-      >
-        ❮
-      </button>
-      <div class="carousel-ps-plus-tv" id="games-plus-tv">
-        <div class="card-ps-plus-tv">
-          <img
-          src="Imagens/mais_nitidez_tv.png"
-          class="imagem-principais-recursos_tv ativa_principais-recursos_tv"
-          alt="Imagem1"
-        />
+    <!--Carrossel Principais Recursos-->
+        <div class="carrossel-principais-recursos">
+            <div class="carrossel-pista-principais-recursos">
+                <div class="carrossel-slide-principais-recursos">
+                    <img src="Imagens/mais_nitidez_tv.png" alt="Cognitive Processor XR">
+                    <div class="carrossel-overlay-principais-recursos">
+                        <h2>Cognitive Processor XR</h2>
+                    </div>
+                </div>
+                <div class="carrossel-slide-principais-recursos">
+                    <img src="Imagens/dolby-vision.jpg" alt="Dolby Vision">
+                    <div class="carrossel-overlay-principais-recursos">
+                        <h2>Dolby Vision</h2>
+                    </div>
+                </div>
+                <div class="carrossel-slide-principais-recursos">
+                    <img src="Imagens/triluminos-color.webp" alt="Triluminos Color">
+                    <div class="carrossel-overlay-principais-recursos">
+                        <h2>Triluminos Color</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="carrossel-indicadores-principais-recursos"></div>
         </div>
-        <div class="card-ps-plus-tv">
-          <img
-          src="Imagens/dolby-vision.jpg"
-          class="imagem-principais-recursos_tv"
-          alt="Imagem2"
-        />
+
+    <!--Fim Carrossel Principais Recursos-->
+
+    <!--Detalhes Principais Recursos-->
+    <section class="detalhes-principais-recursos">
+      <div class="detalhes-cognitive-processor-xr">
+        <div class="img-cognitive-processor-xr">
+          <img src="Imagens/xrprocessor.png">
         </div>
-        <div class="card-ps-plus-tv">
-           <img
-          src="Imagens/triluminos-color.webp"
-          class="imagem-principais-recursos_tv"
-          alt="Imagem3"
-        />
+        <div class="texto-detalhes-cognitive-processor-xr">
+        <h1>Cognitive Processor XR</h1>
+        <p>O Cognitive Processor XR da Sony é o cérebro por trás das TVs mais avançadas da marca, projetado para entregar imagens mais realistas e um som imersivo. Ele analisa a cena como o olho humano, destacando cores, contrastes e detalhes nos pontos que realmente importam, proporcionando uma experiência de entretenimento mais natural e envolvente.</p>
         </div>
+
       </div>
-      <button class="carousel-btn right-plus-tv" onclick="scrollCarousel('games-plus-tv', 1)">❯</button>
-
-    </div>
+    </section>
+    <!--Fim Detalhes Principais Recursos-->
 
     <footer class="footer">
       <div class="footer-content">
@@ -107,7 +112,7 @@
             </a>
           </div>
         </div>
-        <hr class="hr" />
+        <hr class="hr"/>
         <div class="footer-right">
           <p>
             <a href="#privacy">Política de Privacidade</a>
@@ -115,73 +120,14 @@
             <a href="#contact">Contato</a>
           </p>
         </div>
-        
         <hr class="hr" />
         <p>&copy; 2025 Sony. Todos os direitos reservados.</p>
       </div>
     </footer>
 
+    <script src="script_tv.js"></script>
     <script src="script.js"></script>
   </body>
 
-     <!--Carrossel Principais Recursos-->
-        
-        <div class="carousel">
-            <div class="carousel-track">
-                <div class="carousel-slide">
-                    <img src="Imagens/mais_nitidez_tv.png" alt="Cognitive Processor XR">
-                    <div class="overlay">
-                        <h2>Cognitive Processor XR</h2>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="Imagens/dolby-vision.jpg" alt="Dolby Vision">
-                    <div class="overlay">
-                        <h2>Dolby Vision</h2>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="Imagens/triluminos-color.webp" alt="Triluminos Color">
-                    <div class="overlay">
-                        <h2>Triluminos Color</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-indicators"></div>
-        </div>
-        
-     <!--Fim Carrossel Principais Recursos-->
-
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="social-icons">
-                        <h3>Redes Sociais</h3>
-                        <a href="https://www.instagram.com/sony/" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="" style="filter: invert(1);" width="24">
-                        </a> <br>
-                        <a href="https://www.youtube.com/playstation" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="" style="filter: invert(1);" width="24">
-                        </a> <br>
-                        <a href="https://www.youtube.com/playstation" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="" style="filter: invert(1);" width="24">
-                        </a>
-                    </div>
-                </div>
-             
-                <hr class="hr">
-                <div class="footer-right">
-                    <p>
-                        <a href="#privacy">Política de Privacidade</a>
-                        <a href="#terms">Termos de Uso</a>
-                        <a href="#contact">Contato</a>
-                    </p>
-                </div>
-                <hr class="hr">
-                <p>&copy; 2025 Sony. Todos os direitos reservados.</p>
-            </div>
-        </footer>
-        <script src="script_tv.js"></script>
-    </body>
-
 </html>
+

@@ -1,65 +1,36 @@
-function scrollCarousel(id, direction) {
-  const carousel = document.getElementById(id);
-  if (!carousel) return;
-
-  let cardClass = id === "games-plus-tv" ? ".card-ps-plus-tv" : null;
-
-  if (!cardClass) return;
-
-  const cards = carousel.querySelectorAll(cardClass);
-  if (!cards.length) return;
-
-  const cardWidth = cards[0].offsetWidth;
-  const gap = 16; // Espaço entre os cards
-  const scrollAmount = cardWidth + gap;
-
-  // Verifica posição atual
-  const maxScroll = scrollAmount * (cards.length - 1);
-
-  // Se estiver no fim e for para a direita, volta pro início
-  if (direction > 0 && carousel.scrollLeft >= maxScroll) {
-    carousel.scrollLeft = 0;
-  }
-  // Se estiver no início e for para a esquerda, vai para o fim
-  else if (direction < 0 && carousel.scrollLeft <= 0) {
-    carousel.scrollLeft = maxScroll;
-  } else {
-    // Movimento normal
-    carousel.scrollBy({
-      left: direction * scrollAmount,
-      behavior: "smooth",
-    });
-  }
-}
-const track = document.querySelector(".carousel-track");
-const slides = Array.from(document.querySelectorAll(".carousel-slide"));
-const indicatorsContainer = document.querySelector(".carousel-indicators");
+// Carrossel Principais Recursos
+const pista_principais_recursos = document.querySelector('.carrossel-pista-principais-recursos');
+const slides_principais_recursos = Array.from(document.querySelectorAll('.carrossel-slide-principais-recursos'));
+const container_indicadores_principais_recursos = document.querySelector('.carrossel-indicadores-principais-recursos');
 
 let index = 0;
-const totalSlides = slides.length;
+const totalSlides = slides_principais_recursos.length;
 
 // Criar indicadores dinamicamente
-slides.forEach((_, i) => {
-  const btn = document.createElement("button");
-  if (i === 0) btn.classList.add("active");
-  btn.addEventListener("click", () => {
+slides_principais_recursos.forEach((_, i) => {
+  const btn_principais_recursos = document.createElement('button');
+  if (i === 0) btn_principais_recursos.classList.add('active');
+  btn_principais_recursos.addEventListener('click', () => {
     index = i;
-    updateCarousel();
+    updateCarousel_principais_recursos();
   });
-  indicatorsContainer.appendChild(btn);
+  container_indicadores_principais_recursos.appendChild(btn_principais_recursos);
 });
 
-const indicators = document.querySelectorAll(".carousel-indicators button");
+const indicadores_principais_recursos = document.querySelectorAll('.carrossel-indicadores-principais-recursos button');
 
-function updateCarousel() {
-  track.style.transform = `translateX(-${index * 100}%)`;
-  indicators.forEach((btn, i) => {
-    btn.classList.toggle("active", i === index);
+function updateCarousel_principais_recursos() {
+  pista_principais_recursos.style.transform = `translateX(-${index * 100}%)`;
+  indicadores_principais_recursos.forEach((btn, i) => {
+    btn.classList.toggle('active', i === index);
   });
 }
 
 // Rotação automática
 setInterval(() => {
   index = (index + 1) % totalSlides;
-  updateCarousel();
-}, 4000);
+  updateCarousel_principais_recursos();
+}, 4000);        
+
+// Fim Carrossel Principais Recursos
+
