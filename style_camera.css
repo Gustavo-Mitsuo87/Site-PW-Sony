@@ -65,6 +65,25 @@ nav a:active {
 .hr_camera {
   margin-left: -15px;
 }
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("./Imagens/Banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 5px rgba(7, 7, 7, 0.7);
+  margin-top: 0px;
+}
+
+.hero h1 {
+  color: white;
+  margin-left: 7em;
+  font-size: 2rem;
+  font-family: "Segoe UI", sans-serif;
+}
 
 .cards_camera {
   display: flex;
@@ -86,26 +105,7 @@ nav a:active {
   transition: transform 0.3s;
 }
 
-.card_camera2 {
-  flex: 0 0 calc((100% - 40px) / 3);
-  height: auto;
-  background-color: #ddd;
-  flex-direction: column;
-  border-radius: 8px;
-  /*O overflow oculta qualquer elemento que esteja ultrapassando as dimensões do container, fazendo com que o elemento não faça o container aumentar para acomodar seu conteúdo*/
-  overflow: hidden;
-  display: flex;
-  /*Sombreamento dos cards*/
-  box-shadow: 0 2px 4px black;
-  /*Ajuda no hover*/
-  transition: transform 0.3s;
-}
-
 .card_camera:hover {
-  transform: translateY(-5px);
-}
-
-.card_camera2:hover {
   transform: translateY(-5px);
 }
 
