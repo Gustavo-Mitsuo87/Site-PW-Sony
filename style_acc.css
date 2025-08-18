@@ -1,253 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
-
-body,
-html {
-  font-family: "Segoe UI", sans-serif;
-  background: #ffffff;
-  color: #000000;
-}
-
-header {
-  text-align: center;
-  padding: 2rem;
-}
-
-main {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* controla altura sem ocupar a tela toda */
-  overflow: hidden;
-  border-radius: 10px;
-  margin-top: 10.6rem;
-}
-
-.slider {
-  height: 100%;
-  box-shadow: 0 3px 100px rgba(0, 0, 0, 0.22);
-}
-
-.item {
-  width: 200px;
-  height: 300px;
-  list-style-type: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  background-position: center;
-  background-size: cover;
-  border-radius: 20px;
-  overflow: hidden; /* <-- ADICIONE ISTO */
-  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s,
-    opacity 0.75s;
-}
-
-/* Posições principais */
-.item:nth-child(1),
-.item:nth-child(2) {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transform: none;
-  border-radius: 0;
-  box-shadow: none;
-  opacity: 1;
-}
-.item:nth-child(3) {
-  left: 50%;
-}
-.item:nth-child(4) {
-  left: calc(50% + 220px);
-}
-.item:nth-child(5) {
-  left: calc(50% + 440px);
-}
-.item:nth-child(6) {
-  left: calc(50% + 660px);
-  opacity: 0;
-}
-
-.content {
-  width: min(30vw, 400px);
-  position: absolute;
-  top: 50%;
-  left: 3rem;
-  transform: translateY(-50%);
-  font: 400 0.85rem helvetica, sans-serif;
-  color: white;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  display: none;
-}
-
-.content .description {
-  line-height: 1.7;
-  margin: 1rem 0 1.5rem;
-  font-size: 17px;
-}
-
-.item:nth-of-type(2) .content {
-  display: block;
-  animation: show 0.75s ease-in-out 0.3s forwards;
-}
-
-@keyframes show {
-  0% {
-    filter: blur(5px);
-    transform: translateY(calc(-50% + 75px));
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(-50%);
-  }
-}
-
-.nav {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  user-select: none;
-}
-
-.nav .btn-2 {
-  background-color: rgb(0, 0, 0);
-  color: rgba(255, 255, 255, 0.7);
-  border: 2px solid rgb(255, 255, 255);
-  margin: 0 0.25rem;
-  padding: 0.75rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.nav .btn-2:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-/* Responsividade */
-@media (width > 650px) and (width < 900px) {
-  .item {
-    width: 160px;
-    height: 270px;
-  }
-  .item:nth-child(4) {
-    left: calc(50% + 170px);
-  }
-  .item:nth-child(5) {
-    left: calc(50% + 340px);
-  }
-  .item:nth-child(6) {
-    left: calc(50% + 510px);
-  }
-}
-
-@media (width < 650px) {
-  .item {
-    width: 130px;
-    height: 220px;
-  }
-  .item:nth-child(4) {
-    left: calc(50% + 140px);
-  }
-  .item:nth-child(5) {
-    left: calc(50% + 280px);
-  }
-  .item:nth-child(6) {
-    left: calc(50% + 420px);
-  }
-}
-
-header {
-  padding: 0.5rem;
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  top: 5px;
-}
-
-nav {
-  text-decoration-color: #000000;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  color: #000000;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-nav a:hover {
-  color: #002d7f;
-}
-
-nav a:active {
-  color: #0056b3;
-}
-
-.wcabecalho {
-  position: fixed;
-  padding: 10px 20px;
-  background-color: white;
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: -5px;
-  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
-}
-
-#navbar {
-  position: fixed;
-  padding: 10px 20px;
-  background-color: transparent;
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: -5px;
-}
-
-#navbar.scrolled {
-  background-color: white;
-  color: black;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.hero {
-  position: relative;
-  height: 100vh;
-  background: linear-gradient(to bottom, #00000000 20%, #000000cf),
-    url("./Imagens/Camera\ -\ Home.jpg ");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  text-shadow: 1px 1px 5px rgba(7, 7, 7, 0.7);
-  margin-top: 0px;
-}
-
-.hero h1 {
-  color: white;
-  text-align: left;
-  margin-left: 100px;
-  font-size: 4rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.logo img {
-  max-width: 200px;
-  height: auto;
-  width: auto;
-  color: rgb(0, 0, 0);
-}
-
 .sony-txt {
   text-align: center;
   font-family: "Segoe UI", sans-serif;
@@ -255,23 +8,6 @@ nav a:active {
   font-size: 55px;
   margin-top: 4rem;
   color: white;
-}
-.sony-txt3 {
-  text-align: center;
-  font-family: "Segoe UI", sans-serif;
-  font-weight: bold;
-  font-size: 50px;
-  margin-top: 4rem;
-  color: rgb(11, 0, 73);
-}
-
-.sony-txt2 {
-  text-align: justify;
-  font-family: "Segoe UI", sans-serif;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: 4rem;
-  color: rgb(255, 255, 255);
 }
 
 .banner {
@@ -325,6 +61,27 @@ nav a:active {
   justify-content: space-around;
 }
 
+.dropdown:hover .submenu {
+  display: flex;
+}
+
+.submenu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.submenu-item .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #0070d1; /* Você vai trocar isso por imagens depois */
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
 .icon img {
   object-fit: cover;
 }
@@ -334,37 +91,19 @@ nav a:active {
   height: auto;
   margin-top: 50px;
 }
-/* Remove o espaço extra do SVG */
-.fundo-com-img-console svg {
-  display: block; /* evita espaço de elemento inline */
-  margin: 0;
-  padding: 0;
-}
 
-/* Ajusta a section para não criar espaço no topo */
 .section {
-  padding: 0 20px 20px; /* top=0, lados=20px, bottom=20px */
+  padding: 20px;
   background: rgb(0, 0, 0);
-  margin-top: -5px;
+  margin-top: 230px;
 }
 
-/* Ajusta os títulos */
 .section h2 {
   color: #000000;
   font-size: xx-large;
   font-family: "Segoe UI", sans-serif;
   text-align: center;
   margin-bottom: 10px;
-}
-
-/* Remove margens extras de textos dentro do destaque */
-#destaque p {
-  margin-top: 0;
-}
-
-/* Garante que o container do carrossel não tenha margens inesperadas */
-.carousel-container {
-  margin-top: 0;
 }
 
 .carousel-container {
@@ -391,7 +130,6 @@ nav a:active {
   font-size: 20px;
   margin-top: 30px;
   width: 70%;
-  font-weight: bold;
   text-align: center;
   color: white;
 }
@@ -464,7 +202,7 @@ nav a:active {
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: #e7eaf6;
   border-radius: 6px;
   overflow: hidden;
   width: 98%;
@@ -579,6 +317,8 @@ nav a:active {
 .carousel-container-plus {
   position: relative;
   overflow: hidden;
+  padding: 0 60px; /* espaço para setas laterais */
+  margin-top: 40px;
 }
 
 .carousel-ps-plus {
@@ -588,8 +328,6 @@ nav a:active {
   gap: 16px;
   padding: 10px 0;
   scroll-padding: 60px;
-  width: 100%;
-  margin-top: -5px;
 }
 
 .carousel-plus::after {
@@ -608,16 +346,24 @@ nav a:active {
   align-items: center; /* Centraliza verticalmente */
   width: 100%;
   height: 70%;
+  margin-top: 16px;
   overflow: hidden;
   flex: 0 0 auto;
   transition: transform 0.7 ease;
 }
 
 .card-ps-plus video {
-  width: 100%;
+  max-width: 100%;
   max-height: 100%;
   object-fit: contain; /* Ajusta sem cortar */
   border-radius: 12px; /* opcional, para manter estilo */
+}
+
+/* A imagem que está sendo "hovered" */
+.card-ps-plus:hover {
+  transform: translateY(-10px);
+  filter: none;
+  z-index: 1;
 }
 
 /* Container geral do carrossel quando o mouse estiver sobre */
@@ -670,11 +416,12 @@ nav a:active {
 
 .ps-plus {
   background: black;
-
-  margin-top: -5px;
+  height: 900px;
+  margin-top: 0px;
 }
 .ps-plus p {
   color: white;
+  margin-top: 40px;
 }
 .button {
   align-items: center;
@@ -705,6 +452,7 @@ nav a:active {
   text-align: center;
 }
 .ps-plus img {
+  width: 100%;
   height: 50%;
   align-items: center;
   border-radius: 20px;
@@ -875,7 +623,7 @@ nav a:active {
 
 .capas-galeria {
   margin-top: 70px;
-
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 20px;
 }
@@ -943,23 +691,12 @@ nav a:active {
 .console-item p {
   font-size: 0.9rem;
 }
-.btn-ps5-2 {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 20px;
-  background-color: rgba(0, 6, 76, 0.838);
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 20px;
-  transition: background 0.3s;
-  margin-top: 2rem;
-}
+
 .btn-ps5 {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 20px;
-  background-color: rgb(12, 0, 70);
+  background-color: orange;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -968,85 +705,45 @@ nav a:active {
 }
 
 .btn-ps5:hover {
-  background: linear-gradient(rgb(0, 0, 155), rgb(13, 0, 53));
-}
-/* Container */
-.fundo-com-img-console {
-  position: relative;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  background-color: #ffffff;
+  background: linear-gradient(rgb(241, 200, 85), rgb(110, 82, 2));
 }
 
-/* Vídeo */
-.fundo-com-img-console video {
-  width: 95%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 30px;
-  margin: 0 auto;
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
 }
 
-/* Overlay escuro */
-.fundo-com-img-console::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  z-index: 1;
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-/* Conteúdo centralizado */
-.fundo-com-img-console h1,
-.fundo-com-img-console p,
-.fundo-com-img-console .btn3-ps5 {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white !important;
+.footer-section {
+  flex: 1;
+  min-width: 200px;
 }
 
-/* Centralização vertical e horizontal */
-.fundo-com-img-console .conteudo-centro {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 2;
-}
-
-/* Título */
-.fundo-com-img-console h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+.footer-section h3 {
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
-/* Texto */
-.fundo-com-img-console p {
-  margin-bottom: 20px;
+.footer-section ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* Botão */
-.btn3-ps5 {
-  display: inline-block;
-  background-color: #0070cc;
-  color: white !important;
-  padding: 12px 25px;
-  border-radius: 25px;
+.footer-section ul li a {
+  color: #ccc;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
 }
 
-.btn3-ps5:hover {
-  background-color: #005fa3;
+.footer-section ul li a:hover {
+  color: #fff;
 }
 
 .social-icons a {
@@ -1060,9 +757,40 @@ nav a:active {
   color: #fff;
 }
 
-.social-icons a {
-  font-size: 20px;
-  text-decoration: none;
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-decoration: none;
+  }
+
+  .footer-section:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    text-decoration: none;
+  }
 }
 
 /*PS fim*/
@@ -1081,7 +809,7 @@ nav a:active {
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
-  margin-top: -5px;
+  margin-top: 7rem;
 }
 
 .banner-ps-2 p {
@@ -1104,7 +832,7 @@ nav a:active {
   display: block; /* ou flex */
   margin: 20px auto 0 auto; /* centraliza horizontalmente */
   padding: 8px 20px;
-  background-color: rgb(2, 24, 41);
+  background-color: rgb(0, 112, 204, 1);
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -1126,36 +854,107 @@ nav a:active {
   margin: 20px auto 50px auto; /* topo 20px, lateral auto (centralizado), base 50px */
 }
 
-/* Indicadores (bolinhas) abaixo do carrossel */
-.carousel-indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
+/*PS fim*/
+
+/* TV Inicio */
+
+.img-carousel-plus-tv h1 {
+  color: aliceblue;
+  align-items: center;
 }
 
-.indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.indicator.active {
-  background-color: #fff;
-}
-.card3 img {
+.carousel-container-plus-tv {
   position: relative;
-  width: 100%;
-  object-fit: cover;
-  height: 50vh;
+  overflow: hidden;
+  padding: 0 60px; /* espaço para setas laterais */
+  margin-top: 40px;
 }
 
-.card3 {
-  height: 100vh;
+.carousel-ps-plus-tv {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 10px 0;
+  scroll-padding: 60px;
 }
+
+.carousel-plus-tv::after {
+  content: "";
+  flex: 0 0 216px; /* garante espaço para exibir a última imagem */
+  display: block;
+}
+
+.carousel-ps-plus-tv::-webkit-scrollbar {
+  display: none;
+}
+
+.card-ps-plus-tv {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%;
+  height: 70%;
+  margin-top: 16px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  transition: transform 0.7 ease;
+}
+
+.card-ps-plus-tv video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ajusta sem cortar */
+  border-radius: 12px; /* opcional, para manter estilo */
+}
+
+/* A imagem que está sendo "hovered" */
+.card-ps-plus-tv:hover {
+  transform: translateY(-10px);
+  filter: none;
+  z-index: 1;
+}
+
+/* Container geral do carrossel quando o mouse estiver sobre */
+.carousel-ps-tv:hover .card-ps-tv {
+  filter: blur(2px) brightness(0.6);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* A imagem que está sendo "hovered" */
+.carousel-ps-tv .card-ps-tv:hover {
+  transform: translateY(-10px);
+  filter: none;
+  z-index: 1;
+}
+
+.carousel-btn-plus-tv {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn.left-plus-tv {
+  left: 10px;
+  background-color: #0056b3;
+}
+
+.carousel-btn.right-plus-tv {
+  right: 10px;
+  background-color: #0056b3;
+}
+
+/* TV fim*/
