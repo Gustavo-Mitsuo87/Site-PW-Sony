@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   font-family: "Segoe UI", sans-serif;
   background: #ffffff;
   color: #000000;
@@ -249,11 +250,19 @@ nav a:active {
 
 .sony-txt {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", sans-serif;
   font-weight: bold;
   font-size: 55px;
   margin-top: 4rem;
   color: white;
+}
+.sony-txt3 {
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 4rem;
+  color: rgb(11, 0, 73);
 }
 
 .sony-txt2 {
@@ -382,6 +391,7 @@ nav a:active {
   font-size: 20px;
   margin-top: 30px;
   width: 70%;
+  font-weight: bold;
   text-align: center;
   color: white;
 }
@@ -937,7 +947,7 @@ nav a:active {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 20px;
-  background-color: orange;
+  background-color: rgba(0, 6, 76, 0.838);
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -949,7 +959,7 @@ nav a:active {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 20px;
-  background-color: orange;
+  background-color: rgb(12, 0, 70);
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -958,7 +968,7 @@ nav a:active {
 }
 
 .btn-ps5:hover {
-  background: linear-gradient(rgb(241, 200, 85), rgb(110, 82, 2));
+  background: linear-gradient(rgb(0, 0, 155), rgb(13, 0, 53));
 }
 /* Container */
 .fundo-com-img-console {
@@ -1020,7 +1030,6 @@ nav a:active {
 
 /* Texto */
 .fundo-com-img-console p {
-  font-size: 1rem;
   margin-bottom: 20px;
 }
 
