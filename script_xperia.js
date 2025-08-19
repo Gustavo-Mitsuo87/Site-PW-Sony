@@ -7,7 +7,7 @@ window.addEventListener('load', () => { /*serve para que o script espere a pagin
 
   
   let ImagemAtual = 0; /*guarda o indice do slide atual, começa em zero = primeiro slide*/ 
-  let intervalo; /*Guarda o autoplay ;)*/ 
+  
 
   function updateCarousel() {
     const slideWidht = slides[0].offsetWidth + 20; /* largura real + margem */
@@ -73,11 +73,70 @@ window.addEventListener('load', () => { /*serve para que o script espere a pagin
  
 
 
-  faixa.style.transition = 'transform 0.5s ease-in-out';
+  faixa.style.transition = 'transform 0.7s ease-in-out';
 /*garante que sempre que for aplicado translateX, o movimento será suave */
 
   updateCarousel();
   
   /* Inicializa o carrossel na primeira imagem e ja liga o autoplay */
 
+});
+
+window.addEventListener('load', () => {
+
+const faixaCell = document.querySelector('.xcarou-faixa-cell');
+const PrevBtnCell = document.querySelector('.prev-cell');
+const NextBtnCell = document.querySelector('.next-cell');
+const slidecell = document.querySelectorAll('.xcarou-slide-cell');
+const indicadoresCell = document.querySelectorAll ('.xcarou-indicators-cell span');
+
+let ImagemCellAtual = 0;
+
+function updateCarousel () {
+
+  const visiveis = 4;
+  const slideWidht = slidecell [0].offsetWidth ; //offsetWidth (PADDING + CONTEUDO + BORDA )
+  const style = getComputedStyle(slidecell[0]);
+  const margin = parseInt(style.marginLeft) + parseInt(style.marginRight);
+  const totalWidht = slideWidht + margin; 
+
+  const grupo = ImagemCellAtual / visiveis;
+
+    faixaCell.style.transform = `translateX(-${grupo * totalWidht * visiveis }px)`;
+
+    indicadoresCell.forEach(ind => ind.classList.remove('active'));
+    indicadoresCell[grupo].classList.add('active');
+
+};
+
+NextBtnCell.addEventListener('click' , () => {
+
+  const visiveis = 4;
+    ImagemCellAtual = (ImagemCellAtual + visiveis) %slidecell.length;
+    updateCarousel ();
+
+});
+
+PrevBtnCell.addEventListener('click' , () => {
+
+  const visiveis = 4;
+    ImagemCellAtual = (ImagemCellAtual - visiveis + slidecell.length) %slidecell.length;
+    updateCarousel();
+
+});
+
+indicadoresCell.forEach(ind => {
+
+  ind.addEventListener('click' , () => {
+
+  const visiveis = 4;
+    ImagemCellAtual = parseInt(ind.dataset.slidecell) * visiveis;
+    updateCarousel ()
+  });
+
+});
+ 
+faixaCell.style.transition= 'transform 0.7s ease-in-out';
+
+updateCarousel();
 });

@@ -76,7 +76,15 @@ nav a:active {
 .XPcarousel-faixa {
 
   display: flex; /*coloca todos os slides em linha*/
-  transition: transform 0.5s ease-in-out; /*animação suave quando a faixa se move*/
+.card-quadrado1{
+
+  height: 350px;
+  width: 480px;
+  background-color: rgb(255, 166, 0);
+  border-radius: 20px;
+  margin:50px auto;
+ 
+}  transition: transform 0.7s ease-in-out; /*animação suave quando a faixa se move*/
   height: 100%; /*altura da faixa */
 
   
@@ -183,6 +191,122 @@ nav a:active {
   width: 300px;
   background-color: #e8e8e8;
   border-radius: 20px;
-  margin-left: 30px;
+  
   
 }
+
+.xcarou-cell{
+ 
+  position: relative;
+  width: 90%;
+  max-width: 1290px;
+  height: 450px; 
+  overflow: hidden;
+  margin: 50px auto;
+  border-radius: 20px;
+
+
+}
+
+.xcarou-faixa-cell {
+
+  display: flex; /*coloca todos os slides em linha*/
+  transition: transform 0.7s ease-in-out; /*animação suave quando a faixa se move*/
+  
+}
+
+.xcarou-slide-cell{
+
+  /*serve para o slide ocupar 100% altura do carrousel */
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.xcarou-faixa-cell img {
+
+    width: 100%; /*serve para a imagem ocupar 100% altura do slide */
+    height: auto; /*serve para a imagem ocupar 100% largura do slide */
+    display: block; /*tira espaço extra*/
+    
+   
+}
+
+.xcarou-btn-cell {
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s, background 0.3s;
+}
+
+.xcarou-cell:hover .xcarou-btn-cell{
+  opacity: 1;
+}
+
+.prev-cell {left: 15px;}
+.next-cell {right: 15px;}
+
+.xcarou-indicators-cell {
+  margin-top: -25px;     /* espaço abaixo do carrossel */
+  display: flex;
+  justify-content: center; /* centraliza no meio */
+  gap: 8px;
+  
+}
+
+.xcarou-indicators-cell span {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(213, 213, 213, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.xcarou-indicators-cell span.active {
+  background-color: rgb(154, 154, 154);
+  transform: scale(1.3); /* aumenta levemente */
+  
+}
+
+.card-quadrados{
+
+  display: flex;
+  justify-content:center ;
+
+}
+
+.card-quadrado1{
+
+  height: 350px;
+  width: 623px;
+  background-color: rgb(255, 166, 0);
+  border-radius: 20px;
+  margin:50px auto;
+  margin-left: 158px;
+ 
+}
+
+.card-quadrado2{
+
+  height: 350px;
+  width: 623px;
+  background-color: rgb(255, 166, 0);
+  border-radius: 20px;
+  margin:50px auto;
+  margin-right: 158px;
+ 
+}
+
+
