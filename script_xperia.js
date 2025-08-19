@@ -1,3 +1,21 @@
+const navbar = document.getElementById("navbar");
+
+// Adiciona um listener de scroll na janela
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled"); // Adiciona a classe quando rolar
+  } else {
+    navbar.classList.remove("scrolled"); // Remove a classe ao voltar
+  }
+});
+
+
+
+
+
+
+
+
 window.addEventListener('load', () => { /*serve para que o script espere a pagina carregar antes de rodar */
   const faixa = document.querySelector('.XPcarousel-faixa'); /*linha interira do slide*/
   const prevBtn = document.querySelector('.prev'); /*botão de navegação*/
@@ -140,3 +158,19 @@ faixaCell.style.transition= 'transform 0.7s ease-in-out';
 
 updateCarousel();
 });
+
+
+const fofoqueira = new IntersectionObserver((fofoca) =>{
+
+  fofoca.forEach((entry) => {
+    if(entry.isIntersecting === true) {
+        entry.target.classList.add('xpshow')
+
+    } 
+  });
+
+});
+
+const elementos = document.querySelectorAll('.xpinfo')
+
+elementos.forEach((elemento) => fofoqueira.observe(elemento))
