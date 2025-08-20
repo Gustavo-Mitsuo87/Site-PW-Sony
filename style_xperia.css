@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -187,10 +190,12 @@ nav a:active {
 
 .abacelulares h1 {
 
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   margin: 80px auto;
-  color: #000b1f;
+  color: #011428;
   margin-top: 150px;
+  font-size: 2.2rem;
 }
 
 .celulares_cards{
@@ -296,6 +301,18 @@ nav a:active {
   
 }
 
+.abainfo h1{
+
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin: 30px auto;
+  color:#011428;
+  margin-top: 150px;
+  font-size: 2.2rem;
+ 
+}
+
+
 .xpinfo{
 
 
@@ -318,12 +335,13 @@ nav a:active {
 
   display:flex;
   justify-content: center;
-  margin-top: 150px;
+  margin-top: 70px;
 
 }
 
 .avatar {
 
+  
   height: 430px;
   width: 410px;
   background-color: white;
@@ -350,7 +368,7 @@ nav a:active {
 
   display: flex;
   justify-content:center ;
-  margin-top: 100px;
+  margin-top: 150px;
 
 }
 
@@ -378,7 +396,94 @@ nav a:active {
 }
 
 
+.xpsobre h1 {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 150px;
+  text-align: center;
+  font-size: 2.2rem;
+  color:#011428
+  
+}
 
+.xpsobre p {
+
+  color:#011428;
+  font-family: 'Montserrat' ;
+  text-align: justify;
+  margin-left: 150px;
+  margin-right: 150px;
+  line-height: 1.4;
+  font-size: 14px;
+  
+  
+  
+
+}
+
+.xpsobre h3 {
+
+  color:#011428;
+  margin-left:150px ;
+}
+
+
+body h2 {
+
+  text-align: center;
+  margin:50px auto;
+  color:#011428;
+}
+.faq-container {
+    
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+  background: #f7f7f7;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  color:#011428;
+
+}
+
+.faq-question {
+  padding: 15px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat'
+  
+  
+  
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  font-weight: normal;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  
+  
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* altura suficiente p/ resposta */
+  padding: 15px 20px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+ }
 
 
 .footer {
@@ -386,6 +491,7 @@ nav a:active {
   color: #fff;
   padding: 40px 20px 20px;
   font-family: sans-serif;
+  margin-top: 150px;
 }
 
 .footer-container {

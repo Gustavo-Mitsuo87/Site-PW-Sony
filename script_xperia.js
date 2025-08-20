@@ -173,4 +173,15 @@ const fofoqueira = new IntersectionObserver((fofoca) =>{
 
 const elementos = document.querySelectorAll('.xpinfo')
 
-elementos.forEach((elemento) => fofoqueira.observe(elemento))
+elementos.forEach((elemento) => fofoqueira.observe(elemento));
+
+
+// Função para abrir/fechar FAQ
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
