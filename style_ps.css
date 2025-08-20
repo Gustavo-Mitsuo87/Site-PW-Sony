@@ -1596,6 +1596,7 @@ i.fab.fa-youtube {
   background: #0b0b0d;
   border-top: 1px solid var(--stroke);
   margin-top: 60px;
+  margin-top: 0px;
 }
 .footer .grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));

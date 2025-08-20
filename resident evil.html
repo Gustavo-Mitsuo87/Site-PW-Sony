@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Death Stranding 2: On The Beach — Página</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style_footer.css">
+    <link rel="stylesheet" href="style_ps.css">
+    <link rel="stylesheet" href="style_header.css">
+
+    <!-- Fonte: sistema para performance; troque por Inter/Helvetica se quiser -->
+    <style>
+      .card img {
+        height: 60%;
+        max-height: 60%;
+      }
+      .zezin {
+  margin-top: 9rem;
+  width: 92%;
+  color: white;
+  background: rgba(255, 255, 255, 0.1); /* leve transparência */
+  backdrop-filter: blur(10px);          /* desfoque do fundo */
+  -webkit-backdrop-filter: blur(10px);  /* compatibilidade com Safari */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+margin: 0 auto;
+  
+}
+      /* ============ Reset + Variáveis ============ */
+      :root {
+        --bg: #000000;
+        --panel: #121215;
+        --panel-2: #16161a;
+        --text: #e9e9ef;
+        --muted: #a9a9b3;
+        --brand: #01063ea3; /* CTA laranja */
+        --brand-2: #3b82f6; 
+        --stroke: #24242a;
+        --card: #131317;
+        --green: #22c55e;
+        --radius: 14px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        --container: 1200px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font: 400 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+          sans-serif;
+      }
+      img,
+      video {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font: inherit;
+      }
+
+      /* ============ Helpers ============ */
+      .container {
+        width: min(100%, var(--container));
+        margin-inline: auto;
+        padding-inline: 20px;
+      }
+      .stack-24 > * + * {
+        margin-top: 24px;
+      }
+      .stack-32 > * + * {
+        margin-top: 32px;
+      }
+      .grid {
+        display: grid;
+        gap: 24px;
+      }
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+      @media (max-width: 1024px) {
+        .grid-4 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 720px) {
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+        .grid-4 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ============ Header simples (breadcrumbs) ============ */
+     
+      /* ============ HERO ============ */
+      .hero-2 {
+        position: relative;
+        isolation: isolate;
+        min-height: 72vh;
+        display: grid;
+        align-items: end;
+        background: radial-gradient(
+            1200px 500px at 70% 0%,
+            rgba(255, 255, 255, 0.05),
+            transparent
+          ),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.85));
+        overflow: hidden;
+      }
+      .hero-2::before {
+        /* BG da seção – troque a URL */
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("Imagens/re1.jpg") center/cover no-repeat;
+        filter: saturate(1.05) contrast(1.05) brightness(0.8);
+        z-index: -2;
+      }
+      .hero-2::after {
+        /* vinheta */
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient(
+            1000px 600px at 30% 20%,
+            transparent 60%,
+            rgba(0, 0, 0, 0.6) 100%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.2) 20%,
+            rgba(0, 0, 0, 0.9) 100%
+          );
+      }
+      .hero-2 .body {
+        padding-block: 56px 28px;
+      }
+      .kicker {
+        color: var(--muted);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+      .h1 {
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        font-size: clamp(28px, 5vw, 44px);
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 14px;
+        color: var(--muted);
+      }
+      .btnrow {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+      .btn-2 {
+        padding: 12px 18px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .btn--brand {
+        background: var(--brand);
+        color: #ffffff;
+        font-weight: 700;
+        box-shadow: var(--shadow);
+      }
+      .btn--ghost {
+        border-color: #ffffff22;
+        background: #ffffff10;
+        color: #fff;
+      }
+      .btn--ghost:hover {
+        background: #ffffff18;
+      }
+      .badges {
+        display: flex;
+        gap: 10px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+      }
+      .badge {
+        font-size: 12px;
+        padding: 6px 10px;
+        border: 1px solid #ffffff22;
+        border-radius: 999px;
+        color: var(--muted);
+      }
+
+      /* carrossel de miniaturas (simples) */
+      .thumbs {
+        margin-top: 5rem;
+        display: flex;
+        gap: 10px;
+        
+        padding-bottom: 6px;
+        width: 100%;
+      }
+      .thumb {
+        flex: 0 0 auto;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #ffffff1a;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: 0.2s;
+        width: 24%;
+      }
+      .thumb:hover {
+        transform: translateY(-2px);
+        opacity: 1;
+      }
+
+      /* ============ Seção CTA escura ============ */
+      .band-cta {
+        background: url("assets/band-cta.jpg") center/cover no-repeat,
+          var(--panel);
+        padding: 80px 0;
+        position: relative;
+        isolation: isolate;
+      }
+      .band-cta::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .band-cta .inner {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+      .band-cta p {
+        max-width: 760px;
+        margin: 0 auto;
+        color: var(--muted);
+      }
+
+      /* ============ Edição de Colecionador ============ */
+      .section {
+        padding: 60px 0;
+        background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/death-stranding-2-sku-ce-background-desktop-01-en-10mar25?$4000px$");
+      }
+      .section-2 {
+        padding: 60px 0;
+         background: var(--bg);
+      }
+      .section.alt {
+        background: var(--panel);
+      }
+      .h2-2 {
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        font-size: clamp(22px, 3.6vw, 32px);
+        margin-top: 4rem;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--stroke);
+        border-radius: var(--radius);
+        padding: 18px;
+        box-shadow: var(--shadow);
+      }
+      .card .title {
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .card ul {
+        margin-top: 8px;
+        color: var(--muted);
+        padding-left: 18px;
+      }
+      .card li {
+        margin: 6px 0;
+      }
+
+      /* ============ Galeria de personagens ============ */
+      .figure {
+        position: relative;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid var(--stroke);
+      }
+      .figure img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        transition: 0.35s;
+        filter: saturate(0.98);
+      }
+      .figure:hover img {
+        transform: scale(1.04);
+      }
+      .figure .cap {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: 10px 12px;
+        
+        width: 20%;
+        font-size: 14px;
+        color: #fff;
+      }
+      i.fab.fa-youtube {
+      color: #FF0000;
+      font-size: 2rem;
+    }
+      /* ============ Blocos de features alternados ============ */
+      .feature {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 28px;
+        align-items: center; 
+        margin-bottom: 9rem;
+      }
+      .feature:nth-child(even) {
+        grid-template-columns: 0.9fr 1.1fr;
+      }
+      @media (max-width: 920px) {
+        .feature {
+          grid-template-columns: 1fr;
+        }
+      }
+      .feature .media {
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--stroke);
+        box-shadow: var(--shadow);
+      }
+      .feature .copy .eyebrow {
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .feature .copy h3 {
+        font-size: clamp(20px, 3.4vw, 28px);
+        margin: 8px 0 6px;
+        font-weight: 800;
+      }
+      .feature .copy p {
+        color: var(--muted);
+      }
+
+      /* ============ DualSense highlight ============ */
+      .dualsense {
+        background: radial-gradient(
+            800px 300px at 50% -10%,
+            #ffffff12,
+            transparent
+          ),
+          linear-gradient(180deg, var(--panel-2), var(--panel));
+        border-block: 1px solid var(--stroke);
+        padding: 64px 0;
+      }
+      .dualsense .wrap {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 28px;
+      }
+      .dualsense img {
+        width: 100%;
+        max-width: 540px;
+        margin-inline: auto;
+      }
+      @media (max-width: 920px) {
+        .dualsense .wrap {
+          grid-template-columns: 1fr;
+        }
+      }
+      
+
+      /* ============ FAQ (CSS only) ============ */
+      .faq details {
+        border-bottom: 1px solid var(--stroke);
+        padding: 16px 0;
+      }
+      .faq summary {
+        list-style: none;
+        cursor: pointer;
+        font-weight: 700;
+        position: relative;
+        padding-right: 28px;
+      }
+      .faq summary::marker,
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq summary::after {
+        content: "+";
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: var(--muted);
+        transition: 0.2s;
+      }
+      .faq details[open] summary::after {
+        content: "—";
+        color: #fff;
+      }
+      .faq p {
+        color: var(--muted);
+        margin-top: 8px;
+      }
+
+      /* ============ “Informações gerais” (tabela/legendas) ============ */
+      .info-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+      .info-item {
+        background: var(--panel);
+        border: 1px solid var(--stroke);
+        border-radius: 10px;
+        padding: 14px;
+      }
+      .info-item .k {
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      @media (max-width: 900px) {
+        .info-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 520px) {
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ============ Rodapé ============ */
+      .footer {
+        background: #0b0b0d;
+        border-top: 1px solid var(--stroke);
+        margin-top: 60px;
+      }
+      .footer .grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      .footer h4 {
+        font-size: 14px;
+        color: #fff;
+        margin-bottom: 8px;
+      }
+      .footer ul {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .footer li + li {
+        margin-top: 6px;
+      }
+      @media (max-width: 920px) {
+        .footer .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      /* ============ Pequenos toques ============ */
+      .hr {
+        height: 1px;
+        background: var(--stroke);
+        border: 0;
+        margin: 40px 0;
+      }
+      .note {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .small {
+        font-size: 14px;
+      }
+      .round {
+        border-radius: var(--radius);
+      }
+      .center {
+        text-align: center;
+      }
+      .mt-8 {
+        margin-top: 8px;
+      }
+      .mt-16 {
+        margin-top: 16px;
+      }
+      .mt-24 {
+        margin-top: 24px;
+      }
+      .mt-32 {
+        margin-top: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= Header / Breadcrumbs ================= -->
+     <header class="wcabecalho">
+    <nav>
+      <div class="logo">
+        <img src="./Imagens/logo.png" alt="" />
+      </div>
+      <div class="menu">
+      <a href="index.html">Home</a></li>
+      <a href="camera.html">Camera</a></li>
+      <a href="PS.html">PlayStation</a></li>
+      <a href="walkman.html">Walkman</a></li>
+      <a href="Xperia.html">Xperia</a></li>
+
+    </nav>
+  </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero-2">
+      <div class="container body">
+        <div class="stack-24" style="max-width: 760px">
+          <div class="kicker">PS5 • Terror/Ação/Aventura</div>
+          <h1 class="h1">RESIDENT EVIL 4 REMAKE</h1>
+
+          <div class="price small">
+            <strong style="font-size: 18px; color: #fff">R$ 399,90</strong>
+            <span>•</span>
+            <span class="note">Disponível para PS5</span>
+          </div>
+
+          <div class="btnrow">
+            <a class="btn-2 btn--brand" href="#comprar">Comprar agora</a>
+            <a class="btn-2 btn--ghost" href="#trailer">Assistir ao trailer</a>
+          </div>
+
+          <div class="badges">
+            <span class="badge">Modo foto</span>
+            <span class="badge">DualSense™</span>
+            <span class="badge">PS5 Exclusivo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="thumbs">
+      <div class="thumb"><img src="Imagens/hqdefault.webp" alt="" /></div>
+      <div class="thumb"><img src="Imagens/hqdefault (1).webp" alt="" /></div>
+      <div class="thumb"><img src="Imagens/hqdefault (2).webp" alt="" /></div>
+      <div class="thumb"><img src="Imagens/hqdefault (3).webp" alt="" /></div>
+    </div>
+    <!-- ================= Banda CTA ================= -->
+    <section class="band-cta">
+      <div class="container inner stack-24">
+        <h1 class="h2-2">
+          Compre Death Stranding 2: On the Beach 
+        </h2>
+        <p>
+          Explore um mundo de jogos que fogem da realidade
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= Edição de Colecionador ================= -->
+    <section class="section">
+      <div class="container stack-32">
+        <h1 class="h2-2">Expansões:</h2>
+
+        <div class="grid grid-3">
+          <article class="card-2">
+            <img src = "Imagens/re6.avif">
+            <div class="title">Expansão:</div>
+            <ul>
+              <li>  Resident Evil 4 - Caminhos Distintos<p>R$56,90</p></li>
+            </ul>
+          </article>
+
+          <article class="card-2">
+             <img src = "Imagens/re7.avif">
+            <div class="title">Pacote de expansão:</div>
+            <ul>
+              <li> Resident Evil 4 - Pacote de DLC<p>R$73,12</p></li>
+              
+            </ul>
+          </article>
+
+          <article class="card-2">
+             <img src = "Imagens/re8.avif">
+            <div class="title"> Iteml:</div>
+            <ul>
+              <li> Resident Evil 4 - Cupom de Melhoria de Arma x5<p>R$38,62</p></li>
+               
+              
+            </ul>
+          </article>
+        </div>
+      </div>
+    
+
+    <!-- ================= Personagens / Aliados ================= -->
+    
+      <div class="container stack-32">
+        <h1 class="h2-2">Conheça mais do jogo:</h2>
+
+        <div class="grid grid-4">
+
+          <figure class="figure">
+            <img src="Imagens/resident-evil-2-leon-s-kennedy-claire-redfield-pc-games-3840x2160-8654.jpg" alt="" />
+            <figcaption class="cap"> 
+              <i class="fab fa-youtube"></i>
+
+            </figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="Imagens/resident-evil-3-3840x2160-9847.jpg" alt="" />
+             <figcaption class="cap"> 
+              <i class="fab fa-youtube"></i>
+
+            </figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="Imagens/resident-evil-village-resident-evil-8-playstation-5-xbox-3840x2160-1488.jpg" alt="" />
+             <figcaption class="cap"> 
+              <i class="fab fa-youtube"></i>
+
+            </figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="Imagens/resident-evil-village-shadows-of-rose-dlc-2022-games-black-3840x2160-8215.jpg" alt="" />
+             <figcaption class="cap"> 
+              <i class="fab fa-youtube"></i>
+
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+   
+
+    <!-- ================= Por que você deve jogar ================= -->
+    
+      <div class="container stack-32">
+        <h1 class="h2-2">Por que você deve jogar</h2>
+
+        <div class="stack-24">
+          <!-- Feature 1 -->
+          <div class="feature">
+            <div class="media"><img src="Imagens/re2.webp" alt="" /></div>
+            <div class="copy">
+              <div class="eyebrow">Fugindo dos limites</div>
+              <h3>Espere o inesperado</h3>
+              <p>
+               Cenários familiares estão cheios de surpresas novas. Descubra interações secretas com o ambiente e reviravoltas em momentos clássicos.
+              </p>
+
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="feature">
+            <div class="copy">
+              <div class="eyebrow">Novos desafios</div>
+              <h3>Um novo tipo de inimigo</h3>
+              <p>
+                Ganados não são meros zumbis irracionais. Esses aldeões infectados por parasitas têm armas e trabalham em equipe para acabar com o Leon.
+              </p>
+            </div>
+            <div class="media"><img src="Imagens/re3.webp" alt="" /></div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="feature">
+            <div class="media"><img src="Imagens/re5.webp" alt="" /></div>
+            <div class="copy">
+              <div class="eyebrow">Evolua suas armas</div>
+              <h3> O que você vai comprar?</h3>
+              <p>
+               Visite o misterioso Mercador para comprar e aprimorar suas armas, além de adquirir artefatos especiais.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+
+ 
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section-2">
+      <div class="container">
+        <h1 class="h2-2">
+          Tudo o que você precisa saber antes da próxima entrega
+        </h2>
+        <div class="faq mt-16">
+           
+          <details>
+            <summary>Que tipo de jogo é Resident Evil?</summary>
+            <p>
+ Resident Evil 4 é um jogo de terror e sobrevivência no qual os jogadores terão que enfrentar situações extremas de medo. Apesar dos vários elementos de terror, o jogo é equilibrado com muita ação e uma experiência de jogo bastante variada.
+
+Diante de uma horda de inimigos inteligentes e perigosos, você vai fugir? Atirar em todos eles? Ou vai tentar derrubá-los com combate corpo a corpo? Você pode escolher várias formas de lidar com essas situações. 
+
+Viva a emoção de sobreviver por um triz à beira da morte.
+</p>
+            
+          </details>
+          <details>
+            <summary>Posso jogar os outros Resident Evil para jogar o Resident Evil 4?</summary>
+            <p>
+               Resident Evil 4 é um jogo de terror e sobrevivência envolvente que pode ser jogado sem conhecimento prévio da franquia. Os fãs do jogo original vão gostar das referências nostálgicas, mas os novatos também vão se divertir com esse épico cheio de ação.
+
+
+            </p>
+          </details>
+          <details>
+            <summary>Posso jogar Resident Evil 4 varias vezes?</summary>
+            <p>
+             Ao terminar o jogo, é exibida uma classificação com informação do seu desempenho. Jogue novamente em uma dificuldade maior para melhorar a classificação e se desafiar.
+
+Resident Evil 4 traz várias formas de jogar e terminar o jogo, incluindo como você participa dos combates, personaliza armas e muito mais, então há muito a oferecer para você se divertir jogando várias vezes.
+
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Informações gerais ================= -->
+    <section class="section alt">
+      <div class="container stack-24">
+        <h1 class="h2-2">Informações gerais</h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="k">Plataforma</div>
+            <div>PS4/PS5</div>
+          </div>
+          <div class="info-item">
+            <div class="k">Gênero</div>
+            <div>Terror, Aventura, Ação</div>
+          </div>
+          <div class="info-item">
+            <div class="k">Modo</div>
+            <div>Singleplayer</div>
+          </div>
+          <div class="info-item">
+            <div class="k">Áudio/Legendas</div>
+            <div>PT-BR, EN, ES…</div>
+          </div>
+        </div>
+
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Rodapé ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Sony</h3>
+        <p>Inovação e tecnologia.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Links úteis</h3>
+        <ul>
+          <li><a href="#">| Política de privacidade</a></li>
+          <li><a href="#">| Termos de uso</a></li>
+          <li><a href="#">| Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Siga-nos</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Sony. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  </body>
+</html>
