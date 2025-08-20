@@ -189,6 +189,64 @@ nav a:active {
   margin: 0px 10px;
 }
 
+.promocao_itens {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+.card_promocao {
+  height: 600px;
+  width: 600px;
+  object-fit: cover;
+
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px black;
+  transition: transform 0.3s;
+}
+
+.card_promocao:hover {
+  transform: translateY(-5px);
+}
+
+.promocao_itens_vert {
+  flex-direction: column;
+}
+
+.card_promocao_vert1 {
+  height: 280px;
+  width: 500px;
+  overflow: hidden;
+  margin-bottom: 1rem; /*30px*/
+  margin-left: 1rem; /*20px*/
+  background: url(./Imagens/Tripé\ 3\ Canva.png);
+  background-size: cover;
+  box-shadow: 0 2px 4px black;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.card_promocao_vert1:hover {
+  transform: translateY(-5px);
+}
+.card_promocao_vert2 {
+  height: 280px;
+  width: 500px;
+  object-fit: cover;
+  background-color: yellow;
+  margin-top: 2.5rem; /*40px*/
+  margin-left: 1rem; /*20px*/
+  background: url(./Imagens/Lente\ 3.png);
+  background-size: cover;
+  box-shadow: 0 2px 4px black;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.card_promocao_vert2:hover {
+  transform: translateY(-5px);
+}
+
 .footer {
   background-color: #000000;
   color: #fff;
