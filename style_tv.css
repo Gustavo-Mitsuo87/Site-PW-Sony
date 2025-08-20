@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: white;
+  overflow-x: hidden; 
+}
+
 .banner_tv {
   display: flex;
   width: 100vw;
@@ -142,8 +154,9 @@
 
 /* Detalhes Principais Recursos */
 .detalhes-principais-recursos {
-  margin-top: 3rem;
-  width: 100%;
+  margin-top: 2rem;
+  width: 100vw;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,25 +176,29 @@
 }
 
 .detalhes-cognitive-processor-xr {
+
   display: flex;
-  align-items: center;
   gap: 80px;
-  width: 100%;
+  align-items: center;
 }
 
 .img-cognitive-processor-xr {
+  margin-top: 3rem;
   flex: 1;
   display: flex;
   justify-content: center;
+  width: auto;
+  height: auto;
 }
 
 .detalhes-cognitive-processor-xr img {
-  width: 8000px;
+  width: 1200px;
   height: auto;
 }
 .texto-detalhes-cognitive-processor-xr {
   flex: 1.5;                 
   text-align: center;
+  margin-right: 1rem;
 }
 
 .texto-detalhes-cognitive-processor-xr h1 {
