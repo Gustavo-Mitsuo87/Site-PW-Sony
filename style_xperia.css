@@ -115,6 +115,7 @@ nav a:active {
   margin: 0 10px;
   overflow: hidden;
   border-radius: 20px;
+  object-fit: cover;
 }
 
 @media (max-width: 768px){ /*isso significa: aplique essas regras apenas quando a tela for menor ou igual a 768px de largura(tablet/celular)*/
