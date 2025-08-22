@@ -154,9 +154,10 @@ body {
 
 /* Detalhes Principais Recursos */
 .detalhes-principais-recursos {
-  margin-top: 2rem;
+  margin-top: 2rem  ;
+  margin-bottom: 2rem;
   width: 100vw;
-  height: 80vh;
+  height: 120vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,8 +177,6 @@ body {
 }
 
 .detalhes-cognitive-processor-xr {
-
-  display: flex;
   gap: 80px;
   align-items: center;
 }
@@ -192,13 +191,15 @@ body {
 }
 
 .detalhes-cognitive-processor-xr img {
-  width: 1200px;
+  width: 870px;
   height: auto;
 }
 .texto-detalhes-cognitive-processor-xr {
   flex: 1.5;                 
   text-align: center;
-  margin-right: 1rem;
+  margin-top: 3rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .texto-detalhes-cognitive-processor-xr h1 {
