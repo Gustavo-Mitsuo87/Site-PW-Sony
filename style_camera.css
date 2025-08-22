@@ -68,7 +68,7 @@ nav a:active {
 .hero {
   position: relative;
   height: 100vh;
-  background: url("./Imagens/Banner.png");
+  background: url("./Imagens/Banner3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,32 +78,6 @@ nav a:active {
   margin-top: 0px;
 }
 
-.hero h1 {
-  color: white;
-  margin-left: 7em;
-  font-size: 2rem;
-  font-family: "Segoe UI", sans-serif;
-}
-
-.intro_camera {
-  width: 100%; /*Ocupa 100% da largura independente do monitor*/
-  background-color: #ddd;
-  padding: 80px 0px;
-}
-
-.intro_camera_content {
-  max-width: 1200px; /*Limita o 100% do .intro_camera*/
-  margin: 0 auto; /*Centraliza as laterais com auto*/
-  padding: 0px 16px;
-  color: black;
-  display: flex;
-  flex-direction: row;
-}
-
-.intro_camera_texto p {
-  text-align: justify;
-  max-width: 30rem;
-}
 .cards_camera {
   display: flex;
 }
