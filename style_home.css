@@ -41,6 +41,11 @@ nav a {
   color: #000000;
   text-decoration: none;
   margin-right: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover{
+  color: rgb(160, 160, 160);
 }
 
 .nav-icons {
@@ -48,7 +53,7 @@ nav a {
   gap: 1.5rem;
   font-size: 1.4rem;
   color: #000;
-  margin: 5px;
+  margin: 9px;
 }
 
 /* Caixa de pesquisa */
@@ -74,42 +79,6 @@ nav a {
   opacity: 1;
 }
 
-/* Menu lateral */
-#side-menu {
-  position: fixed;
-  top: 0;
-  right: -250px; /* começa fora da tela */
-  width: 250px;
-  height: 100%;
-  background-color: #000000;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-  transition: right 0.3s ease; /* animação suave */
-  z-index: 9999;
-  padding: 1rem;
-}
-#side-menu ul li {
-  margin: 1rem 0;
-}
-#side-menu ul li a {
-  color: rgb(255, 255, 255);
-}
-#side-menu.active {
-  right: 0;
-}
-
-/* Overlay escondido por padrão */
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: none;
-  z-index: 9998; /* logo abaixo do menu */
-}
-
-
 #navbar {
   position: fixed;
   padding: 10px 20px;
@@ -120,7 +89,7 @@ nav a {
 }
 
 #navbar:hover{
-  background-color: rgba(255, 255, 255, 0.645);
+  background-color: rgb(255, 255, 255);
 }
 
 #navbar.scrolled {
@@ -279,7 +248,7 @@ nav a {
   align-items: center;
   border-radius: 25px;
   overflow: hidden;
-  height: 500px;
+  height: 490px;
   width: 760px; /* tamanho fixo opcional */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
@@ -293,14 +262,14 @@ nav a {
  }
 
 .card5 img{
-  width: 120%;
-  height: 450px;
+  width: 110%;
+  height: auto;
   object-fit: cover; /* garante que o produto não seja cortado */
   background-color: transparent;
-  transform: translateY(11%); 
 }
 
 .card6 {
+  min-width: 100%;
   display: flex;
   flex-direction: column; /* imagem em cima, texto embaixo */
   align-items: center;
@@ -308,14 +277,13 @@ nav a {
   border-radius: 25px;
   overflow: hidden;
   padding: 20px;
-  width: 300px; /* tamanho fixo opcional */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
 }
 
 .card6 img{
-  width: 90%;
-  height: 350px;
+  width: 100%;
+  height: 450px;
   object-fit: cover; /* garante que o produto não seja cortado */
   background-color: transparent;
 }
@@ -383,71 +351,47 @@ nav a {
   transform: scale(1.01);
 }
 
-.container {
-  display: flex; /* coloca lado a lado */
-  gap: 20px; /* espaçamento entre o card fixo e o carousel */
-  align-items: center; /* alinha verticalmente */
-  overflow: hidden;
+.container-carousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  width: 30px;
 }
-
-.container-item {
-  min-width: 200px; /* largura de cada card */
-  margin-right: 10px;
-  text-align: center;
-  padding: 20px;
-  flex-shrink: 0; /* impede o card de encolher */
-  flex: 0 0 100%; 
-}
-
 
 .carousel {
   position: relative;
-  width: 90%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.carousel-track-container {
+  flex: 1;
   overflow: hidden;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
-.carousel-button {
+/* Botões */
+.carousel button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #00000000;
-  color: #000000ec;
+  background: rgba(0,0,0,0.5);
   border: none;
-  padding: 9px ;
+  color: white;
+  font-size: 0.5rem;
   cursor: pointer;
-  border-radius: 60%;
-  font-size: 17px;
-  z-index: 100;
-  transition: background 0.3s, transform 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 65px;
+  z-index: 5;
 }
 
-.carousel-button:hover {
-  background-color: #55555572;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-button.prev {
+.carousel .prev {
   left: 10px;
 }
 
-.carousel-button.next {
+.carousel .next {
   right: 10px;
 }
-
-.carousel-button:focus {
-  outline: none;
-}
-
 .footer {
   background-color: #111;
   color: #fff;

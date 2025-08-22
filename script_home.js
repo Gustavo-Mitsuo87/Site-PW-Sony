@@ -1,6 +1,5 @@
 // Seleciona o navbar
 const navbar = document.getElementById("navbar");
-
 // Adiciona um listener de scroll na janela
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
@@ -12,104 +11,60 @@ window.addEventListener("scroll", () => {
 
 //////////////////////////////////////////////////////////////
 const track = document.querySelector(".carousel-track");
-const prevButton = document.querySelector(".carousel-button.prev");
-const nextButton = document.querySelector(".carousel-button.next");
+const cards = document.querySelectorAll(".card6");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
 
-let currentIndex = 1;
-let isTransitioning = false;
-let autoplayInterval;
-let startX = 0;
-let endX = 0;
+let index = 1;
 
-// Clona primeiro e último slide
-const cards = Array.from(track.children);
+// Clona primeiro e último pra suavizar o loop
 const firstClone = cards[0].cloneNode(true);
 const lastClone = cards[cards.length - 1].cloneNode(true);
-firstClone.classList.add("clone");
-lastClone.classList.add("clone");
+
+firstClone.id = "first-clone";
+lastClone.id = "last-clone";
 
 track.appendChild(firstClone);
-track.insertBefore(lastClone, track.firstChild);
+track.insertBefore(lastClone, cards[0]);
 
-const updatedCards = Array.from(track.children);
+const cardWidth = cards[0].clientWidth;
+track.style.transform = `translateX(${-cardWidth * index}px)`;
 
-function updateCarousel() {
-  const cardWidth = updatedCards[0].getBoundingClientRect().width;
-  track.style.transition = "transform 0.4s ease-in-out";
-  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-}
+const moveToCard = () => {
+  track.style.transition = "transform 0.5s ease-in-out";
+  track.style.transform = `translateX(${-cardWidth * index}px)`;
+};
 
-function jumpToRealSlide() {
-  const cardWidth = updatedCards[0].getBoundingClientRect().width;
-  track.style.transition = "none";
-  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-}
-
-// Navegação pelas setas
-nextButton.addEventListener("click", () => {
-  if (isTransitioning) return;
-  currentIndex++;
-  updateCarousel();
-  isTransitioning = true;
+nextBtn.addEventListener("click", () => {
+  if (index >= cards.length + 1) return;
+  index++;
+  moveToCard();
 });
 
-prevButton.addEventListener("click", () => {
-  if (isTransitioning) return;
-  currentIndex--;
-  updateCarousel();
-  isTransitioning = true;
+prevBtn.addEventListener("click", () => {
+  if (index <= 0) return;
+  index--;
+  moveToCard();
 });
 
-// Loop contínuo visual
 track.addEventListener("transitionend", () => {
-  const realCardsCount = updatedCards.length - 2;
-  if (updatedCards[currentIndex].classList.contains("clone")) {
-    if (currentIndex === updatedCards.length - 1) {
-      currentIndex = 1;
-    } else if (currentIndex === 0) {
-      currentIndex = realCardsCount;
-    }
-    jumpToRealSlide();
+  const cardElements = document.querySelectorAll(".card6");
+
+  if (cardElements[index].id === firstClone.id) {
+    track.style.transition = "none";
+    index = 1;
+    track.style.transform = `translateX(${-cardWidth * index}px)`;
   }
-  isTransitioning = false;
-});
 
-// Swipe para touch
-track.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-});
-
-track.addEventListener("touchend", (e) => {
-  endX = e.changedTouches[0].clientX;
-  handleSwipe();
-});
-
-function handleSwipe() {
-  const threshold = 50;
-  if (endX < startX - threshold) {
-    nextButton.click();
-  } else if (endX > startX + threshold) {
-    prevButton.click();
+  if (cardElements[index].id === lastClone.id) {
+    track.style.transition = "none";
+    index = cardElements.length - 2;
+    track.style.transform = `translateX(${-cardWidth * index}px)`;
   }
-}
-
-const menuToggle = document.getElementById("menu-toggle");
-const sideMenu = document.getElementById("side-menu");
-const overlay = document.getElementById("overlay");
-
-menuToggle.addEventListener("click", (e) => {
-  e.preventDefault();
-  sideMenu.classList.toggle("active");
-  overlay.style.display = sideMenu.classList.contains("active") ? "block" : "none";
-});
-
-// Fechar menu clicando no overlay
-overlay.addEventListener("click", () => {
-  sideMenu.classList.remove("active");
-  overlay.style.display = "none";
 });
 
 
+///////////////////////////////////////////////////////////////
 const searchIcon = document.getElementById("search-icon");
 const searchInput = document.getElementById("search-input");
 

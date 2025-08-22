@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sony</title>
+  <link rel="icon" type="image/png" href="Imagens/sony (2).png">
   <link rel="stylesheet" href="style_home.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -17,33 +18,17 @@
         <img src="./Imagens/logo.png" alt="" />
       </div>
       <div class="nav-icons">
-        <i class="fas fa-home"></i>
-        <i class="fas fa-user"></i>
-
+        <a href="index.html">Home</a>
+        <a href="#User">User</a>
+         
         <!-- lupa + input -->
         <div class="search-box">
           <i id="search-icon" class="fas fa-search"></i>
           <input type="text" id="search-input" placeholder="Pesquisar...">
         </div>
-            <i id="menu-toggle" class="fas fa-bars"></i>
       </div>
     </nav>
   </header>
-
-
-
-<!-- Menu lateral -->
-<aside id="side-menu">
-  <!-- Fundo escuro -->
-<div id="overlay"></div>
-  <ul>
-    <li><a href="camera.html">Cameras</a></li>
-    <li><a href="play.html">PlayStation</a></li>
-    <li><a href="Xperia.html">Xperia</a></li>
-    <li><a href="tv.html">TVs</a></li>
-    <li><a href="walkman.html">Walkman</a></li>
-  </ul>
-</aside> 
   
   <section>
     <div class="hero">
@@ -82,7 +67,7 @@
     </section>
   </main>
   <section class="card3">
-    <img src="Imagens/feature_01_desktop-2.jpg" alt="">
+    <img src="Imagens/feature_01_desktop-2.PNG" alt="">
     <img src="Imagens/primary_tout_5-1.PNG" alt="">
   </section>
   <main>
@@ -105,47 +90,30 @@
   <!--Celular Xperia-->
   <main>
     <section class="cards">
-      <div class="container">
-        <a href="Xperia.html">
-        <div class="card5">
-          <img src="Imagens/sony-xperia-1-vi.webp " alt="">
-        </div>
-        </a>
-        <div class="carousel">
-          <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
-          <div class="carousel-track-container">
-            <div class="carousel-track">
-              <div class="container-item">
-                <div class="card6">
-                  <img src="Imagens/SonyXperia1IV12GB_1 - preto.webp" alt="">
-                  <h3>Sony Xperia 1 IV Preto</h3>
-                </div>
-              </div>
-              <div class="container-item">
-                <div class="card6">
-                  <img
-                    src="Imagens/Xperia_1_VI_Smartphone_5G_com_Tela_OLED_120Hz_Full_Screen_Versao_Internacional-edit.PNG"
-                    alt="">
-                  <h3>Sony Xperia</h3>
-                </div>
-              </div>
-              <div class="container-item">
-                <div class="card6">
-                  <img src="Imagens/SonyXperia1IV12GB_2 - cinza.webp" alt="">
-                  <h3>Sony Xperia 1 IV Cinza</h3>
-                </div>
-              </div>
-              <div class="container-item">
-                <div class="card6">
-                  <img src="Imagens/SonyXperia1IV12GB_3 - branco.webp" alt="">
-                  <h3>Sony Xperia 1 IV Branco</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
-        </div>
+  
+      <!-- Card fixo na lateral -->
+      <div class="card5">
+        <a href="Xperia.html"> <img src="Imagens/Sony_Xperia_home.png" alt=""> </a>
       </div>
+
+<div class="container-carousel"></div>
+  <!-- Carrossel -->
+  <div class="carousel">
+    <button class="prev">&#10094;</button>
+    <div class="carousel-track">
+      <div class="card6">
+          <img src="Imagens/SonyXperia1IV12GB_1 - preto.webp" alt="">
+      </div>
+      <div class="card6">
+          <img src="Imagens/SonyXperia1IV12GB_2 - cinza.webp" alt="">
+      </div>
+      <div class="card6">
+          <img src="Imagens/SonyXperia1IV12GB_3 - branco.webp" alt="">
+      </div>
+    </div>
+    <button class="next">&#10095;</button>
+  </div>
+</div>
   </main>
 
   <!--Som, Walkman e fones-->
@@ -236,7 +204,7 @@
       <p>© 2025 Sony. Todos os direitos reservados.</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="script_home.js"></script>
 </body>
 
 </html>
