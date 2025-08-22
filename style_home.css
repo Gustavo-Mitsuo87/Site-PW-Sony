@@ -48,6 +48,7 @@ nav a {
   gap: 1.5rem;
   font-size: 1.4rem;
   color: #000;
+  margin: 5px;
 }
 
 /* Caixa de pesquisa */
