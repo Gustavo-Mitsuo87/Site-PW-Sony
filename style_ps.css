@@ -21,7 +21,6 @@ main {
   width: 100%;
   height: 100vh; /* controla altura sem ocupar a tela toda */
   overflow: hidden;
-  border-radius: 10px;
   margin-top: 10.6rem;
 }
 
@@ -40,8 +39,7 @@ main {
   z-index: 1;
   background-position: center;
   background-size: cover;
-  border-radius: 20px;
-  overflow: hidden; /* <-- ADICIONE ISTO */
+  overflow: hidden; 
   transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s,
     opacity 0.75s;
 }
@@ -54,7 +52,6 @@ main {
   width: 100%;
   height: 100%;
   transform: none;
-  border-radius: 0;
   box-shadow: none;
   opacity: 1;
 }
@@ -977,15 +974,15 @@ nav a:active {
   height: auto;
   overflow: hidden;
   background-color: #ffffff;
+  margin-top: 5rem;
 }
 
 /* Vídeo */
 .fundo-com-img-console video {
-  width: 95%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 30px;
   margin: 0 auto;
 }
 
@@ -1008,7 +1005,7 @@ nav a:active {
   position: relative;
   z-index: 2;
   text-align: center;
-  color: white !important;
+  color: white  ;
 }
 
 /* Centralização vertical e horizontal */
@@ -1025,7 +1022,7 @@ nav a:active {
 .fundo-com-img-console h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 10px;
+   
 }
 
 /* Texto */
@@ -1540,114 +1537,4 @@ i.fab.fa-youtube {
   position: relative;
   padding-right: 28px;
   color: white;
-}
-.faq summary::marker,
-.faq summary::-webkit-details-marker {
-  display: none;
-}
-.faq summary::after {
-  content: "+";
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: var(--muted);
-  transition: 0.2s;
-}
-.faq details[open] summary::after {
-  content: "—";
-  color: #fff;
-}
-.faq p {
-  color: var(--muted);
-  margin-top: 8px;
-}
-
-/* ============ “Informações gerais” (tabela/legendas) ============ */
-.info-grid {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-.info-item {
-  background: var(--panel);
-  border: 1px solid var(--stroke);
-  border-radius: 10px;
-  padding: 14px;
-}
-.info-item .k {
-  color: var(--muted);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-@media (max-width: 900px) {
-  .info-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@media (max-width: 520px) {
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ============ Rodapé ============ */
-.footer {
-  background: #0b0b0d;
-  border-top: 1px solid var(--stroke);
-  margin-top: 60px;
-  margin-top: 0px;
-}
-.footer .grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-.footer h4 {
-  font-size: 14px;
-  color: #fff;
-  margin-bottom: 8px;
-}
-.footer ul {
-  color: var(--muted);
-  font-size: 14px;
-}
-.footer li + li {
-  margin-top: 6px;
-}
-@media (max-width: 920px) {
-  .footer .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-/* ============ Pequenos toques ============ */
-.hr {
-  height: 1px;
-  background: var(--stroke);
-  border: 0;
-  margin: 40px 0;
-}
-.note {
-  font-size: 13px;
-  color: var(--muted);
-}
-.small {
-  font-size: 14px;
-}
-.round {
-  border-radius: var(--radius);
-}
-.center {
-  text-align: center;
-}
-.mt-8 {
-  margin-top: 8px;
-}
-.mt-16 {
-  margin-top: 16px;
-}
-.mt-24 {
-  margin-top: 24px;
-}
-.mt-32 {
-  margin-top: 32px;
 }
