@@ -1,0 +1,266 @@
+/* ===== LAYOUT DO CONTEÚDO PRINCIPAL ===== */
+
+/* ===== RESET GLOBAL (igual da home) ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+/* ===== HEADER (igual da home) ===== */
+header {
+  padding: 0.5rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  top: 5px;
+}
+
+main {
+  max-width: 1200px;          /* limita largura total da área */
+  margin: 6rem auto 2rem;     /* centraliza o <main> e dá espaçamento superior */
+  padding: 0 1rem;            /* respiro lateral em telas pequenas */
+}
+
+/* ===== CARD DA IMAGEM ===== */
+.product-card {               /* container do produto (apenas a imagem nesse card) */
+  max-width: 320px;           /* largura máxima do card da imagem */
+  margin: 0 auto;             /* centraliza o card na página */
+  background: #fff;           /* movi o fundo do "img" para o container (visual melhor) */
+  border-radius: 12px;        /* cantos arredondados */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* sombra suave */
+  padding: 20px;              /* respiro interno para a imagem */
+}
+
+.product-card img {           /* imagem de produto */
+  display: block;             /* permite centralizar com margin:auto */
+  margin: 0 auto;             /* centraliza a imagem no card */
+  max-width: 220px;           /* <<< DIMINUI O TAMANHO DA IMAGEM */
+  height: auto;               /* mantém a proporção original */
+}
+
+/* ===== BLOCO DE INFORMAÇÕES DO PRODUTO ===== */
+.product-info {               /* título, estrelas, frase, preço e comprar */
+  text-align: center;         /* centraliza TODO o conteúdo textual deste bloco */
+  margin-top: 16px;           /* espaço entre o card da imagem e as infos */
+}
+
+.product-title {              /* título do produto */
+  margin: 8px 0;              /* respiro superior/inferior */
+}
+
+/* ===== ESTRELAS ===== */
+.stars {                      /* container das estrelas */
+  display: flex;              /* coloca as estrelas lado a lado */
+  gap: 6px;                   /* espaçamento entre estrelas */
+  justify-content: center;    /* <<< CENTRALIZA as estrelas */
+  align-items: center;        /* alinha verticalmente */
+  margin-top: 8px;            /* espaço acima das estrelas */
+  cursor: pointer;            /* cursor de mão */
+}
+
+.star {                       /* estrela "apagada" */
+  font-size: 24px;            /* tamanho da estrela */
+  color: #ccc;                /* cor padrão (cinza claro) */
+  transition: color 0.2s;     /* anima cor ao hover/click */
+}
+
+.star.hovered,                /* <<< cor ao passar o mouse */
+.star.selected {              /* <<< cor quando selecionada (fixa) */
+  color: gold;                /* AMARELO conforme seu pedido */
+}
+
+.rating-hint {                /* "- Avalie-nos!" */
+  margin-top: 4px;            /* pequeno respiro acima do texto */
+  font-size: 1.50rem;         /* levemente menor que padrão */
+  color: gray;                /* cinza suave */
+}
+
+/* ===== PREÇO + COMPRAR (LADO A LADO E CENTRALIZADOS) ===== */
+.price-container {            /* container do preço + botão */
+  display: flex;              /* coloca lado a lado */
+  justify-content: center;    /* <<< CENTRALIZA o conjunto na linha */
+  align-items: center;        /* alinha verticalmente */
+  gap: 12px;                  /* espaço entre preço e botão */
+  margin-top: 10px;           /* espaço acima do conjunto */
+}
+
+.price {                      /* preço */
+  font-weight: 700;           /* negrito */
+  font-size: 1.2rem;          /* destaque leve */
+  margin: 0;                  /* remove margem padrão do <p> */
+}
+
+.buy-btn {                    /* botão "Comprar" */
+  background: #007bff;        /* verde "comprar" */
+  color: white;                /* texto branco */
+  border: none;               /* sem borda */
+  padding: 10px 16px;         /* área clicável confortável */
+  border-radius: 8px;         /* cantos arredondados */
+  cursor: pointer;            /* cursor de mão */
+  font-size: 14px;            /* tamanho de texto */
+}
+
+.buy-btn:hover {              /* estado hover do botão comprar */
+  background: #0056b3;        /* verde mais escuro no hover */
+}
+
+/* ===== DETALHES DO PRODUTO ===== */
+.product-details {            /* card de descrição longa */
+  background: #fff;           /* fundo branco */
+  border-radius: 12px;        /* cantos arredondados */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* sombra */
+  padding: 20px;              /* respiro */
+  max-width: 600px;           /* largura máxima */
+  margin: 16px auto;       
+}
+
+.product-details .more-btn { 
+  width: 100%;              
+  display: block;             
+  padding: 12px 16px;         
+  font-size: 16px;           
+  background: #007bff;       
+  color: #fff;           
+  border: none;          
+  border-radius: 8px;      
+  cursor: pointer;       
+  margin-top: 8px;          
+}
+
+.product-details .more-btn:hover {
+  background: #0056b3;   
+}
+nav {
+  text-decoration-color: #000000;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px; 
+}
+
+nav a:hover {
+  color: #002d7f;
+}
+
+nav a:active {
+  color: #0056b3;
+}
+
+#navbar {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+}
+
+#navbar.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-left: 80px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    height: 600px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-left: 50px;
+    padding-right: 30px;
+  }
+
+  nav a {
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: auto;
+
+  }
+
+  .logo img {
+    max-width: 70px;
+    height: auto;
+    width: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
