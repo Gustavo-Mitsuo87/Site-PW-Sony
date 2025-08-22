@@ -16,13 +16,35 @@
       <div class="logo">
         <img src="./Imagens/logo.png" alt="" />
       </div>
-      <div class="menu">
-        <a href="index.html">Home</a>
-        <a>User</a>
-        <a>Contato</a>
+      <div class="nav-icons">
+        <i class="fas fa-home"></i>
+        <i class="fas fa-user"></i>
+
+        <!-- lupa + input -->
+        <div class="search-box">
+          <i id="search-icon" class="fas fa-search"></i>
+          <input type="text" id="search-input" placeholder="Pesquisar...">
+        </div>
+            <i id="menu-toggle" class="fas fa-bars"></i>
       </div>
     </nav>
   </header>
+
+
+
+<!-- Menu lateral -->
+<aside id="side-menu">
+  <!-- Fundo escuro -->
+<div id="overlay"></div>
+  <ul>
+    <li><a href="camera.html">Cameras</a></li>
+    <li><a href="play.html">PlayStation</a></li>
+    <li><a href="Xperia.html">Xperia</a></li>
+    <li><a href="tv.html">TVs</a></li>
+    <li><a href="walkman.html">Walkman</a></li>
+  </ul>
+</aside> 
+  
   <section>
     <div class="hero">
       <h1>A Sony redefine o que é possível</h1>
@@ -45,8 +67,10 @@
         </div>
       </section>
       <section class="cards">
+      <a href="camera.html"> 
         <div class="card2">
           <img src="Imagens/camera_sony_ZV-E10.jpg" alt="">
+      </a>
           <div class="card-text">
             <h3>Sony ZV-E10 II</h3>
             <p>A ZV-E10 II apresenta a tecnologia de sensor mais avançada da Sony em um
@@ -82,10 +106,11 @@
   <main>
     <section class="cards">
       <div class="container">
+        <a href="Xperia.html">
         <div class="card5">
           <img src="Imagens/sony-xperia-1-vi.webp " alt="">
         </div>
-
+        </a>
         <div class="carousel">
           <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
           <div class="carousel-track-container">

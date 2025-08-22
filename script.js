@@ -1,5 +1,4 @@
 // Seleciona o navbar
-
 const navbar = document.getElementById("navbar");
 
 // Adiciona um listener de scroll na janela
@@ -94,46 +93,29 @@ function handleSwipe() {
   }
 }
 
-// Responsividade: atualiza o carrossel ao redimensionar a janela
-window.addEventListener("resize", updateCarousel);
+const menuToggle = document.getElementById("menu-toggle");
+const sideMenu = document.getElementById("side-menu");
+const overlay = document.getElementById("overlay");
 
-function scrollCarousel(id, direction) {
-  const carousel = document.getElementById(id);
-  if (!carousel) return;
+menuToggle.addEventListener("click", (e) => {
+  e.preventDefault();
+  sideMenu.classList.toggle("active");
+  overlay.style.display = sideMenu.classList.contains("active") ? "block" : "none";
+});
 
-  // Detecta o card certo baseado no id
-  let cardClass =
-    id === "games" ? ".card-ps" : id === "games-plus" ? ".card-ps-plus" : null;
-  if (!cardClass) return;
+// Fechar menu clicando no overlay
+overlay.addEventListener("click", () => {
+  sideMenu.classList.remove("active");
+  overlay.style.display = "none";
+});
 
-  const card = carousel.querySelector(cardClass);
-  if (!card) return;
 
-  const cardWidth = card.offsetWidth;
-  const gap = 16; // ou dinâmico via getComputedStyle
-  const scrollAmount = cardWidth + gap;
+const searchIcon = document.getElementById("search-icon");
+const searchInput = document.getElementById("search-input");
 
-  const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-  let nextScroll = carousel.scrollLeft + direction * scrollAmount;
-
-  // Loop infinito
-  if (nextScroll > maxScrollLeft) {
-    nextScroll = 0; // volta pro início
-  } else if (nextScroll < 0) {
-    nextScroll = maxScrollLeft; // vai pro fim
+searchIcon.addEventListener("click", () => {
+  searchInput.classList.toggle("active");
+  if (searchInput.classList.contains("active")) {
+    searchInput.focus();
   }
-
-  carousel.scrollTo({
-    left: nextScroll,
-    behavior: "smooth",
-  });
-
-  // Efeito visual
-  carousel.style.transition = "transform 0.3s ease";
-  carousel.style.transform = "scale(0.98)";
-  setTimeout(() => {
-    carousel.style.transform = "scale(1)";
-  }, 200);
-}
-
-// TV Inicio
+});
