@@ -34,7 +34,7 @@ body {
   display: flex;
   flex-direction: column; /* deixa alinhado em coluna */
   width: 100vw;
-  height: 70vh;
+  height: 55vh;
   justify-content: center;
 }
 
@@ -42,8 +42,8 @@ body {
 .principais-recursos_tv h1 {
   color: #000;
   text-align: center;
-  margin-top: 200px;
-  font-size: 4rem;
+  margin-top: 1rem;
+  font-size: 3rem;
   font-family: 'Segoe UI' ;
 }
 .principais-recursos_tv p {
@@ -154,7 +154,6 @@ body {
 
 /* Detalhes Principais Recursos */
 .detalhes-principais-recursos {
-  margin-top: 2rem  ;
   margin-bottom: 2rem;
   width: 100vw;
   height: 120vh;
@@ -179,39 +178,39 @@ body {
 .detalhes-cognitive-processor-xr {
   gap: 80px;
   align-items: center;
+  display: flex;
 }
 
 .img-cognitive-processor-xr {
   margin-top: 3rem;
-  flex: 1;
-  display: flex;
   justify-content: center;
   width: auto;
   height: auto;
 }
 
 .detalhes-cognitive-processor-xr img {
-  width: 870px;
+  margin-left: 1rem;
+  width: 540px;
   height: auto;
 }
 .texto-detalhes-cognitive-processor-xr {
-  flex: 1.5;                 
-  text-align: center;
-  margin-top: 3rem;
+  flex: 1.5;
   margin-right: 3rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 .texto-detalhes-cognitive-processor-xr h1 {
   font-size: 2.5rem;
   font-family: 'Segoe UI';
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .texto-detalhes-cognitive-processor-xr p {
   font-size: 1.1rem;
   font-family: 'Segoe UI';
   line-height: 1.6;
+  text-align: justify;
 }
 
 /* Fim Detalhes Principais Recursos */
