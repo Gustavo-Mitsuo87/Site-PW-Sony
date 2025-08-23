@@ -1,5 +1,4 @@
-body,
-html {
+body {
   font-family: "Segoe UI", sans-serif;
   background: #000000;
   color: #ffffff;
@@ -116,10 +115,11 @@ html {
   --panel-2: #16161a;
   --text: #e9e9ef;
   --muted: #a9a9b3;
-  --brand: #01063ea3; /* CTA laranja */
+  --brand: #010535; /* CTA laranja */
   --brand-2: #3b82f6;
   --stroke: #24242a;
   --card: #131317;
+  --zezin: #01052f;
   --green: #22c55e;
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
@@ -255,7 +255,7 @@ button {
   transition: 0.2s;
 }
 .btn--brand {
-  background: var(--brand);
+  background: var(--zezin);
   color: #ffffff;
   font-weight: 700;
   box-shadow: var(--shadow);
@@ -432,6 +432,7 @@ i.fab.fa-youtube {
   font-size: clamp(20px, 3.4vw, 28px);
   margin: 8px 0 6px;
   font-weight: 800;
+  color: white;
 }
 .feature .copy p {
   color: var(--muted);
@@ -527,7 +528,6 @@ i.fab.fa-youtube {
 .footer {
   background: #0b0b0d;
   border-top: 1px solid var(--stroke);
-  margin-top: 60px;
 }
 .footer .grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -742,7 +742,7 @@ button {
   transition: 0.2s;
 }
 .btn--brand {
-  background: var(--brand);
+  background: var(--zezin);
   color: #ffffff;
   font-weight: 700;
   box-shadow: var(--shadow);
@@ -836,6 +836,7 @@ button {
   line-height: 1.2;
   font-size: clamp(22px, 3.6vw, 32px);
   margin-top: 4rem;
+  color: white;
 }
 .card-2 {
   background: var(--card);

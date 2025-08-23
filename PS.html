@@ -6,6 +6,7 @@
   <title>SONY</title>
   <link rel="stylesheet" href="style_ps.css">
   <link rel="stylesheet" href="style_footer.css">
+  <link rel="stylesheet" href="style_jogos.css">
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -77,7 +78,7 @@
 
 
 </head>
-<body>
+<body class="jeffinho">
 
 </header>
 
@@ -97,7 +98,7 @@
   </header>
 
 <div class="fundo-com-img">
-  <video autoplay loop muted playsinline style="width: 100%; margin-top: 55px; ">
+  <video autoplay loop muted playsinline style="width: 100%; margin-top: 3.02rem; ">
   <source src="Videos/ps5.mp4" type="video/mp4">
 </video>
   
@@ -183,60 +184,7 @@
       </nav>
     </main>
 </div>
-  <section class="games-section">
-    <p class="sony-txt">Conheça mais jogos</p>
-    <p style = "color: white;" class = "txt-ps-2"> Vá alem do imaginavel</p>
-    <div class="games-grid">
-      <!-- Card  -->
-      <div class="game-card">
-        <img src="imagens/re1.jpg" alt="Demon's Souls">
-        <h3>Demon's Souls</h3>
-      </div>
-       <!-- Card  -->
-      <div class="game-card">
-        <img src="imagens/re1.jpg" alt="Demon's Souls">
-        <h3>Demon's Souls</h3>
-      </div>
-       <!-- Card  -->
-      <div class="game-card">
-        <img src="imagens/re1.jpg" alt="Demon's Souls">
-        <h3>Demon's Souls</h3>
-      </div>
-       <!-- Card  -->
-      <div class="game-card">
-        <img src="imagens/re1.jpg" alt="Demon's Souls">
-        <h3>Demon's Souls</h3>
-      </div>
-       <!-- Card  -->
-      <div class="game-card">
-        <img src="imagens/re1.jpg" alt="Demon's Souls">
-        <h3>Demon's Souls</h3>
-      </div>
-       <!-- Card  -->
-      <div class="game-card">
-        <img src="imagens/re1.jpg" alt="Demon's Souls">
-        <h3>Demon's Souls</h3>
-      </div>
-       <!-- Card  -->
-      <div class="game-card">
-        <img src="imagens/re1.jpg" alt="Demon's Souls">
-        <h3>Demon's Souls</h3>
-      </div>
-       <!-- Card  -->
-      <div class="game-card">
-        <img src="imagens/re1.jpg" alt="Demon's Souls">
-        <h3>Demon's Souls</h3>
-      </div>
-
-
-
-
-
-
-
-      
-
-  </section>
+ 
 <!-- TOPO COM TEXTO E IMAGEM -->
 <div style="margin-top: 130px;" class="capas-topo">
   <div class="capas-texto">
@@ -255,7 +203,7 @@
 <!-- GALERIA DE CARDS VERTICAIS -->
 <div class="capas-galeria">
   <div class="card-container" data-aos="fade-up">
-    <div class="card">
+    <div class="card-ps-2">
       <img src="Imagens/ps5-console.png" alt="Velocidade da Luz" />
       <div class="card-content">
         <h2>PS5 Digital</h2>
@@ -264,7 +212,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card-ps-2">
       <img src="Imagens/ps5-digital.png" alt="Imersão de tirar o fôlego" />
       <div class="card-content">
         <h2>Console PS5</h2>
@@ -280,11 +228,12 @@
   background-color: #ffffff;
   border-radius: 10px;
   width: 99.9%;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(6, 0, 59, 0.423);
   margin: 0 auto; /* centraliza horizontalmente */
   display: flex; /* ativa flexbox */
   align-items: center;
   flex-direction: column;
+  margin-bottom: 5rem;
 " class="capas-deitado">
   <div class="card-container-deitado" data-aos="fade-up">
    <div class="card-deitado" style="
@@ -310,87 +259,189 @@
   </div>
 </div>
  
-<div style = "background-color: #ffffff; overflow-x: hidden;" class="fundo-com-img-console">
-      
-<div class="fundo-com-img-console">
-  <video src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/testing/lucy-test-assets/video-hero/test-dualsense-video-billboard.mp4"
-    autoplay loop muted></video>
-</div>
-<div class="capas-galeria">
-  <div class="card-container" data-aos="fade-up">
-    <div class="card">
-      <img src="Imagens/img1.webp" alt="Velocidade da Luz" />
-      <div class="card-content">
-        <h2>PS5 Digital</h2>
-        <p>Entre na ação e continue jogando com a tecnologia de console ultrarrápida e integrada.</p>
-        <a href="https://youtu.be/VGjpnx4-ANY?si=wibav2zhroIF0rjM" class="btn2-ps5">Assista ao vídeo</a>
+ 
+ 
+
+            
+
+    <section class="sense-container">
+      <video
+        class="bg-video"
+        src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/testing/lucy-test-assets/video-hero/test-dualsense-video-billboard.mp4"
+        autoplay
+        loop
+        muted
+      ></video>
+
+      <div class="overlay"></div>
+
+      <div class="sense-content">
+        <button class="play-btn">▶</button>
+        <h2>ELEVE SEUS SENTIDOS™</h2>
+        <p>
+          O controle sem fio DualSense para consoles PS5 oferece resposta tátil
+          imersiva², gatilhos adaptáveis dinâmicos² e um microfone embutido,
+          tudo integrado a um design icônico.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="Imagens/img2.webp" alt="Imersão de tirar o fôlego" />
-      <div class="card-content">
-        <h2>Console PS5</h2>
-        <p>Coloque-se no centro do jogo com controles responsivos, áudio de 360 graus e gráficos detalhados.</p>
-        <a href="https://youtu.be/MErGjwHe1mY?si=aez29UtDDvEPIMb9" class="btn2-ps5">Assista ao vídeo</a>
+    <section class="features-container">
+      <div class="feature feature-right">
+        <img
+          src="https://gmedia.playstation.com/is/image/SIEPDC/dualsense-adaptive-triggers-image-block-01-en-30aug23?$1600px--t$"
+          alt="Gatilhos adaptáveis"
+        />
+        <div class="text">
+          <h3>Gatilhos adaptáveis</h3>
+          <p>
+            Experimente diferentes níveis de força e tensão conforme você
+            interage com seu controle e com os ambientes do jogo. Desde puxar
+            uma corda de arco até pisar nos freios de um carro, sinta-se
+            conectado fisicamente às ações na tela.
+          </p>
+        </div>
       </div>
-    </div>
 
-        <div class="card">
-      <img src="Imagens/ze3.webp" alt="Imersão de tirar o fôlego" />
-      <div class="card-content">
-        <h2>Console PS5</h2>
-        <p>Coloque-se no centro do jogo com controles responsivos, áudio de 360 graus e gráficos detalhados.</p>
-        <a href="https://youtu.be/MErGjwHe1mY?si=aez29UtDDvEPIMb9" class="btn2-ps5">Assista ao vídeo</a>
+      <div class="feature feature-left">
+        
+        <div class="text">
+          <h3>Resposta tátil</h3>
+          <p>
+            Sinta em suas mãos a resposta tátil em seus jogos com atuadores
+            duplos, substituindo os barulhentos motores tradicionais. Nas suas
+            mãos, essas vibrações dinâmicas simulam quaisquer sensações, seja o
+            ambiente ou o recuo de armas diferentes.
+          </p>
+        </div>
+        <img
+          src="https://gmedia.playstation.com/is/image/SIEPDC/dualsense-haptic-feedback-image-block-01-en-30aug23?$1600px--t$"
+          alt="Resposta tátil"
+        />
       </div>
-    </div>
-  </div>
-</div>
+    </section>
+ 
 
+                 
 
-</div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0131ac" fill-opacity="1" d="M0,224L1440,192L1440,320L0,320Z"></path></svg>
-<div class = "banner-ps-2">
-<p>Conheça mais dos nossos consoles</p>
-<h5 class="pzin">Aproveite o poder de uma CPU, uma GPU e um SSD personalizados que oferecem gráficos de tirar o fôlego e jogabilidade suave.</h5>
-</div>
+    <section class="sense-container">
+      <video
+        class="bg-video"
+        src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/hardware/accessories/ps5-wireless-headset/channel-specific-content/pdc/2020/background-video/3d-pulse-wireless-headset-video-background-01-en-21jul20.mp4"
+        autoplay
+        loop
+        muted
+      ></video>
 
-<div class="capas-galeria">
-  <div class="card-container" data-aos="fade-up">
-    <div class="card">
-      <img src="Imagens/img1.webp" alt="Velocidade da Luz" />
-      <div class="card-content">
-        <h2>PS5 Digital</h2>
-        <p>Entre na ação e continue jogando com a tecnologia de console ultrarrápida e integrada.</p>
-        <a href="https://youtu.be/VGjpnx4-ANY?si=wibav2zhroIF0rjM" class="btn2-ps5">Assista ao vídeo</a>
+      <div class="overlay"></div>
+
+      <div class="sense-content">
+        <button class="play-btn">▶</button>
+        <h2>ELEVE SEUS SENTIDOS™</h2>
+        <p>
+          O controle sem fio DualSense para consoles PS5 oferece resposta tátil
+          imersiva², gatilhos adaptáveis dinâmicos² e um microfone embutido,
+          tudo integrado a um design icônico.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="Imagens/img2.webp" alt="Imersão de tirar o fôlego" />
-      <div class="card-content">
-        <h2>Console PS5</h2>
-        <p>Coloque-se no centro do jogo com controles responsivos, áudio de 360 graus e gráficos detalhados.</p>
-        <a href="https://youtu.be/MErGjwHe1mY?si=aez29UtDDvEPIMb9" class="btn2-ps5">Assista ao vídeo</a>
+    <section class="features-container">
+      <div class="feature feature-right">
+        <img
+          src="Imagens/Pulse-Explore-headset-midnight-image-block-01-en-16jan25.webp"
+          alt="Gatilhos adaptáveis"
+        />
+        <div class="text">
+          <h3>Gatilhos adaptáveis</h3>
+          <p>
+            Experimente diferentes níveis de força e tensão conforme você
+            interage com seu controle e com os ambientes do jogo. Desde puxar
+            uma corda de arco até pisar nos freios de um carro, sinta-se
+            conectado fisicamente às ações na tela.
+          </p>
+        </div>
       </div>
-    </div>
 
-        <div class="card">
-      <img src="Imagens/ze3.webp" alt="Imersão de tirar o fôlego" />
-      <div class="card-content">
-        <h2>Console PS5</h2>
-        <p>Coloque-se no centro do jogo com controles responsivos, áudio de 360 graus e gráficos detalhados.</p>
-        <a href="https://youtu.be/MErGjwHe1mY?si=aez29UtDDvEPIMb9" class="btn2-ps5">Assista ao vídeo</a>
+      <div class="feature feature-left">
+        
+        <div class="text">
+          <h3>Resposta tátil</h3>
+          <p>
+            Sinta em suas mãos a resposta tátil em seus jogos com atuadores
+            duplos, substituindo os barulhentos motores tradicionais. Nas suas
+            mãos, essas vibrações dinâmicas simulam quaisquer sensações, seja o
+            ambiente ou o recuo de armas diferentes.
+          </p>
+        </div>
+        <img
+          src="Imagens/Pulse-Elite-headset-midnight-image-block-02-en-16jan25.webp"
+          alt="Resposta tátil"
+        />
       </div>
-    </div>
-  </div>
-</div>
-
+    </section>
   
 
+    <section class="sense-container">
+      <video
+        class="bg-video"
+        src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/hardware/accessories/ps-fight-stick/channel-specific-content/pdc/2025/video/flexstick-announce-video-block-02-en-15jul25.mp4"
+        autoplay
+        loop
+        muted
+      ></video>
 
-</div>
-</div>
+      <div class="overlay"></div>
+
+      <div class="sense-content">
+        <button class="play-btn">▶</button>
+        <h2>ELEVE SEUS SENTIDOS™</h2>
+        <p>
+          O controle sem fio DualSense para consoles PS5 oferece resposta tátil
+          imersiva², gatilhos adaptáveis dinâmicos² e um microfone embutido,
+          tudo integrado a um design icônico.
+        </p>
+      </div>
+    </section>
+
+    <section class="features-container">
+      <div class="feature feature-right">
+        <img
+          src="Imagens/ps-fight-stick-image-block-02-en-28may25.webp"
+          alt="Gatilhos adaptáveis"
+        />
+        <div class="text">
+          <h3>Gatilhos adaptáveis</h3>
+          <p>
+            Experimente diferentes níveis de força e tensão conforme você
+            interage com seu controle e com os ambientes do jogo. Desde puxar
+            uma corda de arco até pisar nos freios de um carro, sinta-se
+            conectado fisicamente às ações na tela.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature feature-left">
+        
+        <div class="text">
+          <h3>Resposta tátil</h3>
+          <p>
+            Sinta em suas mãos a resposta tátil em seus jogos com atuadores
+            duplos, substituindo os barulhentos motores tradicionais. Nas suas
+            mãos, essas vibrações dinâmicas simulam quaisquer sensações, seja o
+            ambiente ou o recuo de armas diferentes.
+          </p>
+        </div>
+        <img
+          src="Imagens/T-flight-Hotas-4-image-block-01-en-28mar22.webp"
+          alt="Resposta tátil"
+        />
+      </div>
+    </section>
+ 
+         
+
+
 
 
 
@@ -425,7 +476,43 @@
 </div>
 </div>
 
-   
+      <section class="section-2">
+      <div class="container">
+        <h1 class="h2-2">
+          Tudo o que você precisa saber antes da próxima entrega
+        </h2>
+        <div class="faq mt-16">
+          <details>
+            <summary>Quanto tempo de campanha?</summary>
+            <p>
+              Depende do seu estilo: entre 35–60h em média, mais conteúdo
+              opcional para completistas.
+            </p>
+          </details>
+          <details>
+            <summary>Posso importar saves do primeiro jogo?</summary>
+            <p>
+              Alguns bônus cosméticos e referências podem ser reconhecidos.
+              Consulte o menu de Extras.
+            </p>
+          </details>
+          <details>
+            <summary>Existe modo foto e ultrawide?</summary>
+            <p>
+              Sim! Modo foto completo no PS5 e composição cinematográfica com
+              opções avançadas.
+            </p>
+          </details>
+          <details>
+            <summary>Como jogar online (modo Social Strand)?</summary>
+            <p>
+              Conecte sua PSN para compartilhar estruturas e sinais. Não há PVP,
+              foco em cooperação assíncrona.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section> 
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-section">
