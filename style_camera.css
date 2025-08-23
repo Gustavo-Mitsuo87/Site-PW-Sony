@@ -139,6 +139,15 @@ nav a:active {
   text-decoration: none;
 }
 
+.banner_lateral img {
+  margin-top: 150px;
+  width: 100vw;
+  position: relative;
+  margin-left: -2rem;
+  margin-right: -1rem;
+  margin-bottom: 100px;
+}
+
 .beneficios {
   display: flex;
   text-align: center;
