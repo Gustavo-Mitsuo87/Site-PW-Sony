@@ -851,7 +851,7 @@ nav a:active {
 }
 
 .capas-texto h2 {
-  color: #0070d1;
+  color: var(--zezin);
   font-size: 28px;
   margin-bottom: 10px;
 }
@@ -960,7 +960,7 @@ nav a:active {
 }
 .btn-ps5 {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 2rem;
   padding: 8px 20px;
   background: var(--zezin);
   color: white;
@@ -1072,7 +1072,6 @@ nav a:active {
 }
 
 .feature img {
-  max-width: 450px;
   flex: 1;
 }
 
@@ -1084,7 +1083,7 @@ nav a:active {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #222;
+  color: var(--zezin);
 }
 
 .feature .text p {
