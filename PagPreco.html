@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sony</title>
+  <link rel="icon" type="image/png" href="Imagens/sony (2).png">
   <link rel="stylesheet" href="StylePrecos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -14,17 +15,23 @@
   <header id="navbar">
     <nav>
       <div class="logo">
-        <img src="./Imagens/logo.png" alt="Logo Sony" />
+        <img src="./Imagens/logo.png" alt="" />
       </div>
-      <div class="menu">
+      <div class="nav-icons">
         <a href="index.html">Home</a>
-        <a>User</a>
-        <a>Contato</a>
+        <a href="#User">User</a>
+         
+
+        <div class="search-box">
+          <i id="search-icon" class="fas fa-search"></i>
+          <input type="text" id="search-input" placeholder="Pesquisar...">
+        </div>
       </div>
     </nav>
   </header>
 
-  <main>
+<main>
+  <div class="product-container">
 
     <div class="product-card">
       <img
@@ -33,10 +40,9 @@
       />
     </div>
 
-   
-    <div class="product-info">
-      <h3 class="product-title">Camera ZV-E10</h3>
 
+    <div class="product-info">
+      <h1 class="product-title">Camera ZV-E10</h1>
 
       <div class="stars">
         <span class="star" data-value="1">&#9733;</span>
@@ -48,28 +54,29 @@
 
       <p class="rating-hint">- Avalie-nos! -</p>
 
-
       <div class="price-container">
         <p class="price">R$6.150,00</p>
         <button class="buy-btn">Comprar</button>
       </div>
-    </div>
 
-  
-    <div class="product-details">
-      <p>
-        Este é um produto incrível que oferece ótima qualidade e durabilidade.
-        Ele é perfeito para quem busca custo-benefício.
-        Disponível em várias cores e tamanhos.
-        <span class="more-text" style="display: none;">
-          Fabricado com materiais sustentáveis e tecnologia avançada, garante conforto e estilo em todas as ocasiões. Além disso, possui garantia estendida e suporte técnico especializado.
-        </span>
-      </p>
-      <button class="more-btn">Mais detalhes</button>
-    </div>
-  </main>
 
- <footer class="footer">
+      <div class="product-details">
+        <p>
+          Este é um produto incrível que oferece ótima qualidade e durabilidade.
+          Ele é perfeito para quem busca custo-benefício.
+          Disponível em várias cores e tamanhos.
+          <span class="more-text" style="display: none;">
+            Fabricado com materiais sustentáveis e tecnologia avançada, garante conforto e estilo em todas as ocasiões. Além disso, possui garantia estendida e suporte técnico especializado.
+          </span>
+        </p>
+        <button class="more-btn">Mais detalhes</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+  <footer class="footer">
     <div class="footer-container">
       <div class="footer-section">
         <h3>Sony</h3>
@@ -100,3 +107,4 @@
 </body>
 
 </html>
+
