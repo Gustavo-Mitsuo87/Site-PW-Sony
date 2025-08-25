@@ -3,13 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.jeffinho {
-  font-family: "Segoe UI", sans-serif;
-  background: #ffffff;
-  color: #000000;
-}
-
 header {
   text-align: center;
   padding: 2rem;
@@ -21,6 +14,170 @@ main {
   height: 100vh; /* controla altura sem ocupar a tela toda */
   overflow: hidden;
   margin-top: 10.6rem;
+}
+.logo img {
+  max-width: 200px;
+  height: auto;
+  width: auto;
+  color: rgb(0, 0, 0);
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #0070d1;
+}
+
+.wcabecalho {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
+  z-index: 40;
+  width: 100%;
+}
+
+#navbar {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+}
+
+#navbar.scrolled {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  user-select: none;
+}
+
+.nav .btn-2 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.nav .btn-2:hover {
+  background-color: rgb(255, 255, 255);
+}
+nav {
+  text-decoration-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  color: #001439;
+}
+
+nav a:active {
+  color: #012246;
+}
+
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-left: 80px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.jeffinho {
+  font-family: "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #000000;
 }
 
 .slider {
@@ -479,9 +636,7 @@ nav a:active {
   object-fit: cover;
   transition: 1s;
 }
-.card-ps-2:hover img {
-  scale: 1.4;
-}
+
 .card-content {
   padding: 20px 25px;
   text-align: center;
@@ -1219,4 +1374,1062 @@ nav a:active {
 
 .dual-img img {
   max-width: 500px;
+}
+.dual-container-2 {
+  text-align: center;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.dual-container-2 h2 {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-bottom: 15px;
+
+  color: var(--zezin);
+}
+
+.dual-container-2 p {
+  font-size: 1em;
+  margin-bottom: 25px;
+  color: var(--zezin);
+  line-height: 1.5;
+}
+
+.thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.thumbs img {
+  width: 10rem;
+  height: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s, border 0.3s;
+}
+.thumbs img {
+  transition: all 0.3s;
+}
+
+/* Todas ficam borradas quando o mouse entra no container */
+.thumbs:hover img {
+  filter: blur(4px);
+}
+
+/* A imagem que está sendo hoverada fica normal e aumenta */
+.thumbs img:hover {
+  filter: blur(0);
+  transform: scale(1.1);
+  border: 0.9px solid var(--zezin);
+}
+
+.main-control {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#controle-grande {
+  max-width: 80%;
+  width: 80%;
+  transition: opacity 0.3s ease;
+}
+
+#controle-texto {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.main-control img {
+  width: 100%;
+  max-width: 100%;
+  transition: opacity 0.4s ease;
+}
+.accs {
+  background-color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-content .p2 {
+  color: #000;
+  text-align: center;
+  margin-top: 1rem;
+}
+.card-content .h22 {
+  color: #000;
+  text-align: center;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #000000;
+  color: #ffffff;
+}
+
+.faq summary::marker,
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--muted);
+  transition: 0.2s;
+}
+.faq details[open] summary::after {
+  content: "—";
+  color: #fff;
+}
+.faq p {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* ============ “Informações gerais” (tabela/legendas) ============ */
+.info-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.info-item {
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  padding: 14px;
+}
+.info-item .k {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 920px) {
+  .footer .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ============ Pequenos toques ============ */
+.hr {
+  height: 1px;
+  background: var(--stroke);
+  border: 0;
+  margin: 40px 0;
+}
+.note {
+  font-size: 13px;
+  color: var(--muted);
+}
+.small {
+  font-size: 14px;
+}
+.round {
+  border-radius: var(--radius);
+}
+.center {
+  text-align: center;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.mt-24 {
+  margin-top: 24px;
+}
+.mt-32 {
+  margin-top: 32px;
+}
+.card img {
+  height: 60%;
+  max-height: 60%;
+}
+.zezin {
+  margin-top: 9rem;
+  width: 92%;
+  color: white;
+  background: rgba(255, 255, 255, 0.1); /* leve transparência */
+  backdrop-filter: blur(10px); /* desfoque do fundo */
+  -webkit-backdrop-filter: blur(10px); /* compatibilidade com Safari */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+/* ============ Reset + Variáveis ============ */
+:root {
+  --bg: #000000;
+  --panel: #121215;
+  --panel-2: #16161a;
+  --text: #e9e9ef;
+  --muted: #a9a9b3;
+  --brand: #010535; /* CTA laranja */
+  --brand-2: #3b82f6;
+  --stroke: #24242a;
+  --card: #131317;
+  --zezin: #01052f;
+  --green: #22c55e;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --container: 1200px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(100%, var(--container));
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+.stack-24 > * + * {
+  margin-top: 24px;
+}
+.stack-32 > * + * {
+  margin-top: 32px;
+}
+.grid {
+  display: grid;
+  gap: 24px;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 720px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============ Header simples (breadcrumbs) ============ */
+
+/* ============ HERO ============ */
+.hero-2 {
+  position: relative;
+  isolation: isolate;
+  min-height: 72vh;
+  display: grid;
+  align-items: end;
+  background: radial-gradient(
+      1200px 500px at 70% 0%,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.85));
+  overflow: hidden;
+}
+.hero-2::before {
+  /* BG da seção – troque a URL */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("Imagens/death2.webp") center/cover no-repeat;
+  filter: saturate(1.05) contrast(1.05) brightness(0.8);
+  z-index: -2;
+}
+.hero-2::after {
+  /* vinheta */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+      1000px 600px at 30% 20%,
+      transparent 60%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.9) 100%);
+}
+.hero-2 .body {
+  padding-block: 56px 28px;
+}
+.kicker {
+  color: var(--muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.h1 {
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-size: clamp(28px, 5vw, 44px);
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  color: var(--muted);
+}
+.btnrow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.btn-2 {
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn--brand {
+  background: var(--zezin);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+}
+.btn--ghost {
+  border-color: #ffffff22;
+  background: #ffffff10;
+  color: #fff;
+}
+.btn--ghost:hover {
+  background: #ffffff18;
+}
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.badge {
+  font-size: 12px;
+  padding: 6px 10px;
+  border: 1px solid #ffffff22;
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+/* carrossel de miniaturas (simples) */
+.thumbs {
+  margin-top: 5rem;
+  display: flex;
+  gap: 10px;
+
+  padding-bottom: 6px;
+  width: 100%;
+}
+.thumb {
+  flex: 0 0 auto;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ffffff1a;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.2s;
+  width: 24%;
+}
+.thumb:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* ============ Seção CTA escura ============ */
+.band-cta {
+  background: url("assets/band-cta.jpg") center/cover no-repeat, var(--panel);
+  padding: 80px 0;
+  position: relative;
+  isolation: isolate;
+}
+.band-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.band-cta .inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.band-cta p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--muted);
+}
+
+/* ============ Edição de Colecionador ============ */
+.section {
+  padding: 60px 0;
+  background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/death-stranding-2-sku-ce-background-desktop-01-en-10mar25?$4000px$");
+}
+.section-2 {
+  padding: 60px 0;
+  background: var(--bg);
+}
+.section.alt {
+  background: var(--panel);
+}
+.h2-2 {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-size: clamp(22px, 3.6vw, 32px);
+  margin-top: 4rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.card .title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.card ul {
+  margin-top: 8px;
+  color: var(--muted);
+  padding-left: 18px;
+}
+.card li {
+  margin: 6px 0;
+}
+
+/* ============ Galeria de personagens ============ */
+.figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+}
+.figure img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: 0.35s;
+  filter: saturate(0.98);
+}
+.figure:hover img {
+  transform: scale(1.04);
+}
+.figure .cap {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 10px 12px;
+
+  width: 20%;
+  font-size: 14px;
+  color: #fff;
+}
+i.fab.fa-youtube {
+  color: #ff0000;
+  font-size: 2rem;
+}
+/* ============ Blocos de features alternados ============ */
+.feature {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 9rem;
+}
+.feature:nth-child(even) {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+@media (max-width: 920px) {
+  .feature {
+    grid-template-columns: 1fr;
+  }
+}
+.feature .media {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+}
+.feature .copy .eyebrow {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.feature .copy h3 {
+  font-size: clamp(20px, 3.4vw, 28px);
+  margin: 8px 0 6px;
+  font-weight: 800;
+  color: white;
+}
+.feature .copy p {
+  color: var(--muted);
+}
+
+/* ============ DualSense highlight ============ */
+.dualsense {
+  background: radial-gradient(800px 300px at 50% -10%, #ffffff12, transparent),
+    linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-block: 1px solid var(--stroke);
+  padding: 64px 0;
+}
+.dualsense .wrap {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+}
+.dualsense img {
+  width: 100%;
+  max-width: 540px;
+  margin-inline: auto;
+}
+@media (max-width: 920px) {
+  .dualsense .wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============ FAQ (CSS only) ============ */
+.faq details {
+  border-bottom: 1px solid var(--stroke);
+  padding: 16px 0;
+}
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  position: relative;
+  padding-right: 28px;
+}
+.faq summary::marker,
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--muted);
+  transition: 0.2s;
+}
+.faq details[open] summary::after {
+  content: "—";
+  color: #fff;
+}
+.faq p {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* ============ “Informações gerais” (tabela/legendas) ============ */
+.info-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.info-item {
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  padding: 14px;
+}
+.info-item .k {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============ Rodapé ============ */
+.footer {
+  background: #0b0b0d;
+  border-top: 1px solid var(--stroke);
+}
+.footer .grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.footer h4 {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.footer ul {
+  color: var(--muted);
+  font-size: 14px;
+}
+.footer li + li {
+  margin-top: 6px;
+}
+@media (max-width: 920px) {
+  .footer .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ============ Pequenos toques ============ */
+.hr {
+  height: 1px;
+  background: var(--stroke);
+  border: 0;
+  margin: 40px 0;
+}
+.note {
+  font-size: 13px;
+  color: var(--muted);
+}
+.small {
+  font-size: 14px;
+}
+.round {
+  border-radius: var(--radius);
+}
+.center {
+  text-align: center;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.mt-24 {
+  margin-top: 24px;
+}
+.mt-32 {
+  margin-top: 32px;
+}
+
+.zezin {
+  margin-top: 9rem;
+  width: 92%;
+  color: white;
+  background: rgba(255, 255, 255, 0.1); /* leve transparência */
+  backdrop-filter: blur(10px); /* desfoque do fundo */
+  -webkit-backdrop-filter: blur(10px); /* compatibilidade com Safari */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+/* ============ Reset + Variáveis ============ */
+:root {
+  --bg: #000000;
+  --panel: #121215;
+  --panel-2: #16161a;
+  --text: #e9e9ef;
+  --muted: #a9a9b3;
+  --brand: #01063ea3; /* CTA laranja */
+  --brand-2: #3b82f6;
+  --stroke: #24242a;
+  --card: #131317;
+  --green: #22c55e;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --container: 1200px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+}
+
+/* ============ Helpers ============ */
+.container {
+  width: min(100%, var(--container));
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+.stack-24 > * + * {
+  margin-top: 24px;
+}
+.stack-32 > * + * {
+  margin-top: 32px;
+}
+.grid {
+  display: grid;
+  gap: 24px;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 720px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============ Header simples (breadcrumbs) ============ */
+
+/* ============ HERO ============ */
+.hero-2 {
+  position: relative;
+  isolation: isolate;
+  min-height: 72vh;
+  display: grid;
+  align-items: end;
+  background: radial-gradient(
+      1200px 500px at 70% 0%,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.85));
+  overflow: hidden;
+}
+.hero-2::before {
+  /* BG da seção – troque a URL */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("Imagens/death2.webp") center/cover no-repeat;
+  filter: saturate(1.05) contrast(1.05) brightness(0.8);
+  z-index: -2;
+}
+.hero-2::after {
+  /* vinheta */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+      1000px 600px at 30% 20%,
+      transparent 60%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.9) 100%);
+}
+.hero-2 .body {
+  padding-block: 56px 28px;
+}
+.kicker {
+  color: var(--muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.h1 {
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-size: clamp(28px, 5vw, 44px);
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  color: var(--muted);
+}
+.btnrow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.btn-2 {
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn--brand {
+  background: var(--zezin);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+}
+.btn--ghost {
+  border-color: #ffffff22;
+  background: #ffffff10;
+  color: #fff;
+}
+.btn--ghost:hover {
+  background: #ffffff18;
+}
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.badge {
+  font-size: 12px;
+  padding: 6px 10px;
+  border: 1px solid #ffffff22;
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+/* carrossel de miniaturas (simples) */
+.thumbs {
+  margin-top: 5rem;
+  display: flex;
+  gap: 10px;
+
+  padding-bottom: 6px;
+  width: 100%;
+}
+.thumb {
+  flex: 0 0 auto;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ffffff1a;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.2s;
+  width: 24%;
+}
+.thumb:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* ============ Seção CTA escura ============ */
+.band-cta {
+  background: url("assets/band-cta.jpg") center/cover no-repeat, var(--panel);
+  padding: 80px 0;
+  position: relative;
+  isolation: isolate;
+}
+.band-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.band-cta .inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.band-cta p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--muted);
+}
+
+/* ============ Edição de Colecionador ============ */
+.section {
+  padding: 60px 0;
+  background-image: url("https://gmedia.playstation.com/is/image/SIEPDC/death-stranding-2-sku-ce-background-desktop-01-en-10mar25?$4000px$");
+}
+.section-2 {
+  padding: 60px 0;
+  background: var(--bg);
+}
+.section.alt {
+  background: var(--panel);
+}
+.h2-2 {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-size: clamp(22px, 3.6vw, 32px);
+  margin-top: 4rem;
+  color: white;
+}
+.card-2 {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.card-2 .title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.card-2 ul {
+  margin-top: 8px;
+  color: var(--muted);
+  padding-left: 18px;
+}
+.card-2 li {
+  margin: 6px 0;
+}
+
+/* ============ Galeria de personagens ============ */
+.figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+}
+.figure img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: 0.35s;
+  filter: saturate(0.98);
+}
+.figure:hover img {
+  transform: scale(1.04);
+}
+.figure .cap {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 10px 12px;
+
+  width: 20%;
+  font-size: 14px;
+  color: #fff;
+}
+i.fab.fa-youtube {
+  color: #ff0000;
+  font-size: 2rem;
+}
+/* ============ Blocos de features alternados ============ */
+.feature {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 9rem;
+}
+.feature:nth-child(even) {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+@media (max-width: 920px) {
+  .feature {
+    grid-template-columns: 1fr;
+  }
+}
+.feature .media {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+}
+.feature .copy .eyebrow {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.feature .copy h3 {
+  font-size: clamp(20px, 3.4vw, 28px);
+  margin: 8px 0 6px;
+  font-weight: 800;
+}
+.feature .copy p {
+  color: var(--muted);
+}
+
+/* ============ DualSense highlight ============ */
+.dualsense {
+  background: radial-gradient(800px 300px at 50% -10%, #ffffff12, transparent),
+    linear-gradient(180deg, var(--panel-2), var(--panel));
+  border-block: 1px solid var(--stroke);
+  padding: 64px 0;
+}
+.dualsense .wrap {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+}
+.dualsense img {
+  width: 100%;
+  max-width: 540px;
+  margin-inline: auto;
+}
+@media (max-width: 920px) {
+  .dualsense .wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============ FAQ (CSS only) ============ */
+.faq details {
+  border-bottom: 1px solid var(--stroke);
+  padding: 16px 0;
+}
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  position: relative;
+  padding-right: 28px;
+  color: white;
 }

@@ -3,327 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beauty Template</title>
+    <title>Controle</title>
     <link rel="stylesheet" href="style_ps.css" />
-    <link rel="stylesheet" href="style_footer.css" />
-    <link rel="stylesheet" href="style_header.css" />
-    <link rel="stylesheet" href="style_jogos.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-.dual-container-2 {
-  text-align: center;
-  padding: 40px;
-  font-family: Arial, sans-serif;
-  max-width: 100%;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.dual-container-2 h2 {
-  font-size: 1.7em;
-  font-weight: bold;
-  margin-bottom: 15px;
-   
-  color: var(--zezin);
-}
-
-.dual-container-2 p {
-  font-size: 1em;
-  margin-bottom: 25px;
-  color: var(--zezin);
-  line-height: 1.5;
  
-}
-
-.thumbs {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-
-.thumbs img {
-  width: 10rem;
-  height: auto;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: transform 0.3s, border 0.3s;
-}
-.thumbs img {
-  transition: all 0.3s;
-}
-
-/* Todas ficam borradas quando o mouse entra no container */
-.thumbs:hover img {
-  filter: blur(4px);
-}
-
-/* A imagem que está sendo hoverada fica normal e aumenta */
-.thumbs img:hover {
-  filter: blur(0);
-  transform: scale(1.1);
-  border: 0.9px solid var(--zezin);
-}
-
-
-.main-control {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#controle-grande {
-  max-width: 80%;
-  width: 80%;
-  transition: opacity 0.3s ease;
-}
-
-#controle-texto {
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  margin-top: 10px;
-  transition: opacity 0.3s ease;
-}
-
-
-.main-control img {
-  width: 100%; 
-max-width: 100%;
-  transition: opacity 0.4s ease;
-}
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Montserrat", sans-serif;
-      }
-
-      body {
-        color: #333;
-        background: #fff;
-        line-height: 1.6;
-      }
-
-       
-
-      .nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-      }
-
-      .nav a {
-        text-decoration: none;
-        color: #333;
-        font-weight: 600;
-      }
-
-      .nav a:hover {
-        color: #d63384;
-      }
-
-      /* Hero */
-      .sense-container {
-  position: relative;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  overflow: hidden; /* garante que o vídeo não vaze */
-}
-.sense-container .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-.sense-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  padding: 20px;
-}
-.play-btn {
-  background: none;
-  border: 2px solid white;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.play-btn:hover {
-  background: white;
-  color: black;
-}
-.sense-content h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.sense-content p {
-  font-size: 16px;
-  color: #ccc;
-}
-
-      .btn {
-        display: inline-block;
-        padding: 12px 25px;
-        background: #d63384;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 30px;
-        font-weight: 600;
-      }
-
-      /* Services */
-      .services .container {
-        display: flex;
-        justify-content: space-between;
-        padding: 60px 0;
-        width: 90%;
-        margin: auto;
-        text-align: center;
-      }
-
-      .service {
-        flex: 1;
-        padding: 15px;
-      }
-
-      .service .icon {
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-
-      /* About */
-      .about {
-        padding: 80px 0;
-        background: #f9f9f9;
-      }
-
-      .about-flex {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 40px;
-      }
-
-      .about-text {
-        flex: 1;
-      }
-
-      .about-img {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .img-placeholder {
-        background: #ddd;
-        width: 100%;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .btn-dark {
-        padding: 12px 25px;
-        background: #333;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 30px;
-        display: inline-block;
-        margin-top: 20px;
-      }
-
-      /* Portfolio */
-      .portfolio {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        margin: 0;
-      }
-
-      .portfolio-item {
-        height: 250px;
-        background: #bbb;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-weight: 600;
-      }
-
-      /* Features */
-      .features {
-        padding: 80px 0;
-        text-align: center;
-      }
-
-      .features .container {
-        display: flex;
-        justify-content: space-around;
-        width: 90%;
-        margin: auto;
-      }
-
-      .feature {
-        flex: 1;
-        padding: 20px;
-      }
-
-      /* Skills */
-      .skills {
-        padding: 80px 0;
-        background: #f9f9f9;
-      }
-
-      .skills .container {
-        width: 90%;
-        margin: auto;
-      }
-
-      .skills h2 {
-        margin: 10px 0 30px;
-      }
-
-      .skill {
-        margin-bottom: 20px;
-      }
-
-      .skill span {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: 600;
-      }
-
-      .bar {
-        background: #ddd;
-        height: 8px;
-        border-radius: 5px;
-        overflow: hidden;
-      }
-
-      .progress {
-        background: #d63384;
-        height: 100%;
-      }
-    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
   </head>
   <body>
     <!-- Header -->
@@ -383,7 +69,7 @@ max-width: 100%;
             uma corda de arco até pisar nos freios de um carro, sinta-se
             conectado fisicamente às ações na tela.
           </p>
-          <a href="play.html" class="btn-ps5">Saiba mais</a>
+           
         </div>
       </div>
 
@@ -397,7 +83,7 @@ max-width: 100%;
             mãos, essas vibrações dinâmicas simulam quaisquer sensações, seja o
             ambiente ou o recuo de armas diferentes.
           </p>
-          <a href="play.html" class="btn-ps5">Saiba mais</a>
+           
         </div>
         <img
           src="https://gmedia.playstation.com/is/image/SIEPDC/dualsense-haptic-feedback-image-block-01-en-30aug23?$1600px--t$"
@@ -418,6 +104,7 @@ max-width: 100%;
     <div class="thumb-item">
       <img src="imagens/con1.webp" 
            data-png="Imagens/con5.png" 
+           data-link=" https://www.amazon.com.br/dp/B0F8RBVJ51"
           data-title="Death Stranding™ 2: On the Beach Limited Edition"
            data-text="Mantenha o fluxo de suprimentos com o hardware mais recente para a nova jornada de Portadores em Death Stranding 2: On the Beach."
            onclick="trocarControle(this)" alt="Controle Astro Bot">
@@ -428,6 +115,7 @@ max-width: 100%;
     <div class="thumb-item">
       <img src="imagens/con6.webp" 
            data-png="Imagens/con6-22.png" 
+           data-link="https://www.amazon.com.br/dp/B0DCKXZ21T"
           data-title="Edição limitada de ASTRO BOT "
            data-text="Viaje pela galáxia com esta edição limitada do controle sem fio DualSense, inspirado no design dinâmico da confiável nave espacial Dual Speeder do ASTRO. Lançado em 6 de setembro de 2024. Esse controle não está mais disponível."
            onclick="trocarControle(this)" alt="Controle Astro Bot">
@@ -437,6 +125,7 @@ max-width: 100%;
     <div class="thumb-item">
       <img src="imagens/con2.webp" 
            data-png="Imagens/con2.png" 
+           data-link=" https://www.amazon.com.br/dp/B0DCKXZ21T"
            data-title="Edição limitada do 30º aniversário"
            data-text="Comemore o 30º aniversário do console PlayStation® original com o controle sem fio DualSense™ — edição limitada do 30º Aniversário. Disponibilidade limitada — consulte os revendedores para mais detalhes"
            onclick="trocarControle(this)" alt="Controle TLOU">
@@ -446,6 +135,7 @@ max-width: 100%;
     <div class="thumb-item">
       <img src="imagens/con3.webp" 
            data-png="Imagens/con3.png" 
+           data-link=" "
            data-title="Edição limitada de The Last of Us"
            data-text="Fuja dos infectados com a edição limitada deste controle, inspirado em The Last of Us. Lançado em 10 de abril de 2025."
            onclick="trocarControle(this)" alt="Controle Helldivers">
@@ -456,6 +146,7 @@ max-width: 100%;
       <img src="imagens/con56.webp" 
            data-png="Imagens/con1.png" 
            data-title="Edição limitada do HELLDIVERS™ 2"
+           data-link="https://www.kabum.com.br/produto/690193/controle-sony-dualsense-helldivers-2-ps5-sem-fio-edicao-limitada-1000047244"
            data-text="Lidere o comando da democracia galáctica com a elegante edição limitada do controle sem fio DualSense – HELLDIVERS™ 2. Lançado em 6 de fevereiro de 2025. Esse controle não está mais disponível."
            onclick="trocarControle(this)" alt="Controle Fortnite">
       
@@ -464,9 +155,11 @@ max-width: 100%;
 
   <!-- Imagem principal + texto -->
   <div class="main-control">
-    <img id="controle-grande" src="imagens/controle-sem-fundo.png" alt="Controle Grande">
+    <img id="controle-grande" src="imagens/con5.png" alt="Controle Grande">
     <h3 id="controle-titulo">Controles Especiais</h3>
     <p id="controle-texto">Clique em uma miniatura para ver os detalhes.</p>
+    <a id="controle-link" href="https://www.amazon.com.br/dp/B0F8RBVJ51" class="btn-ps5">Saiba mais</a>
+
   </div>
 </div>
 
@@ -474,51 +167,40 @@ max-width: 100%;
   
 
     <!-- About -->
-    <section class="about">
-      <div class="container about-flex">
-        <div class="about-text">
-          <h4>About Us & Our Work</h4>
-          <h2>Get to Know Us</h2>
+     <section class="features-container">
+      <div class="feature feature-right"data-aos="fade-up-left">
+        <img
+          src="Imagens/carregador.webp"
+          alt="Gatilhos adaptáveis"
+        />
+        <div class="text" data-aos="fade-up-right">
+          <h3>Clique. Carregue. Jogue.</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.
+            Conecte até dois controles sem fio DualSense5  de forma rápida e simples com a base de carregamento fácil de conectar. Seus controles carregam tão rápido quanto se estivessem conectados ao console PS5, liberando as portas USB sem comprometer o desempenho.
           </p>
-          <a href="#" class="btn-dark">Continue Reading</a>
+            <a href="https://www.magazineluiza.com.br/estacao-de-carregamento-para-controle-dualsense-para-ps5-sony-original/p/233238100/ga/otga/" class="btn-ps5">Saiba mais</a>
         </div>
-        <div class="about-img">
-          <div class="img-placeholder">IMAGEM</div>
+      </div>
+
+      <div class="feature feature-left"data-aos="fade-up-right">
+        
+        <div class="text">
+          <h3>Eleve seu jogo</h3>
+          <p>
+            Conecte-se usando um cabo USB Tipo-C® ou tecnologia Bluetooth® e jogue facilmente em mais dispositivos, incluindo computadores Windows PC e Mac®, além de dispositivos móveis e tablets Android e iOS.
+
+Eleve sua diversão no PC com recursos avançados como resposta tátil e gatilhos adaptáveis em vários títulos de sucesso para PC8 e curta milhares de jogos compatíveis com controle. 
+          </p>
+           
         </div>
+        <img
+          src="Imagens/pc.webp"
+          alt="Resposta tátil"
+        />
       </div>
     </section>
 
-    <!-- Portfolio -->
-    <section class="portfolio">
-      <div class="portfolio-item">IMAGEM</div>
-      <div class="portfolio-item">IMAGEM</div>
-      <div class="portfolio-item">IMAGEM</div>
-      <div class="portfolio-item">IMAGEM</div>
-      <div class="portfolio-item">IMAGEM</div>
-    </section>
-
-    <!-- Features -->
-    <section class="features">
-      <div class="container">
-        <div class="feature">
-          <h3>Fully Responsive</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        </div>
-        <div class="feature">
-          <h3>Amazing Clients</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        </div>
-        <div class="feature">
-          <h3>Easy to Customize</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        </div>
-      </div>
-    </section>
-
+   
     <!-- Skills -->
      <section class="section-2">
       <div class="container">
@@ -585,42 +267,40 @@ max-width: 100%;
     </div>
   </footer>
 <script>
-    function trocarControle(el) {
-  const grande = document.getElementById("controle-grande");
-  const titulo = document.getElementById("controle-titulo");
-  const texto = document.getElementById("controle-texto");
-
-  // Atualiza a imagem grande
-  grande.src = el.getAttribute("data-png");
-
-  // Atualiza o título e texto
-  titulo.textContent = el.getAttribute("data-title");
-  texto.textContent = el.getAttribute("data-text");
-}
 function trocarControle(img) {
   const controleGrande = document.getElementById("controle-grande");
+  const controleTitulo = document.getElementById("controle-titulo");
   const controleTexto = document.getElementById("controle-texto");
+  const controleLink = document.getElementById("controle-link"); // botão
 
   // fade out
   controleGrande.style.opacity = "0";
+  controleTitulo.style.opacity = "0";
   controleTexto.style.opacity = "0";
+  controleLink.style.opacity = "0";
 
   setTimeout(() => {
     controleGrande.src = img.getAttribute("data-png");
+    controleTitulo.textContent = img.getAttribute("data-title");
     controleTexto.textContent = img.getAttribute("data-text");
+    controleLink.href = img.getAttribute("data-link"); // atualiza link
 
     // fade in
     controleGrande.style.opacity = "1";
+    controleTitulo.style.opacity = "1";
     controleTexto.style.opacity = "1";
+    controleLink.style.opacity = "1";
   }, 200);
 }
 
-// garante que ao carregar a página já aparece a primeira imagem + texto
+// garante que ao carregar a página já aparece a primeira imagem + titulo + texto + link
 window.addEventListener("DOMContentLoaded", () => {
   const primeiraThumb = document.querySelector(".thumbs img");
   if (primeiraThumb) {
     document.getElementById("controle-grande").src = primeiraThumb.getAttribute("data-png");
+    document.getElementById("controle-titulo").textContent = primeiraThumb.getAttribute("data-title");
     document.getElementById("controle-texto").textContent = primeiraThumb.getAttribute("data-text");
+    document.getElementById("controle-link").href = primeiraThumb.getAttribute("data-link");
   }
 });
 
@@ -628,5 +308,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 </script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1500,  // duração da animação em ms
+    once: false       // anima a apenas uma vez (não repete ao rolar para cima e para baixo)
+  });
+</script>
+
   </body>
 </html>
