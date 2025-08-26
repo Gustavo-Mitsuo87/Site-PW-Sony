@@ -234,6 +234,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-right: 1rem;
 }
 
 .img-card-cognitive-processor-container {
