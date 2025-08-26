@@ -78,10 +78,6 @@ nav a:active {
   margin-top: 0px;
 }
 
-.cards_camera {
-  display: flex;
-}
-
 .cards {
   display: flex;
   flex-direction: row;
@@ -91,22 +87,6 @@ nav a:active {
   margin-left: -0.75rem;
   align-self: center;
   justify-content: center;
-}
-
-.card_camera {
-  width: 380px;
-  height: auto;
-  background-color: #ddd;
-  margin: 20px;
-  flex-direction: column;
-  border-radius: 8px;
-  /*O overflow oculta qualquer elemento que esteja ultrapassando as dimensões do container, fazendo com que o elemento não faça o container aumentar para acomodar seu conteúdo*/
-  overflow: hidden;
-  display: flex;
-  /*Sombreamento dos cards*/
-  box-shadow: 0 2px 4px black;
-  /*Ajuda no hover*/
-  transition: transform 0.3s;
 }
 
 .card1 {
@@ -119,6 +99,11 @@ nav a:active {
   padding: 20px;
   width: 370px; /* tamanho fixo opcional */
   box-shadow: 0 2px 4px black;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card1:hover {
+  transform: translateY(-5px);
 }
 
 .card1 img {
@@ -131,34 +116,6 @@ nav a:active {
 
 .card-text {
   text-align: left;
-}
-
-.card_camera:hover {
-  transform: translateY(-5px);
-}
-
-.card_imagem_camera {
-  height: 60%;
-  overflow: hidden;
-  width: 100%;
-}
-
-.card_imagem_camera img {
-  height: 100%;
-  /*O object-fit faz com que a imagem preencha o contâiner completo e tentando não mudar a proporção original da imagem, cortando bordas se necessário*/
-  object-fit: cover;
-  width: 100%;
-}
-
-.card_texto_camera {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-}
-
-.card_texto_camera p {
-  font-style: italic;
-  padding-top: 5px;
 }
 
 .btn_galeria {
