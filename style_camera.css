@@ -4,7 +4,11 @@
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
 }
-
+:root {
+  --card-width: 370px;
+  --gap: 20px;
+  --cards-per-view: 3;
+}
 body {
   background-color: white;
 }
@@ -137,7 +141,15 @@ nav a:active {
   position: relative;
   margin-left: -2rem;
   margin-right: -1rem;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+}
+
+.banner_lateral2 img {
+  margin-top: 50px;
+  width: 100vw;
+  position: relative;
+  margin-left: -2rem;
+  margin-right: -1rem;
 }
 
 .beneficios {
@@ -163,6 +175,11 @@ nav a:active {
   flex-direction: column;
   border-radius: 8px;
   box-shadow: 0 2px 4px black;
+  transition: transform 0.3s ease;
+}
+
+.card_beneficios:hover {
+  transform: translateY(-5px);
 }
 
 .card_beneficios i {
@@ -246,6 +263,7 @@ nav a:active {
   color: #fff;
   padding: 40px 20px 20px;
   font-family: sans-serif;
+  margin-top: -30px;
 }
 
 .footer-container {
