@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < selectedRating; i++) {
           stars[i].classList.add('selected');       // aplica classe selected (fica dourada permanente)
         }
-        console.log(`Você avaliou este produto com ${selectedRating} estrelas`);
+
       });
     });
   });
@@ -65,4 +65,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mainImage = document.getElementById("mainImage");
+  const thumbnails = document.querySelectorAll(".thumb");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  let currentIndex = 0;
+
+  // Atualiza imagem principal e miniaturas
+  function updateCarousel(index) {
+    currentIndex = index;
+
+    // troca imagem principal
+    mainImage.src = thumbnails[currentIndex].src;
+
+    // remove e adiciona destaque na miniatura
+    thumbnails.forEach(thumb => thumb.classList.remove("active"));
+    thumbnails[currentIndex].classList.add("active");
+  }
+
+  // Botão "Anterior"
+  prevBtn.addEventListener("click", () => {
+    let newIndex = currentIndex - 1;
+    if (newIndex < 0) newIndex = thumbnails.length - 1; // volta pro fim
+    updateCarousel(newIndex);
+  });
+
+  // Botão "Próximo"
+  nextBtn.addEventListener("click", () => {
+    let newIndex = currentIndex + 1;
+    if (newIndex >= thumbnails.length) newIndex = 0; // volta pro começo
+    updateCarousel(newIndex);
+  });
+
+  // Clique nas miniaturas
+  thumbnails.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => {
+      updateCarousel(index);
+    });
+  });
 });
