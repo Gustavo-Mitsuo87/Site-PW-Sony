@@ -1,0 +1,539 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body, ul { 
+  margin: 0; 
+  padding: 0; 
+  list-style: none;
+}
+
+main {
+  max-width: 1200px;
+  margin: 6rem auto 2rem;
+  padding: 0 1rem;
+}
+
+header {
+  padding: 0.5rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  top: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+nav {
+  text-decoration-color: #000000;
+  max-width: auto;
+  margin: -10px ;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover{
+  color: rgb(160, 160, 160);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: #000;
+  margin: 9px;
+}
+
+/* Caixa de pesquisa */
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#search-input {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* quando ativo */
+#search-input.active {
+  width: 150px;
+  opacity: 1;
+}
+
+#navbar {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+}
+
+#navbar:hover{
+  background-color: rgb(255, 255, 255);
+}
+
+#navbar.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, #00000000 20%, #000000cf),
+    url("./Imagens/Camera\ -\ Home.jpg ");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 5px rgba(7, 7, 7, 0.7);
+  margin-top: 0px;
+}
+
+.hero h1 {
+  color: white;
+  text-align: left;
+  margin-left: 100px;
+  font-size: 4rem;
+  font-family: "Baskerville Old Face";
+}
+
+.logo img {
+  max-width: 200px;
+  height: auto;
+  width: auto;
+  color: rgb(0, 0, 0);
+}
+
+/* cards camera */
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center ;
+}
+
+
+.card1 {
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  background-color: #fff; /* cor de fundo parecida com o exemplo */
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 20px;
+  width: 390px; /* tamanho fixo opcional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.card1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card-text {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.card-text h3 {
+  font-size: 0.9rem; /* código do produto */
+  color: #000;
+  margin: 0;
+}
+
+.card-text p {
+  font-size: 1rem; /* nome do produto */
+  color: #000;
+  margin: 5px 0 0 0;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  background-color: #fff; /* cor de fundo parecida com o exemplo */
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 20px;
+  width: 570px; /* tamanho fixo opcional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.card2 img{
+  width: 620px;
+  height: 560px;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card3 img {
+  position: relative;
+  width: 100%;
+}
+
+.card4 {
+  width: 300px;       /* ou o tamanho que quiser */
+  height: 200px;      /* precisa ter altura definida */
+  border-radius: 25px;
+  overflow: hidden;   /* esconde pedaços que ultrapassarem */
+  position: relative;
+  margin-top: 0px;
+}
+
+.card4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* preenche cortando o excesso */
+  display: block;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card4 h4 {
+  position: absolute;
+  bottom: 10px;      /* distância do fundo */
+  left: 15px;        /* distância da esquerda */
+  margin: 0;
+  color: rgb(117, 116, 116);
+}
+
+.card1:hover img {
+  transform: scale(1.05);
+}
+
+.card2:hover img {
+  transform: scale(1.05);
+}
+
+.card4:hover img {
+  transform: scale(1.05);
+}
+
+/*cards do celular*/
+.card5 {
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 490px;
+  width: 760px; /* tamanho fixo opcional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* animação suave */
+ }
+
+ .card5:hover {
+  transform: scale(1.02);
+ }
+
+.card5 img{
+  width: 110%;
+  height: auto;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+}
+
+.card6 {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  background-color: #fff; /* cor de fundo parecida com o exemplo */
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.card6 img{
+  width: 100%;
+  height: 450px;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+}
+
+.card7 {
+  display: flex;
+  flex-direction: column; /* imagem em cima, texto embaixo */
+  align-items: center;
+  background-color: #ffffff; /* cor de fundo parecida com o exemplo */
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 20px;
+  width: 340px; /* tamanho fixo opcional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.card7 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* garante que o produto não seja cortado */
+  background-color: transparent;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card7:hover img {
+  transform: scale(1.05);
+}
+
+.card8 {
+  width: 645px;       /* ou o tamanho que quiser */
+  height: 400px;      /* precisa ter altura definida */
+  overflow: hidden;   /* esconde pedaços que ultrapassarem */
+  position: relative;
+  margin: 0px;
+  border-radius: 25px;
+}
+
+.card8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* preenche cortando o excesso */
+  display: block;
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.card8 p{
+  position: absolute;
+  bottom: 20px;      /* distância do fundo */
+  left: 30px;        /* distância da esquerda */
+  color: rgb(26, 24, 24);
+  font-size: 1.1rem;
+}
+
+.card8 h3 {
+  position: absolute;
+  bottom: 60px;      /* distância do fundo */
+  left: 30px;        /* distância da esquerda */
+  margin: 0;
+  color: rgb(26, 24, 24);
+  font-size: 1.5rem;
+}
+
+.card8:hover {
+  transform: scale(1.01);
+}
+
+.container-carousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  width: 30px;
+}
+
+.carousel {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+/* Botões */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 65px;
+  z-index: 5;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-left: 80px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    height: 600px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-left: 50px;
+    padding-right: 30px;
+  }
+
+  nav a {
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: auto;
+
+  }
+
+  .logo img {
+    max-width: 70px;
+    height: auto;
+    width: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 300px;
+    max-width: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .card-text {
+    padding: 15px;
+    text-align: center;
+  }
+  .card-text h3 {
+    font-size: 1rem;
+  }
+
+  .card-text p {
+    font-size: 70%;
+    text-align: justify;
+  }
+
+  .carousel-button.prev {
+    display: none;
+  }
+
+  .carousel-button.next {
+    display: none;
+  }
+
+}
+
+.banner-ps {
+
+  max-width: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.banner-ps img {
+  object-fit: cover;
+}
