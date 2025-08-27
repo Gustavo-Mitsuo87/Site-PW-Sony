@@ -234,7 +234,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-right: 1rem;
 }
 
 .img-card-cognitive-processor-container {
@@ -314,26 +313,25 @@ body {
 }
 /*Fim Detalhes Dolby Vision*/
 
-/* Slider Comparativo Dolby Vision */
-.slider-comparativo-dolby-vision {
+/* Cards Dolby Vision*/
+.cards-dolby-vision {
   margin-top: 100px;
   width: 100%;
   height: auto;
-  display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  gap: 10px;
+  
+}
 
-}
-.img-slider-comparativo-dolby-vision {
-  width: 80%;
+.card-dolby-vision {
+  background-color: #2c2c2c;
+  width: 30%;
   height: auto;
-}
-.img-slider-comparativo-dolby-vision img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
   border-radius: 25px;
 }
+
 /*Fim Dolby Vision*/
 
 
