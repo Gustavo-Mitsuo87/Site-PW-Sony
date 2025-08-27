@@ -26,19 +26,23 @@
   <body>
     <!-- ================= Header / Breadcrumbs ================= -->
      <header class="wcabecalho">
-    <nav>
-      <div class="logo">
-        <img src="./Imagens/logo.png" alt="" />
-      </div>
-      <div class="menu">
-      <a href="index.html">Home</a></li>
-      <a href="camera.html">Camera</a></li>
-      <a href="PS.html">PlayStation</a></li>
-      <a href="walkman.html">Walkman</a></li>
-      <a href="Xperia.html">Xperia</a></li>
+  <nav>
+    <div class="logo">
+      <img src="./Imagens/logo.png" alt="Logo Sony" />
+    </div>
 
-    </nav>
-  </header>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="#">User</a>
+       <div class="search-box">
+  <i id="search-icon" class="fas fa-search"></i>
+  <input type="text" id="search-input" placeholder="Pesquisar...">
+</div>
+    </div>
+
+   
+  </nav>
+</header>
 
     <!-- ================= HERO ================= -->
     <section class="hero-2">
@@ -207,44 +211,7 @@
  
     </section>
 
-    <!-- ================= FAQ ================= -->
-    <section class="section-2">
-      <div class="container">
-        <h1 class="h2-2">
-          Tudo o que você precisa saber antes da próxima entrega
-        </h2>
-        <div class="faq mt-16">
-          <details>
-            <summary>Quanto tempo de campanha?</summary>
-            <p>
-              Depende do seu estilo: entre 35–60h em média, mais conteúdo
-              opcional para completistas.
-            </p>
-          </details>
-          <details>
-            <summary>Posso importar saves do primeiro jogo?</summary>
-            <p>
-              Alguns bônus cosméticos e referências podem ser reconhecidos.
-              Consulte o menu de Extras.
-            </p>
-          </details>
-          <details>
-            <summary>Existe modo foto e ultrawide?</summary>
-            <p>
-              Sim! Modo foto completo no PS5 e composição cinematográfica com
-              opções avançadas.
-            </p>
-          </details>
-          <details>
-            <summary>Como jogar online (modo Social Strand)?</summary>
-            <p>
-              Conecte sua PSN para compartilhar estruturas e sinais. Não há PVP,
-              foco em cooperação assíncrona.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
+   
 
     <!-- ================= Informações gerais ================= -->
     <section class="section alt">
@@ -302,5 +269,15 @@
       <p>© 2025 Sony. Todos os direitos reservados.</p>
     </div>
   </footer>
+    <script>
+    const searchIcon = document.getElementById("search-icon");
+const searchInput = document.getElementById("search-input");
+searchIcon.addEventListener("click", () => {
+  searchInput.classList.toggle("active");
+  if (searchInput.classList.contains("active")) {
+    searchInput.focus();
+  }
+});
+  </script>
   </body>
 </html>

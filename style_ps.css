@@ -15,6 +15,40 @@ main {
   overflow: hidden;
   margin-top: 10.6rem;
 }
+.search-box i {
+  color: #000000; /* Cor da lupa */
+  font-size: 16px; /* Tamanho do ícone */
+  margin-right: 8px; /* Espaço entre a lupa e o input */
+  cursor: pointer; /* Cursor de mão ao passar por cima */
+  transition: color 0.3s; /* Transição suave de cor */
+}
+
+.search-box i:hover {
+  color: #00aaff; /* Cor ao passar o mouse */
+}
+#search-input {
+  width: 0;
+  opacity: 0;
+  pointer-events: none; /* Impede interação */
+  transition: width 0.3s ease, opacity 0.3s ease;
+  border: none;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+
+/* Quando estiver ativo, permite digitar */
+#search-input.active {
+  width: 150px;
+  opacity: 1;
+  pointer-events: auto; /* Ativa interação */
+  background: transparent;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: black;
+  box-shadow: 0 0 10px rgba(6, 0, 59, 0.423);
+}
+
 .logo img {
   max-width: 200px;
   height: auto;
@@ -1413,6 +1447,7 @@ nav a:active {
   cursor: pointer;
   border-radius: 30px;
   transition: transform 0.3s, border 0.3s;
+  width: 8rem;
 }
 .thumbs img {
   transition: all 0.3s;

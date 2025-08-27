@@ -15,19 +15,23 @@
    </header>
 
  <header class="wcabecalho">
-    <nav>
-      <div class="logo">
-        <img src="./Imagens/logo.png" alt="" />
-      </div>
-      <div class="menu">
-      <a href="index.html">Home</a></li>
-      <a href="camera.html">Camera</a></li>
-      <a href="PS.html">PlayStation</a></li>
-      <a href="walkman.html">Walkman</a></li>
-      <a href="Xperia.html">Xperia</a></li>
+  <nav>
+    <div class="logo">
+      <img src="./Imagens/logo.png" alt="Logo Sony" />
+    </div>
 
-    </nav>
-  </header>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="#">User</a>
+       <div class="search-box">
+  <i id="search-icon" class="fas fa-search"></i>
+  <input type="text" id="search-input" placeholder="Pesquisar...">
+</div>
+    </div>
+
+   
+  </nav>
+</header>
 
     <!-- Hero -->
       <section class="sense-container">
@@ -117,44 +121,7 @@
       </div>
     </div>
   </div>
-    <!-- Skills -->
-     <section class="section-2">
-      <div class="container">
-        <h1 class="h2-2">
-          Tudo o que você precisa saber antes da próxima entrega
-        </h2>
-        <div class="faq mt-16">
-          <details>
-            <summary>Quanto tempo de campanha?</summary>
-            <p>
-              Depende do seu estilo: entre 35–60h em média, mais conteúdo
-              opcional para completistas.
-            </p>
-          </details>
-          <details>
-            <summary>Posso importar saves do primeiro jogo?</summary>
-            <p>
-              Alguns bônus cosméticos e referências podem ser reconhecidos.
-              Consulte o menu de Extras.
-            </p>
-          </details>
-          <details>
-            <summary>Existe modo foto e ultrawide?</summary>
-            <p>
-              Sim! Modo foto completo no PS5 e composição cinematográfica com
-              opções avançadas.
-            </p>
-          </details>
-          <details>
-            <summary>Como jogar online (modo Social Strand)?</summary>
-            <p>
-              Conecte sua PSN para compartilhar estruturas e sinais. Não há PVP,
-              foco em cooperação assíncrona.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section> 
+     
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-section">
@@ -182,48 +149,7 @@
       <p>© 2025 Sony. Todos os direitos reservados.</p>
     </div>
   </footer>
-<script>
-function trocarControle(img) {
-  const controleGrande = document.getElementById("controle-grande");
-  const controleTitulo = document.getElementById("controle-titulo");
-  const controleTexto = document.getElementById("controle-texto");
-  const controleLink = document.getElementById("controle-link"); // botão
-
-  // fade out
-  controleGrande.style.opacity = "0";
-  controleTitulo.style.opacity = "0";
-  controleTexto.style.opacity = "0";
-  controleLink.style.opacity = "0";
-
-  setTimeout(() => {
-    controleGrande.src = img.getAttribute("data-png");
-    controleTitulo.textContent = img.getAttribute("data-title");
-    controleTexto.textContent = img.getAttribute("data-text");
-    controleLink.href = img.getAttribute("data-link"); // atualiza link
-
-    // fade in
-    controleGrande.style.opacity = "1";
-    controleTitulo.style.opacity = "1";
-    controleTexto.style.opacity = "1";
-    controleLink.style.opacity = "1";
-  }, 200);
-}
-
-// garante que ao carregar a página já aparece a primeira imagem + titulo + texto + link
-window.addEventListener("DOMContentLoaded", () => {
-  const primeiraThumb = document.querySelector(".thumbs img");
-  if (primeiraThumb) {
-    document.getElementById("controle-grande").src = primeiraThumb.getAttribute("data-png");
-    document.getElementById("controle-titulo").textContent = primeiraThumb.getAttribute("data-title");
-    document.getElementById("controle-texto").textContent = primeiraThumb.getAttribute("data-text");
-    document.getElementById("controle-link").href = primeiraThumb.getAttribute("data-link");
-  }
-});
-
-
-
-
-</script> 
+ 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
@@ -231,5 +157,15 @@ window.addEventListener("DOMContentLoaded", () => {
     once: false       // anima a apenas uma vez (não repete ao rolar para cima e para baixo)
   });
 </script>
+  <script>
+    const searchIcon = document.getElementById("search-icon");
+const searchInput = document.getElementById("search-input");
+searchIcon.addEventListener("click", () => {
+  searchInput.classList.toggle("active");
+  if (searchInput.classList.contains("active")) {
+    searchInput.focus();
+  }
+});
+  </script>
   </body>
 </html>

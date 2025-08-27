@@ -26,20 +26,23 @@
   <body>
     <!-- ================= Header / Breadcrumbs ================= -->
      <header class="wcabecalho">
-    <nav>
-      <div class="logo">
-        <img src="./Imagens/logo.png" alt="" />
-      </div>
-      <div class="menu">
-      <a href="index.html">Home</a></li>
-      <a href="camera.html">Camera</a></li>
-      <a href="PS.html">PlayStation</a></li>
-      <a href="walkman.html">Walkman</a></li>
-      <a href="Xperia.html">Xperia</a></li>
+  <nav>
+    <div class="logo">
+      <img src="./Imagens/logo.png" alt="Logo Sony" />
+    </div>
 
-    </nav>
-  </header>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="#">User</a>
+       <div class="search-box">
+  <i id="search-icon" class="fas fa-search"></i>
+  <input type="text" id="search-input" placeholder="Pesquisar...">
+</div>
+    </div>
 
+   
+  </nav>
+</header>
     <!-- ================= HERO ================= -->
     <section class="hero-2" >
       <div class="container body">
@@ -305,5 +308,15 @@ Resident Evil 4 traz várias formas de jogar e terminar o jogo, incluindo como v
       <p>© 2025 Sony. Todos os direitos reservados.</p>
     </div>
   </footer>
+  <script>
+    const searchIcon = document.getElementById("search-icon");
+const searchInput = document.getElementById("search-input");
+searchIcon.addEventListener("click", () => {
+  searchInput.classList.toggle("active");
+  if (searchInput.classList.contains("active")) {
+    searchInput.focus();
+  }
+});
+  </script>
   </body>
 </html>
