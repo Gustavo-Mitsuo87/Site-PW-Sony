@@ -5,9 +5,6 @@
   font-family: "Segoe UI", sans-serif;
   overflow-x: hidden;
 }
-:root{
-  --wcaixa: #ebebeb;
-}
 
 body {
   background-color: white;
@@ -63,6 +60,14 @@ nav a:active {
   background-color: white;
   color: black;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.wseta{
+  color: white;
+  text-decoration: none;
+  margin-bottom: 37em;
+  position: absolute;
+  left: 100px;
 }
 
 .whero {
@@ -176,7 +181,7 @@ nav a:active {
 .wpequeclasse{
   padding: 10px;
   padding-bottom: 30px;
-  background-color: var(--wcaixa);
+
   border-radius: 25px;
   text-align: justify;
   position: relative;
@@ -194,7 +199,7 @@ nav a:active {
   font-size: large;
   padding: 20px;
   height: 100%;
-  background-color: var(--wcaixa);
+
   border-radius: 25px;
   position: relative;
 
@@ -340,6 +345,39 @@ nav a:active {
 
 /* Responsivo */
 @media (max-width: 768px) {
+  .whero{
+    height: 50vh;
+  }
+  .whero h1{
+    margin-left: 20%;
+    font-size: 1rem;
+  }
+  .wseta{
+    margin-bottom: 15em;
+    left: 30px;
+  }
+  .wtexto{
+    font-size: 0.7rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .footer-container {
     flex-direction: column;
   }
