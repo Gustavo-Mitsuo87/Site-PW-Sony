@@ -132,8 +132,8 @@ nav a:active {
   color: white;
   text-decoration: none;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 5%;
+  right: 5%;
 }
 
 .wlistapro{
@@ -172,6 +172,16 @@ nav a:active {
   background-color: transparent;
   transition: transform 0.3s ease; 
 }
+
+.wpequeclasse{
+  padding: 10px;
+  padding-bottom: 30px;
+  background-color: var(--wcaixa);
+  border-radius: 25px;
+  text-align: justify;
+  position: relative;
+}
+
 .wproduto:hover{
   transform: scale(1.03);
 }
