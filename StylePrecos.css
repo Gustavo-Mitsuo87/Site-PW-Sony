@@ -186,13 +186,13 @@ nav a:hover{
   }
 }
 
-.product-card {           
-  max-width: 500px;    
+.precos-product-card {           
+  flex: 1;
+  max-width: 300px;    
   margin: 30px;            
   background: #fff;          
-      
   padding: 20px;  
-  gap: 30px;     
+  
 }
 /*
 .product-card img {                       
@@ -202,62 +202,46 @@ nav a:hover{
 }
 */
 
-.product-title {             
-  margin: 8px ;
+.precos-product-title {             
+  margin: 0px ;
 }
 
 
-.stars {                  
+.precos-stars {                  
   cursor: pointer;         
 }
 
-.star {                     
+.precos-star {                     
   font-size: 20px;      
   color: #ccc;          
   transition: color 0.2s;    
 }
 
-.star.hovered,        
-.star.selected {      
+.precos-star.hovered,        
+.precos-star.selected {      
   color: gold;             
 }
 
-.letrinhas-legais {             
+.precos-letrinhas-legais {             
   margin-top: 4px;        
   font-size: 0.80rem;   
   color: gray;            
 }
 
 
-.price-container {            
+.precos-price-container {            
   display: flex;            
   align-items: center;       
   gap: 20px;                  
 }
 
-.price {                      
+.precos-price {                      
   font-weight: 700;          
   font-size: 1.2rem;         
   color: #333;
-}
+}        
 
-.buy-btn {                    
-  background: gray;       
-  color: white;               
-  border: none;              
-  padding: 10px 16px;      
-  border-radius: 8px;     
-  cursor: pointer;      
-  font-size: 15px;         
-  transition: 0.3s;
-}
-
-.buy-btn:hover {             
-  background: DimGray;        
-  text-decoration: underline;
-}
-
-.product-container {
+.precos-product-container {
   display: flex;
   align-items: flex-start; 
   justify-content: center;
@@ -269,16 +253,15 @@ nav a:hover{
 }
 
 
-.product-info {
+.precos-product-info {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-right: 200px;
 }
 
 
-.product-details p {
+.precos-product-details p {
   font-size: 12px;
   color: #444;
   line-height: 1.5;
@@ -286,63 +269,88 @@ nav a:hover{
   width: 300px;
 }
 
-.product-details .more-btn {
+.precos-product-details .precos-buy-btn {
   background: gray;       
   color: white;               
   border: none;              
   padding: 10px 16px;
   border-radius: 8px;        
   cursor: pointer;         
-  font-size: 12px;         
+  font-size: 1rem;         
   transition: 0.3s;
   width: 300px;
   display: block;
+  margin-bottom: 20px;
   
 }
-
-.carousel {
-  max-width: 400px;  
-  margin: auto;       
-  text-align: center;
+.precos-product-details .precos-buy-btn:hover {
+    background: DimGray;        
 }
 
-.carousel-main {
+.precos-product-details .precos-carrinho-btn {
+  background: #C0C0C0;
+  color: DimGray;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 300px;
+  display: block;
+}
+
+.precos-product-details .precos-carrinho-btn:hover {
+    background: #A9A9A9;        
+}
+
+
+.precos-carousel {
+  min-height: 300px;
+  max-height: 300px;
+  max-width: 100%;  
+  margin: auto;       
+  text-align: center;
+  width: 100%;
+}
+
+.precos-carousel-main {
   position: relative;
 }
 
-.carousel-main img {
+.precos-carousel-main img {
   width: 100%;
   border-radius: 10px;
 }
 
-.carousel-main button {
+.precos-carousel-main button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: transparent;
   border: none;
-  color: white;
-  font-size: 24px;
+  color: black;
+  font-size: 30px;
   padding: 8px;
   cursor: pointer;
   border-radius: 50%;
 }
 
-.carousel-main .prev {
-  left: 10px;
+.precos-carousel-main .prev {
+  left: 20px;
 }
-.carousel-main .next {
-  right: 10px;
+.precos-carousel-main .next {
+  right: 20px;
 }
 
-.carousel-thumbnails {
+.precos-carousel-thumbnails {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 5px;
   margin-top: 10px;
 }
 
-.carousel-thumbnails img {
+.precos-carousel-thumbnails img {
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -352,26 +360,56 @@ nav a:hover{
   transition: 0.3s;
 }
 
-.carousel-thumbnails img.active {
+.precos-carousel-thumbnails img.active {
   border: 2px solid DimGray;
   opacity: 1;
 }
 
-.lateral-card {
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+.precos-lateral-card {
+  width: 250px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
   flex-direction: column;
-  margin-right: 100px;
+  gap: 10px;
 }
-.lateral-card p {
-	text-align: justify;
-	width: 150px;
-	font-size: 0.90 rem;
-	line-height: 1.50
-	
+
+.precos-lateral-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #444;
+  text-align: justify;
 }
-.texto-grande {
+
+.precos-lateral-card .precos-more-btn {
+  background: gray;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.precos-lateral-card .precos-more-btn:hover {
+    background: DimGray;        
+}
+
+.precos-texto-grande {
 	font-size: 40px;
-	color:Black;
-	
+	color:Black;	
+}
+.precos-texto-frete{
+	color: green;
+}
+.precos-texto-pagamentos {
+	color: DimGray;
+	cursor: pointer;
+}
+.precos-texto-pagamentos:hover {
+    color: LightSlateGray;        
+    text-decoration: underline;
 }
