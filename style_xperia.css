@@ -194,7 +194,7 @@ nav a:active {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   margin: 80px auto;
-  color: #011428;
+  color: #111;
   margin-top: 150px;
   font-size: 2.2rem;
 }
@@ -211,10 +211,19 @@ nav a:active {
   margin-top: -10px;
   height: 450px;
   width: 300px;
-  background-color: #e8e8e8;
+  background-color: #c3c3c3;
   border-radius: 20px;
   
   
+  
+  
+}
+
+.celulares_card img{
+
+  object-fit: cover;
+  border-radius: 20px;
+
 }
 
 .xcarou-cell{
@@ -307,7 +316,7 @@ nav a:active {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   margin: 30px auto;
-  color:#011428;
+  color:#111;
   margin-top: 150px;
   font-size: 2.2rem;
  
@@ -377,24 +386,45 @@ nav a:active {
 
   height: 350px;
   width: 623px;
-  background-color: rgb(255, 166, 0);
   border-radius: 20px;
   margin:50px auto;
+  margin-top: -60px;
   margin-left: 158px;
+  
    
  
+}
+
+.card-quadrado1 img{
+
+object-fit: cover;
+border-radius: 20px;
+width: 100%;
+height: 100%;
+
 }
 
 .card-quadrado2{
 
   height: 350px;
   width: 623px;
-  background-color: rgb(255, 166, 0);
   border-radius: 20px;
   margin:50px auto;
+  margin-top: -60px;
   margin-right: 158px;
  
 }
+
+.card-quadrado2 img{
+
+object-fit: cover;
+border-radius: 20px;
+width: 100%;
+height: 100%;
+
+}
+
+
 
 
 .xpsobre h1 {
@@ -402,7 +432,7 @@ nav a:active {
   margin-top: 150px;
   text-align: center;
   font-size: 2.2rem;
-  color:#011428
+  color:#111
   
 }
 
@@ -423,7 +453,7 @@ nav a:active {
 
 .xpsobre h3 {
 
-  color:#011428;
+  color:#111;
   margin-left:150px ;
 }
 
@@ -432,7 +462,7 @@ body h2 {
 
   text-align: center;
   margin:50px auto;
-  color:#011428;
+  color:#111;
 }
 .faq-container {
     
@@ -446,7 +476,7 @@ body h2 {
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  color:#011428;
+  color:#111;
 
 }
 
