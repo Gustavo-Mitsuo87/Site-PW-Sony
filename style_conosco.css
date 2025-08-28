@@ -99,12 +99,17 @@ nav a:active {
 }
 
 .card {
-  width: 400px;
+  width: auto;
   height: 400px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 4px black;
-  background-color: red;
+  background-color: white;
+  position: relative;
+  transform: translateY(-60vh);
+  border-radius: 25px;
+
+  align-items: center;
 }
 
 .footer {
