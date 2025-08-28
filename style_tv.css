@@ -30,6 +30,43 @@ body {
   font-family: "Segoe UI";
 }
 
+.destaques-tvs {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 20px;
+  width: 100vw;
+}
+.titulo-destaques-tvs {
+  margin-left: 2rem;
+}
+
+.cards-destaques-tvs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.card-destaques-tvs {
+  width: 30%;
+  height: auto;
+  flex-direction: column; /* deixa alinhado em coluna */
+}
+.img-card-destaques-tvs {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+.img-card-destaques-tvs img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+
+}
+
+
+
 .principais-recursos_tv {
   display: flex;
   flex-direction: column; /* deixa alinhado em coluna */
