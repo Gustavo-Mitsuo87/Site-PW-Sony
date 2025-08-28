@@ -1,110 +1,77 @@
-// Garante que o script rode após o HTML estar carregado
 document.addEventListener('DOMContentLoaded', () => {
-
-  // ===== SISTEMA DE AVALIAÇÃO (HOVER + CLICK) =====
-  // Seleciona todos os blocos que podem conter estrelas
-  document.querySelectorAll('.product-info, .product-card, .product-details').forEach(block => {
-    const stars = block.querySelectorAll('.star'); // pega apenas as estrelas dentro deste bloco
-    if (stars.length === 0) return;                // se não tiver estrelas neste bloco, sai
-
-    let selectedRating = 0;                        // guarda a nota selecionada para este bloco
-
-    stars.forEach(star => {
-      // quando passar o mouse em uma estrela...
-      star.addEventListener('mouseover', () => {
-        // remove hover de todas
-        stars.forEach(s => s.classList.remove('hovered'));
-        // pinta de 1 até o valor da estrela atual
-        const val = Number(star.dataset.value);    // garante que é número
-        for (let i = 0; i < val; i++) {
-          stars[i].classList.add('hovered');       // aplica classe de hover (fica dourada)
-        }
-      });
-
-      // quando tirar o mouse da estrela, remove o hover
-      star.addEventListener('mouseout', () => {
-        stars.forEach(s => s.classList.remove('hovered'));
-      });
-
-      // quando clicar, fixa as estrelas como "selected"
-      star.addEventListener('click', () => {
-        selectedRating = Number(star.dataset.value); // salva a nota
-        // limpa qualquer seleção anterior
-        stars.forEach(s => s.classList.remove('selected'));
-        // aplica a seleção fixa
-        for (let i = 0; i < selectedRating; i++) {
-          stars[i].classList.add('selected');       // aplica classe selected (fica dourada permanente)
-        }
-
-      });
+  const starsAll = document.querySelectorAll('.precos-star');
+  starsAll.forEach(star => {
+    const starsParent = star.closest('.precos-stars');
+    if (!starsParent) return;
+    const stars = Array.from(starsParent.querySelectorAll('.precos-star'));
+    star.addEventListener('mouseover', () => {
+      stars.forEach(s => s.classList.remove('hovered'));
+      const val = Number(star.dataset.value) || 0;
+      for (let i = 0; i < val; i++) stars[i].classList.add('hovered');
+    });
+    star.addEventListener('mouseout', () => {
+      stars.forEach(s => s.classList.remove('hovered'));
+    });
+    star.addEventListener('click', () => {
+      const val = Number(star.dataset.value) || 0;
+      stars.forEach(s => s.classList.remove('selected'));
+      for (let i = 0; i < val; i++) stars[i].classList.add('selected');
     });
   });
 
-  // ===== BOTÃO "MAIS DETALHES" (expandir/contrair) =====
-  document.querySelectorAll('.product-details').forEach(card => {
-    const moreBtn = card.querySelector('.more-btn');   // botão que expande/recolhe
-    const moreText = card.querySelector('.more-text'); // conteúdo extra a mostrar/ocultar
-    if (!moreBtn || !moreText) return;                 // se faltar algo, não faz nada
-
-    let expanded = false;                               // estado atual (fechado por padrão)
+  document.querySelectorAll('.precos-lateral-card').forEach(card => {
+    const moreBtn = card.querySelector('.precos-more-btn');
+    const moreText = card.querySelector('.precos-more-text');
+    if (!moreBtn || !moreText) return;
+    let expanded = false;
     moreBtn.addEventListener('click', () => {
-      expanded = !expanded;                             // inverte o estado
-      moreText.style.display = expanded ? 'inline' : 'none'; // mostra ou esconde
-      moreBtn.textContent = expanded ? 'Menos detalhes' : 'Mais detalhes'; // troca o rótulo
+      expanded = !expanded;
+      moreText.style.display = expanded ? 'block' : 'none';
+      moreBtn.textContent = expanded ? 'Menos detalhes' : 'Mais detalhes';
     });
   });
 
-  // ===== BOTÃO "COMPRAR" =====
-  document.querySelectorAll('.buy-btn').forEach(btn => {
+  document.querySelectorAll('.precos-buy-btn, .precos-carrinho-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      // tenta descobrir o título mais próximo do botão
-      const info = btn.closest('.product-info');                    // sobe até o bloco de infos
-      const title = info?.querySelector('.product-title')?.textContent?.trim() || 'Produto';
-      alert(`${title} adicionado ao carrinho! `);                  // feedback ao usuário
-      console.log("Produto comprado:", title);                       // log no console (debug)
+      const info = btn.closest('.precos-product-info');
+      const title = info?.querySelector('.precos-product-title')?.textContent?.trim() || 'Produto';
+      if (btn.classList.contains('precos-carrinho-btn')) {
+        alert(`${title} adicionado ao carrinho!`);
+      } else {}
+      console.log('Ação no produto:', title);
     });
   });
 
-});
+  const mainImage = document.getElementById('mainImage');
+  const thumbnails = Array.from(document.querySelectorAll('.precos-thumb'));
+  const prevBtn = document.querySelector('.precos-prev');
+  const nextBtn = document.querySelector('.precos-next');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const mainImage = document.getElementById("mainImage");
-  const thumbnails = document.querySelectorAll(".thumb");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
+  if (mainImage && thumbnails.length && prevBtn && nextBtn) {
+    let currentIndex = thumbnails.findIndex(t => t.classList.contains('active') || t.classList.contains('precos-active'));
+    if (currentIndex === -1) currentIndex = 0;
 
-  let currentIndex = 0;
+    function updateCarousel(index) {
+      currentIndex = index;
+      mainImage.src = thumbnails[currentIndex].src;
+      thumbnails.forEach(t => t.classList.remove('active', 'precos-active'));
+      thumbnails[currentIndex].classList.add('active', 'precos-active');
+    }
 
-  // Atualiza imagem principal e miniaturas
-  function updateCarousel(index) {
-    currentIndex = index;
+    prevBtn.addEventListener('click', () => {
+      let newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = thumbnails.length - 1;
+      updateCarousel(newIndex);
+    });
 
-    // troca imagem principal
-    mainImage.src = thumbnails[currentIndex].src;
+    nextBtn.addEventListener('click', () => {
+      let newIndex = currentIndex + 1;
+      if (newIndex >= thumbnails.length) newIndex = 0;
+      updateCarousel(newIndex);
+    });
 
-    // remove e adiciona destaque na miniatura
-    thumbnails.forEach(thumb => thumb.classList.remove("active"));
-    thumbnails[currentIndex].classList.add("active");
+    thumbnails.forEach((thumb, idx) => {
+      thumb.addEventListener('click', () => updateCarousel(idx));
+    });
   }
-
-  // Botão "Anterior"
-  prevBtn.addEventListener("click", () => {
-    let newIndex = currentIndex - 1;
-    if (newIndex < 0) newIndex = thumbnails.length - 1; // volta pro fim
-    updateCarousel(newIndex);
-  });
-
-  // Botão "Próximo"
-  nextBtn.addEventListener("click", () => {
-    let newIndex = currentIndex + 1;
-    if (newIndex >= thumbnails.length) newIndex = 0; // volta pro começo
-    updateCarousel(newIndex);
-  });
-
-  // Clique nas miniaturas
-  thumbnails.forEach((thumb, index) => {
-    thumb.addEventListener("click", () => {
-      updateCarousel(index);
-    });
-  });
 });
