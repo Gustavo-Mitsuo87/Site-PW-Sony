@@ -555,11 +555,11 @@ body h2 {
 
 
 .footer {
-  background-color: #111;
+  background-color: #000000;
   color: #fff;
   padding: 40px 20px 20px;
   font-family: sans-serif;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .footer-container {
@@ -572,6 +572,7 @@ body h2 {
 .footer-section {
   flex: 1;
   min-width: 200px;
+  margin-left: 80px;
 }
 
 .footer-section h3 {
@@ -600,10 +601,6 @@ body h2 {
   text-decoration: none;
 }
 
-.social-icons a:hover {
-  color: #fff;
-}
-
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
@@ -611,4 +608,9 @@ body h2 {
   padding-top: 15px;
   font-size: 14px;
   color: #aaa;
+}
+
+.footer-content {
+  flex-direction: column;
+  align-items: center;
 }
