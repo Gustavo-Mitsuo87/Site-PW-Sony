@@ -10,6 +10,39 @@ body {
   overflow-x: hidden; 
 }
 
+/* Caixa de pesquisa */
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#search-input {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* quando ativo */
+#search-input.active {
+  width: 150px;
+  opacity: 1;
+}
+
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: #000;
+  margin: 9px;
+}
+
+
 .banner_tv {
   display: flex;
   width: 100vw;
