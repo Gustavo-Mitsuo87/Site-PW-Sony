@@ -100,16 +100,58 @@ nav a:active {
 
 .card {
   width: auto;
-  height: 400px;
+  height: auto;
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 4px black;
   background-color: white;
   position: relative;
-  transform: translateY(-60vh);
+  transform: translateY(-80vh);
   border-radius: 25px;
 
   align-items: center;
+}
+
+.inputs_order p {
+  margin-left: 1.5px;
+}
+
+.inputs_order {
+  flex-direction: column;
+}
+
+input,
+button {
+  outline: none; /* remove a borda de foco padrão */
+  border: 1px solid #ccc; /* define sua própria borda */
+  box-shadow: none; /* remove o sombreamento */
+  appearance: none; /* remove estilos padrão do sistema */
+  -webkit-appearance: none; /* remove no Chrome/Safari */
+  -moz-appearance: none; /* remove no Firefox */
+}
+
+.btn_galeria {
+  display: flex;
+  width: 250px;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: #000000;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 10px 0px;
+}
+
+input {
+  width: 500px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #bfbfbf;
+  border-color: #bfbfbf;
+  margin: 10px 0px 10px 3px;
+  color: black;
 }
 
 .footer {
