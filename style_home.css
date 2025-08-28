@@ -262,10 +262,11 @@ nav a:hover {
 }
 
 .card5 img {
-  width: 110%;
-  height: auto;
+  width: 120%;
+  height: 450px;
   object-fit: cover; /* garante que o produto não seja cortado */
   background-color: transparent;
+  transform: translateY(11%);
 }
 
 .card6 {
@@ -282,8 +283,8 @@ nav a:hover {
 }
 
 .card6 img {
-  width: 100%;
-  height: 450px;
+  width: 90%;
+  height: 350px;
   object-fit: cover; /* garante que o produto não seja cortado */
   background-color: transparent;
 }
@@ -391,8 +392,7 @@ nav a:hover {
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
   border: none;
-  color: white;
-  font-size: 0.5rem;
+  padding: 9px;
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 65px;
