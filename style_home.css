@@ -5,9 +5,10 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-body, ul { 
-  margin: 0; 
-  padding: 0; 
+body,
+ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -30,7 +31,7 @@ header {
 nav {
   text-decoration-color: #000000;
   max-width: auto;
-  margin: -10px ;
+  margin: -10px;
   display: flex;
   padding: 10px;
   justify-content: space-between;
@@ -44,7 +45,7 @@ nav a {
   transition: background-color 0.3s ease;
 }
 
-nav a:hover{
+nav a:hover {
   color: rgb(160, 160, 160);
 }
 
@@ -88,7 +89,7 @@ nav a:hover{
   margin-top: -5px;
 }
 
-#navbar:hover{
+#navbar:hover {
   background-color: rgb(255, 255, 255);
 }
 
@@ -136,9 +137,8 @@ nav a:hover{
   padding: 20px;
   flex-wrap: wrap;
   align-self: center;
-  justify-content: center ;
+  justify-content: center;
 }
-
 
 .card1 {
   display: flex;
@@ -191,7 +191,7 @@ nav a:hover{
   text-decoration: none;
 }
 
-.card2 img{
+.card2 img {
   width: 620px;
   height: 560px;
   object-fit: cover; /* garante que o produto não seja cortado */
@@ -205,10 +205,10 @@ nav a:hover{
 }
 
 .card4 {
-  width: 300px;       /* ou o tamanho que quiser */
-  height: 200px;      /* precisa ter altura definida */
+  width: 300px; /* ou o tamanho que quiser */
+  height: 200px; /* precisa ter altura definida */
   border-radius: 25px;
-  overflow: hidden;   /* esconde pedaços que ultrapassarem */
+  overflow: hidden; /* esconde pedaços que ultrapassarem */
   position: relative;
   margin-top: 0px;
 }
@@ -216,15 +216,15 @@ nav a:hover{
 .card4 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* preenche cortando o excesso */
+  object-fit: cover; /* preenche cortando o excesso */
   display: block;
   transition: transform 0.3s ease; /* animação suave */
 }
 
 .card4 h4 {
   position: absolute;
-  bottom: 10px;      /* distância do fundo */
-  left: 15px;        /* distância da esquerda */
+  bottom: 10px; /* distância do fundo */
+  left: 15px; /* distância da esquerda */
   margin: 0;
   color: rgb(117, 116, 116);
 }
@@ -255,13 +255,13 @@ nav a:hover{
   margin-bottom: 30px;
   margin-left: 10px;
   transition: transform 0.3s ease; /* animação suave */
- }
+}
 
- .card5:hover {
+.card5:hover {
   transform: scale(1.02);
- }
+}
 
-.card5 img{
+.card5 img {
   width: 110%;
   height: auto;
   object-fit: cover; /* garante que o produto não seja cortado */
@@ -281,7 +281,7 @@ nav a:hover{
   text-decoration: none;
 }
 
-.card6 img{
+.card6 img {
   width: 100%;
   height: 450px;
   object-fit: cover; /* garante que o produto não seja cortado */
@@ -314,9 +314,9 @@ nav a:hover{
 }
 
 .card8 {
-  width: 645px;       /* ou o tamanho que quiser */
-  height: 400px;      /* precisa ter altura definida */
-  overflow: hidden;   /* esconde pedaços que ultrapassarem */
+  width: 645px; /* ou o tamanho que quiser */
+  height: 400px; /* precisa ter altura definida */
+  overflow: hidden; /* esconde pedaços que ultrapassarem */
   position: relative;
   margin: 0px;
   border-radius: 25px;
@@ -325,23 +325,23 @@ nav a:hover{
 .card8 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* preenche cortando o excesso */
+  object-fit: cover; /* preenche cortando o excesso */
   display: block;
   transition: transform 0.3s ease; /* animação suave */
 }
 
-.card8 p{
+.card8 p {
   position: absolute;
-  bottom: 20px;      /* distância do fundo */
-  left: 30px;        /* distância da esquerda */
+  bottom: 20px; /* distância do fundo */
+  left: 30px; /* distância da esquerda */
   color: rgb(26, 24, 24);
   font-size: 1.1rem;
 }
 
 .card8 h3 {
   position: absolute;
-  bottom: 60px;      /* distância do fundo */
-  left: 30px;        /* distância da esquerda */
+  bottom: 60px; /* distância do fundo */
+  left: 30px; /* distância da esquerda */
   margin: 0;
   color: rgb(26, 24, 24);
   font-size: 1.5rem;
@@ -351,18 +351,20 @@ nav a:hover{
   transform: scale(1.01);
 }
 
-.card9 img {
-  position: relative;
-  width: 100%;
-  border-radius: 25px;
+.container {
+  display: flex; /* coloca lado a lado */
+  gap: 20px; /* espaçamento entre o card fixo e o carousel */
+  align-items: center; /* alinha verticalmente */
+  overflow: hidden;
 }
 
-.container-carousel {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
-  width: 30px;
+.container-item {
+  min-width: 200px; /* largura de cada card */
+  margin-right: 10px;
+  text-align: center;
+  padding: 20px;
+  flex-shrink: 0; /* impede o card de encolher */
+  flex: 0 0 100%;
 }
 
 .carousel {
@@ -381,7 +383,7 @@ nav a:hover{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
   font-size: 0.5rem;
@@ -457,8 +459,6 @@ nav a:hover{
   color: #aaa;
 }
 
-
-
 @media (max-width: 768px) {
   .hero {
     text-align: center;
@@ -475,7 +475,6 @@ nav a:hover{
     font-size: 10px;
     font-weight: bold;
     margin-right: auto;
-
   }
 
   .logo img {
@@ -529,15 +528,12 @@ nav a:hover{
   .carousel-button.next {
     display: none;
   }
-
 }
 
 .banner-ps {
-
   max-width: 100px;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
 
 .banner-ps img {
