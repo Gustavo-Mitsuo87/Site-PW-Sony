@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body, ul { 
+  margin: 0; 
+  padding: 0; 
+  list-style: none;
+}
+
+main {
+  max-width: 1200px;
+  margin: 6rem auto 2rem;
+  padding: 0 1rem;
+}
+
+header {
+  padding: 0.5rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  top: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+nav {
+  text-decoration-color: #000000;
+  max-width: auto;
+  margin: -10px ;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover{
+  color: rgb(160, 160, 160);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: #000;
+  margin: 9px;
+}
+
+/* Caixa de pesquisa */
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#search-input {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* quando ativo */
+#search-input.active {
+  width: 150px;
+  opacity: 1;
+}
+
+#navbar {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+}
+
+#navbar:hover{
+  background-color: rgb(255, 255, 255);
+}
+
+#navbar.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-heroxp{
+
+  width: 100%;
+  height: 100vh;
+  ;
+  
+
+}
+
+.card-heroxp img {
+
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.XPcarousel {
+  
+  position: relative;
+  width: 90%;
+  max-width: 1500px;
+  height: 60vh; /* altura total da janela */
+  overflow: hidden;
+  margin: 50px auto;
+  border-radius: 20px;
+}
+
+.XPcarousel-faixa {
+
+  display: flex; /*coloca todos os slides em linha*/
+.card-quadrado1{
+
+  height: 350px;
+  width: 480px;
+  background-color: rgb(255, 166, 0);
+  border-radius: 20px;
+  margin:50px auto;
+ 
+}  transition: transform 0.7s ease-in-out; /*animação suave quando a faixa se move*/
+  height: 100%; /*altura da faixa */
+
+  
+  
+}
+.XPcarousel-slide{
+
+  height: 100%; /*serve para o slide ocupar 100% altura do carrousel */
+  flex: 0 0 90%;
+  margin: 0 10px;
+  overflow: hidden;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px){ /*isso significa: aplique essas regras apenas quando a tela for menor ou igual a 768px de largura(tablet/celular)*/
+  .XPcarousel{height: 55vh;}
+  .XPcarousel-slide{flex:0 0 100%; margin: 0;}
+  .XPcarousel-slide img{
+     width: 100%;
+    height: auto;
+    object-fit: contain;                     /* mostra tudo, sem corte */
+    display: block;                      /* “letterbox” elegante */
+  }
+}
+
+.XPcarousel-faixa img {
+
+    width: 100%; /*serve para a imagem ocupar 100% altura do slide */
+    height: 100%; /*serve para a imagem ocupar 100% largura do slide */
+    object-fit: cover; /*garante que a imagem não fique distorcida */
+    border-radius: 20px;
+}
+
+
+.XPcarousel-btn {
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s, background 0.3s;
+}
+.XPcarousel:hover .XPcarousel-btn{
+  opacity: 1;
+}
+.XPcarousel-btn:hover{
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.prev {left: 15px;}
+.next {right: 15px;}
+ 
+.XPcarousel-indicators {
+  margin-top: -25px;     /* espaço abaixo do carrossel */
+  display: flex;
+  justify-content: center; /* centraliza no meio */
+  gap: 8px;
+  
+}
+
+/* Cada bolinha */
+.XPcarousel-indicators span {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(213, 213, 213, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+       /* Evita encolher */
+}
+
+/* Bolinha ativa */
+.XPcarousel-indicators span.active {
+  background-color: rgb(154, 154, 154);
+  transform: scale(1.3); /* aumenta levemente */
+  
+}
+
+
+.abacelulares h1 {
+
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin: 80px auto;
+  color: #111;
+  margin-top: 150px;
+  font-size: 2.2rem;
+}
+
+.celulares_cards{
+
+  display: flex;
+  justify-content: center;
+}
+
+.celulares_card{
+
+  
+  margin-top: -10px;
+  height: 450px;
+  width: 300px;
+  background-color: #c3c3c3;
+  border-radius: 20px;
+  
+  
+  
+  
+}
+
+.celulares_card img{
+
+  object-fit: cover;
+  border-radius: 20px;
+
+}
+
+.xcarou-cell{
+ 
+  position: relative;
+  width: 90%;
+  max-width: 1290px;
+  height: 450px; 
+  overflow: hidden;
+  margin: 50px auto;
+  border-radius: 20px;
+
+
+}
+
+.xcarou-faixa-cell {
+
+  display: flex; /*coloca todos os slides em linha*/
+  transition: transform 0.7s ease-in-out; /*animação suave quando a faixa se move*/
+  
+}
+
+.xcarou-slide-cell{
+
+  /*serve para o slide ocupar 100% altura do carrousel */
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.xcarou-faixa-cell img {
+
+    width: 100%; /*serve para a imagem ocupar 100% altura do slide */
+    height: auto; /*serve para a imagem ocupar 100% largura do slide */
+    display: block; /*tira espaço extra*/
+    
+   
+}
+
+.xcarou-btn-cell {
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.3s, background 0.3s;
+}
+
+.xcarou-cell:hover .xcarou-btn-cell{
+  opacity: 1;
+}
+
+.prev-cell {left: 15px;}
+.next-cell {right: 15px;}
+
+.xcarou-indicators-cell {
+  margin-top: -25px;     /* espaço abaixo do carrossel */
+  display: flex;
+  justify-content: center; /* centraliza no meio */
+  gap: 8px;
+  
+}
+
+.xcarou-indicators-cell span {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(213, 213, 213, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.xcarou-indicators-cell span.active {
+  background-color: rgb(154, 154, 154);
+  transform: scale(1.3); /* aumenta levemente */
+  
+}
+
+.abainfo h1{
+
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin: 30px auto;
+  color:#111;
+  margin-top: 150px;
+  font-size: 2.2rem;
+ 
+}
+
+
+.xpinfo{
+
+
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 2s;
+  
+}
+
+.xpshow{
+
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 2s;
+}
+
+.xpfirula{
+
+  display:flex;
+  justify-content: center;
+  margin-top: 70px;
+
+}
+
+.avatar {
+
+  
+  height: 430px;
+  width: 410px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+
+}
+
+.xpfirula :nth-child(2) {
+
+  transition-delay: 400ms;
+
+}
+.xpfirula :nth-child(3) {
+
+  transition-delay: 700ms;
+
+}
+
+
+
+
+.card-quadrados{
+
+  display: flex;
+  justify-content:center ;
+  margin-top: 150px;
+
+}
+
+.card-quadrado1{
+
+  height: 350px;
+  width: 623px;
+  border-radius: 20px;
+  margin:50px auto;
+  margin-top: -60px;
+  margin-left: 158px;
+  
+   
+ 
+}
+
+.card-quadrado1 img{
+
+object-fit: cover;
+border-radius: 20px;
+width: 100%;
+height: 100%;
+
+}
+
+.card-quadrado2{
+
+  height: 350px;
+  width: 623px;
+  border-radius: 20px;
+  margin:50px auto;
+  margin-top: -60px;
+  margin-right: 158px;
+ 
+}
+
+.card-quadrado2 img{
+
+object-fit: cover;
+border-radius: 20px;
+width: 100%;
+height: 100%;
+
+}
+
+
+
+
+.xpsobre h1 {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 150px;
+  text-align: center;
+  font-size: 2.2rem;
+  color:#111
+  
+}
+
+.xpsobre p {
+
+  color:#011428;
+  font-family: 'Montserrat' ;
+  text-align: justify;
+  margin-left: 150px;
+  margin-right: 150px;
+  line-height: 1.4;
+  font-size: 14px;
+  
+  
+  
+
+}
+
+.xpsobre h3 {
+
+  color:#111;
+  margin-left:150px ;
+}
+
+
+body h2 {
+
+  text-align: center;
+  margin:50px auto;
+  color:#111;
+}
+.faq-container {
+    
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+  background: #f7f7f7;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  color:#111;
+
+}
+
+.faq-question {
+  padding: 15px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat'
+  
+  
+  
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  font-weight: normal;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  
+  
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* altura suficiente p/ resposta */
+  padding: 15px 20px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+ }
+
+
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-left: 80px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+}
