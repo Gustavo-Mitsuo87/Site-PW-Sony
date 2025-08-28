@@ -1,3 +1,30 @@
+// Seleciona o navbar
+
+const navbar = document.getElementById("navbar");
+
+// Adiciona um listener de scroll na janela
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled"); // Adiciona a classe quando rolar
+  } else {
+    navbar.classList.remove("scrolled"); // Remove a classe ao voltar
+  }
+});
+
+// Lupa do Nav //
+
+  const searchIcon = document.getElementById('search-icon');
+const searchInput = document.getElementById('search-input');
+
+searchIcon.addEventListener('click', () => {
+  searchInput.classList.toggle('active');
+  if (searchInput.classList.contains('active')) {
+    searchInput.focus(); // já foca no campo ao abrir
+  }
+});
+
+
+// Parte do Carrossel //
 const track = document.querySelector(".carousel-track");
 let slides = document.querySelectorAll(".carousel-track img");
 
@@ -122,7 +149,7 @@ const gameData = {
     desc: "Five Nights at Freddy’s: Help Wanted é um jogo de terror em realidade virtual (ou modo padrão) que reúne minigames clássicos e originais da franquia FNAF. O jogador enfrenta animatrônicos assustadores enquanto realiza tarefas como consertos e vigilância noturna. A atmosfera é tensa e imersiva, com sustos garantidos. Não é necessário ter headset VR para jogar.",
     link: "aco.html"
   },
-  "GOW.webp": {
+  "GOWar.jpg": {
     desc: "God of War (2018) é um jogo de ação e aventura que reinventa a saga de Kratos, agora ambientada na mitologia nórdica. Ele embarca numa jornada emocional com seu filho Atreus, enfrentando deuses e monstros em busca do topo dos nove reinos. Com combate visceral, narrativa profunda e visual cinematográfico, o jogo foi aclamado como um dos melhores de sua geração.",
     link: "mk1.html"
   },
