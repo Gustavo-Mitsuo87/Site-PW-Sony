@@ -1,5 +1,5 @@
+// Seleciona o navbar
 const navbar = document.getElementById("navbar");
-
 // Adiciona um listener de scroll na janela
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
@@ -185,3 +185,14 @@ elementos.forEach((elemento) => fofoqueira.observe(elemento));
         item.classList.toggle('active');
       });
     });
+
+  
+const searchIcon = document.getElementById("search-icon");
+const searchInput = document.getElementById("search-input");
+
+searchIcon.addEventListener("click", () => {
+  searchInput.classList.toggle("active");
+  if (searchInput.classList.contains("active")) {
+    searchInput.focus();
+  }
+});
