@@ -351,6 +351,12 @@ nav a:hover{
   transform: scale(1.01);
 }
 
+.card9 img {
+  position: relative;
+  width: 100%;
+  border-radius: 25px;
+}
+
 .container-carousel {
   display: flex;
   align-items: center;
