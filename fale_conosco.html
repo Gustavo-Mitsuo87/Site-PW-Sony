@@ -56,14 +56,19 @@
         <section class="inputs_order">
           <p>Nome:</p>
           <input placeholder="Nome" />
-          <p>Email:</p>
-          <input placeholder="Email" />
+
+          <form id="formEmail">
+            <p>Email</p>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+            <p id="mensagem"></p> <!-- aqui mostraremos o resultado -->
+          </form>
+
           <p>Data de Nascimento:</p>
-          <input placeholder="Data de Nascimento" />
+          <input type="date" placeholder="Data de Nascimento" />
           <p>Assunto:</p>
           <input placeholder="Assunto" />
           <p>Dúvida:</p>
-          <input placeholder="Dúvida" />
+          <textarea placeholder="Dúvida"  style="height: 150px;"></textarea>
         </section>
         <button class="btn_galeria"><strong>ENVIAR</strong></button>
       </div>
@@ -96,5 +101,6 @@
         <p>© 2025 Sony. Todos os direitos reservados.</p>
       </div>
     </footer>
+    <script src="conosco.js"></script>
   </body>
 </html>

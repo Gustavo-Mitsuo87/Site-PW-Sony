@@ -154,6 +154,16 @@ input {
   color: black;
 }
 
+textarea {
+  width: 500px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #bfbfbf;
+  border-color: #bfbfbf;
+  margin: 10px 0px 10px 3px;
+  color: black;
+}
+
 .footer {
   background-color: #000000;
   color: #fff;
