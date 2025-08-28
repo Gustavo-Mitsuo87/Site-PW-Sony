@@ -351,6 +351,12 @@ nav a:hover {
   transform: scale(1.01);
 }
 
+.card9 img {
+  position: relative;
+  width: 100%;
+  border-radius: 25px;
+}
+
 .container {
   display: flex; /* coloca lado a lado */
   gap: 20px; /* espaçamento entre o card fixo e o carousel */
