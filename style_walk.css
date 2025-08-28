@@ -1,3 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: white;
+}
+
+main {
+  max-width: 1200px;
+  margin: 6rem auto 2rem;
+  padding: 0 1rem;
+}
+
+/* Parte do Mitsuo */
+
+header {
+  padding: 0.5rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  top: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+nav {
+  text-decoration-color: #000000;
+  max-width: auto;
+  margin: -10px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  color: rgb(160, 160, 160);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: #000;
+  margin: 9px;
+}
+
+/* Caixa de pesquisa */
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#search-input {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* quando ativo */
+#search-input.active {
+  width: 150px;
+  opacity: 1;
+}
+
+#navbar {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+}
+
+#navbar:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#navbar.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Fim da parte do Mitsuo */
+
+.wseta {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 500px;
+  position: absolute;
+  left: 100px;
+}
 
 .whero {
   position: relative;
@@ -21,12 +131,16 @@
   font-family: "Baskerville Old Face";
 }
 
-.wclasses{
+.wtexto {
+  margin-bottom: 1rem;
+}
+
+.wclasses {
   display: flex;
   justify-content: space-between;
 }
 
-.wclasse{
+.wclasse {
   margin: 10px;
   height: auto;
   width: 33%;
@@ -36,31 +150,43 @@
   text-decoration: none;
   padding: 20px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   position: relative;
 }
-.wclasse img{
+.wclasse img {
   height: 300px;
   background-color: transparent;
+<<<<<<< HEAD
   transition: transform 0.3s ease; 
 }
 .wclasse:hover{
   transform: scale(1.03);
 }
 .wbotaoespaco{
-  width: 100%;
-  height: 1rem;
+=======
+  transition: transform 0.3s ease;
 }
+.wclasse:hover {
+  transform: scale(1.03);
+}
+.wbotaoespaco {
+>>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
+  width: 100%;
+  padding: 1rem;
+}
+.wbotaopro,
 .wbotao {
+  padding: 5px;
   background-color: #000000;
   width: 100px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 25px;
   float: right;
   color: white;
   text-decoration: none;
   position: absolute;
+<<<<<<< HEAD
   bottom: 20px;
   right: 20px;
 }
@@ -70,6 +196,106 @@
 }
 
 
+=======
+  bottom: 5%;
+  right: 5%;
+}
+
+.wlistapro {
+  display: inline;
+}
+
+.wprodutos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wproduto {
+  margin: 10px;
+  height: auto;
+  width: 50%;
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.wproimg {
+  min-width: 150px;
+  height: 100%;
+  position: relative;
+}
+.wproduto img {
+  transform: translate(0%, -50%);
+  position: absolute;
+  top: 50%;
+  height: 300px;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.wpequeclasse {
+  padding: 10px;
+  padding-bottom: 30px;
+
+  border-radius: 25px;
+  text-align: justify;
+  position: relative;
+}
+
+.wproduto:hover {
+  transform: scale(1.03);
+}
+
+.wtextopro {
+  margin-bottom: 0.8rem;
+}
+.wdescri {
+  text-align: justify;
+  font-size: large;
+  padding: 20px;
+  height: 100%;
+
+  border-radius: 25px;
+  position: relative;
+
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.wbotaopro {
+  right: 5%;
+}
+
+.wqualidades {
+  margin: 10px;
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.wimg {
+  min-width: 50px;
+}
+.wimg img {
+  width: 50px;
+  margin-right: 10px;
+}
+.wqualidades:hover {
+  transform: scale(1.03);
+}
+
+.wancora {
+  margin-top: 3rem;
+}
+
+>>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
 .wsubhero {
   margin-top: 3rem;
   margin-bottom: 100px;
@@ -81,7 +307,10 @@
   box-shadow: 1px 40px 50px rgba(7, 7, 7, 0.264);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
 .wsubhero h1 {
   color: white;
   text-align: left;
@@ -90,24 +319,139 @@
   font-family: "Baskerville Old Face";
 }
 
+<<<<<<< HEAD
 .wsub1{
+=======
+.wsub1 {
+>>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
   background: linear-gradient(to bottom, #00000000 50%, #000000cf),
     url("./Imagens/Walksubhero1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+<<<<<<< HEAD
 .wsub2{
+=======
+.wsub2 {
+>>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
   background: linear-gradient(to bottom, #00000000 50%, #000000cf),
     url("./Imagens/Walksubhero2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+<<<<<<< HEAD
 .wsub3{
+=======
+.wsub3 {
+>>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
   background: linear-gradient(to bottom, #00000000 50%, #000000cf),
     url("./Imagens/Walksubhero3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+<<<<<<< HEAD
+=======
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .whero {
+    height: 50vh;
+  }
+  .whero h1 {
+    margin-left: 20%;
+    font-size: 1rem;
+  }
+  .wseta {
+    margin-bottom: 15em;
+    left: 30px;
+  }
+  .wtexto {
+    font-size: 0.7rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-decoration: none;
+  }
+
+  .footer-section:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    text-decoration: none;
+  }
+}
+>>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253

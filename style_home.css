@@ -5,8 +5,11 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-body {
-  background-color: white;
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 main {
@@ -21,13 +24,16 @@ header {
   z-index: 10;
   width: 100%;
   top: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
 nav {
   text-decoration-color: #000000;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: auto;
+  margin: -10px;
   display: flex;
+  padding: 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -36,14 +42,42 @@ nav a {
   color: #000000;
   text-decoration: none;
   margin-right: 20px;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  color: #002d7f;
+  color: rgb(160, 160, 160);
 }
 
-nav a:active {
-  color: #0056b3;
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: #000;
+  margin: 9px;
+}
+
+/* Caixa de pesquisa */
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#search-input {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* quando ativo */
+#search-input.active {
+  width: 150px;
+  opacity: 1;
 }
 
 #navbar {
@@ -53,6 +87,10 @@ nav a:active {
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: -5px;
+}
+
+#navbar:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 #navbar.scrolled {
@@ -148,7 +186,7 @@ nav a:active {
   border-radius: 25px;
   overflow: hidden;
   padding: 20px;
-  width: 600px; /* tamanho fixo opcional */
+  width: 570px; /* tamanho fixo opcional */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
 }
@@ -210,8 +248,8 @@ nav a:active {
   align-items: center;
   border-radius: 25px;
   overflow: hidden;
-  height: 500px;
-  width: 1900px; /* tamanho fixo opcional */
+  height: 490px;
+  width: 760px; /* tamanho fixo opcional */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   margin-bottom: 30px;
@@ -232,6 +270,7 @@ nav a:active {
 }
 
 .card6 {
+  min-width: 100%;
   display: flex;
   flex-direction: column; /* imagem em cima, texto embaixo */
   align-items: center;
@@ -239,7 +278,6 @@ nav a:active {
   border-radius: 25px;
   overflow: hidden;
   padding: 20px;
-  width: 300px; /* tamanho fixo opcional */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
 }
@@ -332,52 +370,36 @@ nav a:active {
 
 .carousel {
   position: relative;
-  width: 90%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.carousel-track-container {
+  flex: 1;
   overflow: hidden;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
-.carousel-button {
+/* Botões */
+.carousel button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #00000000;
-  color: #000000ec;
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   padding: 9px;
   cursor: pointer;
-  border-radius: 60%;
-  font-size: 17px;
-  z-index: 100;
-  transition: background 0.3s, transform 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 65px;
+  z-index: 5;
 }
 
-.carousel-button:hover {
-  background-color: #55555572;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-button.prev {
+.carousel .prev {
   left: 10px;
 }
 
-.carousel-button.next {
+.carousel .next {
   right: 10px;
 }
-
-.carousel-button:focus {
-  outline: none;
-}
-
 .footer {
   background-color: #111;
   color: #fff;
