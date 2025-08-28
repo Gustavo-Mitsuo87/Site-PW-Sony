@@ -34,3 +34,24 @@ setInterval(() => {
 
 // Fim Carrossel Principais Recursos
 
+// Antes e Depois Triluminos Color
+
+//variavel para controlar o estado do botão
+let ativo = false
+
+//função chamada ao clicar o botão
+function alternarBotao() {
+  const btn = document.getElementById('toggleBotao');
+  const container = document.getElementById('toggleContainer');
+  const imagem = document.getElementById('imagem');
+
+  ativo = !ativo; //alterna o estado (true/false)
+  btn.classList.toggle('ativo-botao');
+  container.classList.toggle('ativo-container');
+
+  //Troca a imagem com base no estado 
+  imagem.src = ativo
+  ? "Imagens/com-triluminos.png"
+  : "Imagens/sem-triluminos.png";
+}
+

@@ -270,7 +270,7 @@ body {
   display: flex;
   margin-top: 100px;
 }
-.cabecalho-dolby-vision {
+.cabecalho-principais-recursos {
   display: flex;
   width: 100%;
   height: auto;
@@ -282,7 +282,7 @@ body {
   padding: 20px;
   margin-top: 100px;
 }
-.cabecalho-dolby-vision h2 {
+.cabecalho-principais-recursos h2 {
   font-size: 2rem;
 }
 .detalhes-dolby-vision {
@@ -317,22 +317,85 @@ body {
 .cards-dolby-vision {
   margin-top: 100px;
   width: 100%;
-  height: auto;
+  height: 70vh;
   align-items: center;
   justify-content: center;
   display: flex;
-  gap: 10px;
-  
+  gap: 20px;  
+  overflow: hidden;
+  position: relative;
+}
+.cards-dolby-vision video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(50%);
 }
 
 .card-dolby-vision {
-  background-color: #2c2c2c;
+  background-color: rgba(0,0,0,0.8);
   width: 30%;
-  height: auto;
+  height: 200px;
   border-radius: 25px;
+  padding: 20px;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card-dolby-vision h3 {
+  color: #f6f3f3;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.card-dolby-vision p {
+  color: #f6f3f3;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+.card-dolby-vision:hover {
+  transform: translateY(-10px); /* levanta 10px */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4); /* sombra para dar profundidade */
+
+}
 /*Fim Dolby Vision*/
+
+/*Triluminos Color*/
+.detalhes-triluminos-color {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  margin-top: 100px;
+}
+.img-detalhes-triluminos-color-container {
+  margin-left: 10px;
+}
+
+.img-detalhes-triluminos-color-container img {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.texto-detalhes-triluminos-color {
+  margin-right: 3rem;
+  margin-left: 5rem;
+  width: 45%;
+}
+.texto-detalhes-triluminos-color p {
+  text-align: justify;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+
+/*Fim Triluminos Color*/
+
 
 
 
