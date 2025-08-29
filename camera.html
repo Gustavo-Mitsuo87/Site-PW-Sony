@@ -9,81 +9,100 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <script src="script_camera.js" defer></script>
   </head>
   <body>
-    <header id="navbar-gog">
+    <header id="navbar">
       <nav>
         <div class="logo">
           <img src="./Imagens/logo.png" alt="" />
         </div>
-        <div class="menu">
-          <a href="index.html"> Home</a>
-          <a href="#user">User</a>
-          <a href="#contato">Contato</a>
+        <div class="nav-icons">
+          <a href="index.html">Home</a>
+          <a href="#User">User</a>
+
+          <!-- lupa + input -->
+          <div class="search-box">
+            <i id="search-icon" class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Pesquisar..." />
+          </div>
         </div>
       </nav>
     </header>
-    <main>
+
+    <div class="hero">
       <a
         class="fa-solid fa-arrow-left"
         href="index.html"
         style="
-          color: black;
+          color: white;
           text-decoration: none;
-          margin-top: -30px;
-          margin-left: -10px;
-          padding-bottom: 30px;
+          margin-bottom: 37em;
+          margin-left: 10px;
         "
       ></a>
-      <h1 class="h1_camera">Seção das Câmeras</h1>
-      <p style="margin-left: -12px">Veja nossas principais câmeras.</p>
-      <hr class="hr_camera" />
+    </div>
 
-      <section class="cards_camera">
-        <div class="card_camera">
-          <div class="card_imagem_camera">
-            <img src="./Imagens/Sony A7CR.png" />
-          </div>
-          <div class="card_texto_camera">
-            <h1>A7CR</h1>
-            <p>"Veja além do comum"</p>
+    <main>
+      <h1 class="h1_camera" style="font-size: 3em">Seção das Câmeras</h1>
+      <p style="margin-left: -10px; padding-bottom: 10px">
+        Veja nossas principais câmeras.
+      </p>
+
+      <section class="cards">
+        <div class="card1">
+          <img src="./Imagens/Sony DSC-HX99.png" />
+
+          <div class="card-text">
+            <h1>DSC-HX99</h1>
+            <p>
+              Capture cada momento com a precisão e a qualidade que só a
+              tecnologia Sony pode oferecer.
+            </p>
           </div>
         </div>
 
-        <div class="card_camera">
-          <div class="card_imagem_camera">
-            <img src="./Imagens/Sony DSC-H300.png" />
-          </div>
-          <div class="card_texto_camera">
-            <h1>DSC-H300</h1>
-            <p>"Sensibilidade que redefine o possível em condições de luz"</p>
+        <div class="card1">
+          <img src="./Imagens/Sony DSC-HX400V.png" />
+
+          <div class="card-text">
+            <h1>DSC-HX400V</h1>
+            <p>
+              Transforme suas visões em imagens impressionantes com a inovação
+              que define a fotografia moderna.
+            </p>
           </div>
         </div>
 
-        <div class="card_camera">
-          <div class="card_imagem_camera">
-            <img src="./Imagens/Sony ZV-1F.png" />
-          </div>
-          <div class="card_texto_camera">
+        <div class="card1">
+          <img src="./Imagens/Sony ZV-1F.png" />
+
+          <div class="card-text">
             <h1>ZV-1F</h1>
-            <p>"Equilíbrio perfeito entre foto e vídeo"</p>
+            <p>
+              A arte de fotografar se torna uma experiência profissional com as
+              câmeras que elevam sua criatividade.
+            </p>
           </div>
         </div>
       </section>
-
-      <h1 class="h1_camera" style="padding-top: 30px">
+      <h1 class="h1_camera" style="padding-top: 100px; font-size: 3em">
         Coleção Completa das Câmeras
       </h1>
       <p style="margin-left: -12px">
         Caso queira ver nossa coleção completa de nossas câmera, clique aqui.
       </p>
-      <hr class="hr_camera" />
+
       <a class="btn_galeria" href="colecao_camera.html"
         ><strong>CLIQUE AQUI!</strong>
       </a>
 
+      <section class="banner_lateral">
+        <img src="./Imagens/Banner-Lateral.png" />
+      </section>
+
       <section class="beneficios">
-        <h1 class="h1_camera" style="font-size: 2em; padding-top: 65px">
+        <h1 class="h1_camera" style="font-size: 2.5em; padding-top: 65px">
           Porque comprar as câmeras Sony?
         </h1>
         <p>
@@ -118,20 +137,43 @@
           </div>
         </section>
       </section>
+
+      <h1
+        class="h1_camera"
+        style="font-size: 3em; margin-top: 5rem; margin-left: 3px"
+      >
+        Promoções e Ofertas
+      </h1>
+      <p style="margin-left: -10px; margin-bottom: 30px; margin-left: 5px">
+        Veja nossas principais promoções.
+      </p>
+      <section class="promocao_itens">
+        <div class="card_promocao">
+          <img src="./Imagens/Promoção Cybershot.png" />
+        </div>
+        <section class="promocao_itens_vert">
+          <div class="card_promocao_vert1"></div>
+          <div class="card_promocao_vert2"></div>
+        </section>
+      </section>
+
+      <section class="banner_lateral2">
+        <img src="./Imagens/Banner-Lateral2.png" />
+      </section>
     </main>
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section">
-          <h3>PlayStation</h3>
+          <h3>Sony</h3>
           <p>Inovação e tecnologia.</p>
         </div>
         <div class="footer-section">
           <h3>Links úteis</h3>
           <ul>
-            <li><a href="#">Política de privacidade</a></li>
-            <li><a href="#">Termos de uso</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#">| Política de privacidade</a></li>
+            <li><a href="#">| Termos de uso</a></li>
+            <li><a href="#">| Contato</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -144,10 +186,9 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 TechZone. Todos os direitos reservados.</p>
+        <p>© 2025 Sony. Todos os direitos reservados.</p>
       </div>
     </footer>
-
-    <script src="script.js"></script>
   </body>
+  <script src="script_camera.js"></script>
 </html>
