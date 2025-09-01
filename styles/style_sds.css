@@ -46,7 +46,7 @@
   margin-top:0px ;
   margin-bottom: 3rem;
   padding-bottom: 5rem;
-  background-image: url(Imagens/Banner_sisds.png);
+  background-image: url(../Imagens/Banner_sisds.png);
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -210,36 +210,3 @@
 
 .btn:hover { background: rgba(0,0,0,0.7); }
 
-/*<div class="slide">
-            <table>
-              <tr>
-                <td>
-                  <img src="Imagens/MHC-M60D.png" alt="Imagem 1">
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      
-                    </li>
-                  </ul>
-                </td>
-               </tr>
-            </table>
-          </div>
-          
-          
-          <td>
-                  <ul>
-                    <li>
-                      <p class="txt_sds">DVD Player integrado cp, saída HDMI</p>
-                    </li>
-                    <li>
-                      <p class="txt_sds"></p>
-                    </li>
-                    <li>
-                      <p class="txt_sds">Modo Futebol</p>
-                    </li>
-                  </ul>
-                </td>
-          
-          /
