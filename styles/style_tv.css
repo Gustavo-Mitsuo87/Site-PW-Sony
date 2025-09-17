@@ -47,7 +47,7 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-image: url(Imagens/banner_tv.png);
+  background-image: url(../Imagens/banner_tv.png);
   background-size: cover;
   background-position: center;
 }

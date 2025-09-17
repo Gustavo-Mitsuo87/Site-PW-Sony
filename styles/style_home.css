@@ -103,7 +103,7 @@ nav a:hover {
   position: relative;
   height: 100vh;
   background: linear-gradient(to bottom, #00000000 20%, #000000cf),
-    url("./Imagens/Camera\ -\ Home.jpg ");
+    url("../Imagens/Camera - Home.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -262,11 +262,11 @@ nav a:hover {
 }
 
 .card5 img {
-  width: 120%;
-  height: 450px;
-  object-fit: cover; /* garante que o produto não seja cortado */
+  width: 110%;
+  height: auto;
+  object-fit: cover; 
   background-color: transparent;
-  transform: translateY(11%);
+
 }
 
 .card6 {
@@ -283,8 +283,8 @@ nav a:hover {
 }
 
 .card6 img {
-  width: 90%;
-  height: 350px;
+  width: 100%;
+  height: 450px;
   object-fit: cover; /* garante que o produto não seja cortado */
   background-color: transparent;
 }
@@ -390,7 +390,7 @@ nav a:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.119);
   border: none;
   padding: 9px;
   cursor: pointer;

@@ -113,7 +113,7 @@ nav a:hover {
   position: relative;
   height: 110vh;
   background: linear-gradient(to bottom, #00000000 20%, #000000cf),
-    url("./Imagens/Walkhero.png");
+    url("../Imagens/Walkhero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -296,21 +296,21 @@ nav a:hover {
 
 .wsub1 {
   background: linear-gradient(to bottom, #00000000 50%, #000000cf),
-    url("./Imagens/Walksubhero1.png");
+    url("../Imagens/Walksubhero1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .wsub2 {
   background: linear-gradient(to bottom, #00000000 50%, #000000cf),
-    url("./Imagens/Walksubhero2.png");
+    url("../Imagens/Walksubhero2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .wsub3 {
   background: linear-gradient(to bottom, #00000000 50%, #000000cf),
-    url("./Imagens/Walksubhero3.png");
+    url("../Imagens/Walksubhero3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
