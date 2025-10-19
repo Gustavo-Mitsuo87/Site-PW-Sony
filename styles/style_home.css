@@ -355,7 +355,11 @@ nav a:hover {
 .card9 img {
   position: relative;
   width: 100%;
+<<<<<<< HEAD:style_home.css
+  border-radius: 25px;
+=======
   border-radius: 25px; ;
+>>>>>>> 71e46884ec2e2e964380654eff208553cfaa73d6:styles/style_home.css
 }
 
 .container {
