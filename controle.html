@@ -1,263 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Controle</title>
-    <link rel="stylesheet" href="style_ps.css" />
+<!--Arrumar nav-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle</title>
+  <link rel="stylesheet" href="styles/style_ps.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- Header -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
 
-    <header class="wcabecalho">
-      <nav>
-        <div class="logo">
-          <img src="./Imagens/logo.png" alt="Logo Sony" />
-        </div>
+<body>
+  <!-- Header -->
 
-        <div class="menu">
-          <a href="index.html">Home</a>
-          <a href="#">User</a>
-          <div class="search-box">
-            <i id="search-icon" class="fas fa-search"></i>
-            <input type="text" id="search-input" placeholder="Pesquisar..." />
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Hero -->
-    <section class="sense-container">
-      <video
-        class="bg-video"
-        src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/testing/lucy-test-assets/video-hero/test-dualsense-video-billboard.mp4"
-        autoplay
-        loop
-        muted
-      ></video>
-
-      <div class="overlay"></div>
-
-      <div class="sense-content">
-        <button class="play-btn">▶</button>
-        <h2>Eleve seus sentidos</h2>
-        <p>
-          O controle sem fio DualSense para consoles PS5 oferece resposta tátil
-          imersiva, gatilhos adaptáveis dinâmicos² e um microfone embutido, tudo
-          integrado a um design icônico.
-        </p>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="features-container">
-      <div class="feature feature-right" data-aos="fade-up-left">
-        <img
-          src="https://gmedia.playstation.com/is/image/SIEPDC/dualsense-adaptive-triggers-image-block-01-en-30aug23?$1600px--t$"
-          alt="Gatilhos adaptáveis"
-        />
-        <div class="text" data-aos="fade-up-right">
-          <h3>Gatilhos adaptáveis</h3>
-          <p>
-            Experimente diferentes níveis de força e tensão conforme você
-            interage com seu controle e com os ambientes do jogo. Desde puxar
-            uma corda de arco até pisar nos freios de um carro, sinta-se
-            conectado fisicamente às ações na tela.
-          </p>
-        </div>
+  <header class="wcabecalho">
+    <nav>
+      <div class="logo">
+        <img src="./Imagens/logo.png" alt="Logo Sony" />
       </div>
 
-      <div class="feature feature-left" data-aos="fade-up-right">
-        <div class="text">
-          <h3>Resposta tátil</h3>
-          <p>
-            Sinta em suas mãos a resposta tátil em seus jogos com atuadores
-            duplos, substituindo os barulhentos motores tradicionais. Nas suas
-            mãos, essas vibrações dinâmicas simulam quaisquer sensações, seja o
-            ambiente ou o recuo de armas diferentes.
-          </p>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="#">User</a>
+        <div class="search-box">
+          <i id="search-icon" class="fas fa-search"></i>
+          <input type="text" id="search-input" placeholder="Pesquisar..." />
         </div>
-        <img
-          src="https://gmedia.playstation.com/is/image/SIEPDC/dualsense-haptic-feedback-image-block-01-en-30aug23?$1600px--t$"
-          alt="Resposta tátil"
-        />
       </div>
-    </section>
+    </nav>
+  </header>
 
-    <div class="dual-container-2">
-      <h2>Edição limitada dos controles sem fio DualSense</h2>
+  <!-- Hero -->
+  <section class="sense-container">
+    <video class="bg-video"
+      src="https://gmedia.playstation.com/is/content/SIEPDC/global_pdc/en/testing/lucy-test-assets/video-hero/test-dualsense-video-billboard.mp4"
+      autoplay loop muted></video>
+
+    <div class="overlay"></div>
+
+    <div class="sense-content">
+      <button class="play-btn">▶</button>
+      <h2>Eleve seus sentidos</h2>
       <p>
-        Comemore alguns dos maiores jogos, personagens e momentos do PlayStation
-        com a edição limitada do controle sem fio DualSense.
+        O controle sem fio DualSense para consoles PS5 oferece resposta tátil
+        imersiva, gatilhos adaptáveis dinâmicos² e um microfone embutido, tudo
+        integrado a um design icônico.
       </p>
+    </div>
+  </section>
 
-      <!-- Miniaturas -->
-      <div class="thumbs">
-        <div class="thumb-item">
-          <img
-            src="imagens/con1.webp"
-            data-png="Imagens/con5.png"
-            data-link=" https://www.amazon.com.br/dp/B0F8RBVJ51"
-            data-title="Death Stranding™ 2: On the Beach Limited Edition"
-            data-text="Mantenha o fluxo de suprimentos com o hardware mais recente para a nova jornada de Portadores em Death Stranding 2: On the Beach."
-            onclick="trocarControle(this)"
-            alt="Controle Astro Bot"
-          />
-        </div>
-
-        <div class="thumb-item">
-          <img
-            src="imagens/con6.webp"
-            data-png="Imagens/con6-22.png"
-            data-link="https://www.amazon.com.br/dp/B0DCKXZ21T"
-            data-title="Edição limitada de ASTRO BOT "
-            data-text="Viaje pela galáxia com esta edição limitada do controle sem fio DualSense, inspirado no design dinâmico da confiável nave espacial Dual Speeder do ASTRO. Lançado em 6 de setembro de 2024. Esse controle não está mais disponível."
-            onclick="trocarControle(this)"
-            alt="Controle Astro Bot"
-          />
-        </div>
-
-        <div class="thumb-item">
-          <img
-            src="imagens/con2.webp"
-            data-png="Imagens/con2.png"
-            data-link=" https://www.amazon.com.br/dp/B0DCKXZ21T"
-            data-title="Edição limitada do 30º aniversário"
-            data-text="Comemore o 30º aniversário do console PlayStation® original com o controle sem fio DualSense™ — edição limitada do 30º Aniversário. Disponibilidade limitada — consulte os revendedores para mais detalhes"
-            onclick="trocarControle(this)"
-            alt="Controle TLOU"
-          />
-        </div>
-
-        <div class="thumb-item">
-          <img
-            src="imagens/con3.webp"
-            data-png="Imagens/con3.png"
-            data-link=" "
-            data-title="Edição limitada de The Last of Us"
-            data-text="Fuja dos infectados com a edição limitada deste controle, inspirado em The Last of Us. Lançado em 10 de abril de 2025."
-            onclick="trocarControle(this)"
-            alt="Controle Helldivers"
-          />
-        </div>
-
-        <div class="thumb-item">
-          <img
-            src="imagens/con56.webp"
-            data-png="Imagens/con1.png"
-            data-title="Edição limitada do HELLDIVERS™ 2"
-            data-link="https://www.kabum.com.br/produto/690193/controle-sony-dualsense-helldivers-2-ps5-sem-fio-edicao-limitada-1000047244"
-            data-text="Lidere o comando da democracia galáctica com a elegante edição limitada do controle sem fio DualSense – HELLDIVERS™ 2. Lançado em 6 de fevereiro de 2025. Esse controle não está mais disponível."
-            onclick="trocarControle(this)"
-            alt="Controle Fortnite"
-          />
-        </div>
-      </div>
-
-      <!-- Imagem principal + texto -->
-      <div class="main-control">
-        <img
-          id="controle-grande"
-          src="imagens/con5.png"
-          alt="Controle Grande"
-        />
-        <h3 id="controle-titulo">Controles Especiais</h3>
-        <p id="controle-texto">Clique em uma miniatura para ver os detalhes.</p>
-        <a
-          id="controle-link"
-          href="https://www.amazon.com.br/dp/B0F8RBVJ51"
-          class="btn-ps5"
-          >Saiba mais</a
-        >
+  <!-- Services -->
+  <section class="features-container">
+    <div class="feature feature-right" data-aos="fade-up-left">
+      <img
+        src="https://gmedia.playstation.com/is/image/SIEPDC/dualsense-adaptive-triggers-image-block-01-en-30aug23?$1600px--t$"
+        alt="Gatilhos adaptáveis" />
+      <div class="text" data-aos="fade-up-right">
+        <h3>Gatilhos adaptáveis</h3>
+        <p>
+          Experimente diferentes níveis de força e tensão conforme você
+          interage com seu controle e com os ambientes do jogo. Desde puxar
+          uma corda de arco até pisar nos freios de um carro, sinta-se
+          conectado fisicamente às ações na tela.
+        </p>
       </div>
     </div>
 
-    <!-- About -->
-    <section class="features-container">
-      <div class="feature feature-right" data-aos="fade-up-left">
-        <img src="Imagens/carregador.webp" alt="Gatilhos adaptáveis" />
-        <div class="text" data-aos="fade-up-right">
-          <h3>Clique. Carregue. Jogue.</h3>
-          <p>
-            Conecte até dois controles sem fio DualSense5 de forma rápida e
-            simples com a base de carregamento fácil de conectar. Seus controles
-            carregam tão rápido quanto se estivessem conectados ao console PS5,
-            liberando as portas USB sem comprometer o desempenho.
-          </p>
-          <a
-            href="https://www.magazineluiza.com.br/estacao-de-carregamento-para-controle-dualsense-para-ps5-sony-original/p/233238100/ga/otga/"
-            class="btn-ps5"
-            >Saiba mais</a
-          >
-        </div>
+    <div class="feature feature-left" data-aos="fade-up-right">
+      <div class="text">
+        <h3>Resposta tátil</h3>
+        <p>
+          Sinta em suas mãos a resposta tátil em seus jogos com atuadores
+          duplos, substituindo os barulhentos motores tradicionais. Nas suas
+          mãos, essas vibrações dinâmicas simulam quaisquer sensações, seja o
+          ambiente ou o recuo de armas diferentes.
+        </p>
+      </div>
+      <img
+        src="https://gmedia.playstation.com/is/image/SIEPDC/dualsense-haptic-feedback-image-block-01-en-30aug23?$1600px--t$"
+        alt="Resposta tátil" />
+    </div>
+  </section>
+
+  <div class="dual-container-2">
+    <h2>Edição limitada dos controles sem fio DualSense</h2>
+    <p>
+      Comemore alguns dos maiores jogos, personagens e momentos do PlayStation
+      com a edição limitada do controle sem fio DualSense.
+    </p>
+
+    <!-- Miniaturas -->
+    <div class="thumbs">
+      <div class="thumb-item">
+        <img src="imagens/con1.webp" data-png="Imagens/con5.png" data-link=" https://www.amazon.com.br/dp/B0F8RBVJ51"
+          data-title="Death Stranding™ 2: On the Beach Limited Edition"
+          data-text="Mantenha o fluxo de suprimentos com o hardware mais recente para a nova jornada de Portadores em Death Stranding 2: On the Beach."
+          onclick="trocarControle(this)" alt="Controle Astro Bot" />
       </div>
 
-      <div class="feature feature-left" data-aos="fade-up-right">
-        <div class="text">
-          <h3>Eleve seu jogo</h3>
-          <p>
-            Conecte-se usando um cabo USB Tipo-C® ou tecnologia Bluetooth® e
-            jogue facilmente em mais dispositivos, incluindo computadores
-            Windows PC e Mac®, além de dispositivos móveis e tablets Android e
-            iOS. Eleve sua diversão no PC com recursos avançados como resposta
-            tátil e gatilhos adaptáveis em vários títulos de sucesso para PC8 e
-            curta milhares de jogos compatíveis com controle.
-          </p>
-        </div>
-        <img src="Imagens/pc.webp" alt="Resposta tátil" />
+      <div class="thumb-item">
+        <img src="imagens/con6.webp" data-png="Imagens/con6-22.png" data-link="https://www.amazon.com.br/dp/B0DCKXZ21T"
+          data-title="Edição limitada de ASTRO BOT "
+          data-text="Viaje pela galáxia com esta edição limitada do controle sem fio DualSense, inspirado no design dinâmico da confiável nave espacial Dual Speeder do ASTRO. Lançado em 6 de setembro de 2024. Esse controle não está mais disponível."
+          onclick="trocarControle(this)" alt="Controle Astro Bot" />
       </div>
-    </section>
 
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Sony</h3>
-          <p>Inovação e tecnologia.</p>
-        </div>
-        <div class="footer-section">
-          <h3>Links úteis</h3>
-          <ul>
-            <li><a href="#">| Política de privacidade</a></li>
-            <li><a href="#">| Termos de uso</a></li>
-            <li><a href="#">| Contato</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Siga-nos</h3>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-          </div>
+      <div class="thumb-item">
+        <img src="imagens/con2.webp" data-png="Imagens/con2.png" data-link=" https://www.amazon.com.br/dp/B0DCKXZ21T"
+          data-title="Edição limitada do 30º aniversário"
+          data-text="Comemore o 30º aniversário do console PlayStation® original com o controle sem fio DualSense™ — edição limitada do 30º Aniversário. Disponibilidade limitada — consulte os revendedores para mais detalhes"
+          onclick="trocarControle(this)" alt="Controle TLOU" />
+      </div>
+
+      <div class="thumb-item">
+        <img src="imagens/con3.webp" data-png="Imagens/con3.png" data-link=" "
+          data-title="Edição limitada de The Last of Us"
+          data-text="Fuja dos infectados com a edição limitada deste controle, inspirado em The Last of Us. Lançado em 10 de abril de 2025."
+          onclick="trocarControle(this)" alt="Controle Helldivers" />
+      </div>
+
+      <div class="thumb-item">
+        <img src="imagens/con56.webp" data-png="Imagens/con1.png" data-title="Edição limitada do HELLDIVERS™ 2"
+          data-link="https://www.kabum.com.br/produto/690193/controle-sony-dualsense-helldivers-2-ps5-sem-fio-edicao-limitada-1000047244"
+          data-text="Lidere o comando da democracia galáctica com a elegante edição limitada do controle sem fio DualSense – HELLDIVERS™ 2. Lançado em 6 de fevereiro de 2025. Esse controle não está mais disponível."
+          onclick="trocarControle(this)" alt="Controle Fortnite" />
+      </div>
+    </div>
+
+    <!-- Imagem principal + texto -->
+    <div class="main-control">
+      <img id="controle-grande" src="imagens/con5.png" alt="Controle Grande" />
+      <h3 id="controle-titulo">Controles Especiais</h3>
+      <p id="controle-texto">Clique em uma miniatura para ver os detalhes.</p>
+      <a id="controle-link" href="https://www.amazon.com.br/dp/B0F8RBVJ51" class="btn-ps5">Saiba mais</a>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="features-container">
+    <div class="feature feature-right" data-aos="fade-up-left">
+      <img src="Imagens/carregador.webp" alt="Gatilhos adaptáveis" />
+      <div class="text" data-aos="fade-up-right">
+        <h3>Clique. Carregue. Jogue.</h3>
+        <p>
+          Conecte até dois controles sem fio DualSense5 de forma rápida e
+          simples com a base de carregamento fácil de conectar. Seus controles
+          carregam tão rápido quanto se estivessem conectados ao console PS5,
+          liberando as portas USB sem comprometer o desempenho.
+        </p>
+        <a href="https://www.magazineluiza.com.br/estacao-de-carregamento-para-controle-dualsense-para-ps5-sony-original/p/233238100/ga/otga/"
+          class="btn-ps5">Saiba mais</a>
+      </div>
+    </div>
+
+    <div class="feature feature-left" data-aos="fade-up-right">
+      <div class="text">
+        <h3>Eleve seu jogo</h3>
+        <p>
+          Conecte-se usando um cabo USB Tipo-C® ou tecnologia Bluetooth® e
+          jogue facilmente em mais dispositivos, incluindo computadores
+          Windows PC e Mac®, além de dispositivos móveis e tablets Android e
+          iOS. Eleve sua diversão no PC com recursos avançados como resposta
+          tátil e gatilhos adaptáveis em vários títulos de sucesso para PC8 e
+          curta milhares de jogos compatíveis com controle.
+        </p>
+      </div>
+      <img src="Imagens/pc.webp" alt="Resposta tátil" />
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Sony</h3>
+        <p>Inovação e tecnologia.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Links úteis</h3>
+        <ul>
+          <li><a href="#">| Política de privacidade</a></li>
+          <li><a href="#">| Termos de uso</a></li>
+          <li><a href="#">| Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Siga-nos</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 Sony. Todos os direitos reservados.</p>
-      </div>
-    </footer>
-    <script src="script_ps.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1500, // duração da animação em ms
-        once: false, // anima a apenas uma vez (não repete ao rolar para cima e para baixo)
-      });
-    </script>
-    <script>
-      const searchIcon = document.getElementById("search-icon");
-      const searchInput = document.getElementById("search-input");
-      searchIcon.addEventListener("click", () => {
-        searchInput.classList.toggle("active");
-        if (searchInput.classList.contains("active")) {
-          searchInput.focus();
-        }
-      });
-    </script>
-  </body>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Sony. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="JS/script_ps.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1500, // duração da animação em ms
+      once: false, // anima a apenas uma vez (não repete ao rolar para cima e para baixo)
+    });
+  </script>
+  <script>
+    const searchIcon = document.getElementById("search-icon");
+    const searchInput = document.getElementById("search-input");
+    searchIcon.addEventListener("click", () => {
+      searchInput.classList.toggle("active");
+      if (searchInput.classList.contains("active")) {
+        searchInput.focus();
+      }
+    });
+  </script>
+</body>
+
 </html>

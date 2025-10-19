@@ -1,187 +1,253 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sony</title>
-    <link rel="stylesheet" href="style_tv.css" />
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header id="navbar">
-      <nav>
-        <div class="logo">
-          <img src="./Imagens/logo.png" alt="" />
-        </div>
-        <div class="menu">
-          <a href="index.html">Home</a>
-          <a>User</a>
-          <a>Contato</a>
-        </div>
-      </nav>
-    </header>
 
-    <!--Banner-->
-    <section>
-      <div class="banner_tv">
-        <h1>Cada detalhe em alta definição</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sony</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/style_tv.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header id="navbar">
+    <nav>
+      <div class="logo">
+        <img src="./Imagens/logo.png" alt="" />
       </div>
-    </section>
-    <!--Fim Banner-->
+      <div class="nav-icons">
+        <a href="index.html">Home</a>
+        <a href="#User">User</a>
 
-    <!--Principais Recursos-->
-    <section class="principais-recursos_tv">
-      <h1>Principais Recursos</h1>
-      <p>Experimente uma nova forma de consumir entretenimento</p>
-    </section>
-    <!--Fim Principais Recursos-->
-
-
-    
-
-
-    <div class="carousel-container-plus-tv">
-      <button
-        class="carousel-btn left-plus-tv"
-        onclick="scrollCarousel('games-plus-tv', -1)"
-      >
-        ❮
-      </button>
-      <div class="carousel-ps-plus-tv" id="games-plus-tv">
-        <div class="card-ps-plus-tv">
-          <img
-          src="Imagens/mais_nitidez_tv.png"
-          class="imagem-principais-recursos_tv ativa_principais-recursos_tv"
-          alt="Imagem1"
-        />
-        </div>
-        <div class="card-ps-plus-tv">
-          <img
-          src="Imagens/dolby-vision.jpg"
-          class="imagem-principais-recursos_tv"
-          alt="Imagem2"
-        />
-        </div>
-        <div class="card-ps-plus-tv">
-           <img
-          src="Imagens/triluminos-color.webp"
-          class="imagem-principais-recursos_tv"
-          alt="Imagem3"
-        />
+        <!-- lupa + input -->
+        <div class="search-box">
+          <i id="search-icon" class="fas fa-search"></i>
+          <input type="text" id="search-input" placeholder="Pesquisar...">
         </div>
       </div>
-      <button class="carousel-btn right-plus-tv" onclick="scrollCarousel('games-plus-tv', 1)">❯</button>
+    </nav>
+  </header>
 
+  <!--Banner-->
+  <section>
+    <div class="banner_tv">
+      <h1>Cada detalhe em alta definição</h1>
     </div>
+  </section>
+  <!--Fim Banner-->
+  <section class="destaques-tvs">
+    <div class="titulo-destaques-tvs">
+      <h1>Nossos Destaques</h1>
+    </div>
+    <section class="cards-destaques-tvs">
+      <div class="card-destaques-tvs">
+        <div class="img-card-destaques-tvs">
+          <img src="Imagens/A80L-img.webp">
+        </div>
+        <div class="texto-card-destaques-tvs">
+          <h1>A80L</h1>
+          <p>A Sony A80L entrega imagem OLED 4K com contraste impressionante e som imersivo direto da tela. Perfeita
+            para filmes, séries e games com qualidade premium.</p>
+        </div>
+      </div>
+      <div class="card-destaques-tvs">
+        <div class="img-card-destaques-tvs">
+          <img src="Imagens/A95L-img.webp">
+        </div>
+        <div class="texto-card-destaques-tvs">
+          <h1>A95L</h1>
+          <p>A Sony A95L combina o poder do QD-OLED com o Cognitive Processor XR para cores vibrantes e som direto da
+            tela. É a TV definitiva para quem exige excelência.</p>
+        </div>
+      </div>
+      <div class="card-destaques-tvs">
+        <div class="img-card-destaques-tvs">
+          <img src="Imagens/BRAVIA8-img.webp">
+        </div>
+        <div class="texto-card-destaques-tvs">
+          <h1>BRAVIA 8</h1>
+          <p>A Sony Bravia 8 oferece imagem OLED 4K com contraste profundo e som envolvente, ideal para filmes e séries.
+            Design elegante e desempenho premium em qualquer ambiente</p>
+        </div>
+      </div>
+    </section>
+  </section>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-left">
-          <div class="social-icons">
-            <h3>Redes Sociais</h3>
-            <a href="https://www.instagram.com/sony/" target="_blank">
-              <img
-                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
-                alt=""
-                style="filter: invert(1)"
-                width="24"
-              />
-            </a>
-            <br />
-            <a href="https://www.youtube.com/playstation" target="_blank">
-              <img
-                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
-                alt=""
-                style="filter: invert(1)"
-                width="24"
-              />
-            </a>
-            <br />
-            <a href="https://www.youtube.com/playstation" target="_blank">
-              <img
-                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"
-                alt=""
-                style="filter: invert(1)"
-                width="24"
-              />
-            </a>
+  <!--Principais Recursos-->
+  <section class="principais-recursos_tv">
+    <h1>Principais Recursos</h1>
+    <p>Experimente uma nova forma de consumir entretenimento</p>
+  </section>
+  <!--Fim Principais Recursos-->
+
+  <!--Carrossel Principais Recursos-->
+  <div class="carrossel-principais-recursos">
+    <div class="carrossel-pista-principais-recursos">
+      <div class="carrossel-slide-principais-recursos">
+        <img src="Imagens/mais_nitidez_tv.png" alt="Cognitive Processor XR">
+        <div class="carrossel-overlay-principais-recursos">
+          <h2>Cognitive Processor XR</h2>
+        </div>
+      </div>
+      <div class="carrossel-slide-principais-recursos">
+        <img src="Imagens/dolby-vision.jpg" alt="Dolby Vision">
+        <div class="carrossel-overlay-principais-recursos">
+          <h2>Dolby Vision</h2>
+        </div>
+      </div>
+      <div class="carrossel-slide-principais-recursos">
+        <img src="Imagens/triluminos-color.webp" alt="Triluminos Color">
+        <div class="carrossel-overlay-principais-recursos">
+          <h2>Triluminos Color</h2>
+        </div>
+      </div>
+    </div>
+    <div class="carrossel-indicadores-principais-recursos"></div>
+  </div>
+
+  <!--Fim Carrossel Principais Recursos-->
+
+  <!--Detalhes Principais Recursos-->
+  <section class="detalhes-principais-recursos">
+    <div class="cabecalho-principais-recursos">
+      <h2>Cognitive Processor XR</h2>
+      <p>O cérebro por trás da imagem perfeita</p>
+    </div>
+    <section class="detalhes-cognitive-processor-xr">
+      <div class="img-cognitive-processor-xr">
+        <img src="Imagens/xrprocessor.png">
+      </div>
+      <div class="texto-detalhes-cognitive-processor-xr">
+        <h2>Tecnologia que Sente, Vê e Ouve como Você</h2>
+        <p>O Cognitive Processor XR da Sony é o cérebro por trás das TVs mais avançadas da marca, projetado para
+          entregar imagens mais realistas e um som imersivo. Ele analisa a cena como o olho humano, destacando cores,
+          contrastes e detalhes nos pontos que realmente importam, proporcionando uma experiência de entretenimento mais
+          natural e envolvente.</p>
+      </div>
+    </section>
+    <section class="cards-cognitive-processor-xr">
+      <div class="card-cognitive-processor-xr">
+        <div class="img-card-cognitive-processor-container">
+          <img src="Imagens/mapeamento_profundidade.png">
+        </div>
+        <h3>Mapeamento de profundidade</h3>
+        <p>Com o <strong>Cognitive Processor XR</strong>, O mapeamento de profundidade analisa cada cena como o olho
+          humano faria, destacando o que realmente importa e criando uma sensação de profundidade natural e envolvente.
+          É como se você estivesse dentro da cena — com mais realismo, mais emoção e muito mais imersão. </p>
+      </div>
+      <div class="card-cognitive-processor-xr">
+        <div class="img-card-cognitive-processor-container">
+          <img src="Imagens/som_posicionado.png">
+        </div>
+        <h3>Sinta o som exatamente de onde a ação acontece</h3>
+        <p>Com o <strong>Cognitive Processor XR</strong>, sua TV posiciona o som exatamente de onde a ação acontece na
+          tela. Diálogos, efeitos e músicas ganham vida no ponto certo, criando uma imersão tão real que você esquece
+          que está assistindo — e começa a viver a cena.</p>
+      </div>
+
+    </section>
+    <!--Fim Cognitive Processor-->
+
+    <!--Dolby Vision-->
+    <section class="dolby-vision">
+      <div class="cabecalho-principais-recursos">
+        <h2>Dolby Vision</h2>
+        <p>Mais brilho, mais contraste, mais emoção</p>
+      </div>
+      <section class="detalhes-dolby-vision">
+        <div class="texto-detalhes-dolby-vision">
+          <h2>Dolby Vision — A imagem que emociona.</h2>
+          <p>Com Dolby Vision, sua TV entrega uma experiência visual digna das melhores salas de cinema. Cada cena é
+            otimizada quadro a quadro, revelando nuances de cor, brilho e contraste com precisão impressionante. Os
+            pretos são mais profundos, os detalhes nas sombras ganham vida, e os tons vibrantes explodem na tela com
+            realismo surpreendente.</p>
+        </div>
+        <div class="img-detalhes-dolby-vision">
+          <img src="Imagens/dolby_vision_detalhes.jpg">
+        </div>
+      </section>
+      <section class="cards-dolby-vision">
+        <video autoplay muted loop>
+          <source src="Videos/ceu_estrelado.mp4">
+        </video>
+        <div class="card-dolby-vision">
+          <div class="texto-card-dolby-vision">
+            <h3>Riqueza de detalhes</h3>
+            <p>Controle de brilho em cada pixel para a exibição de cenas mais precisas</p>
           </div>
         </div>
-        <hr class="hr" />
-        <div class="footer-right">
-          <p>
-            <a href="#privacy">Política de Privacidade</a>
-            <a href="#terms">Termos de Uso</a>
-            <a href="#contact">Contato</a>
-          </p>
+        <div class="card-dolby-vision">
+          <div class="texto-card-dolby-vision">
+            <h3>Cores Intensas</h3>
+            <p>Uma infinidade de tons diferentes para dar mais vida à cena</p>
+          </div>
         </div>
-        
-        <hr class="hr" />
-        <p>&copy; 2025 Sony. Todos os direitos reservados.</p>
+        <div class="card-dolby-vision">
+          <div class="texto-card-dolby-vision">
+            <h3>Contraste Infinito</h3>
+            <p>Pretos mais ricos e luzes mais claras transformam a experiência visual em cenas escuras</p>
+          </div>
+        </div>
+
+      </section>
+    </section>
+    <!--Fim Dolby Vision-->
+
+    <!--Triluminos Color-->
+    <section class="triluminos-color">
+      <div class="cabecalho-principais-recursos">
+        <h2>Triluminos Color</h2>
+        <p>Cada tom, cada nuance, cada emoção — revelados com precisão atômica</p>
       </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-
-     <!--Carrossel Principais Recursos-->
-        
-        <div class="carousel">
-            <div class="carousel-track">
-                <div class="carousel-slide">
-                    <img src="Imagens/mais_nitidez_tv.png" alt="Cognitive Processor XR">
-                    <div class="overlay">
-                        <h2>Cognitive Processor XR</h2>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="Imagens/dolby-vision.jpg" alt="Dolby Vision">
-                    <div class="overlay">
-                        <h2>Dolby Vision</h2>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="Imagens/triluminos-color.webp" alt="Triluminos Color">
-                    <div class="overlay">
-                        <h2>Triluminos Color</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-indicators"></div>
+      <section class="detalhes-triluminos-color">
+        <div class="img-detalhes-triluminos-color-container">
+          <img src="Imagens/triluminos_color_section.avif">
         </div>
-        
-     <!--Fim Carrossel Principais Recursos-->
+        <div class="texto-detalhes-triluminos-color">
+          <h2>Cores que transformam sua tela</h2>
+          <p>Descubra uma nova dimensão de imagem com a tecnologia Triluminos Color da Sony. Ela reproduz uma paleta
+            muito mais ampla de cores, revelando tons vibrantes, naturais e realistas que TVs comuns não conseguem
+            mostrar. Cada cena ganha profundidade, emoção e vida, é como ver o mundo com outros olhos.</p>
+        </div>
+      </section>
+    </section>
+    <!--Fim Triluminos Color-->
 
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="social-icons">
-                        <h3>Redes Sociais</h3>
-                        <a href="https://www.instagram.com/sony/" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="" style="filter: invert(1);" width="24">
-                        </a> <br>
-                        <a href="https://www.youtube.com/playstation" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="" style="filter: invert(1);" width="24">
-                        </a> <br>
-                        <a href="https://www.youtube.com/playstation" target="_blank">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="" style="filter: invert(1);" width="24">
-                        </a>
-                    </div>
-                </div>
-             
-                <hr class="hr">
-                <div class="footer-right">
-                    <p>
-                        <a href="#privacy">Política de Privacidade</a>
-                        <a href="#terms">Termos de Uso</a>
-                        <a href="#contact">Contato</a>
-                    </p>
-                </div>
-                <hr class="hr">
-                <p>&copy; 2025 Sony. Todos os direitos reservados.</p>
-            </div>
-        </footer>
-        <script src="script_tv.js"></script>
-    </body>
+  </section>
+
+  <!--Fim Detalhes Principais Recursos-->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Sony</h3>
+        <p>Inovação e tecnologia.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Links úteis</h3>
+        <ul>
+          <li><a href="#">| Política de privacidade</a></li>
+          <li><a href="#">| Termos de uso</a></li>
+          <li><a href="#">| Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Siga-nos</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Sony. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="JS/script_tv.js"></script>
+  <script src="JS/script.js"></script>
+</body>
 
 </html>

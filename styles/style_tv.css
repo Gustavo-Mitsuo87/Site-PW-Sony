@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: white;
+  overflow-x: hidden; 
+}
+
+/* Caixa de pesquisa */
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#search-input {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* quando ativo */
+#search-input.active {
+  width: 150px;
+  opacity: 1;
+}
+
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: #000;
+  margin: 9px;
+}
+
+
+.banner_tv {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../Imagens/banner_tv.png);
+  background-size: cover;
+  background-position: center;
+}
+.banner_tv h1 {
+  color: #000;
+  text-align: left;
+  margin-top: 200px;
+  margin-left: 80px;
+  max-width: 25%;
+  word-wrap: break-word; /* garante quebra de linha se a palavra for longa */
+  font-size: 3rem;
+  text-align: left;
+  font-family: "Segoe UI";
+}
+
+.destaques-tvs {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 20px;
+  width: 100vw;
+}
+.titulo-destaques-tvs {
+  margin-left: 2rem;
+}
+
+.cards-destaques-tvs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.card-destaques-tvs {
+  width: 30%;
+  height: auto;
+  flex-direction: column; /* deixa alinhado em coluna */
+}
+.img-card-destaques-tvs {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+.img-card-destaques-tvs img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+.texto-card-destaques-tvs h1 {
+  text-align: justify;
+
+}
+
+
+
+.principais-recursos_tv {
+  display: flex;
+  flex-direction: column; /* deixa alinhado em coluna */
+  width: 100vw;
+  height: 55vh;
+  justify-content: center;
+}
+
+/*Parte Principais Recursos */
+.principais-recursos_tv h1 {
+  color: #000;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-family: 'Segoe UI' ;
+}
+.principais-recursos_tv p {
+  color: #2c2c2c;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-family: 'Segoe UI' ;
+}
+/* Fim Parte Principais Recursos */
+
+/* Carrossel Principais Recursos */
+
+.carrossel-principais-recursos {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.carrossel-pista-principais-recursos {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carrossel-slide-principais-recursos {
+  position: relative;
+  min-width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.carrossel-slide-principais-recursos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.4s ease;
+  overflow-x: hidden;
+}
+
+.carrossel-overlay-principais-recursos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: background 0.4s ease, opacity 0.4s ease;
+}
+
+.carrossel-overlay-principais-recursos h2 {
+  color: white;
+  font-size: 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.carrossel-slide-principais-recursos:hover img {
+  filter: brightness(60%);
+}
+
+.carrossel-slide-principais-recursos:hover .carrossel-overlay-principais-recursos {
+  background: rgba(0,0,0,0.4);
+  opacity: 1;
+}
+
+.carrossel-slide-principais-recursos:hover .carrossel-overlay-principais-recursos h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Indicadores */
+.carrossel-indicadores-principais-recursos {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carrossel-indicadores-principais-recursos button {
+  width: 12px;
+  height: 12px;
+  background: rgba(255,255,255,0.6);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carrossel-indicadores-principais-recursos button.active {
+  background: white;
+}
+
+.carrossel-indicadores-principais-recursos button:hover {
+  background: rgba(255,255,255,0.9);
+}
+
+/* Fim Carrossel Principais Recursos */
+
+/* Detalhes Principais Recursos */
+.detalhes-principais-recursos {
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.detalhes-principais-recursos h1 {
+  font-size: 2.5rem;
+  font-family: 'Segoe UI';
+  text-align: center;
+}
+
+.detalhes-principais-recursos p {
+  font-size: 1rem;
+  font-family: 'Segoe UI';
+  word-wrap: break-word; /* garante quebra de linha se a palavra for longa */
+  text-align: center;
+}
+
+/* Cognitive Processor */
+.detalhes-cognitive-processor-xr {
+  gap: 80px;
+  align-items: center;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.img-cognitive-processor-xr {
+  margin-top: 3rem;
+  margin-left: 1rem;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+.detalhes-cognitive-processor-xr img {
+  margin-left: 1rem;
+  width: 540px;
+  height: auto;
+}
+.texto-detalhes-cognitive-processor-xr {
+  flex: 1.5;
+  margin-right: 3rem;
+  margin-left: 2rem;
+}
+
+.texto-detalhes-cognitive-processor-xr h2 {
+  text-align: justify;
+}
+
+.texto-detalhes-cognitive-processor-xr p {
+  font-size: 1.1rem;
+  font-family: 'Segoe UI';
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 1rem;
+
+}
+
+/* Cards Cognitive Processor */
+.cards-cognitive-processor-xr {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;      /* permite quebrar linha */
+  width: 100%;
+  justify-content: center;
+  gap: 20px;            /* espaçamento entre cards */
+  margin-bottom: 2rem;
+}
+.card-cognitive-processor-xr {
+  background-color: #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 48%;
+  height: auto;         /* altura cresce com o conteúdo */
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.img-card-cognitive-processor-container {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+.img-card-cognitive-processor-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-cognitive-processor-xr h3 {
+  text-align: justify;
+  margin-left: 1rem;
+}
+
+.card-cognitive-processor-xr p {
+  text-align: justify;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+/*Fim Cards Cognitive Processor */
+
+/* Fim Cognitive Processor */
+
+/*Dolby Vision*/
+/*Detalhes Dolby Vision*/
+
+.detalhes-dolby-vision {
+  width: 100vw;
+  display: flex;
+  margin-top: 100px;
+}
+.cabecalho-principais-recursos {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #D9D9D9;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 100px;
+}
+.cabecalho-principais-recursos h2 {
+  font-size: 2rem;
+}
+.detalhes-dolby-vision {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+.texto-detalhes-dolby-vision {
+  margin-right: 5rem;
+  margin-left: 3rem;
+}
+
+.texto-detalhes-dolby-vision p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+.img-detalhes-dolby-vision {
+  margin-right: 20px;
+}
+.img-detalhes-dolby-vision img {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 25px;
+}
+/*Fim Detalhes Dolby Vision*/
+
+/* Cards Dolby Vision*/
+.cards-dolby-vision {
+  margin-top: 100px;
+  width: 100%;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 20px;  
+  overflow: hidden;
+  position: relative;
+}
+.cards-dolby-vision video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(50%);
+}
+
+.card-dolby-vision {
+  background-color: rgba(0,0,0,0.8);
+  width: 30%;
+  height: 200px;
+  border-radius: 25px;
+  padding: 20px;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-dolby-vision h3 {
+  color: #f6f3f3;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.card-dolby-vision p {
+  color: #f6f3f3;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+.card-dolby-vision:hover {
+  transform: translateY(-10px); /* levanta 10px */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4); /* sombra para dar profundidade */
+
+}
+/*Fim Dolby Vision*/
+
+/*Triluminos Color*/
+.detalhes-triluminos-color {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  margin-top: 100px;
+}
+.img-detalhes-triluminos-color-container {
+  margin-left: 10px;
+}
+
+.img-detalhes-triluminos-color-container img {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.texto-detalhes-triluminos-color {
+  margin-right: 3rem;
+  margin-left: 5rem;
+  width: 45%;
+}
+.texto-detalhes-triluminos-color p {
+  text-align: justify;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+
+
+
+/*Fim Triluminos Color*/
+
+
+
+
+
+/* Fim Detalhes Principais Recursos */
+
+
+
+
+
+
