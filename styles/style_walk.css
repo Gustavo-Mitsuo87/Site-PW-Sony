@@ -113,7 +113,7 @@ nav a:hover {
   position: relative;
   height: 110vh;
   background: linear-gradient(to bottom, #00000000 20%, #000000cf),
-    url("./Imagens/Walkhero.png");
+    url("../Imagens/Walkhero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -157,21 +157,12 @@ nav a:hover {
 .wclasse img {
   height: 300px;
   background-color: transparent;
-<<<<<<< HEAD
-  transition: transform 0.3s ease; 
-}
-.wclasse:hover{
-  transform: scale(1.03);
-}
-.wbotaoespaco{
-=======
   transition: transform 0.3s ease;
 }
 .wclasse:hover {
   transform: scale(1.03);
 }
 .wbotaoespaco {
->>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
   width: 100%;
   padding: 1rem;
 }
@@ -186,17 +177,6 @@ nav a:hover {
   color: white;
   text-decoration: none;
   position: absolute;
-<<<<<<< HEAD
-  bottom: 20px;
-  right: 20px;
-}
-
-.wancora{
-  margin-top: 3rem;
-}
-
-
-=======
   bottom: 5%;
   right: 5%;
 }
@@ -295,7 +275,6 @@ nav a:hover {
   margin-top: 3rem;
 }
 
->>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
 .wsubhero {
   margin-top: 3rem;
   margin-bottom: 100px;
@@ -307,10 +286,6 @@ nav a:hover {
   box-shadow: 1px 40px 50px rgba(7, 7, 7, 0.264);
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
 .wsubhero h1 {
   color: white;
   text-align: left;
@@ -319,41 +294,27 @@ nav a:hover {
   font-family: "Baskerville Old Face";
 }
 
-<<<<<<< HEAD
-.wsub1{
-=======
 .wsub1 {
->>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
   background: linear-gradient(to bottom, #00000000 50%, #000000cf),
-    url("./Imagens/Walksubhero1.png");
+    url("../Imagens/Walksubhero1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-<<<<<<< HEAD
-.wsub2{
-=======
 .wsub2 {
->>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
   background: linear-gradient(to bottom, #00000000 50%, #000000cf),
-    url("./Imagens/Walksubhero2.png");
+    url("../Imagens/Walksubhero2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-<<<<<<< HEAD
-.wsub3{
-=======
 .wsub3 {
->>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
   background: linear-gradient(to bottom, #00000000 50%, #000000cf),
-    url("./Imagens/Walksubhero3.png");
+    url("../Imagens/Walksubhero3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-<<<<<<< HEAD
-=======
 
 .footer {
   background-color: #111;
@@ -454,4 +415,3 @@ nav a:hover {
     text-decoration: none;
   }
 }
->>>>>>> c89209b51bba70eda646741a7db8cf602d9b9253
