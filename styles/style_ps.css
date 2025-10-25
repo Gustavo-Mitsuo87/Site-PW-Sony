@@ -1436,18 +1436,19 @@ nav a:active {
 
 .thumbs {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* ou flex-start, se quiser alinhadas à esquerda */
   gap: 15px;
+  border-radius: 30px;
   margin-bottom: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* <- força tudo em uma linha */
+  overflow-x: auto; /* <- adiciona scroll horizontal se não couber */
 }
 
 .thumbs img {
   height: auto;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 20px;
   transition: transform 0.3s, border 0.3s;
-  width: 8rem;
 }
 .thumbs img {
   transition: all 0.3s;
@@ -1461,8 +1462,6 @@ nav a:active {
 /* A imagem que está sendo hoverada fica normal e aumenta */
 .thumbs img:hover {
   filter: blur(0);
-  transform: scale(1.1);
-  border: 0.9px solid var(--zezin);
 }
 
 .main-control {
@@ -1800,7 +1799,6 @@ button {
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #ffffff1a;
   cursor: pointer;
   opacity: 0.9;
   transition: 0.2s;
@@ -2115,11 +2113,6 @@ i.fab.fa-youtube {
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   --container: 1200px;
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 img,
 video {
@@ -2288,7 +2281,6 @@ button {
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #ffffff1a;
   cursor: pointer;
   opacity: 0.9;
   transition: 0.2s;

@@ -13,7 +13,15 @@
 
   <!-- Fonte: sistema para performance; troque por Inter/Helvetica se quiser -->
   <style>
-
+     .hero-2::before {
+      /* BG da seção – troque a URL */
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url(Imagens/death2.webp) center/cover no-repeat;
+      filter: saturate(1.05) contrast(1.05) brightness(0.8);
+      z-index: -2;
+    }
   </style>
 </head>
 
