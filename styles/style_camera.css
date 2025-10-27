@@ -134,6 +134,8 @@ nav a:active {
   width: 370px; /* tamanho fixo opcional */
   box-shadow: 0 2px 4px black;
   transition: transform 0.3s ease; /* animação suave */
+  text-decoration: none;
+  color: black;
 }
 
 .card1:hover {
