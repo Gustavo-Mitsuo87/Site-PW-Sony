@@ -34,11 +34,100 @@
 }
 
 .section_sds {
+  display:flex;
+  justify-content:center;
   margin-left:0.5rem;
   margin-right:0.5rem;
   padding: 0px;
-  background: rgb(0, 0, 0);
   margin-top: 0px;
+}
+
+.section2_sds {
+  display:flex;
+  justify-content:center;
+  margin-left:0.5rem;
+  margin-right:0.5rem;
+  padding: 0px;
+  margin-bottom: 30vh;
+}
+
+.section3_sds {
+  display:flex;
+  justify-content:left;
+  margin-left:0.5rem;
+  margin-right:0.5rem;
+  padding: 0px;
+  margin-bottom: 5vh;
+}
+
+.section4_sds {
+  display:flex;
+  justify-content:right;
+  margin-left:0.5rem;
+  margin-right:0.5rem;
+  padding: 0px;
+  margin-bottom: 5vh;
+}
+
+.cardsds {
+  margin: 1vh 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0px;
+  min-width: 20vw;
+  box-shadow: 0 2px 4px black;
+  transition: transform 0.3s ease;
+}
+
+.cardsds2 {
+  margin: 1vh 1vw;
+  display: flex;
+  align-items: left;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0px;
+  min-width: 20vw;
+}
+
+.cardsds3 {
+  margin: 2vh 1vw;
+  display: flex;
+  align-items: left;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-left:5vw;
+  padding: 0px;
+  min-width: 20vw;
+  max-width: 60vw;
+}
+
+.cardsds4 {
+  margin: 2vh 1vw;
+  display: flex;
+  align-items: right;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right:5vw;
+  padding: 0px;
+  min-width: 20vw;
+  max-width: 60vw;
+}
+
+
+.img_sds {
+  width: 20vw;
+}
+
+.img_sds2 {
+  min-width: 20vw;
+  max-width: 20vw;
 }
 
 .banner_sds {
@@ -51,6 +140,90 @@
   height: 100vh;
   width: 100vw;
   background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+}
+
+.banner2_sds {
+  display:flex;
+  margin-top:0px ;
+  margin-bottom: 3rem;
+  padding-bottom: 5rem;
+  background-image: url(Imagens/Banner3_sisds.png);
+  background-size: cover;
+  height: 20vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+}
+
+.banner3_sds {
+  display:flex;
+  margin-top:0px ;
+  margin-bottom: 3rem;
+  padding-bottom: 5rem;
+  background-image: url(Imagens/Banner_sisds2.png);
+  background-size: cover;
+  height: 20vh;
+  width: 100vw;
+  background-position: left;
+  background-repeat: no-repeat;
+  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+}
+
+.banner4_sds {
+  display:flex;
+  margin-top:0px ;
+  margin-bottom: 3rem;
+  padding-bottom: 5rem;
+  background-image: url(Imagens/Banner4_sisds.png);
+  background-size: cover;
+  height: 20vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+}
+
+.banner5_sds {
+  display:flex;
+  margin-top:0px ;
+  margin-bottom: 3rem;
+  padding-bottom: 5rem;
+  background-image: url(Imagens/Banner5_sisds.png);
+  background-size: cover;
+  height: 20vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+}
+
+.banner6_sds {
+  display:flex;
+  margin-top:0px ;
+  margin-bottom: 3rem;
+  padding-bottom: 5rem;
+  background-image: url(Imagens/Banner7_sisds.png);
+  background-size: cover;
+  height: 50vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+}
+
+.banner7_sds {
+  display:flex;
+  margin-top:0px ;
+  margin-bottom: 0rem;
+  padding-bottom: 5rem;
+  background-image: url(Imagens/Sds6.png);
+  background-size: cover;
+  height: 50vh;
+  width: 100vw;
+  background-position:bottom;
   background-repeat: no-repeat;
   box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
 }
@@ -82,14 +255,14 @@
   text-align:left;
   align-items: left;
   font-family: 'Segoe UI';
-  font-size: 2.2vw;
+  font-size: 1.5vw;
   margin-top:0;
   margin-bottom: 0vh;
   word-wrap: break-word;
   margin-left: 0vw;
   margin-right: 0vw;
   background-color: #ffffff;
-  width: 75%;
+  width: 90%;
 }
 
 .div_sds {
@@ -113,133 +286,10 @@
   display:flex;
   text-align:left;
   font-family: 'Segoe UI';
-  font-size: clamp(1rem, 3vw + 1rem, 3rem);
+  font-size: clamp(0.8rem, 1.6vw + 1rem, 2rem);
   margin-left: 1vw;
   margin-top:0vh;
   margin-bottom:0vh;
   font-weight:400;
 }
 
-#bordertop_sds {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-#borderbot_sds {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.carrossel {
-  background-color: #ffffff;
-  display: flex;
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  overflow: hidden;
-  border-radius: 0px;
-  box-shadow: 0 5px 3px rgba(0,0,0,0.3);
-}
-
-.slides {
-  display: flex;              /* coloca os slides lado a lado */
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-.conteudo {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.conteudo img {
-  min-width: 16vw;
-  min-height:32vh;
-  max-height:32vh;
-  margin-left:3.2vw;
-  max-width: 16vw;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Estilo da tabela */
-.caract {
-  width: 100%;
-  background-color: #ffffff;
- 
-}
-
-.caract td {
-  padding: 8px;
-}
-
-.btn {
-  display:flex;
-  position: absolute;
-  top: 50%;
-  left: 95%;
-  right: 10%;
-  width: 5%;
-  height: 100%;
-  transform: translateY(-50%);
-  background: transparent;
-  color: rgb(0, 0, 0);
-  border: none;
-  padding: 50% 0%;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 0%;
-  z-index: 2;
-  margin:0;
-}
-
-
-.prev { left: 0px; }
-.next { right: 0px; }
-
-.btn:hover { background: rgba(0,0,0,0.7); }
-
-/*<div class="slide">
-            <table>
-              <tr>
-                <td>
-                  <img src="Imagens/MHC-M60D.png" alt="Imagem 1">
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      
-                    </li>
-                  </ul>
-                </td>
-               </tr>
-            </table>
-          </div>
-          
-          
-          <td>
-                  <ul>
-                    <li>
-                      <p class="txt_sds">DVD Player integrado cp, saída HDMI</p>
-                    </li>
-                    <li>
-                      <p class="txt_sds"></p>
-                    </li>
-                    <li>
-                      <p class="txt_sds">Modo Futebol</p>
-                    </li>
-                  </ul>
-                </td>
-          
-          /
