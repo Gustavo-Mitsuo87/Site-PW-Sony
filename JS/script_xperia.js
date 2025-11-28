@@ -109,10 +109,10 @@ const slidecell = document.querySelectorAll('.xcarou-slide-cell');
 const indicadoresCell = document.querySelectorAll ('.xcarou-indicators-cell span');
 
 let ImagemCellAtual = 0;
-
+let visiveis = 4;
 function updateCarousel () {
 
-  const visiveis = 4;
+ 
   const slideWidht = slidecell [0].offsetWidth ; //offsetWidth (PADDING + CONTEUDO + BORDA )
   const style = getComputedStyle(slidecell[0]);
   const margin = parseInt(style.marginLeft) + parseInt(style.marginRight);
@@ -129,7 +129,7 @@ function updateCarousel () {
 
 NextBtnCell.addEventListener('click' , () => {
 
-  const visiveis = 4;
+  
     ImagemCellAtual = (ImagemCellAtual + visiveis) %slidecell.length;
     updateCarousel ();
 
@@ -137,17 +137,14 @@ NextBtnCell.addEventListener('click' , () => {
 
 PrevBtnCell.addEventListener('click' , () => {
 
-  const visiveis = 4;
+  
     ImagemCellAtual = (ImagemCellAtual - visiveis + slidecell.length) %slidecell.length;
     updateCarousel();
 
 });
 
 indicadoresCell.forEach(ind => {
-
-  ind.addEventListener('click' , () => {
-
-  const visiveis = 4;
+  ind.addEventListener('click', () => {
     ImagemCellAtual = parseInt(ind.dataset.slidecell) * visiveis;
     updateCarousel ()
   });
