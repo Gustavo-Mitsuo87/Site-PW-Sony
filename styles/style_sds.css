@@ -135,7 +135,7 @@
   margin-top:0 px ;
   margin-bottom: 3 rem;
   padding-bottom: 5 rem;
-  background-image: url(Imagens/Banner_sisds.png);
+  background-image: url(../Imagens/Banner_sisds.png);
   background-size: cover;
   height: 100 vh;
   width: 100 vw;
@@ -149,7 +149,7 @@
   margin-top:0 px ;
   margin-bottom: 3 rem;
   padding-bottom: 5 rem;
-  background-image: url(Imagens/Banner3_sisds.png);
+  background-image: url(../Imagens/Banner3_sisds.png);
   background-size: cover;
   height: 20 vh;
   width: 100 vw;
@@ -163,7 +163,7 @@
   margin-top:0 px ;
   margin-bottom: 3 rem;
   padding-bottom: 5 rem;
-  background-image: url(Imagens/Banner_sisds2.png);
+  background-image: url(../Imagens/Banner_sisds2.png);
   background-size: cover;
   height: 20 vh;
   width: 100 vw;
@@ -177,7 +177,7 @@
   margin-top:0 px ;
   margin-bottom: 3 rem;
   padding-bottom: 5 rem;
-  background-image: url(Imagens/Banner4_sisds.png);
+  background-image: url(../Imagens/Banner4_sisds.png);
   background-size: cover;
   height: 20 vh;
   width: 100 vw;
@@ -191,7 +191,7 @@
   margin-top:0 px ;
   margin-bottom: 3 rem;
   padding-bottom: 5 rem;
-  background-image: url(Imagens/Banner5_sisds.png);
+  background-image: url(../Imagens/Banner5_sisds.png);
   background-size: cover;
   height: 20 vh;
   width: 100 vw;
@@ -205,7 +205,7 @@
   margin-top:0 px ;
   margin-bottom: 3 rem;
   padding-bottom: 5 rem;
-  background-image: url(Imagens/Banner7_sisds.png);
+  background-image: url(../Imagens/Banner7_sisds.png);
   background-size: cover;
   height: 50 vh;
   width: 100 vw;
@@ -219,7 +219,7 @@
   margin-top:0 px ;
   margin-bottom: 0 rem;
   padding-bottom: 5 rem;
-  background-image: url(Imagens/Sds6.png);
+  background-image: url(../Imagens/Sds6.png);
   background-size: cover;
   height: 50 vh;
   width: 100 vw;
@@ -292,5 +292,6 @@
   margin-bottom:0 vh;
   font-weight:400;
 }
+
 
 
