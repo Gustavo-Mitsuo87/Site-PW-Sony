@@ -7,6 +7,8 @@
 
 body {
   background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -23,9 +25,11 @@ header {
   z-index: 10;
   width: 100%;
   top: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
-#navbar-gog {
+#navbar {
   position: fixed;
   padding: 10px 20px;
   background-color: white;
@@ -35,23 +39,65 @@ header {
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
 }
 
+#navbar:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#navbar.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 nav {
   text-decoration-color: #000000;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: auto;
+  margin: -10px;
   display: flex;
+  padding: 10px;
   justify-content: space-between;
   align-items: center;
+}
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: #000;
+  margin: 9px;
+}
+
+/* Caixa de pesquisa */
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#search-input {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* quando ativo */
+#search-input.active {
+  width: 150px;
+  opacity: 1;
 }
 
 nav a {
   color: #000000;
   text-decoration: none;
   margin-right: 20px;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  color: #002d7f;
+  color: rgb(160, 160, 160);
 }
 
 nav a:active {
