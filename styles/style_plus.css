@@ -32,7 +32,7 @@ main {
   cursor: pointer; /* Cursor de mão ao passar por cima */
   transition: color 0.3s; /* Transição suave de cor */
   display: flex;
-  margin-top: 4px;
+  margin-top: 0px;
   margin-left: -10px;
 }
 
@@ -78,6 +78,7 @@ main {
   list-style: none;
   gap: 25px;
   align-items: center;
+  justify-content: center;
 }
 
 .menu li {
@@ -105,6 +106,7 @@ main {
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
   z-index: 40;
   width: 100%;
+  font-family: "Segoe UI", sans-serif;
 }
 
 #navbar {
@@ -169,25 +171,23 @@ nav a:active {
   color: #012246;
 }
 
-
 /* Inicio Ps Plus*/
 
 .container_plus {
-    position: relative;
-   width: 100%;
-   height: 102vh;
-    text-align: center;                              
-    box-shadow: #002d7f; 
-    overflow-x: hidden;  
-    
+  position: relative;
+  width: 100%;
+  height: 102vh;
+  text-align: center;
+  box-shadow: #002d7f;
+  overflow-x: hidden;
 }
-  .container_plus img {
-    object-fit: cover;
-  }
+.container_plus img {
+  object-fit: cover;
+}
 
-.texto_plus h2{
+.texto_plus h2 {
   position: absolute;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   font-weight: bold;
   font-size: 50px;
   top: 50%;
@@ -197,9 +197,9 @@ nav a:active {
   margin-bottom: 10px;
 }
 
-.texto_plus p{
+.texto_plus p {
   position: absolute;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   font-weight: bold;
   font-size: 20px;
   top: 60%;
@@ -208,7 +208,6 @@ nav a:active {
   color: rgb(0, 0, 0);
   margin-bottom: 10px;
 }
-
 
 .tplus {
   margin: 0;
@@ -227,16 +226,15 @@ nav a:active {
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   font-family: Arial, sans-serif;
-  background-color: rgb(206, 206, 206);;
+  background-color: rgb(206, 206, 206);
   margin-top: 10px;
   position: relative;
   display: inline-block;
   margin: 30px;
 }
 
-
 .card_img_plus {
-  width: 100%;      
+  width: 100%;
   display: block;
   padding: 12px;
   border-radius: 25px;
@@ -250,8 +248,8 @@ nav a:active {
 }
 
 .container_cards_plus {
-    background-color: #ffffff;
-    text-align: center;
+  background-color: #ffffff;
+  text-align: center;
 }
 
 .carousel-container {
@@ -288,13 +286,14 @@ nav a:active {
 }
 
 .carousel-track img:hover {
-  filter:blur(0) brightness(1);
+  filter: blur(0) brightness(1);
   transform: scale(1.1);
   z-index: 2;
-  border-radius: 20px; 
+  border-radius: 20px;
 }
 
-button.prev, button.next {
+button.prev,
+button.next {
   background-color: #0066da;
   border: none;
   color: white;
@@ -331,7 +330,7 @@ button.next {
 
 .card_img_plus-ben {
   width: 100%;
-  height: 200px;      
+  height: 200px;
   display: block;
   border-radius: 25px;
   text-align: center;
@@ -355,7 +354,7 @@ button.next {
 .card_plan {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   padding: 20px;
   width: 250px;
   text-align: center;
@@ -430,11 +429,11 @@ button.next {
 }
 
 .extra-options {
-    display: none;              /* começa escondido */
-    margin-top: 12px;
-    flex-direction: column;
-    gap: 8px;
-    }
+  display: none; /* começa escondido */
+  margin-top: 12px;
+  flex-direction: column;
+  gap: 8px;
+}
 
 .extra-options .show {
   display: block;
@@ -450,67 +449,77 @@ button.next {
   padding: 10px;
 }
 
-.essential { background: #f9f9f9; }
-.extra { background: #ffeb3b; }
-.premium { background: #222; color: white; }
-.premium .option { background: #333; color: white; }
+.essential {
+  background: #f9f9f9;
+}
+.extra {
+  background: #ffeb3b;
+}
+.premium {
+  background: #222;
+  color: white;
+}
+.premium .option {
+  background: #333;
+  color: white;
+}
 
 .faq {
-      width: 100%;
-      background: #000000; /* cinza médio */
-      padding: 30px;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-    }
+  width: 100%;
+  background: #000000; /* cinza médio */
+  padding: 30px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    .faq h2 {
-      margin-bottom: 30px;
-      font-size: 50px;
-      color: #ffffff;
-    }
+.faq h2 {
+  margin-bottom: 30px;
+  font-size: 50px;
+  color: #ffffff;
+}
 
-    /* Estilo das perguntas */
-    details {
-      margin-bottom: 12px;
-      padding: 12px;
-      background: #000000; /* cinza mais escuro */
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+/* Estilo das perguntas */
+details {
+  margin-bottom: 12px;
+  padding: 12px;
+  background: #000000; /* cinza mais escuro */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-    details:hover {
-      background: #000000;
-    }
+details:hover {
+  background: #000000;
+}
 
-    summary {
-      font-weight: bold;
-      font-size: 16px;
-      color: #ffffff;
-      list-style: none; /* tira a setinha padrão */
-      display: flex;
-      justify-content: space-between; /* joga a setinha pro lado direito */
-      align-items: center;
-    }
+summary {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  list-style: none; /* tira a setinha padrão */
+  display: flex;
+  justify-content: space-between; /* joga a setinha pro lado direito */
+  align-items: center;
+}
 
-    /* Criando a setinha com ::after */
-    summary::after {
-      content: "+"; /* setinha para direita */
-      font-size: 14px;
-      transition: transform 0.3s ease;
-    }
+/* Criando a setinha com ::after */
+summary::after {
+  content: "+"; /* setinha para direita */
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
 
-    /* Quando o details estiver aberto, gira a setinha */
-    details[open] summary::after {
-      transform: rotate(90deg); /* vira para baixo */
-    }
+/* Quando o details estiver aberto, gira a setinha */
+details[open] summary::after {
+  transform: rotate(90deg); /* vira para baixo */
+}
 
-    /* Resposta (quando expandida) */
-    details p {
-      margin-top: 10px; /* espaçamento entre pergunta e resposta */
-      font-size: 15px;
-      color: #ffffff;
-      line-height: 1.4em;
-    }
+/* Resposta (quando expandida) */
+details p {
+  margin-top: 10px; /* espaçamento entre pergunta e resposta */
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 1.4em;
+}
 
 .modal {
   display: none;
@@ -520,7 +529,7 @@ button.next {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
 }
