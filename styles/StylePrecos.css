@@ -23,7 +23,7 @@ header {
   z-index: 10;
   width: 100%;
   top: 5px;
-  background-color: transparent;
+  background-color: white;
   transition: background-color 0.3s ease;
 }
 
@@ -368,7 +368,6 @@ nav a:hover{
 .precos-lateral-card {
   width: 250px;
   background: white;
-  border: 1px solid #ddd;
   border-radius: 10px;
   padding: 15px;
   display: flex;
