@@ -3,7 +3,7 @@ function initCarrossel(carrossel) {
   const slide = carrossel.querySelectorAll('.slide');
   const prev = carrossel.querySelector('.prev');
   const next = carrossel.querySelector('.next');
-  
+  t
   let index = 0;
   let autoPlay;
 
@@ -37,3 +37,25 @@ function initCarrossel(carrossel) {
 
 /* Inicializa todos os carrosséis da página */
 document.querySelectorAll('.carrossel').forEach(initCarrossel);
+
+///////////////////////////////////////////////////////////////
+const searchIcon = document.getElementById("search-icon");
+const searchInput = document.getElementById("search-input");
+
+searchIcon.addEventListener("click", () => {
+  searchInput.classList.toggle("active");
+  if (searchInput.classList.contains("active")) {
+    searchInput.focus();
+  }
+});
+
+// Seleciona o navbar
+const navbar = document.getElementById("navbar");
+// Adiciona um listener de scroll na janela
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled"); // Adiciona a classe quando rolar
+  } else {
+    navbar.classList.remove("scrolled"); // Remove a classe ao voltar
+  }
+});

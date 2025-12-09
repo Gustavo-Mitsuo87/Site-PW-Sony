@@ -29,13 +29,12 @@ header {
 
 nav {
   text-decoration-color: #000000;
-  max-width: 1500px;
+  max-width: auto;
   margin: -10px;
   display: flex;
   padding: 10px;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
 }
 
 nav a {
@@ -97,33 +96,6 @@ nav a:hover {
   background-color: white;
   color: black;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.menu b {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  transition: 0.3s;
-  font-weight: normal;
-  margin-left: 0;
-  margin-right: 0;
-  align-items: center;
-}
-
-.menu b:hover {
-  color: #0070d1;
-}
-
-#navsds {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-left: -2rem;
-  margin-right: -2rem;
-  margin-top: -0.1rem;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  padding-bottom: 0.5rem;
-  justify-content: space-between;
-  display: flex;
 }
 
 .section_sds {

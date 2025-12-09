@@ -10,73 +10,6 @@ body {
   background-color: white;
 }
 
-main {
-  max-width: 1200px;
-  margin: 6rem auto 2rem;
-  padding: 0 1rem;
-}
-
-header {
-  padding: 0.5rem;
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  top: 5px;
-}
-
-nav {
-  text-decoration-color: #000000;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  color: #000000;
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-nav a:hover {
-  color: #002d7f;
-}
-
-nav a:active {
-  color: #0056b3;
-}
-
-#navbar {
-  position: fixed;
-  padding: 10px 20px;
-  background-color: transparent;
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: -5px;
-}
-
-#navbar.scrolled {
-  background-color: white;
-  color: black;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/*Inicio G.O.G*/
-.cabeçalho_camera {
-  position: fixed;
-  padding: 10px 20px;
-  background-color: white;
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: -5px;
-  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-}
 .h1_camera {
   color: #000000;
   margin-left: -15px;
@@ -1190,63 +1123,7 @@ nav a:active {
   background: linear-gradient(rgb(241, 200, 85), rgb(110, 82, 2));
 }
 
-.footer {
-  background-color: #111;
-  color: #fff;
-  padding: 40px 20px 20px;
-  font-family: sans-serif;
-}
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 200px;
-}
-
-.footer-section h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-  color: #fff;
-}
-
-.social-icons a {
-  color: #ccc;
-  margin-right: 10px;
-  font-size: 18px;
-  text-decoration: none;
-}
-
-.social-icons a:hover {
-  color: #fff;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #444;
-  padding-top: 15px;
-  font-size: 14px;
-  color: #aaa;
-}
 
 /* Responsivo */
 @media (max-width: 768px) {

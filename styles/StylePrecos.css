@@ -73,7 +73,6 @@ nav a:hover{
   transition: width 0.3s ease, opacity 0.3s ease;
 }
 
-
 #search-input.active {
   width: 150px;
   opacity: 1;
@@ -82,20 +81,10 @@ nav a:hover{
 #navbar {
   position: fixed;
   padding: 10px 20px;
-  background-color: transparent;
+  background-color: white;
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: -5px;
-}
-
-#navbar:hover{
-  background-color: rgb(255, 255, 255);
-}
-
-#navbar.scrolled {
-  background-color: white;
-  color: black;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo img {

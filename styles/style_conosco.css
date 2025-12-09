@@ -38,19 +38,8 @@ header {
   padding: 10px 20px;
   background-color: white;
   color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: -5px;
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
-}
-
-#navbar:hover {
-  background-color: rgb(255, 255, 255);
-}
-
-#navbar.scrolled {
-  background-color: white;
-  color: black;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav {
@@ -62,6 +51,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+ 
 .nav-icons {
   display: flex;
   gap: 1.5rem;
@@ -98,14 +88,11 @@ nav a {
   color: #000000;
   text-decoration: none;
   margin-right: 20px;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
   color: rgb(160, 160, 160);
-}
-
-nav a:active {
-  color: #0056b3;
 }
 
 .card_center {
