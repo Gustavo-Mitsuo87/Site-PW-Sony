@@ -11,6 +11,8 @@
 }
 body {
   background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -27,9 +29,11 @@ header {
   z-index: 10;
   width: 100%;
   top: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
-#navbar-gog {
+#navbar {
   position: fixed;
   padding: 10px 20px;
   background-color: white;
@@ -39,11 +43,22 @@ header {
   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.2);
 }
 
+#navbar:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#navbar.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 nav {
   text-decoration-color: #000000;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: auto;
+  margin: -20px;
   display: flex;
+  padding: 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -53,6 +68,7 @@ nav {
   font-size: 1.4rem;
   color: #000;
   margin: 9px;
+  align-items: center;
 }
 
 /* Caixa de pesquisa */
@@ -85,7 +101,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #002d7f;
+  color: rgb(160, 160, 160);
 }
 
 nav a:active {
@@ -106,10 +122,9 @@ nav a:active {
   box-shadow: 0 2px 4px black;
   background-color: white;
   position: relative;
-  transform: translateY(-80vh);
   border-radius: 25px;
-
   align-items: center;
+  margin: 100px 0px 50px 0px;
 }
 
 .inputs_order p {

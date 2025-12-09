@@ -3,18 +3,111 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
+}
 
+main {
+  max-width: 1200px;
+  margin: 6rem auto 2rem;
+  padding: 0 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header {
+  padding: 0.5rem;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  top: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+nav {
+  text-decoration-color: #000000;
+  max-width: 1500px;
+  margin: -10px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  color: rgb(160, 160, 160);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: #000;
+  margin: 9px;
+}
+
+/* Caixa de pesquisa */
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#search-input {
+  width: 0;
+  opacity: 0;
+  padding: 5px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* quando ativo */
+#search-input.active {
+  width: 150px;
+  opacity: 1;
+}
+
+#navbar {
+  position: fixed;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: -5px;
+}
+
+#navbar:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#navbar.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .menu b {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: 0.3s;
-    font-weight: normal;
-    margin-left:0;
-    margin-right:0;
-    align-items: center;    
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+  font-weight: normal;
+  margin-left: 0;
+  margin-right: 0;
+  align-items: center;
 }
 
 .menu b:hover {
@@ -22,49 +115,49 @@
 }
 
 #navsds {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-left: -2rem;
-    margin-right: -2rem;
-    margin-top: -0.1rem;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-bottom: 0.5rem;
-    justify-content: space-between;
-    display: flex;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-top: -0.1rem;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 0.5rem;
+  justify-content: space-between;
+  display: flex;
 }
 
 .section_sds {
-  display:flex;
-  justify-content:center;
-  margin-left:0.5rem;
-  margin-right:0.5rem;
+  display: flex;
+  justify-content: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   padding: 0px;
   margin-top: 0px;
 }
 
 .section2_sds {
-  display:flex;
-  justify-content:center;
-  margin-left:0.5rem;
-  margin-right:0.5rem;
+  display: flex;
+  justify-content: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   padding: 0px;
   margin-bottom: 30vh;
 }
 
 .section3_sds {
-  display:flex;
-  justify-content:left;
-  margin-left:0.5rem;
-  margin-right:0.5rem;
+  display: flex;
+  justify-content: left;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   padding: 0px;
   margin-bottom: 5vh;
 }
 
 .section4_sds {
-  display:flex;
-  justify-content:right;
-  margin-left:0.5rem;
-  margin-right:0.5rem;
+  display: flex;
+  justify-content: right;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   padding: 0px;
   margin-bottom: 5vh;
 }
@@ -101,7 +194,7 @@
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
-  margin-left:5vw;
+  margin-left: 5vw;
   padding: 0px;
   min-width: 20vw;
   max-width: 60vw;
@@ -114,12 +207,11 @@
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
-  margin-right:5vw;
+  margin-right: 5vw;
   padding: 0px;
   min-width: 20vw;
   max-width: 60vw;
 }
-
 
 .img_sds {
   width: 20vw;
@@ -131,8 +223,8 @@
 }
 
 .banner_sds {
-  display:flex;
-  margin-top:0px ;
+  display: flex;
+  margin-top: 0px;
   margin-bottom: 3rem;
   padding-bottom: 5rem;
   background-image: url(../Imagens/Banner_sisds.png);
@@ -141,12 +233,12 @@
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1vh 4px rgba(0, 0, 0, 0.1);
 }
 
 .banner2_sds {
-  display:flex;
-  margin-top:0px ;
+  display: flex;
+  margin-top: 0px;
   margin-bottom: 3rem;
   padding-bottom: 5rem;
   background-image: url(../Imagens/Banner3_sisds.png);
@@ -155,12 +247,12 @@
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1vh 4px rgba(0, 0, 0, 0.1);
 }
 
 .banner3_sds {
-  display:flex;
-  margin-top:0px;
+  display: flex;
+  margin-top: 0px;
   margin-bottom: 3rem;
   padding-bottom: 5rem;
   background-image: url(../Imagens/Banner_sisds2.png);
@@ -169,12 +261,12 @@
   width: 100vw;
   background-position: left;
   background-repeat: no-repeat;
-  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1vh 4px rgba(0, 0, 0, 0.1);
 }
 
 .banner4_sds {
-  display:flex;
-  margin-top:0px ;
+  display: flex;
+  margin-top: 0px;
   margin-bottom: 3rem;
   padding-bottom: 5rem;
   background-image: url(../Imagens/Banner4_sisds.png);
@@ -183,12 +275,12 @@
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1vh 4px rgba(0, 0, 0, 0.1);
 }
 
 .banner5_sds {
-  display:flex;
-  margin-top:0px ;
+  display: flex;
+  margin-top: 0px;
   margin-bottom: 3rem;
   padding-bottom: 5rem;
   background-image: url(../Imagens/Banner5_sisds.png);
@@ -197,12 +289,12 @@
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1vh 4px rgba(0, 0, 0, 0.1);
 }
 
 .banner6_sds {
-  display:flex;
-  margin-top:0px ;
+  display: flex;
+  margin-top: 0px;
   margin-bottom: 3rem;
   padding-bottom: 5rem;
   background-image: url(../Imagens/Banner7_sisds.png);
@@ -211,39 +303,39 @@
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1vh 4px rgba(0, 0, 0, 0.1);
 }
 
 .banner7_sds {
-  display:flex;
-  margin-top:0px ;
+  display: flex;
+  margin-top: 0px;
   margin-bottom: 0rem;
   padding-bottom: 5rem;
   background-image: url(../Imagens/Sds6.png);
   background-size: cover;
   height: 50vh;
   width: 100vw;
-  background-position:bottom;
+  background-position: bottom;
   background-repeat: no-repeat;
-  box-shadow: 0 1vh 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1vh 4px rgba(0, 0, 0, 0.1);
 }
 
 .h1_sds {
-  display:flex;
-  text-align:center;
-  font-family: 'Segoe UI';
+  display: flex;
+  text-align: center;
+  font-family: "Segoe UI";
   font-size: clamp (1rem, 2.5vw + 1rem, 2.5rem);
-  margin-top:15vh;
-  margin-bottom:1.5vh;
+  margin-top: 15vh;
+  margin-bottom: 1.5vh;
 }
 
 .txt_sds {
-  display:flex;
-  text-align:center;
+  display: flex;
+  text-align: center;
   align-items: center;
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
   font-size: clamp (1rem, 2vw + 1rem, 2rem);
-  margin-top:0;
+  margin-top: 0;
   margin-bottom: 15vh;
   word-wrap: break-word;
   margin-left: 20vw;
@@ -251,12 +343,12 @@
 }
 
 .txt2_sds {
-  display:flex;
-  text-align:left;
+  display: flex;
+  text-align: left;
   align-items: left;
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
   font-size: 1.5vw;
-  margin-top:0;
+  margin-top: 0;
   margin-bottom: 0vh;
   word-wrap: break-word;
   margin-left: 0vw;
@@ -266,33 +358,29 @@
 }
 
 .div_sds {
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
 .div2_sds {
-  display:flex;
+  display: flex;
   align-items: center;
-  width:80vw;
-  position:relative; 
+  width: 80vw;
+  position: relative;
   justify-content: center;
   border: 0.1vh solid black;
-  margin-left: 10vw; 
-  margin-right:10vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
   background-color: rgb(145, 151, 155);
 }
 
 .h2_sds {
-  display:flex;
-  text-align:left;
-  font-family: 'Segoe UI';
+  display: flex;
+  text-align: left;
+  font-family: "Segoe UI";
   font-size: clamp (0.8rem, 1.6vw + 1rem, 2rem);
   margin-left: 1vw;
-  margin-top:0vh;
-  margin-bottom:0vh;
-  font-weight:400;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+  font-weight: 400;
 }
-
-
-
-
