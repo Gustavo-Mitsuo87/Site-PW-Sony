@@ -37,51 +37,6 @@ function scrollCarousel(id, direction) {
   }, 200);
 }
 
-function setupIndicators(id) {
-  const carousel = document.getElementById(id);
-  const indicators = document.getElementById(`${id}-indicators`);
-  if (!carousel || !indicators) return;
-
-  const cardClass = id === "games-plus" ? ".card-ps-plus" : null;
-  if (!cardClass) return;
-
-  const cards = carousel.querySelectorAll(cardClass);
-  indicators.innerHTML = "";
-
-  cards.forEach((_, index) => {
-    const dot = document.createElement("div");
-    dot.classList.add("indicator");
-    if (index === 0) dot.classList.add("active");
-
-    dot.addEventListener("click", () => {
-      const cardWidth = cards[0].offsetWidth;
-      const gap = 16;
-      const scrollAmount = index * (cardWidth + gap);
-
-      carousel.scrollTo({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
-    });
-
-    indicators.appendChild(dot);
-  });
-
-  carousel.addEventListener("scroll", () => {
-    const scrollLeft = carousel.scrollLeft;
-    const cardWidth = cards[0].offsetWidth + 16;
-    const activeIndex = Math.round(scrollLeft / cardWidth);
-
-    indicators.querySelectorAll(".indicator").forEach((dot, i) => {
-      dot.classList.toggle("active", i === activeIndex);
-    });
-  });
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-  setupIndicators("games-plus");
-});
-
 const searchIcon = document.getElementById("search-icon");
 const searchInput = document.getElementById("search-input");
 searchIcon.addEventListener("click", () => {

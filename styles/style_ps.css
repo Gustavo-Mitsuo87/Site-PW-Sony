@@ -2028,7 +2028,7 @@ i.fab.fa-youtube {
 
 /* ============ Rodapé ============ */
 .footer {
-  background: #0b0b0d;
+  background: #000000;
   border-top: 1px solid var(--stroke);
 }
 .footer .grid {
