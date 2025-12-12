@@ -171,7 +171,7 @@ const gameData = {
   },
   "Miles Morales.webp": {
     desc: "Neste jogo da Insomniac Games, Miles Morales assume o manto de Spider-Man após os eventos do jogo anterior, trazendo habilidades únicas como o Venom Blast e a camuflagem, além de uma narrativa emocionante sobre identidade, responsabilidade e comunidade.",
-    link: "aco.html"
+    link: "miranha.html"
   },
   "MFPP.jpg": {
     desc: "Minha Amiga Peppa Pig é um jogo interativo voltado para crianças, onde você cria seu próprio personagem e se torna o novo melhor amigo da Peppa. O jogo tem uma proposta bem leve e divertida, com gráficos que imitam o estilo do desenho animado e uma jogabilidade simples e acessível.",
