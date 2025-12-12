@@ -122,7 +122,7 @@ nav a:hover {
   margin-left: 2rem;
 }
 
-.cards-destaques-tvs {
+.cards-destaques-tvs {  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +135,13 @@ nav a:hover {
   height: auto;
   flex-direction: column; /* deixa alinhado em coluna */
 }
+
+.cards-destaques-tvs a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .img-card-destaques-tvs {
   width: auto;
   height: auto;
@@ -518,8 +525,6 @@ nav a:hover {
 
 
 /*Fim Triluminos Color*/
-
-
 
 
 
