@@ -111,11 +111,11 @@ const closeBtn = document.querySelector(".close");
 const gameData = {
   "MK1_ban.jpg": {
     desc: "Mortal Kombat 1 (2023) é um reboot da franquia, recriando o universo após Liu Kang se tornar Deus do Fogo. O jogo traz versões renovadas de personagens clássicos e introduz o sistema de Kameo Fighters, que permitem suporte em combate. Com gráficos modernos, lutas brutais e Fatalities icônicos, mistura jogabilidade intensa com um modo história cinematográfico.",
-    link: "mk1.html"
+    link: "MK1.html"
   },
   "ACO.jpg": {
     desc: "Assassin’s Creed Odyssey (2018) se passa na Grécia Antiga durante a Guerra do Peloponeso, colocando o jogador no papel de Alexios ou Kassandra, mercenários descendentes de Leônidas. O jogo mistura exploração em mundo aberto, batalhas navais e escolhas que moldam a narrativa. Com elementos de RPG, permite personalizar habilidades e decidir o rumo da história em meio a conspirações e mitos gregos.",
-    link: "aco.html"
+    link: "ACO.html"
   },
   "Detroit.jpg": {
     desc: "Detroit: Become Human (2018) é um jogo narrativo da Quantic Dream ambientado em um futuro próximo, onde androides convivem com humanos. A história acompanha Kara, Connor e Markus, cujas escolhas podem mudar radicalmente o rumo da trama. Com múltiplos finais, o jogo explora temas como liberdade, consciência e moralidade, colocando o jogador no centro de dilemas éticos intensos.",
