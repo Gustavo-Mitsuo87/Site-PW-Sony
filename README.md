@@ -1,8 +1,29 @@
-# Site Sony/Projeto Academico 1ºDS
-Este projeto web foi desenvolvido no 1º ano do 
-ensino médio para um trabalho acadêmico na Etec Guarulhos. 
-Esse repositório tem outros colaboradores já que foi um trabalho em grupo.
+# Site PW Sony
 
-This web project was developed in the 1st year of 
-high school for an academic assignment at Etec Guarulhos. 
-This repository has other collaborators since it was a group project.
+Projeto desenvolvido em equipe durante o curso Técnico em Desenvolvimento de Sistemas da ETEC de Guarulhos.
+
+## Sobre o projeto
+
+O objetivo deste projeto foi desenvolver um website inspirado na Sony, colocando em prática os conhecimentos adquiridos em desenvolvimento web, estruturação de páginas, estilização e programação com JavaScript.
+
+## Tecnologias utilizadas
+
+* HTML5
+* CSS3
+* JavaScript
+* Git
+* GitHub
+
+## Minha participação
+
+Este projeto foi desenvolvido em equipe. Contribuí para o desenvolvimento do sistema, implementação de funcionalidades e utilização do Git para controle de versão.
+
+## Aprendizados
+
+Durante o desenvolvimento deste projeto foi possível aprimorar conhecimentos em:
+
+* Estruturação de páginas web;
+* Estilização utilizando CSS;
+* Manipulação do DOM com JavaScript;
+* Trabalho em equipe;
+* Versionamento de código utilizando Git e GitHub.
